@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "collections": [
+    {
+      "id": "essentials",
+      "label": "Essentials",
+      "description": "Recognised starting points from the configured catalogue.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["featured-artist"],
+      "semanticDescription": "Recognised songs and accessible starting points from the configured artist.",
+      "rankingWeight": 0.2
+    },
+    {
+      "id": "romantic",
+      "label": "Romantic",
+      "description": "Warm and expressive love songs.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["featured-artist"],
+      "semanticDescription": "Romantic warmth, love songs and date-night listening.",
+      "rankingWeight": 0.18
+    },
+    {
+      "id": "calm",
+      "label": "Comfort and Calm",
+      "description": "Gentle, peaceful catalogue choices.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["featured-artist"],
+      "semanticDescription": "Calm, comforting and peaceful music with gentle energy.",
+      "rankingWeight": 0.18
+    },
+    {
+      "id": "discovery",
+      "label": "Hidden Gems",
+      "description": "Less familiar choices for discovery.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["featured-artist"],
+      "semanticDescription": "Deep cuts and less familiar catalogue discoveries.",
+      "rankingWeight": 0.16
+    },
+    {
+      "id": "malaysian-legends",
+      "label": "Malaysian Legends",
+      "description": "Disabled placeholder for a separately verified secondary collection.",
+      "active": false,
+      "kind": "secondary-artist",
+      "artistIds": [],
+      "semanticDescription": "Optional disabled secondary artist collection.",
+      "rankingWeight": 0.08
+    }
+  ]
+}

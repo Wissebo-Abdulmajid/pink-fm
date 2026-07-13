@@ -1,0 +1,2020 @@
+{
+  "schemaVersion": 1,
+  "lastFullAudit": "2026-07-13",
+  "sources": [
+    {
+      "id": "apple-artist",
+      "type": "official-streaming-artist",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/artist/siti-nurhaliza/102288156",
+      "checkedAt": "2026-07-13",
+      "notes": "Official Apple Music artist page and public catalogue API artist identifier."
+    },
+    {
+      "id": "spotify-artist",
+      "type": "official-streaming-artist",
+      "provider": "Spotify",
+      "url": "https://open.spotify.com/artist/5d0bxRte3J74ZXyEGRL8uU",
+      "checkedAt": "2026-07-13",
+      "notes": "Official Spotify artist page used to cross-check established catalogue identity."
+    },
+    {
+      "id": "spotify-editorial",
+      "type": "official-editorial-playlist",
+      "provider": "Spotify",
+      "url": "https://open.spotify.com/playlist/37i9dQZF1DWSW97Ajf5E1t",
+      "checkedAt": "2026-07-13",
+      "notes": "Official editorial playlist used for selected direct Spotify destinations."
+    },
+    {
+      "id": "apple-release-574251506",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/siti-nurhaliza/574251506?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-574180393",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/aku-cinta-padamu/574180393?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-573126598",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/cindai/573126598?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-574417117",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/adiwarna/574417117?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-574352019",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/pancawarna/574352019?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-574380968",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/sahmura/574380968?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-574288251",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/safa/574288251?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1266167994",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/sanggar-mustika/1266167994?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-573421556",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/e-m-a-s/573421556?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-574386535",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/prasasti-seni/574386535?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1444110731",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/transkripsi/1444110731?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1442496646",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/hadiah-daripada-hati/1442496646?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1442404651",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/lentera-timur/1442404651?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1442374465",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/tahajjud-cinta/1442374465?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-466626765",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/all-your-love/466626765?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1443611673",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/fragmen/1443611673?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1443196646",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/simetrisiti/1443196646?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1521304037",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/manifestasiti2020/1521304037?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1694424145",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/sitism/1694424145?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1848810439",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/gema-bumantara/1848810439?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-663686792",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/gema-hari-raya/663686792?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-664487155",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/salam-aidilfitri/664487155?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1577780523",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/seluruh-cinta-single/1577780523?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1141036328",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/dirgahayu-single/1141036328?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1516262101",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/you-came-to-me-feat-dato-sri-siti-nurhaliza-single/1516262101?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-723514639",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/dua-dunia-feat-siti-nurhaliza-single/723514639?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1445320455",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/muara-hati-single/1445320455?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1445306090",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/galau-single/1445306090?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1445307750",
+      "type": "official-streaming-album",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/mikraj-cinta-single/1445307750?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1444590180",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/milikmu-selamanya-single/1444590180?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1316321668",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/bersandar-cinta-feat-dato-sri-siti-nurhaliza-from-aubrey/1316321668?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1464658934",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/ikhlas-single/1464658934?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1734375730",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/cinta-tak-mungkin-single/1734375730?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1779075735",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/sejarah-single/1779075735?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1827253698",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/menamakanmu-cinta-single/1827253698?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1807913067",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/sesal-single/1807913067?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-1879717949",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/beraya-dengan-saya-single/1879717949?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "apple-release-6784597042",
+      "type": "official-streaming-single",
+      "provider": "Apple Music",
+      "url": "https://music.apple.com/my/album/%E5%83%8F%E6%B0%B4%E4%B8%80%E6%A8%A3-single/6784597042?uo=4",
+      "checkedAt": "2026-07-13",
+      "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    }
+  ],
+  "trackVerification": {
+    "jawapan-di-persimpangan": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574251506"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "mahligai-asmara": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574251506"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "jerat-percintaan": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574251506"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "antara-waktu-dan-usia": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574251506"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "sanggar-bayu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574251506"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "bicara-luka": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574251506"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "aku-cinta-padamu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574180393",
+        "spotify-artist",
+        "spotify-editorial"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "wajah-kekasih": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574180393",
+        "spotify-artist",
+        "spotify-editorial"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "kesilapanku-keegoanmu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574180393"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "khayalan-cinta": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574180393"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "usah-diragui": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574180393"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "rindu-di-antara-kita": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574180393"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "cindai": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-573126598",
+        "spotify-artist",
+        "spotify-editorial"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "laksamana-mati-dibunuh": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-573126598"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "janji": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-573126598"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "lela-manja": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-573126598"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "joget-pahang": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-573126598"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "joget-berhibur": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-573126598"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "purnama-merindu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574417117",
+        "spotify-artist",
+        "spotify-editorial"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "sendiri": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574417117"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "diari-hatimu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574417117"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "satu-cinta-dua-jiwa": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574417117"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "tak-boleh-lupa": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574417117"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "gelora-asmara": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574417117"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "nian-di-hati": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574352019"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "seribu-kemanisan": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574352019"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "engkau-bagaikan-permata": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574352019"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "lelaki-warkah-seorang-anak": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574352019"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "kedamaian": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574352019"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "kau-kekasihku": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574352019",
+        "spotify-artist",
+        "spotify-editorial"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "balqis": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574380968",
+        "spotify-artist",
+        "spotify-editorial"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "joget-kasih-tak-sudah": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574380968"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "zapin-cinta-asmara": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574380968"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "canggai": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574380968"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "pawana-sampaikanlah-salam": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574380968"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "berpantun-kasih": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574380968"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "azimat-cinta": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574288251"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "bicara-manis-menghiris-kalbu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574288251"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "jalinan-cinta": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574288251"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "indah-percintaan": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574288251"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "percayalah": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574288251"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "lakaran-kehidupan": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574288251"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "nirmala": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1266167994"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "joget-senyum-memikat": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1266167994"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "panas-berteduh-gelap-bersuluh": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1266167994"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "kurik-kundi": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1266167994"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "badarsila": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1266167994"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "syair-kamelia": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1266167994"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "bukan-cinta-biasa": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-573421556",
+        "spotify-artist",
+        "spotify-editorial"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "debaran-cinta": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-573421556"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "untuk-selamanya": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-573421556"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "oda-bumi-anbia": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-573421556"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "janji-kasih": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-573421556"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "airmata-ibu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-573421556"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "dialah-di-hati": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574386535"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "pendirianku": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574386535"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "cinta-tak-berganti": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574386535"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "cahaya-seribu-liku": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574386535"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "lagu-rindu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574386535"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "pejam-matamu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-574386535"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "siti-situ-sana-sini": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1444110731"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "biarlah-rahsia": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1444110731",
+        "spotify-artist",
+        "spotify-editorial"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "destinasi-cinta": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1444110731",
+        "spotify-artist",
+        "spotify-editorial"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "cuba-untuk-mengerti": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1444110731"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "hidup-penuh-bicara": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1444110731"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "intrig-cinta": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1444110731"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "ku-mahu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442496646"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "melawan-kesepian": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442496646"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "mulanya-cinta": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442496646"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "tanpa-kalian": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442496646"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "wanita": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442496646"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "sekian-lama": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442496646"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "di-kayangan-kita": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442404651"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "bintang-malam": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442404651"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "cinta-ini": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442404651"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "seloka-budi": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442404651"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "senyum-minang-manis": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442404651"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "joget-menanti-kasih": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442404651"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "asma-ul-husna": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442374465"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "pintu-rindu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442374465"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "tahajjud-cinta": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442374465"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "ku-percaya-ada-cinta": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442374465"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "selawat": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1442374465"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "all-your-love": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-466626765"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "nobody-else": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-466626765"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "falling-in-love": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-466626765"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "fight-for-love": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-466626765"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "remember-you-feat-sean-kingston": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-466626765"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "aku": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1443611673"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "jaga-dia-untukku": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1443611673"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "mula-dan-akhir": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1443611673"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "terbaik-bagimu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1443611673"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "warna-dunia": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1443611673"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "lebih-indah": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1443611673",
+        "spotify-artist",
+        "spotify-editorial"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "bersandar-cinta": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1443196646"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "penghiburku-feat-joe-flizzow": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1443196646"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "ikrar-cinta": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1443196646"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "segala-perasaan": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1443196646"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "aku-bukan-malaikat": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1443196646"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "kisah-ku-inginkan": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1443196646"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "siapa-tak-mahu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1521304037"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "aku-bidadari-syurgamu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1521304037"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "tertulis-nama-kita": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1521304037"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "7-nasihat": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1521304037"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "kuasa-cintamu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1521304037"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "terang": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1521304037"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "anta-permana": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1521304037",
+        "spotify-artist",
+        "spotify-editorial"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "menyapa-dunia": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1694424145"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "tanpa-diri-mu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1694424145"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "sehebat-matahari-feat-nao-zumar": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1694424145"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "romansa-kita": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1694424145"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "teratas": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1694424145"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "menjaga-cintamu-original-soundtrack-from-anwar-the-untold-story": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1694424145"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "magis": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1694424145"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "kumbang-bunga": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1848810439"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "hati-yang-rindu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1848810439"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "rencong": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1848810439"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "pesanan-buat-diri": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1848810439"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "syurgaloka": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1848810439"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "kesuma": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1848810439"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "cenderamaya": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1848810439"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "aidilfitri-di-alaf-baru": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-663686792"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "nikmat-hari-raya": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-663686792"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "sesuci-lebaran": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-663686792"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "nazam-lebaran": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-664487155"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "bila-hari-raya-menjelma": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-664487155"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "seluruh-cinta": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1577780523",
+        "spotify-artist",
+        "spotify-editorial"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "dirgahayu": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1141036328"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "you-came-to-me-feat-dato-sri-siti-nurhaliza": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1516262101"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "dua-dunia-feat-siti-nurhaliza": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-723514639"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "muara-hati": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1445320455"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "galau": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1445306090"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "mikraj-cinta": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1445307750"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "milikmu-selamanya": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1444590180"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "bersandar-cinta-orchestral": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1316321668"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "ikhlas": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1464658934"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "cinta-tak-mungkin": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1734375730"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    },
+    "sejarah": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1779075735"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "menamakanmu-cinta": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1827253698"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "sesal": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1807913067"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "beraya-dengan-saya": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-1879717949"
+      ],
+      "notes": "Track identity, official destination and editorial mood profile reviewed for Pink FM."
+    },
+    "xiang-shui-yi-yang": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": [
+        "apple-artist",
+        "apple-release-6784597042"
+      ],
+      "notes": "Track identity and official destination verified; emotional profile awaits full human listening review."
+    }
+  },
+  "releaseCoverage": {
+    "siti-nurhaliza": {
+      "album": "Siti Nurhaliza",
+      "expectedTrackCount": 10,
+      "includedTrackIds": [
+        "jawapan-di-persimpangan",
+        "mahligai-asmara",
+        "jerat-percintaan",
+        "antara-waktu-dan-usia",
+        "sanggar-bayu",
+        "bicara-luka"
+      ],
+      "sourceIds": [
+        "apple-release-574251506"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "aku-cinta-padamu": {
+      "album": "Aku Cinta Padamu",
+      "expectedTrackCount": 11,
+      "includedTrackIds": [
+        "aku-cinta-padamu",
+        "wajah-kekasih",
+        "kesilapanku-keegoanmu",
+        "khayalan-cinta",
+        "usah-diragui",
+        "rindu-di-antara-kita"
+      ],
+      "sourceIds": [
+        "apple-release-574180393"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "cindai": {
+      "album": "Cindai",
+      "expectedTrackCount": 10,
+      "includedTrackIds": [
+        "cindai",
+        "laksamana-mati-dibunuh",
+        "janji",
+        "lela-manja",
+        "joget-pahang",
+        "joget-berhibur"
+      ],
+      "sourceIds": [
+        "apple-release-573126598"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "adiwarna": {
+      "album": "Adiwarna",
+      "expectedTrackCount": 10,
+      "includedTrackIds": [
+        "purnama-merindu",
+        "sendiri",
+        "diari-hatimu",
+        "satu-cinta-dua-jiwa",
+        "tak-boleh-lupa",
+        "gelora-asmara"
+      ],
+      "sourceIds": [
+        "apple-release-574417117"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "pancawarna": {
+      "album": "Pancawarna",
+      "expectedTrackCount": 10,
+      "includedTrackIds": [
+        "nian-di-hati",
+        "seribu-kemanisan",
+        "engkau-bagaikan-permata",
+        "lelaki-warkah-seorang-anak",
+        "kedamaian",
+        "kau-kekasihku"
+      ],
+      "sourceIds": [
+        "apple-release-574352019"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "sahmura": {
+      "album": "Sahmura",
+      "expectedTrackCount": 10,
+      "includedTrackIds": [
+        "balqis",
+        "joget-kasih-tak-sudah",
+        "zapin-cinta-asmara",
+        "canggai",
+        "pawana-sampaikanlah-salam",
+        "berpantun-kasih"
+      ],
+      "sourceIds": [
+        "apple-release-574380968"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "safa": {
+      "album": "Safa",
+      "expectedTrackCount": 10,
+      "includedTrackIds": [
+        "azimat-cinta",
+        "bicara-manis-menghiris-kalbu",
+        "jalinan-cinta",
+        "indah-percintaan",
+        "percayalah",
+        "lakaran-kehidupan"
+      ],
+      "sourceIds": [
+        "apple-release-574288251"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "sanggar-mustika": {
+      "album": "Sanggar Mustika",
+      "expectedTrackCount": 10,
+      "includedTrackIds": [
+        "nirmala",
+        "joget-senyum-memikat",
+        "panas-berteduh-gelap-bersuluh",
+        "kurik-kundi",
+        "badarsila",
+        "syair-kamelia"
+      ],
+      "sourceIds": [
+        "apple-release-1266167994"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "e-m-a-s": {
+      "album": "E.M.A.S",
+      "expectedTrackCount": 10,
+      "includedTrackIds": [
+        "bukan-cinta-biasa",
+        "debaran-cinta",
+        "untuk-selamanya",
+        "oda-bumi-anbia",
+        "janji-kasih",
+        "airmata-ibu"
+      ],
+      "sourceIds": [
+        "apple-release-573421556"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "prasasti-seni": {
+      "album": "Prasasti Seni",
+      "expectedTrackCount": 11,
+      "includedTrackIds": [
+        "dialah-di-hati",
+        "pendirianku",
+        "cinta-tak-berganti",
+        "cahaya-seribu-liku",
+        "lagu-rindu",
+        "pejam-matamu"
+      ],
+      "sourceIds": [
+        "apple-release-574386535"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "transkripsi": {
+      "album": "Transkripsi",
+      "expectedTrackCount": 13,
+      "includedTrackIds": [
+        "siti-situ-sana-sini",
+        "biarlah-rahsia",
+        "destinasi-cinta",
+        "cuba-untuk-mengerti",
+        "hidup-penuh-bicara",
+        "intrig-cinta"
+      ],
+      "sourceIds": [
+        "apple-release-1444110731"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "hadiah-daripada-hati": {
+      "album": "Hadiah Daripada Hati",
+      "expectedTrackCount": 11,
+      "includedTrackIds": [
+        "ku-mahu",
+        "melawan-kesepian",
+        "mulanya-cinta",
+        "tanpa-kalian",
+        "wanita",
+        "sekian-lama"
+      ],
+      "sourceIds": [
+        "apple-release-1442496646"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "lentera-timur": {
+      "album": "Lentera Timur",
+      "expectedTrackCount": 11,
+      "includedTrackIds": [
+        "di-kayangan-kita",
+        "bintang-malam",
+        "cinta-ini",
+        "seloka-budi",
+        "senyum-minang-manis",
+        "joget-menanti-kasih"
+      ],
+      "sourceIds": [
+        "apple-release-1442404651"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "tahajjud-cinta": {
+      "album": "Tahajjud Cinta",
+      "expectedTrackCount": 8,
+      "includedTrackIds": [
+        "asma-ul-husna",
+        "pintu-rindu",
+        "tahajjud-cinta",
+        "ku-percaya-ada-cinta",
+        "selawat"
+      ],
+      "sourceIds": [
+        "apple-release-1442374465"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "all-your-love": {
+      "album": "All Your Love",
+      "expectedTrackCount": 10,
+      "includedTrackIds": [
+        "all-your-love",
+        "nobody-else",
+        "falling-in-love",
+        "fight-for-love",
+        "remember-you-feat-sean-kingston"
+      ],
+      "sourceIds": [
+        "apple-release-466626765"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "fragmen": {
+      "album": "Fragmen",
+      "expectedTrackCount": 9,
+      "includedTrackIds": [
+        "aku",
+        "jaga-dia-untukku",
+        "mula-dan-akhir",
+        "terbaik-bagimu",
+        "warna-dunia",
+        "lebih-indah"
+      ],
+      "sourceIds": [
+        "apple-release-1443611673"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "simetrisiti": {
+      "album": "SimetriSiti",
+      "expectedTrackCount": 10,
+      "includedTrackIds": [
+        "bersandar-cinta",
+        "penghiburku-feat-joe-flizzow",
+        "ikrar-cinta",
+        "segala-perasaan",
+        "aku-bukan-malaikat",
+        "kisah-ku-inginkan"
+      ],
+      "sourceIds": [
+        "apple-release-1443196646"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "manifestasiti2020": {
+      "album": "ManifestaSITI2020",
+      "expectedTrackCount": 11,
+      "includedTrackIds": [
+        "siapa-tak-mahu",
+        "aku-bidadari-syurgamu",
+        "tertulis-nama-kita",
+        "7-nasihat",
+        "kuasa-cintamu",
+        "terang",
+        "anta-permana"
+      ],
+      "sourceIds": [
+        "apple-release-1521304037"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "sitism": {
+      "album": "SITISM",
+      "expectedTrackCount": 8,
+      "includedTrackIds": [
+        "menyapa-dunia",
+        "tanpa-diri-mu",
+        "sehebat-matahari-feat-nao-zumar",
+        "romansa-kita",
+        "teratas",
+        "menjaga-cintamu-original-soundtrack-from-anwar-the-untold-story",
+        "magis"
+      ],
+      "sourceIds": [
+        "apple-release-1694424145"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "gema-bumantara": {
+      "album": "Gema Bumantara",
+      "expectedTrackCount": 10,
+      "includedTrackIds": [
+        "kumbang-bunga",
+        "hati-yang-rindu",
+        "rencong",
+        "pesanan-buat-diri",
+        "syurgaloka",
+        "kesuma",
+        "cenderamaya"
+      ],
+      "sourceIds": [
+        "apple-release-1848810439"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "gema-hari-raya": {
+      "album": "Gema Hari Raya",
+      "expectedTrackCount": 14,
+      "includedTrackIds": [
+        "aidilfitri-di-alaf-baru",
+        "nikmat-hari-raya",
+        "sesuci-lebaran"
+      ],
+      "sourceIds": [
+        "apple-release-663686792"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "salam-aidilfitri": {
+      "album": "Salam Aidilfitri",
+      "expectedTrackCount": 12,
+      "includedTrackIds": [
+        "nazam-lebaran",
+        "bila-hari-raya-menjelma"
+      ],
+      "sourceIds": [
+        "apple-release-664487155"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "seluruh-cinta-single": {
+      "album": "Seluruh Cinta - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "seluruh-cinta"
+      ],
+      "sourceIds": [
+        "apple-release-1577780523"
+      ],
+      "notes": "Complete single."
+    },
+    "dirgahayu-single": {
+      "album": "Dirgahayu - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "dirgahayu"
+      ],
+      "sourceIds": [
+        "apple-release-1141036328"
+      ],
+      "notes": "Complete single."
+    },
+    "you-came-to-me-feat-dato-sri-siti-nurhaliza-single": {
+      "album": "You Came to Me (feat. Dato' Sri Siti Nurhaliza) - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "you-came-to-me-feat-dato-sri-siti-nurhaliza"
+      ],
+      "sourceIds": [
+        "apple-release-1516262101"
+      ],
+      "notes": "Complete single."
+    },
+    "dua-dunia-feat-siti-nurhaliza-single": {
+      "album": "Dua Dunia (feat. Siti Nurhaliza) - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "dua-dunia-feat-siti-nurhaliza"
+      ],
+      "sourceIds": [
+        "apple-release-723514639"
+      ],
+      "notes": "Complete single."
+    },
+    "muara-hati-single": {
+      "album": "Muara Hati - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "muara-hati"
+      ],
+      "sourceIds": [
+        "apple-release-1445320455"
+      ],
+      "notes": "Complete single."
+    },
+    "galau-single": {
+      "album": "Galau - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "galau"
+      ],
+      "sourceIds": [
+        "apple-release-1445306090"
+      ],
+      "notes": "Complete single."
+    },
+    "mikraj-cinta-single": {
+      "album": "Mikraj Cinta - Single",
+      "expectedTrackCount": 2,
+      "includedTrackIds": [
+        "mikraj-cinta"
+      ],
+      "sourceIds": [
+        "apple-release-1445307750"
+      ],
+      "notes": "Selected representation; omitted tracks remain visible in the dated source snapshot for future review."
+    },
+    "milikmu-selamanya-single": {
+      "album": "Milikmu Selamanya - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "milikmu-selamanya"
+      ],
+      "sourceIds": [
+        "apple-release-1444590180"
+      ],
+      "notes": "Complete single."
+    },
+    "bersandar-cinta-feat-dato-sri-siti-nurhaliza-from-aubrey-suwito-and-friends-with-the-malaysian-philharmonic-orchestra-single": {
+      "album": "Bersandar Cinta (feat. Dato' Sri Siti Nurhaliza) [From \"Aubrey Suwito and Friends with the Malaysian Philharmonic Orchestra\"] - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "bersandar-cinta-orchestral"
+      ],
+      "sourceIds": [
+        "apple-release-1316321668"
+      ],
+      "notes": "Complete single."
+    },
+    "ikhlas-single": {
+      "album": "Ikhlas - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "ikhlas"
+      ],
+      "sourceIds": [
+        "apple-release-1464658934"
+      ],
+      "notes": "Complete single."
+    },
+    "cinta-tak-mungkin-single": {
+      "album": "Cinta Tak Mungkin - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "cinta-tak-mungkin"
+      ],
+      "sourceIds": [
+        "apple-release-1734375730"
+      ],
+      "notes": "Complete single."
+    },
+    "sejarah-single": {
+      "album": "Sejarah - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "sejarah"
+      ],
+      "sourceIds": [
+        "apple-release-1779075735"
+      ],
+      "notes": "Complete single."
+    },
+    "menamakanmu-cinta-single": {
+      "album": "Menamakanmu Cinta - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "menamakanmu-cinta"
+      ],
+      "sourceIds": [
+        "apple-release-1827253698"
+      ],
+      "notes": "Complete single."
+    },
+    "sesal-single": {
+      "album": "SESAL - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "sesal"
+      ],
+      "sourceIds": [
+        "apple-release-1807913067"
+      ],
+      "notes": "Complete single."
+    },
+    "beraya-dengan-saya-single": {
+      "album": "Beraya Dengan Saya - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "beraya-dengan-saya"
+      ],
+      "sourceIds": [
+        "apple-release-1879717949"
+      ],
+      "notes": "Complete single."
+    },
+    "single": {
+      "album": "像水一樣 - Single",
+      "expectedTrackCount": 1,
+      "includedTrackIds": [
+        "xiang-shui-yi-yang"
+      ],
+      "sourceIds": [
+        "apple-release-6784597042"
+      ],
+      "notes": "Complete single."
+    }
+  }
+}

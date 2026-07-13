@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "loading": { "heading": "Tuning your frequency", "messages": ["Warming the valves…", "Finding the clearest signal…", "Setting the mood dial…"] },
+  "welcome": { "preparedFor": "A station prepared for one listener", "tuneIn": "Tune in", "frequencyAriaLabel": "Decorative frequency dial" },
+  "mood": { "heading": "How would you like to feel?", "intro": "Pick an emotional destination. You can fine-tune it once the music starts.", "askAssistant": "Tell WisseBot instead" },
+  "radio": { "nowTuned": "Now tuned", "matchLabel": "match strength", "playOn": "Listen on", "noLink": "No official listening destination is configured for this track yet.", "another": "Another choice", "energyLabel": "Energy tuning" },
+  "feedback": { "love": "Love this", "notToday": "Not today", "moreLikeThis": "More like this", "lessIntense": "Less intense", "moreEnergetic": "More energetic", "saved": "Preference saved on this device." },
+  "bot": {
+    "greeting": "Tell me how you want the music to feel. You can be specific—for example, ‘romantic but cheerful’, ‘tenang tapi tak mengantuk’, or ‘something like the last song with more energy’.",
+    "placeholder": "Tenang tapi tak mengantuk…",
+    "send": "Tune",
+    "understoodPrefix": "I’m tuning for",
+    "clarification": "Give me a mood, activity, era, title or adjustment and I’ll ask a focused question if the signal is ambiguous.",
+    "semanticAvailable": "Enhanced understanding can run locally in this browser.",
+    "semanticLoading": "Preparing enhanced local understanding…",
+    "semanticReady": "Enhanced local understanding is ready.",
+    "semanticUnavailable": "Enhanced understanding is unavailable; lightweight mode remains ready.",
+    "lightweightMode": "Continue with lightweight mode",
+    "enableSemantic": "Enable enhanced understanding",
+    "newConversation": "Start a new request",
+    "whyRecommendation": "Why this recommendation?",
+    "whatUnderstood": "What did you understand?",
+    "localProcessing": "Requests are interpreted locally and grounded in this catalogue.",
+    "suggestions": [
+      "Romantic but cheerful",
+      "Tenang tapi tak mengantuk",
+      "Something like the last song with more energy",
+      "Nak lagu tradisional Siti",
+      "A modern hidden gem"
+    ]
+  },
+  "library": { "heading": "Your listening shelf", "intro": "A small local record of what has worked for you.", "loved": "Loved tracks", "recent": "Recent frequencies", "insights": "Your dial", "empty": "Nothing here yet. Tune the radio and this shelf will begin to fill." },
+  "settings": { "heading": "Station settings", "privacyHeading": "On-device privacy", "installHeading": "Install Pink FM", "installInstructions": "Use your browser’s Add to Home Screen or Install app option. Availability depends on your browser." },
+  "errors": { "profileMissing": "That gift frequency could not be found.", "profileInvalid": "This gift profile needs a little retuning before it can open.", "retry": "Try again" },
+  "stationIds": ["This is Pink FM, tuned around you.", "A little pink signal, tuned just for you.", "Siti on the dial; your mood in the lead."]
+}

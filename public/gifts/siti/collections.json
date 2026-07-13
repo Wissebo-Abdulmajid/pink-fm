@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "collections": [
+    {
+      "id": "siti-essentials",
+      "label": "Siti Essentials",
+      "description": "Recognised songs spanning the defining colours of Siti's catalogue.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["siti-nurhaliza"],
+      "semanticDescription": "Recognised Siti Nurhaliza classics, signature songs and accessible starting points across eras.",
+      "rankingWeight": 0.22
+    },
+    {
+      "id": "romantic-siti",
+      "label": "Romantic Siti",
+      "description": "Tender, sweeping and warmly expressive love songs.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["siti-nurhaliza"],
+      "semanticDescription": "Romantic warmth, graceful love songs, date-night listening and emotionally expressive ballads.",
+      "rankingWeight": 0.2
+    },
+    {
+      "id": "traditional-nusantara",
+      "label": "Traditional and Nusantara",
+      "description": "Traditional forms, regional colours and rhythm-led repertoire.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["siti-nurhaliza"],
+      "semanticDescription": "Malay traditional, ethnic creative, Nusantara, folk-rooted and rhythm-led repertoire.",
+      "rankingWeight": 0.22
+    },
+    {
+      "id": "elegant-evenings",
+      "label": "Elegant Evenings",
+      "description": "Polished, poised music for an unhurried evening.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["siti-nurhaliza"],
+      "semanticDescription": "Elegant and polished evening listening with graceful vocals, calm atmosphere and refined arrangements.",
+      "rankingWeight": 0.18
+    },
+    {
+      "id": "powerful-vocals",
+      "label": "Powerful Vocals",
+      "description": "Commanding performances with dramatic or confident lift.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["siti-nurhaliza"],
+      "semanticDescription": "Powerful vocal performances, emotional crescendos, dramatic intensity and confident presence.",
+      "rankingWeight": 0.2
+    },
+    {
+      "id": "comfort-calm",
+      "label": "Comfort and Calm",
+      "description": "Gentle choices that settle the room without fading away.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["siti-nurhaliza"],
+      "semanticDescription": "Calm, comforting, peaceful and reflective songs with gentle but awake energy.",
+      "rankingWeight": 0.2
+    },
+    {
+      "id": "joyful-upbeat",
+      "label": "Joyful and Upbeat",
+      "description": "Bright, lively choices for movement and good company.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["siti-nurhaliza"],
+      "semanticDescription": "Happy, cheerful, upbeat, lively and energetic music for cooking, driving and celebration.",
+      "rankingWeight": 0.2
+    },
+    {
+      "id": "nostalgic-classics",
+      "label": "Nostalgic Classics",
+      "description": "Familiar signals from the early and signature eras.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["siti-nurhaliza"],
+      "semanticDescription": "Nostalgic Siti classics, familiar favourites and songs associated with earlier catalogue eras.",
+      "rankingWeight": 0.2
+    },
+    {
+      "id": "modern-siti",
+      "label": "Modern Siti",
+      "description": "Contemporary productions and recent releases.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["siti-nurhaliza"],
+      "semanticDescription": "Modern and recent Siti Nurhaliza releases with contemporary pop production and current collaborations.",
+      "rankingWeight": 0.18
+    },
+    {
+      "id": "duets-collaborations",
+      "label": "Duets and Collaborations",
+      "description": "Shared performances with clearly credited musical partners.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["siti-nurhaliza"],
+      "semanticDescription": "Duets, featured artists and collaborative recordings led by or prominently featuring Siti Nurhaliza.",
+      "rankingWeight": 0.2
+    },
+    {
+      "id": "festive-frequency",
+      "label": "Festive Frequency",
+      "description": "Selected celebratory and Hari Raya repertoire.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["siti-nurhaliza"],
+      "semanticDescription": "Festive, celebratory and Hari Raya music with joyful communal energy.",
+      "rankingWeight": 0.16
+    },
+    {
+      "id": "hidden-gems",
+      "label": "Hidden Gems",
+      "description": "Deeper catalogue choices for discovery without losing quality.",
+      "active": true,
+      "kind": "editorial",
+      "artistIds": ["siti-nurhaliza"],
+      "semanticDescription": "Less familiar deep cuts and discovery choices from across Siti Nurhaliza's verified catalogue.",
+      "rankingWeight": 0.18
+    },
+    {
+      "id": "malaysian-legends",
+      "label": "Malaysian Legends",
+      "description": "An optional future collection for separately verified Malaysian artists.",
+      "active": false,
+      "kind": "secondary-artist",
+      "artistIds": [],
+      "semanticDescription": "Disabled secondary collection reserved for verified Malaysian artists beyond the primary Siti station.",
+      "rankingWeight": 0.08
+    }
+  ]
+}

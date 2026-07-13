@@ -1,0 +1,1871 @@
+{
+  "schemaVersion": 1,
+  "language": "mixed",
+  "utterances": [
+    {
+      "id": "mixed-001",
+      "utterance": "I want calm dan tenang",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "mixed-002",
+      "utterance": "I want happy sikit",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "mixed-003",
+      "utterance": "I want romantic dan manis",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-004",
+      "utterance": "I want confident dan yakin",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "mixed-005",
+      "utterance": "I want upbeat dan rancak",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "mixed-006",
+      "utterance": "I want nostalgic zaman dulu",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-007",
+      "utterance": "I want elegant dan anggun",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "mixed-008",
+      "utterance": "I want comforting dan nyaman",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "mixed-009",
+      "utterance": "I want dramatic dan emosi",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-010",
+      "utterance": "I want peaceful sikit",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "mixed-011",
+      "utterance": "I want cheerful dan ceria",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "mixed-012",
+      "utterance": "I want love song yang mesra",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-013",
+      "utterance": "I want bold tapi elegan",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "mixed-014",
+      "utterance": "I want more energy sikit",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "mixed-015",
+      "utterance": "I want classic Siti lama",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-016",
+      "utterance": "I want classy tapi lembut",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "mixed-017",
+      "utterance": "I want warm untuk hati",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "mixed-018",
+      "utterance": "I want intense tapi anggun",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-019",
+      "utterance": "I want soft dan damai",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "mixed-020",
+      "utterance": "I want bright tapi santai",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "mixed-021",
+      "utterance": "I want romantik but warm",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-022",
+      "utterance": "I want powerful vocal yang kuat",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "mixed-023",
+      "utterance": "I want lively dan bertenaga",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "mixed-024",
+      "utterance": "I want throwback penuh kenangan",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-025",
+      "utterance": "I want refined dan berkelas",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "mixed-026",
+      "utterance": "I want cozy dan menenangkan",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "mixed-027",
+      "utterance": "I want grand dan mendalam",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-028",
+      "utterance": "saya nak something calm dan tenang",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "mixed-029",
+      "utterance": "saya nak something happy sikit",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "mixed-030",
+      "utterance": "saya nak something romantic dan manis",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-031",
+      "utterance": "saya nak something confident dan yakin",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "mixed-032",
+      "utterance": "saya nak something upbeat dan rancak",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "mixed-033",
+      "utterance": "saya nak something nostalgic zaman dulu",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-034",
+      "utterance": "saya nak something elegant dan anggun",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "mixed-035",
+      "utterance": "saya nak something comforting dan nyaman",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "mixed-036",
+      "utterance": "saya nak something dramatic dan emosi",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-037",
+      "utterance": "saya nak something peaceful sikit",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "mixed-038",
+      "utterance": "saya nak something cheerful dan ceria",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "mixed-039",
+      "utterance": "saya nak something love song yang mesra",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-040",
+      "utterance": "saya nak something bold tapi elegan",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "mixed-041",
+      "utterance": "saya nak something more energy sikit",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "mixed-042",
+      "utterance": "saya nak something classic Siti lama",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-043",
+      "utterance": "saya nak something classy tapi lembut",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "mixed-044",
+      "utterance": "saya nak something warm untuk hati",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "mixed-045",
+      "utterance": "saya nak something intense tapi anggun",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-046",
+      "utterance": "saya nak something soft dan damai",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "mixed-047",
+      "utterance": "saya nak something bright tapi santai",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "mixed-048",
+      "utterance": "saya nak something romantik but warm",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-049",
+      "utterance": "saya nak something powerful vocal yang kuat",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "mixed-050",
+      "utterance": "saya nak something lively dan bertenaga",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "mixed-051",
+      "utterance": "saya nak something throwback penuh kenangan",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-052",
+      "utterance": "something calm dan tenang tapi cheerful dan ceria",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "mixed-053",
+      "utterance": "nak cheerful dan ceria but also romantik but warm",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-054",
+      "utterance": "mix romantik but warm dengan confident dan yakin",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "mixed-055",
+      "utterance": "something confident dan yakin tapi more energy sikit",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "mixed-056",
+      "utterance": "nak more energy sikit but also throwback penuh kenangan",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-057",
+      "utterance": "mix throwback penuh kenangan dengan elegant dan anggun",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "mixed-058",
+      "utterance": "something elegant dan anggun tapi warm untuk hati",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "mixed-059",
+      "utterance": "nak warm untuk hati but also grand dan mendalam",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-060",
+      "utterance": "mix grand dan mendalam dengan calm dan tenang",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "mixed-061",
+      "utterance": "something calm dan tenang tapi love song yang mesra",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-062",
+      "utterance": "nak cheerful dan ceria but also powerful vocal yang kuat",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "mixed-063",
+      "utterance": "mix romantik but warm dengan upbeat dan rancak",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "mixed-064",
+      "utterance": "something confident dan yakin tapi classic Siti lama",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-065",
+      "utterance": "nak more energy sikit but also refined dan berkelas",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "mixed-066",
+      "utterance": "mix throwback penuh kenangan dengan comforting dan nyaman",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "mixed-067",
+      "utterance": "something elegant dan anggun tapi intense tapi anggun",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-068",
+      "utterance": "nak warm untuk hati but also soft dan damai",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "mixed-069",
+      "utterance": "mix grand dan mendalam dengan happy sikit",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "mixed-070",
+      "utterance": "something calm dan tenang tapi bold tapi elegan",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "mixed-071",
+      "utterance": "nak cheerful dan ceria but also lively dan bertenaga",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "mixed-072",
+      "utterance": "mix romantik but warm dengan nostalgic zaman dulu",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-073",
+      "utterance": "something confident dan yakin tapi classy tapi lembut",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "mixed-074",
+      "utterance": "nak more energy sikit but also cozy dan menenangkan",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "mixed-075",
+      "utterance": "mix throwback penuh kenangan dengan dramatic dan emosi",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-076",
+      "utterance": "something elegant dan anggun tapi peaceful sikit",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "mixed-077",
+      "utterance": "nak warm untuk hati but also bright tapi santai",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "mixed-078",
+      "utterance": "mix grand dan mendalam dengan romantic dan manis",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-079",
+      "utterance": "something calm dan tenang tapi more energy sikit",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "mixed-080",
+      "utterance": "nak cheerful dan ceria but also throwback penuh kenangan",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-081",
+      "utterance": "mix romantik but warm dengan elegant dan anggun",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "mixed-082",
+      "utterance": "something confident dan yakin tapi warm untuk hati",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "mixed-083",
+      "utterance": "nak more energy sikit but also grand dan mendalam",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-084",
+      "utterance": "mix throwback penuh kenangan dengan calm dan tenang",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "mixed-085",
+      "utterance": "something elegant dan anggun tapi cheerful dan ceria",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "mixed-086",
+      "utterance": "nak warm untuk hati but also romantik but warm",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "mixed-087",
+      "utterance": "mix grand dan mendalam dengan confident dan yakin",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "mixed-088",
+      "utterance": "music untuk masak",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cooking"
+      }
+    },
+    {
+      "id": "mixed-089",
+      "utterance": "lagu while cleaning yang cheerful dan ceria",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cleaning"
+      }
+    },
+    {
+      "id": "mixed-090",
+      "utterance": "something masa driving",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "driving"
+      }
+    },
+    {
+      "id": "mixed-091",
+      "utterance": "music untuk buat kerja yang happy sikit",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      }
+    },
+    {
+      "id": "mixed-092",
+      "utterance": "lagu untuk relaxing",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "relaxing"
+      }
+    },
+    {
+      "id": "mixed-093",
+      "utterance": "something for makan malam yang bright tapi santai",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "dinner"
+      }
+    },
+    {
+      "id": "mixed-094",
+      "utterance": "music untuk majlis",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "celebration"
+      }
+    },
+    {
+      "id": "mixed-095",
+      "utterance": "lagu for reflecting yang cheerful dan ceria",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "reflecting"
+      }
+    },
+    {
+      "id": "mixed-096",
+      "utterance": "music untuk masak",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cooking"
+      }
+    },
+    {
+      "id": "mixed-097",
+      "utterance": "lagu while cleaning yang happy sikit",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cleaning"
+      }
+    },
+    {
+      "id": "mixed-098",
+      "utterance": "something masa driving",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "driving"
+      }
+    },
+    {
+      "id": "mixed-099",
+      "utterance": "music untuk buat kerja yang bright tapi santai",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      }
+    },
+    {
+      "id": "mixed-100",
+      "utterance": "lagu untuk relaxing",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "relaxing"
+      }
+    },
+    {
+      "id": "mixed-101",
+      "utterance": "something for makan malam yang cheerful dan ceria",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "dinner"
+      }
+    },
+    {
+      "id": "mixed-102",
+      "utterance": "music untuk majlis",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "celebration"
+      }
+    },
+    {
+      "id": "mixed-103",
+      "utterance": "lagu for reflecting yang happy sikit",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "reflecting"
+      }
+    },
+    {
+      "id": "mixed-104",
+      "utterance": "music untuk masak",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cooking"
+      }
+    },
+    {
+      "id": "mixed-105",
+      "utterance": "lagu while cleaning yang bright tapi santai",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cleaning"
+      }
+    },
+    {
+      "id": "mixed-106",
+      "utterance": "something masa driving",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "driving"
+      }
+    },
+    {
+      "id": "mixed-107",
+      "utterance": "music untuk buat kerja yang cheerful dan ceria",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      }
+    },
+    {
+      "id": "mixed-108",
+      "utterance": "lagu untuk relaxing",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "relaxing"
+      }
+    },
+    {
+      "id": "mixed-109",
+      "utterance": "something for makan malam yang happy sikit",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "dinner"
+      }
+    },
+    {
+      "id": "mixed-110",
+      "utterance": "something untuk pagi",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "morning"
+      }
+    },
+    {
+      "id": "mixed-111",
+      "utterance": "music waktu siang please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "daytime"
+      }
+    },
+    {
+      "id": "mixed-112",
+      "utterance": "lagu for the evening",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "evening"
+      }
+    },
+    {
+      "id": "mixed-113",
+      "utterance": "something malam nanti please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "night"
+      }
+    },
+    {
+      "id": "mixed-114",
+      "utterance": "something untuk pagi",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "morning"
+      }
+    },
+    {
+      "id": "mixed-115",
+      "utterance": "music waktu siang please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "daytime"
+      }
+    },
+    {
+      "id": "mixed-116",
+      "utterance": "lagu for the evening",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "evening"
+      }
+    },
+    {
+      "id": "mixed-117",
+      "utterance": "something malam nanti please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "night"
+      }
+    },
+    {
+      "id": "mixed-118",
+      "utterance": "something untuk pagi",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "morning"
+      }
+    },
+    {
+      "id": "mixed-119",
+      "utterance": "music waktu siang please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "daytime"
+      }
+    },
+    {
+      "id": "mixed-120",
+      "utterance": "lagu for the evening",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "evening"
+      }
+    },
+    {
+      "id": "mixed-121",
+      "utterance": "yang macam tadi tapi more upbeat",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      }
+    },
+    {
+      "id": "mixed-122",
+      "utterance": "same mood tapi less intense",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "less-intense"
+      }
+    },
+    {
+      "id": "mixed-123",
+      "utterance": "more like tadi",
+      "category": "intent",
+      "expected": {
+        "kind": "clarification"
+      }
+    },
+    {
+      "id": "mixed-124",
+      "utterance": "something lain sikit",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "different"
+      }
+    },
+    {
+      "id": "mixed-125",
+      "utterance": "familiar lagu favourite",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "familiar"
+      }
+    },
+    {
+      "id": "mixed-126",
+      "utterance": "something saya tak biasa pilih",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "mixed-127",
+      "utterance": "give me Siti lama",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "older"
+      }
+    },
+    {
+      "id": "mixed-128",
+      "utterance": "nak modern release",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "modern"
+      }
+    },
+    {
+      "id": "mixed-129",
+      "utterance": "traditional vibe please",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "traditional"
+        ]
+      }
+    },
+    {
+      "id": "mixed-130",
+      "utterance": "bagi duet please",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "duet"
+        ]
+      }
+    },
+    {
+      "id": "mixed-131",
+      "utterance": "surprise saya please",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "mixed-132",
+      "utterance": "romantic tapi jangan sedih",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ],
+        "excludedMoods": [
+          "sad"
+        ]
+      }
+    },
+    {
+      "id": "mixed-133",
+      "utterance": "yang macam tadi tapi more upbeat 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      }
+    },
+    {
+      "id": "mixed-134",
+      "utterance": "same mood tapi less intense 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "less-intense"
+      }
+    },
+    {
+      "id": "mixed-135",
+      "utterance": "more like tadi 2",
+      "category": "intent",
+      "expected": {
+        "kind": "clarification"
+      }
+    },
+    {
+      "id": "mixed-136",
+      "utterance": "something lain sikit 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "different"
+      }
+    },
+    {
+      "id": "mixed-137",
+      "utterance": "familiar lagu favourite 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "familiar"
+      }
+    },
+    {
+      "id": "mixed-138",
+      "utterance": "something saya tak biasa pilih 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "mixed-139",
+      "utterance": "give me Siti lama 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "older"
+      }
+    },
+    {
+      "id": "mixed-140",
+      "utterance": "nak modern release 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "modern"
+      }
+    },
+    {
+      "id": "mixed-141",
+      "utterance": "traditional vibe please 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "traditional"
+        ]
+      }
+    },
+    {
+      "id": "mixed-142",
+      "utterance": "bagi duet please 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "duet"
+        ]
+      }
+    },
+    {
+      "id": "mixed-143",
+      "utterance": "surprise saya please 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "mixed-144",
+      "utterance": "romantic tapi jangan sedih 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ],
+        "excludedMoods": [
+          "sad"
+        ]
+      }
+    },
+    {
+      "id": "mixed-145",
+      "utterance": "yang macam tadi tapi more upbeat 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      }
+    },
+    {
+      "id": "mixed-146",
+      "utterance": "same mood tapi less intense 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "less-intense"
+      }
+    },
+    {
+      "id": "mixed-147",
+      "utterance": "more like tadi 3",
+      "category": "intent",
+      "expected": {
+        "kind": "clarification"
+      }
+    },
+    {
+      "id": "mixed-148",
+      "utterance": "something lain sikit 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "different"
+      }
+    },
+    {
+      "id": "mixed-149",
+      "utterance": "familiar lagu favourite 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "familiar"
+      }
+    },
+    {
+      "id": "mixed-150",
+      "utterance": "something saya tak biasa pilih 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "mixed-151",
+      "utterance": "nak powerful song 0",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-152",
+      "utterance": "something deep sikit 1",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-153",
+      "utterance": "nak powerful song 2",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-154",
+      "utterance": "something deep sikit 3",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-155",
+      "utterance": "nak powerful song 4",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-156",
+      "utterance": "something deep sikit 5",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-157",
+      "utterance": "nak powerful song 6",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-158",
+      "utterance": "something deep sikit 7",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-159",
+      "utterance": "nak powerful song 8",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-160",
+      "utterance": "something deep sikit 9",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-161",
+      "utterance": "nak powerful song 10 11",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-162",
+      "utterance": "something deep sikit 11 12",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-163",
+      "utterance": "nak powerful song 12 13",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-164",
+      "utterance": "something deep sikit 13 14",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-165",
+      "utterance": "nak powerful song 14 15",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-166",
+      "utterance": "something deep sikit 15 16",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-167",
+      "utterance": "nak powerful song 16 17",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-168",
+      "utterance": "something deep sikit 17 18",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-169",
+      "utterance": "nak powerful song 18 19",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-170",
+      "utterance": "something deep sikit 19 20",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-171",
+      "utterance": "nak powerful song 20 21",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-172",
+      "utterance": "something deep sikit 21 22",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-173",
+      "utterance": "nak powerful song 22 23",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-174",
+      "utterance": "something deep sikit 23 24",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-175",
+      "utterance": "nak powerful song 24 25",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "mixed-entity-01",
+      "utterance": "Please bagi Cindai",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "cindai"
+      }
+    },
+    {
+      "id": "mixed-entity-02",
+      "utterance": "Please bagi Purnama Merindu",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "purnama-merindu"
+      }
+    },
+    {
+      "id": "mixed-entity-03",
+      "utterance": "Please bagi Bukan Cinta Biasa",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "bukan-cinta-biasa"
+      }
+    },
+    {
+      "id": "mixed-entity-04",
+      "utterance": "Please bagi Aku Cinta Padamu",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "aku-cinta-padamu"
+      }
+    },
+    {
+      "id": "mixed-entity-05",
+      "utterance": "Please bagi Jerat Percintaan",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "jerat-percintaan"
+      }
+    },
+    {
+      "id": "mixed-entity-06",
+      "utterance": "Please bagi Sejarah",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "sejarah"
+      }
+    },
+    {
+      "id": "mixed-entity-07",
+      "utterance": "Please bagi Sesal",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "sesal"
+      }
+    },
+    {
+      "id": "mixed-entity-08",
+      "utterance": "Please bagi Magis",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "magis"
+      }
+    },
+    {
+      "id": "mixed-entity-09",
+      "utterance": "Please bagi Wanita",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "wanita"
+      }
+    },
+    {
+      "id": "mixed-entity-10",
+      "utterance": "Please bagi Terang",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "terang"
+      }
+    }
+  ]
+}

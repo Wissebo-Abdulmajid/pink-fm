@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "lastFullAudit": "2026-07-13",
+  "sources": [
+    {
+      "id": "template-review-placeholder",
+      "type": "template-placeholder",
+      "provider": "Replace with an official catalogue source",
+      "url": "https://example.com/replace-with-an-official-catalogue-source",
+      "checkedAt": "2026-07-13",
+      "notes": "Template-only placeholder. This is not music provenance and must be replaced before publication."
+    }
+  ],
+  "trackVerification": {
+    "replace-me-demo-signal": {
+      "verifiedAt": "2026-07-13",
+      "sourceIds": ["template-review-placeholder"],
+      "notes": "Fictional template record; not a verified artist track."
+    }
+  },
+  "releaseCoverage": {}
+}

@@ -1,0 +1,215 @@
+{
+  "generatedAt": "2026-07-13T14:27:15.879Z",
+  "slug": "siti",
+  "totals": {
+    "unique": 142,
+    "active": 142,
+    "recommendationReady": 105,
+    "reviewed": 105,
+    "verifiedMetadata": 37,
+    "provisional": 0,
+    "albums": 38
+  },
+  "byEra": {
+    "1990s classics": 41,
+    "2000s evolution": 37,
+    "2010s contemporary": 26,
+    "2020s modern": 14,
+    "late 2010s": 11,
+    "recent releases": 13
+  },
+  "byAlbum": {
+    "Cindai": 6,
+    "Adiwarna": 6,
+    "E.M.A.S": 6,
+    "Aku Cinta Padamu": 6,
+    "Seluruh Cinta - Single": 1,
+    "Transkripsi": 6,
+    "ManifestaSITI2020": 7,
+    "Fragmen": 6,
+    "Pancawarna": 6,
+    "Sahmura": 6,
+    "Siti Nurhaliza": 6,
+    "Safa": 6,
+    "Sanggar Mustika": 6,
+    "Prasasti Seni": 6,
+    "Hadiah Daripada Hati": 6,
+    "Lentera Timur": 6,
+    "Tahajjud Cinta": 5,
+    "All Your Love": 5,
+    "SimetriSiti": 6,
+    "SITISM": 7,
+    "Gema Bumantara": 7,
+    "Gema Hari Raya": 3,
+    "Salam Aidilfitri": 2,
+    "Dirgahayu - Single": 1,
+    "You Came to Me (feat. Dato' Sri Siti Nurhaliza) - Single": 1,
+    "Dua Dunia (feat. Siti Nurhaliza) - Single": 1,
+    "Muara Hati - Single": 1,
+    "Galau - Single": 1,
+    "Mikraj Cinta - Single": 1,
+    "Milikmu Selamanya - Single": 1,
+    "Bersandar Cinta (feat. Dato' Sri Siti Nurhaliza) [From \"Aubrey Suwito and Friends with the Malaysian Philharmonic Orchestra\"] - Single": 1,
+    "Ikhlas - Single": 1,
+    "Cinta Tak Mungkin - Single": 1,
+    "Sejarah - Single": 1,
+    "Menamakanmu Cinta - Single": 1,
+    "SESAL - Single": 1,
+    "Beraya Dengan Saya - Single": 1,
+    "像水一樣 - Single": 1
+  },
+  "byVersionType": {
+    "traditional": 27,
+    "studio": 89,
+    "duet": 11,
+    "festive": 6,
+    "collaboration": 4,
+    "single": 5
+  },
+  "byCollection": {
+    "elegant-evenings": 48,
+    "nostalgic-classics": 78,
+    "powerful-vocals": 51,
+    "siti-essentials": 26,
+    "traditional-nusantara": 27,
+    "romantic-siti": 62,
+    "duets-collaborations": 18,
+    "joyful-upbeat": 34,
+    "modern-siti": 35,
+    "hidden-gems": 37,
+    "comfort-calm": 17,
+    "festive-frequency": 6
+  },
+  "byPrimaryMood": {
+    "nostalgic": 11,
+    "romantic": 39,
+    "elegant": 28,
+    "happy": 8,
+    "confident": 15,
+    "dramatic": 17,
+    "energised": 10,
+    "comforted": 10,
+    "peaceful": 4
+  },
+  "missingLinks": [],
+  "missingProvenance": [],
+  "likelyNeverRanks": [],
+  "remoteLinkWarnings": [],
+  "problems": [
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Siti Nurhaliza includes 6 of 10 source tracks (siti-nurhaliza)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Aku Cinta Padamu includes 6 of 11 source tracks (aku-cinta-padamu)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Cindai includes 6 of 10 source tracks (cindai)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Adiwarna includes 6 of 10 source tracks (adiwarna)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Pancawarna includes 6 of 10 source tracks (pancawarna)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Sahmura includes 6 of 10 source tracks (sahmura)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Safa includes 6 of 10 source tracks (safa)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Sanggar Mustika includes 6 of 10 source tracks (sanggar-mustika)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "E.M.A.S includes 6 of 10 source tracks (e-m-a-s)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Prasasti Seni includes 6 of 11 source tracks (prasasti-seni)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Transkripsi includes 6 of 13 source tracks (transkripsi)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Hadiah Daripada Hati includes 6 of 11 source tracks (hadiah-daripada-hati)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Lentera Timur includes 6 of 11 source tracks (lentera-timur)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Tahajjud Cinta includes 5 of 8 source tracks (tahajjud-cinta)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "All Your Love includes 5 of 10 source tracks (all-your-love)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Fragmen includes 6 of 9 source tracks (fragmen)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "SimetriSiti includes 6 of 10 source tracks (simetrisiti)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "ManifestaSITI2020 includes 7 of 11 source tracks (manifestasiti2020)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "SITISM includes 7 of 8 source tracks (sitism)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Gema Bumantara includes 7 of 10 source tracks (gema-bumantara)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Gema Hari Raya includes 3 of 14 source tracks (gema-hari-raya)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Salam Aidilfitri includes 2 of 12 source tracks (salam-aidilfitri)."
+    },
+    {
+      "level": "warning",
+      "code": "partial-album-coverage",
+      "message": "Mikraj Cinta - Single includes 1 of 2 source tracks (mikraj-cinta-single)."
+    }
+  ]
+}

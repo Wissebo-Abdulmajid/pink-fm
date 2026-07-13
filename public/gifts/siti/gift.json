@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "slug": "siti",
+  "locale": "en",
+  "station": {
+    "name": "Pink FM",
+    "tagline": "Your personal mood radio",
+    "shortName": "Pink FM",
+    "frequencyLabel": "92.6",
+    "welcomeHeading": "Your frequency is ready",
+    "welcomeMessage": "Choose how you would like to feel, and let the station find the music."
+  },
+  "recipient": {
+    "displayName": "",
+    "privateGreeting": "",
+    "showName": false
+  },
+  "artist": {
+    "name": "Siti Nurhaliza",
+    "shortName": "Siti",
+    "slug": "siti-nurhaliza",
+    "image": null,
+    "imageAlt": ""
+  },
+  "assistant": {
+    "name": "WisseBot",
+    "subtitle": "Your personal music guide",
+    "personality": "warm, concise, lightly nerdy and listener-centred",
+    "avatar": null,
+    "semantic": {
+      "enabled": true,
+      "modelId": "Xenova/multilingual-e5-small",
+      "modelRevision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+      "estimatedDownloadMb": 142
+    }
+  },
+  "creator": {
+    "name": "WISSEBO ABDULMAJID",
+    "creditLabel": "Designed and engineered by",
+    "showOnAboutPage": true,
+    "showInMainExperience": false
+  },
+  "theme": {
+    "background": "#fff7fa",
+    "surface": "#fffdfd",
+    "surfaceAlt": "#fce7ef",
+    "primary": "#d94f83",
+    "primaryStrong": "#a8275c",
+    "secondary": "#ef9eba",
+    "accent": "#c79a55",
+    "text": "#3f2431",
+    "mutedText": "#775866",
+    "plum": "#4a2036",
+    "speakerCloth": "#e7b8c9"
+  },
+  "features": {
+    "wisseBot": true,
+    "dailyFrequency": true,
+    "listeningStats": true,
+    "installPrompt": true,
+    "soundEffects": true,
+    "mysteryBroadcast": true,
+    "semanticUnderstanding": true
+  },
+  "artistPolicy": {
+    "mode": "primary-only",
+    "primaryArtistIds": ["siti-nurhaliza"],
+    "allowFeaturedArtists": true,
+    "allowSecondaryCollection": false,
+    "secondaryCollectionId": "malaysian-legends"
+  },
+  "defaultStreamingService": "spotify",
+  "privacyNotice": "Your preferences remain on this device."
+}

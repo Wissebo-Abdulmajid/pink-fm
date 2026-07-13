@@ -1,0 +1,347 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-07-13T15:37:21.510Z",
+  "profile": "siti",
+  "mode": "hybrid-semantic",
+  "model": {
+    "id": "Xenova/multilingual-e5-small",
+    "revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+    "dtype": "q8",
+    "dimensions": 384,
+    "estimatedDownloadBytes": 148897792
+  },
+  "corpus": {
+    "english": 335,
+    "malay": 285,
+    "mixed": 185,
+    "noisy": 100,
+    "unsupportedAdversarial": 50,
+    "multiTurnSequences": 100,
+    "multiTurnTurns": 300
+  },
+  "languages": {
+    "en": {
+      "total": 335,
+      "intentAccuracy": 1,
+      "kindAccuracy": 1,
+      "moodPrecision": 1,
+      "moodRecall": 1,
+      "moodF1": 1
+    },
+    "ms": {
+      "total": 285,
+      "intentAccuracy": 0.9964912280701754,
+      "kindAccuracy": 1,
+      "moodPrecision": 1,
+      "moodRecall": 0.9952153110047847,
+      "moodF1": 0.9976019184652278
+    },
+    "mixed": {
+      "total": 185,
+      "intentAccuracy": 0.9945945945945946,
+      "kindAccuracy": 1,
+      "moodPrecision": 0.8620689655172413,
+      "moodRecall": 1,
+      "moodF1": 0.9259259259259259
+    }
+  },
+  "overall": {
+    "total": 1255,
+    "intentAccuracy": 0.9904382470119522,
+    "kindAccuracy": 0.9920318725099602,
+    "moodPrecision": 0.9755799755799756,
+    "moodRecall": 0.9864197530864197,
+    "moodF1": 0.9809699201964395
+  },
+  "negationAccuracy": 1,
+  "entityMatchAccuracy": 1,
+  "clarificationAccuracy": 1,
+  "unsupportedRequestDetection": 1,
+  "contextFollowUpAccuracy": 1,
+  "grounding": {
+    "recommendationChecks": 1108,
+    "evidenceBackedExplanationChecks": 1108,
+    "hallucinatedCatalogueTracks": 0,
+    "unsupportedFactualClaims": 0,
+    "lyricOutputCount": 0
+  },
+  "performance": {
+    "mode": "enhanced",
+    "modelLoadMs": 1213,
+    "firstInferenceMs": 21,
+    "repeatInferenceMs": 25,
+    "batchInferenceMs": 1716,
+    "queryCount": 973,
+    "meanBatchQueryMs": 1.764,
+    "environment": "Node CPU on the build machine; not a browser claim"
+  },
+  "failureCount": 12,
+  "failures": [
+    {
+      "id": "ms-089",
+      "utterance": "nak lagu bersemangat tapi juga semangat",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "energised"
+        ]
+      },
+      "actual": {
+        "kind": "recommendation",
+        "request": {
+          "targetMoods": {
+            "peaceful": 50,
+            "happy": 50,
+            "romantic": 50,
+            "confident": 96,
+            "energised": 75,
+            "nostalgic": 50,
+            "elegant": 72,
+            "comforted": 50,
+            "dramatic": 62
+          },
+          "excludedMoods": [],
+          "exclusions": {
+            "trackIds": [],
+            "albumIds": [],
+            "artistIds": []
+          },
+          "surprise": false,
+          "confidence": 0.96,
+          "evidence": [
+            {
+              "source": "exact-rule",
+              "concept": "mood",
+              "value": "confident",
+              "confidence": 0.96,
+              "span": "bersemangat"
+            },
+            {
+              "source": "semantic-similarity",
+              "concept": "semantic-retrieval",
+              "value": "happy",
+              "confidence": 0.8951556950485423
+            }
+          ]
+        },
+        "summary": "confident."
+      }
+    },
+    {
+      "id": "mixed-099",
+      "utterance": "music untuk buat kerja yang bright tapi santai",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      },
+      "actual": {
+        "kind": "recommendation",
+        "request": {
+          "targetMoods": {
+            "peaceful": 90,
+            "happy": 94,
+            "romantic": 50,
+            "confident": 62,
+            "energised": 22,
+            "nostalgic": 50,
+            "elegant": 68,
+            "comforted": 86,
+            "dramatic": 18
+          },
+          "excludedMoods": [],
+          "exclusions": {
+            "trackIds": [],
+            "albumIds": [],
+            "artistIds": []
+          },
+          "surprise": false,
+          "confidence": 0.96,
+          "evidence": [
+            {
+              "source": "exact-rule",
+              "concept": "mood",
+              "value": "peaceful",
+              "confidence": 0.96,
+              "span": "santai"
+            },
+            {
+              "source": "exact-rule",
+              "concept": "mood",
+              "value": "happy",
+              "confidence": 0.96,
+              "span": "bright"
+            },
+            {
+              "source": "exact-rule",
+              "concept": "activity",
+              "value": "relaxing",
+              "confidence": 0.96,
+              "span": "santai"
+            },
+            {
+              "source": "semantic-similarity",
+              "concept": "activity",
+              "value": "working",
+              "confidence": 0.906180956744452
+            }
+          ],
+          "activities": [
+            "relaxing"
+          ]
+        },
+        "summary": "peaceful and happy for relaxing."
+      }
+    },
+    {
+      "id": "noisy-010",
+      "utterance": "pls bagi romantikk vibe 1",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-020",
+      "utterance": "pls bagi romantikk vibe 2",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-030",
+      "utterance": "pls bagi romantikk vibe 3",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-040",
+      "utterance": "pls bagi romantikk vibe 4",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-050",
+      "utterance": "pls bagi romantikk vibe 5",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-060",
+      "utterance": "pls bagi romantikk vibe 6",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-070",
+      "utterance": "pls bagi romantikk vibe 7",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-080",
+      "utterance": "pls bagi romantikk vibe 8",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-090",
+      "utterance": "pls bagi romantikk vibe 9",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-100",
+      "utterance": "pls bagi romantikk vibe 10",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    }
+  ]
+}

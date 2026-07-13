@@ -1,0 +1,596 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-07-13T14:01:43.217Z",
+  "profile": "siti",
+  "mode": "lightweight",
+  "model": {
+    "id": "Xenova/multilingual-e5-small",
+    "revision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+    "dtype": "q8",
+    "dimensions": 384,
+    "estimatedDownloadBytes": 148897792
+  },
+  "corpus": {
+    "english": 335,
+    "malay": 285,
+    "mixed": 185,
+    "noisy": 100,
+    "unsupportedAdversarial": 50,
+    "multiTurnSequences": 100,
+    "multiTurnTurns": 300
+  },
+  "languages": {
+    "en": {
+      "total": 335,
+      "intentAccuracy": 1,
+      "kindAccuracy": 1,
+      "moodPrecision": 1,
+      "moodRecall": 1,
+      "moodF1": 1
+    },
+    "ms": {
+      "total": 285,
+      "intentAccuracy": 1,
+      "kindAccuracy": 1,
+      "moodPrecision": 0.9457013574660633,
+      "moodRecall": 1,
+      "moodF1": 0.9720930232558139
+    },
+    "mixed": {
+      "total": 185,
+      "intentAccuracy": 0.9135135135135135,
+      "kindAccuracy": 0.9351351351351351,
+      "moodPrecision": 0.8507462686567164,
+      "moodRecall": 0.912,
+      "moodF1": 0.8803088803088803
+    }
+  },
+  "overall": {
+    "total": 1255,
+    "intentAccuracy": 0.9792828685258964,
+    "kindAccuracy": 0.9824701195219123,
+    "moodPrecision": 0.9610231425091352,
+    "moodRecall": 0.9740740740740741,
+    "moodF1": 0.9675045984058859
+  },
+  "negationAccuracy": 1,
+  "entityMatchAccuracy": 0.8,
+  "clarificationAccuracy": 1,
+  "unsupportedRequestDetection": 1,
+  "contextFollowUpAccuracy": 1,
+  "grounding": {
+    "recommendationChecks": 1096,
+    "evidenceBackedExplanationChecks": 1096,
+    "hallucinatedCatalogueTracks": 0,
+    "unsupportedFactualClaims": 0,
+    "lyricOutputCount": 0
+  },
+  "performance": {
+    "mode": "lightweight",
+    "modelLoadMs": 0,
+    "firstInferenceMs": 0,
+    "repeatInferenceMs": 0,
+    "batchInferenceMs": 0
+  },
+  "failureCount": 26,
+  "failures": [
+    {
+      "id": "mixed-027",
+      "utterance": "I want grand dan mendalam",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      },
+      "actual": {
+        "kind": "conflict",
+        "request": null,
+        "summary": "Adakah “mendalam” bermaksud emosi yang kuat, tenang dan reflektif, atau vokal yang hebat?"
+      }
+    },
+    {
+      "id": "mixed-059",
+      "utterance": "nak warm untuk hati but also grand dan mendalam",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "dramatic"
+        ]
+      },
+      "actual": {
+        "kind": "conflict",
+        "request": null,
+        "summary": "Adakah “mendalam” bermaksud emosi yang kuat, tenang dan reflektif, atau vokal yang hebat?"
+      }
+    },
+    {
+      "id": "mixed-060",
+      "utterance": "mix grand dan mendalam dengan calm dan tenang",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "peaceful"
+        ]
+      },
+      "actual": {
+        "kind": "conflict",
+        "request": null,
+        "summary": "Adakah “mendalam” bermaksud emosi yang kuat, tenang dan reflektif, atau vokal yang hebat?"
+      }
+    },
+    {
+      "id": "mixed-069",
+      "utterance": "mix grand dan mendalam dengan happy sikit",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "happy"
+        ]
+      },
+      "actual": {
+        "kind": "conflict",
+        "request": null,
+        "summary": "Adakah “mendalam” bermaksud emosi yang kuat, tenang dan reflektif, atau vokal yang hebat?"
+      }
+    },
+    {
+      "id": "mixed-078",
+      "utterance": "mix grand dan mendalam dengan romantic dan manis",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "conflict",
+        "request": null,
+        "summary": "Adakah “mendalam” bermaksud emosi yang kuat, tenang dan reflektif, atau vokal yang hebat?"
+      }
+    },
+    {
+      "id": "mixed-087",
+      "utterance": "mix grand dan mendalam dengan confident dan yakin",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "confident"
+        ]
+      },
+      "actual": {
+        "kind": "conflict",
+        "request": null,
+        "summary": "Adakah “mendalam” bermaksud emosi yang kuat, tenang dan reflektif, atau vokal yang hebat?"
+      }
+    },
+    {
+      "id": "mixed-093",
+      "utterance": "something for makan malam yang bright tapi santai",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "dinner"
+      },
+      "actual": {
+        "kind": "recommendation",
+        "request": {
+          "targetMoods": {
+            "peaceful": 90,
+            "happy": 94,
+            "romantic": 50,
+            "confident": 62,
+            "energised": 22,
+            "nostalgic": 50,
+            "elegant": 68,
+            "comforted": 86,
+            "dramatic": 18
+          },
+          "excludedMoods": [],
+          "exclusions": {
+            "trackIds": [],
+            "albumIds": [],
+            "artistIds": []
+          },
+          "surprise": false,
+          "confidence": 0.96,
+          "evidence": [
+            {
+              "source": "exact-rule",
+              "concept": "mood",
+              "value": "peaceful",
+              "confidence": 0.96,
+              "span": "santai"
+            },
+            {
+              "source": "exact-rule",
+              "concept": "mood",
+              "value": "happy",
+              "confidence": 0.96,
+              "span": "bright"
+            },
+            {
+              "source": "exact-rule",
+              "concept": "activity",
+              "value": "relaxing",
+              "confidence": 0.96,
+              "span": "santai"
+            },
+            {
+              "source": "exact-rule",
+              "concept": "time",
+              "value": "night",
+              "confidence": 0.96,
+              "span": "malam"
+            }
+          ],
+          "activities": [
+            "relaxing"
+          ],
+          "contexts": [
+            "night"
+          ]
+        },
+        "summary": "peaceful and happy for relaxing at night."
+      }
+    },
+    {
+      "id": "mixed-121",
+      "utterance": "yang macam tadi tapi more upbeat",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      },
+      "actual": {
+        "kind": "recommendation",
+        "request": {
+          "targetMoods": {
+            "peaceful": 50,
+            "happy": 78,
+            "romantic": 50,
+            "confident": 80,
+            "energised": 97,
+            "nostalgic": 50,
+            "elegant": 50,
+            "comforted": 50,
+            "dramatic": 50
+          },
+          "excludedMoods": [],
+          "exclusions": {
+            "trackIds": [],
+            "albumIds": [],
+            "artistIds": []
+          },
+          "surprise": false,
+          "confidence": 0.96,
+          "evidence": [
+            {
+              "source": "exact-rule",
+              "concept": "mood",
+              "value": "energised",
+              "confidence": 0.96,
+              "span": "upbeat"
+            }
+          ]
+        },
+        "summary": "energetic."
+      }
+    },
+    {
+      "id": "mixed-133",
+      "utterance": "yang macam tadi tapi more upbeat 2",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      },
+      "actual": {
+        "kind": "recommendation",
+        "request": {
+          "targetMoods": {
+            "peaceful": 50,
+            "happy": 78,
+            "romantic": 50,
+            "confident": 80,
+            "energised": 97,
+            "nostalgic": 50,
+            "elegant": 50,
+            "comforted": 50,
+            "dramatic": 50
+          },
+          "excludedMoods": [],
+          "exclusions": {
+            "trackIds": [],
+            "albumIds": [],
+            "artistIds": []
+          },
+          "surprise": false,
+          "confidence": 0.96,
+          "evidence": [
+            {
+              "source": "exact-rule",
+              "concept": "mood",
+              "value": "energised",
+              "confidence": 0.96,
+              "span": "upbeat"
+            }
+          ]
+        },
+        "summary": "energetic."
+      }
+    },
+    {
+      "id": "mixed-145",
+      "utterance": "yang macam tadi tapi more upbeat 3",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      },
+      "actual": {
+        "kind": "recommendation",
+        "request": {
+          "targetMoods": {
+            "peaceful": 50,
+            "happy": 78,
+            "romantic": 50,
+            "confident": 80,
+            "energised": 97,
+            "nostalgic": 50,
+            "elegant": 50,
+            "comforted": 50,
+            "dramatic": 50
+          },
+          "excludedMoods": [],
+          "exclusions": {
+            "trackIds": [],
+            "albumIds": [],
+            "artistIds": []
+          },
+          "surprise": false,
+          "confidence": 0.96,
+          "evidence": [
+            {
+              "source": "exact-rule",
+              "concept": "mood",
+              "value": "energised",
+              "confidence": 0.96,
+              "span": "upbeat"
+            }
+          ]
+        },
+        "summary": "energetic."
+      }
+    },
+    {
+      "id": "mixed-entity-01",
+      "utterance": "Please bagi Cindai",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "cindai"
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "mixed-entity-06",
+      "utterance": "Please bagi Sejarah",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "sejarah"
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "mixed-entity-07",
+      "utterance": "Please bagi Sesal",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "sesal"
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "mixed-entity-08",
+      "utterance": "Please bagi Magis",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "magis"
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "mixed-entity-09",
+      "utterance": "Please bagi Wanita",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "wanita"
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "mixed-entity-10",
+      "utterance": "Please bagi Terang",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "terang"
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-010",
+      "utterance": "pls bagi romantikk vibe 1",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-020",
+      "utterance": "pls bagi romantikk vibe 2",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-030",
+      "utterance": "pls bagi romantikk vibe 3",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-040",
+      "utterance": "pls bagi romantikk vibe 4",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-050",
+      "utterance": "pls bagi romantikk vibe 5",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-060",
+      "utterance": "pls bagi romantikk vibe 6",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-070",
+      "utterance": "pls bagi romantikk vibe 7",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-080",
+      "utterance": "pls bagi romantikk vibe 8",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-090",
+      "utterance": "pls bagi romantikk vibe 9",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    },
+    {
+      "id": "noisy-100",
+      "utterance": "pls bagi romantikk vibe 10",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      },
+      "actual": {
+        "kind": "clarification",
+        "request": null,
+        "summary": "Which direction should I tune: calm, cheerful, romantic, powerful, or a surprise?"
+      }
+    }
+  ]
+}

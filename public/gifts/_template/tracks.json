@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 2,
+  "tracks": [
+    {
+      "id": "replace-me-demo-signal",
+      "title": "Replace Me — Demo Signal",
+      "artist": "Featured Artist",
+      "primaryArtistId": "featured-artist",
+      "featuredArtists": [],
+      "featuredArtistIds": [],
+      "year": null,
+      "album": "",
+      "albumId": "",
+      "releaseDate": null,
+      "releaseYear": null,
+      "versionType": "studio",
+      "isPrimaryVersion": true,
+      "languages": ["other"],
+      "genres": [],
+      "collections": ["discovery"],
+      "curationStatus": "provisional",
+      "curationConfidence": 0.1,
+      "era": "demo",
+      "artwork": null,
+      "artworkAlt": "",
+      "active": true,
+      "officialLinks": {
+        "youtube": "",
+        "spotify": "",
+        "appleMusic": ""
+      },
+      "embed": {
+        "provider": "none",
+        "url": null
+      },
+      "moods": {
+        "peaceful": 70,
+        "happy": 60,
+        "romantic": 45,
+        "confident": 55,
+        "energised": 50,
+        "nostalgic": 40,
+        "elegant": 60,
+        "comforted": 65,
+        "dramatic": 30
+      },
+      "contexts": ["evening", "relaxing"],
+      "tempoClass": "medium",
+      "intensity": 45,
+      "familiarity": 20,
+      "editorialNote": "A fictional demonstration record. Replace it with a verified track and official listening destination before publishing.",
+      "tags": ["demo", "replace-me"],
+      "semanticDescription": "A fictional neutral demonstration record used only to verify the profile flow.",
+      "emotionalArc": {
+        "opening": "",
+        "middle": "",
+        "ending": ""
+      },
+      "vocalCharacter": [],
+      "instrumentalCharacter": [],
+      "useCases": ["evening", "relaxing"],
+      "avoidWhen": [],
+      "sourceIds": ["template-review-placeholder"]
+    }
+  ]
+}

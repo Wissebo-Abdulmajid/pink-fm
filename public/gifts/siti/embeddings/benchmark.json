@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "environment": "build-machine-node-cpu",
+  "modelLoadMs": 12994,
+  "trackEmbeddingMs": 2945,
+  "prototypeEmbeddingMs": 211,
+  "trackCount": 142,
+  "prototypeCount": 93,
+  "batchSize": 12,
+  "dimensions": 384,
+  "measuredAt": "2026-07-13T13:34:22.685Z",
+  "note": "Build-time CPU measurements are not browser performance claims."
+}

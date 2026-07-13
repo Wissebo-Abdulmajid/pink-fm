@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "modelId": "Xenova/multilingual-e5-small",
+  "modelRevision": "761b726dd34fb83930e26aab4e9ac3899aa1fa78",
+  "dtype": "q8",
+  "dimensions": 384,
+  "pooling": "mean",
+  "normalisation": "l2",
+  "catalogueContentHash": "3f534baf33ce776cda5a84ef4eae5314b253a1ecae6f63ef5f52767f884a576f",
+  "createdAt": "2026-07-13T13:34:22.682Z",
+  "trackCount": 142,
+  "prototypeCount": 93,
+  "estimatedModelDownloadBytes": 148897792,
+  "vectorEncoding": "float32-le",
+  "trackEmbeddingBytes": 218112,
+  "prototypeEmbeddingBytes": 142848,
+  "files": {
+    "tracks": "tracks.bin",
+    "prototypes": "prototypes.bin",
+    "index": "index.json"
+  }
+}

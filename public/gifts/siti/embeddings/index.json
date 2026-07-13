@@ -1,0 +1,1449 @@
+{
+  "schemaVersion": 1,
+  "dimensions": 384,
+  "tracks": [
+    {
+      "id": "7-nasihat",
+      "offset": 0
+    },
+    {
+      "id": "aidilfitri-di-alaf-baru",
+      "offset": 1
+    },
+    {
+      "id": "airmata-ibu",
+      "offset": 2
+    },
+    {
+      "id": "aku",
+      "offset": 3
+    },
+    {
+      "id": "aku-bidadari-syurgamu",
+      "offset": 4
+    },
+    {
+      "id": "aku-bukan-malaikat",
+      "offset": 5
+    },
+    {
+      "id": "aku-cinta-padamu",
+      "offset": 6
+    },
+    {
+      "id": "all-your-love",
+      "offset": 7
+    },
+    {
+      "id": "anta-permana",
+      "offset": 8
+    },
+    {
+      "id": "antara-waktu-dan-usia",
+      "offset": 9
+    },
+    {
+      "id": "asma-ul-husna",
+      "offset": 10
+    },
+    {
+      "id": "azimat-cinta",
+      "offset": 11
+    },
+    {
+      "id": "badarsila",
+      "offset": 12
+    },
+    {
+      "id": "balqis",
+      "offset": 13
+    },
+    {
+      "id": "beraya-dengan-saya",
+      "offset": 14
+    },
+    {
+      "id": "berpantun-kasih",
+      "offset": 15
+    },
+    {
+      "id": "bersandar-cinta",
+      "offset": 16
+    },
+    {
+      "id": "bersandar-cinta-orchestral",
+      "offset": 17
+    },
+    {
+      "id": "biarlah-rahsia",
+      "offset": 18
+    },
+    {
+      "id": "bicara-luka",
+      "offset": 19
+    },
+    {
+      "id": "bicara-manis-menghiris-kalbu",
+      "offset": 20
+    },
+    {
+      "id": "bila-hari-raya-menjelma",
+      "offset": 21
+    },
+    {
+      "id": "bintang-malam",
+      "offset": 22
+    },
+    {
+      "id": "bukan-cinta-biasa",
+      "offset": 23
+    },
+    {
+      "id": "cahaya-seribu-liku",
+      "offset": 24
+    },
+    {
+      "id": "canggai",
+      "offset": 25
+    },
+    {
+      "id": "cenderamaya",
+      "offset": 26
+    },
+    {
+      "id": "cindai",
+      "offset": 27
+    },
+    {
+      "id": "cinta-ini",
+      "offset": 28
+    },
+    {
+      "id": "cinta-tak-berganti",
+      "offset": 29
+    },
+    {
+      "id": "cinta-tak-mungkin",
+      "offset": 30
+    },
+    {
+      "id": "cuba-untuk-mengerti",
+      "offset": 31
+    },
+    {
+      "id": "debaran-cinta",
+      "offset": 32
+    },
+    {
+      "id": "destinasi-cinta",
+      "offset": 33
+    },
+    {
+      "id": "di-kayangan-kita",
+      "offset": 34
+    },
+    {
+      "id": "dialah-di-hati",
+      "offset": 35
+    },
+    {
+      "id": "diari-hatimu",
+      "offset": 36
+    },
+    {
+      "id": "dirgahayu",
+      "offset": 37
+    },
+    {
+      "id": "dua-dunia-feat-siti-nurhaliza",
+      "offset": 38
+    },
+    {
+      "id": "engkau-bagaikan-permata",
+      "offset": 39
+    },
+    {
+      "id": "falling-in-love",
+      "offset": 40
+    },
+    {
+      "id": "fight-for-love",
+      "offset": 41
+    },
+    {
+      "id": "galau",
+      "offset": 42
+    },
+    {
+      "id": "gelora-asmara",
+      "offset": 43
+    },
+    {
+      "id": "hati-yang-rindu",
+      "offset": 44
+    },
+    {
+      "id": "hidup-penuh-bicara",
+      "offset": 45
+    },
+    {
+      "id": "ikhlas",
+      "offset": 46
+    },
+    {
+      "id": "ikrar-cinta",
+      "offset": 47
+    },
+    {
+      "id": "indah-percintaan",
+      "offset": 48
+    },
+    {
+      "id": "intrig-cinta",
+      "offset": 49
+    },
+    {
+      "id": "jaga-dia-untukku",
+      "offset": 50
+    },
+    {
+      "id": "jalinan-cinta",
+      "offset": 51
+    },
+    {
+      "id": "janji",
+      "offset": 52
+    },
+    {
+      "id": "janji-kasih",
+      "offset": 53
+    },
+    {
+      "id": "jawapan-di-persimpangan",
+      "offset": 54
+    },
+    {
+      "id": "jerat-percintaan",
+      "offset": 55
+    },
+    {
+      "id": "joget-berhibur",
+      "offset": 56
+    },
+    {
+      "id": "joget-kasih-tak-sudah",
+      "offset": 57
+    },
+    {
+      "id": "joget-menanti-kasih",
+      "offset": 58
+    },
+    {
+      "id": "joget-pahang",
+      "offset": 59
+    },
+    {
+      "id": "joget-senyum-memikat",
+      "offset": 60
+    },
+    {
+      "id": "kau-kekasihku",
+      "offset": 61
+    },
+    {
+      "id": "kedamaian",
+      "offset": 62
+    },
+    {
+      "id": "kesilapanku-keegoanmu",
+      "offset": 63
+    },
+    {
+      "id": "kesuma",
+      "offset": 64
+    },
+    {
+      "id": "khayalan-cinta",
+      "offset": 65
+    },
+    {
+      "id": "kisah-ku-inginkan",
+      "offset": 66
+    },
+    {
+      "id": "ku-mahu",
+      "offset": 67
+    },
+    {
+      "id": "ku-percaya-ada-cinta",
+      "offset": 68
+    },
+    {
+      "id": "kuasa-cintamu",
+      "offset": 69
+    },
+    {
+      "id": "kumbang-bunga",
+      "offset": 70
+    },
+    {
+      "id": "kurik-kundi",
+      "offset": 71
+    },
+    {
+      "id": "lagu-rindu",
+      "offset": 72
+    },
+    {
+      "id": "lakaran-kehidupan",
+      "offset": 73
+    },
+    {
+      "id": "laksamana-mati-dibunuh",
+      "offset": 74
+    },
+    {
+      "id": "lebih-indah",
+      "offset": 75
+    },
+    {
+      "id": "lela-manja",
+      "offset": 76
+    },
+    {
+      "id": "lelaki-warkah-seorang-anak",
+      "offset": 77
+    },
+    {
+      "id": "magis",
+      "offset": 78
+    },
+    {
+      "id": "mahligai-asmara",
+      "offset": 79
+    },
+    {
+      "id": "melawan-kesepian",
+      "offset": 80
+    },
+    {
+      "id": "menamakanmu-cinta",
+      "offset": 81
+    },
+    {
+      "id": "menjaga-cintamu-original-soundtrack-from-anwar-the-untold-story",
+      "offset": 82
+    },
+    {
+      "id": "menyapa-dunia",
+      "offset": 83
+    },
+    {
+      "id": "mikraj-cinta",
+      "offset": 84
+    },
+    {
+      "id": "milikmu-selamanya",
+      "offset": 85
+    },
+    {
+      "id": "muara-hati",
+      "offset": 86
+    },
+    {
+      "id": "mula-dan-akhir",
+      "offset": 87
+    },
+    {
+      "id": "mulanya-cinta",
+      "offset": 88
+    },
+    {
+      "id": "nazam-lebaran",
+      "offset": 89
+    },
+    {
+      "id": "nian-di-hati",
+      "offset": 90
+    },
+    {
+      "id": "nikmat-hari-raya",
+      "offset": 91
+    },
+    {
+      "id": "nirmala",
+      "offset": 92
+    },
+    {
+      "id": "nobody-else",
+      "offset": 93
+    },
+    {
+      "id": "oda-bumi-anbia",
+      "offset": 94
+    },
+    {
+      "id": "panas-berteduh-gelap-bersuluh",
+      "offset": 95
+    },
+    {
+      "id": "pawana-sampaikanlah-salam",
+      "offset": 96
+    },
+    {
+      "id": "pejam-matamu",
+      "offset": 97
+    },
+    {
+      "id": "pendirianku",
+      "offset": 98
+    },
+    {
+      "id": "penghiburku-feat-joe-flizzow",
+      "offset": 99
+    },
+    {
+      "id": "percayalah",
+      "offset": 100
+    },
+    {
+      "id": "pesanan-buat-diri",
+      "offset": 101
+    },
+    {
+      "id": "pintu-rindu",
+      "offset": 102
+    },
+    {
+      "id": "purnama-merindu",
+      "offset": 103
+    },
+    {
+      "id": "remember-you-feat-sean-kingston",
+      "offset": 104
+    },
+    {
+      "id": "rencong",
+      "offset": 105
+    },
+    {
+      "id": "rindu-di-antara-kita",
+      "offset": 106
+    },
+    {
+      "id": "romansa-kita",
+      "offset": 107
+    },
+    {
+      "id": "sanggar-bayu",
+      "offset": 108
+    },
+    {
+      "id": "satu-cinta-dua-jiwa",
+      "offset": 109
+    },
+    {
+      "id": "segala-perasaan",
+      "offset": 110
+    },
+    {
+      "id": "sehebat-matahari-feat-nao-zumar",
+      "offset": 111
+    },
+    {
+      "id": "sejarah",
+      "offset": 112
+    },
+    {
+      "id": "sekian-lama",
+      "offset": 113
+    },
+    {
+      "id": "selawat",
+      "offset": 114
+    },
+    {
+      "id": "seloka-budi",
+      "offset": 115
+    },
+    {
+      "id": "seluruh-cinta",
+      "offset": 116
+    },
+    {
+      "id": "sendiri",
+      "offset": 117
+    },
+    {
+      "id": "senyum-minang-manis",
+      "offset": 118
+    },
+    {
+      "id": "seribu-kemanisan",
+      "offset": 119
+    },
+    {
+      "id": "sesal",
+      "offset": 120
+    },
+    {
+      "id": "sesuci-lebaran",
+      "offset": 121
+    },
+    {
+      "id": "siapa-tak-mahu",
+      "offset": 122
+    },
+    {
+      "id": "siti-situ-sana-sini",
+      "offset": 123
+    },
+    {
+      "id": "syair-kamelia",
+      "offset": 124
+    },
+    {
+      "id": "syurgaloka",
+      "offset": 125
+    },
+    {
+      "id": "tahajjud-cinta",
+      "offset": 126
+    },
+    {
+      "id": "tak-boleh-lupa",
+      "offset": 127
+    },
+    {
+      "id": "tanpa-diri-mu",
+      "offset": 128
+    },
+    {
+      "id": "tanpa-kalian",
+      "offset": 129
+    },
+    {
+      "id": "terang",
+      "offset": 130
+    },
+    {
+      "id": "teratas",
+      "offset": 131
+    },
+    {
+      "id": "terbaik-bagimu",
+      "offset": 132
+    },
+    {
+      "id": "tertulis-nama-kita",
+      "offset": 133
+    },
+    {
+      "id": "untuk-selamanya",
+      "offset": 134
+    },
+    {
+      "id": "usah-diragui",
+      "offset": 135
+    },
+    {
+      "id": "wajah-kekasih",
+      "offset": 136
+    },
+    {
+      "id": "wanita",
+      "offset": 137
+    },
+    {
+      "id": "warna-dunia",
+      "offset": 138
+    },
+    {
+      "id": "xiang-shui-yi-yang",
+      "offset": 139
+    },
+    {
+      "id": "you-came-to-me-feat-dato-sri-siti-nurhaliza",
+      "offset": 140
+    },
+    {
+      "id": "zapin-cinta-asmara",
+      "offset": 141
+    }
+  ],
+  "prototypes": [
+    {
+      "id": "mood-peaceful:1",
+      "kind": "mood",
+      "text": "quiet music that helps me settle without demanding attention",
+      "payload": {
+        "mood": "peaceful",
+        "strength": 82
+      },
+      "offset": 0
+    },
+    {
+      "id": "mood-peaceful:2",
+      "kind": "mood",
+      "text": "lagu yang tenang dan lembut untuk berehat",
+      "payload": {
+        "mood": "peaceful",
+        "strength": 82
+      },
+      "offset": 1
+    },
+    {
+      "id": "mood-peaceful:3",
+      "kind": "mood",
+      "text": "something serene and unhurried",
+      "payload": {
+        "mood": "peaceful",
+        "strength": 82
+      },
+      "offset": 2
+    },
+    {
+      "id": "mood-peaceful:4",
+      "kind": "mood",
+      "text": "nak vibe santai dan damai",
+      "payload": {
+        "mood": "peaceful",
+        "strength": 82
+      },
+      "offset": 3
+    },
+    {
+      "id": "mood-happy:1",
+      "kind": "mood",
+      "text": "music that feels cheerful bright and optimistic",
+      "payload": {
+        "mood": "happy",
+        "strength": 82
+      },
+      "offset": 4
+    },
+    {
+      "id": "mood-happy:2",
+      "kind": "mood",
+      "text": "saya nak rasa ceria dan gembira sikit",
+      "payload": {
+        "mood": "happy",
+        "strength": 82
+      },
+      "offset": 5
+    },
+    {
+      "id": "mood-happy:3",
+      "kind": "mood",
+      "text": "a sunny feel good selection",
+      "payload": {
+        "mood": "happy",
+        "strength": 82
+      },
+      "offset": 6
+    },
+    {
+      "id": "mood-happy:4",
+      "kind": "mood",
+      "text": "lagu happy yang boleh naikkan mood",
+      "payload": {
+        "mood": "happy",
+        "strength": 82
+      },
+      "offset": 7
+    },
+    {
+      "id": "mood-romantic:1",
+      "kind": "mood",
+      "text": "warm romantic music with tenderness",
+      "payload": {
+        "mood": "romantic",
+        "strength": 82
+      },
+      "offset": 8
+    },
+    {
+      "id": "mood-romantic:2",
+      "kind": "mood",
+      "text": "lagu cinta yang manis dan romantik",
+      "payload": {
+        "mood": "romantic",
+        "strength": 82
+      },
+      "offset": 9
+    },
+    {
+      "id": "mood-romantic:3",
+      "kind": "mood",
+      "text": "something affectionate and graceful",
+      "payload": {
+        "mood": "romantic",
+        "strength": 82
+      },
+      "offset": 10
+    },
+    {
+      "id": "mood-romantic:4",
+      "kind": "mood",
+      "text": "romantic sikit untuk suasana mesra",
+      "payload": {
+        "mood": "romantic",
+        "strength": 82
+      },
+      "offset": 11
+    },
+    {
+      "id": "mood-confident:1",
+      "kind": "mood",
+      "text": "bold assured music with a strong vocal presence",
+      "payload": {
+        "mood": "confident",
+        "strength": 82
+      },
+      "offset": 12
+    },
+    {
+      "id": "mood-confident:2",
+      "kind": "mood",
+      "text": "lagu yang buat saya rasa yakin dan kuat",
+      "payload": {
+        "mood": "confident",
+        "strength": 82
+      },
+      "offset": 13
+    },
+    {
+      "id": "mood-confident:3",
+      "kind": "mood",
+      "text": "something empowering and poised",
+      "payload": {
+        "mood": "confident",
+        "strength": 82
+      },
+      "offset": 14
+    },
+    {
+      "id": "mood-confident:4",
+      "kind": "mood",
+      "text": "nak powerful vocal dan confident vibe",
+      "payload": {
+        "mood": "confident",
+        "strength": 82
+      },
+      "offset": 15
+    },
+    {
+      "id": "mood-energised:1",
+      "kind": "mood",
+      "text": "lively upbeat music that gives me energy",
+      "payload": {
+        "mood": "energised",
+        "strength": 82
+      },
+      "offset": 16
+    },
+    {
+      "id": "mood-energised:2",
+      "kind": "mood",
+      "text": "lagu rancak dan bertenaga",
+      "payload": {
+        "mood": "energised",
+        "strength": 82
+      },
+      "offset": 17
+    },
+    {
+      "id": "mood-energised:3",
+      "kind": "mood",
+      "text": "something active with forward movement",
+      "payload": {
+        "mood": "energised",
+        "strength": 82
+      },
+      "offset": 18
+    },
+    {
+      "id": "mood-energised:4",
+      "kind": "mood",
+      "text": "nak yang lebih upbeat untuk semangat",
+      "payload": {
+        "mood": "energised",
+        "strength": 82
+      },
+      "offset": 19
+    },
+    {
+      "id": "mood-nostalgic:1",
+      "kind": "mood",
+      "text": "a nostalgic classic that brings back memories",
+      "payload": {
+        "mood": "nostalgic",
+        "strength": 82
+      },
+      "offset": 20
+    },
+    {
+      "id": "mood-nostalgic:2",
+      "kind": "mood",
+      "text": "lagu klasik Siti yang penuh kenangan",
+      "payload": {
+        "mood": "nostalgic",
+        "strength": 82
+      },
+      "offset": 21
+    },
+    {
+      "id": "mood-nostalgic:3",
+      "kind": "mood",
+      "text": "an old school throwback feeling",
+      "payload": {
+        "mood": "nostalgic",
+        "strength": 82
+      },
+      "offset": 22
+    },
+    {
+      "id": "mood-nostalgic:4",
+      "kind": "mood",
+      "text": "nak rasa macam zaman dulu",
+      "payload": {
+        "mood": "nostalgic",
+        "strength": 82
+      },
+      "offset": 23
+    },
+    {
+      "id": "mood-elegant:1",
+      "kind": "mood",
+      "text": "refined elegant music for a graceful evening",
+      "payload": {
+        "mood": "elegant",
+        "strength": 82
+      },
+      "offset": 24
+    },
+    {
+      "id": "mood-elegant:2",
+      "kind": "mood",
+      "text": "lagu anggun dan berkelas",
+      "payload": {
+        "mood": "elegant",
+        "strength": 82
+      },
+      "offset": 25
+    },
+    {
+      "id": "mood-elegant:3",
+      "kind": "mood",
+      "text": "something polished and sophisticated",
+      "payload": {
+        "mood": "elegant",
+        "strength": 82
+      },
+      "offset": 26
+    },
+    {
+      "id": "mood-elegant:4",
+      "kind": "mood",
+      "text": "nak suasana elegan tapi tidak terlalu berat",
+      "payload": {
+        "mood": "elegant",
+        "strength": 82
+      },
+      "offset": 27
+    },
+    {
+      "id": "mood-comforted:1",
+      "kind": "mood",
+      "text": "warm reassuring music that feels like company",
+      "payload": {
+        "mood": "comforted",
+        "strength": 82
+      },
+      "offset": 28
+    },
+    {
+      "id": "mood-comforted:2",
+      "kind": "mood",
+      "text": "lagu yang menenangkan hati dan rasa selesa",
+      "payload": {
+        "mood": "comforted",
+        "strength": 82
+      },
+      "offset": 29
+    },
+    {
+      "id": "mood-comforted:3",
+      "kind": "mood",
+      "text": "something gentle and emotionally safe",
+      "payload": {
+        "mood": "comforted",
+        "strength": 82
+      },
+      "offset": 30
+    },
+    {
+      "id": "mood-comforted:4",
+      "kind": "mood",
+      "text": "nak muzik yang boleh jadi teman",
+      "payload": {
+        "mood": "comforted",
+        "strength": 82
+      },
+      "offset": 31
+    },
+    {
+      "id": "mood-dramatic:1",
+      "kind": "mood",
+      "text": "emotionally intense music with a sweeping dramatic shape",
+      "payload": {
+        "mood": "dramatic",
+        "strength": 82
+      },
+      "offset": 32
+    },
+    {
+      "id": "mood-dramatic:2",
+      "kind": "mood",
+      "text": "lagu dramatik dan mendalam dengan vokal besar",
+      "payload": {
+        "mood": "dramatic",
+        "strength": 82
+      },
+      "offset": 33
+    },
+    {
+      "id": "mood-dramatic:3",
+      "kind": "mood",
+      "text": "a grand powerful ballad",
+      "payload": {
+        "mood": "dramatic",
+        "strength": 82
+      },
+      "offset": 34
+    },
+    {
+      "id": "mood-dramatic:4",
+      "kind": "mood",
+      "text": "nak sesuatu yang penuh emosi",
+      "payload": {
+        "mood": "dramatic",
+        "strength": 82
+      },
+      "offset": 35
+    },
+    {
+      "id": "activity-cooking:1",
+      "kind": "activity",
+      "text": "music for cooking dinner",
+      "payload": {
+        "activity": "cooking"
+      },
+      "offset": 36
+    },
+    {
+      "id": "activity-cooking:2",
+      "kind": "activity",
+      "text": "lagu untuk masak",
+      "payload": {
+        "activity": "cooking"
+      },
+      "offset": 37
+    },
+    {
+      "id": "activity-cooking:3",
+      "kind": "activity",
+      "text": "something lively while I am in the kitchen",
+      "payload": {
+        "activity": "cooking"
+      },
+      "offset": 38
+    },
+    {
+      "id": "activity-driving:1",
+      "kind": "activity",
+      "text": "music for a drive",
+      "payload": {
+        "activity": "driving"
+      },
+      "offset": 39
+    },
+    {
+      "id": "activity-driving:2",
+      "kind": "activity",
+      "text": "lagu masa memandu",
+      "payload": {
+        "activity": "driving"
+      },
+      "offset": 40
+    },
+    {
+      "id": "activity-driving:3",
+      "kind": "activity",
+      "text": "a road trip soundtrack",
+      "payload": {
+        "activity": "driving"
+      },
+      "offset": 41
+    },
+    {
+      "id": "activity-working:1",
+      "kind": "activity",
+      "text": "music for focused work",
+      "payload": {
+        "activity": "working"
+      },
+      "offset": 42
+    },
+    {
+      "id": "activity-working:2",
+      "kind": "activity",
+      "text": "lagu untuk buat kerja",
+      "payload": {
+        "activity": "working"
+      },
+      "offset": 43
+    },
+    {
+      "id": "activity-working:3",
+      "kind": "activity",
+      "text": "something steady while studying",
+      "payload": {
+        "activity": "working"
+      },
+      "offset": 44
+    },
+    {
+      "id": "activity-relaxing:1",
+      "kind": "activity",
+      "text": "music to unwind",
+      "payload": {
+        "activity": "relaxing"
+      },
+      "offset": 45
+    },
+    {
+      "id": "activity-relaxing:2",
+      "kind": "activity",
+      "text": "lagu untuk rehat malam",
+      "payload": {
+        "activity": "relaxing"
+      },
+      "offset": 46
+    },
+    {
+      "id": "activity-relaxing:3",
+      "kind": "activity",
+      "text": "something for a quiet break",
+      "payload": {
+        "activity": "relaxing"
+      },
+      "offset": 47
+    },
+    {
+      "id": "activity-celebration:1",
+      "kind": "activity",
+      "text": "music for a happy celebration",
+      "payload": {
+        "activity": "celebration"
+      },
+      "offset": 48
+    },
+    {
+      "id": "activity-celebration:2",
+      "kind": "activity",
+      "text": "lagu untuk majlis dan kenduri",
+      "payload": {
+        "activity": "celebration"
+      },
+      "offset": 49
+    },
+    {
+      "id": "activity-celebration:3",
+      "kind": "activity",
+      "text": "a festive gathering",
+      "payload": {
+        "activity": "celebration"
+      },
+      "offset": 50
+    },
+    {
+      "id": "intent-more-energy:1",
+      "kind": "intent",
+      "text": "turn the energy up a little",
+      "payload": {
+        "intent": "more-energetic"
+      },
+      "offset": 51
+    },
+    {
+      "id": "intent-more-energy:2",
+      "kind": "intent",
+      "text": "yang macam tadi tapi lebih upbeat",
+      "payload": {
+        "intent": "more-energetic"
+      },
+      "offset": 52
+    },
+    {
+      "id": "intent-more-energy:3",
+      "kind": "intent",
+      "text": "make this livelier",
+      "payload": {
+        "intent": "more-energetic"
+      },
+      "offset": 53
+    },
+    {
+      "id": "intent-less-intense:1",
+      "kind": "intent",
+      "text": "keep the idea but soften the emotional intensity",
+      "payload": {
+        "intent": "less-intense"
+      },
+      "offset": 54
+    },
+    {
+      "id": "intent-less-intense:2",
+      "kind": "intent",
+      "text": "macam tadi tapi kurang dramatik",
+      "payload": {
+        "intent": "less-intense"
+      },
+      "offset": 55
+    },
+    {
+      "id": "intent-less-intense:3",
+      "kind": "intent",
+      "text": "tone that down",
+      "payload": {
+        "intent": "less-intense"
+      },
+      "offset": 56
+    },
+    {
+      "id": "intent-similar:1",
+      "kind": "intent",
+      "text": "another song with the same feeling",
+      "payload": {
+        "intent": "similar"
+      },
+      "offset": 57
+    },
+    {
+      "id": "intent-similar:2",
+      "kind": "intent",
+      "text": "nak yang macam tadi",
+      "payload": {
+        "intent": "similar"
+      },
+      "offset": 58
+    },
+    {
+      "id": "intent-similar:3",
+      "kind": "intent",
+      "text": "more like the previous selection",
+      "payload": {
+        "intent": "similar"
+      },
+      "offset": 59
+    },
+    {
+      "id": "intent-different:1",
+      "kind": "intent",
+      "text": "take me somewhere different",
+      "payload": {
+        "intent": "different"
+      },
+      "offset": 60
+    },
+    {
+      "id": "intent-different:2",
+      "kind": "intent",
+      "text": "bagi sesuatu yang lain sikit",
+      "payload": {
+        "intent": "different"
+      },
+      "offset": 61
+    },
+    {
+      "id": "intent-different:3",
+      "kind": "intent",
+      "text": "change the character completely",
+      "payload": {
+        "intent": "different"
+      },
+      "offset": 62
+    },
+    {
+      "id": "intent-discovery:1",
+      "kind": "intent",
+      "text": "choose something I would not normally hear",
+      "payload": {
+        "intent": "discovery"
+      },
+      "offset": 63
+    },
+    {
+      "id": "intent-discovery:2",
+      "kind": "intent",
+      "text": "bagi hidden gem yang jarang dipilih",
+      "payload": {
+        "intent": "discovery"
+      },
+      "offset": 64
+    },
+    {
+      "id": "intent-discovery:3",
+      "kind": "intent",
+      "text": "a deeper catalogue discovery",
+      "payload": {
+        "intent": "discovery"
+      },
+      "offset": 65
+    },
+    {
+      "id": "intent-familiar:1",
+      "kind": "intent",
+      "text": "give me a familiar favourite",
+      "payload": {
+        "intent": "familiar"
+      },
+      "offset": 66
+    },
+    {
+      "id": "intent-familiar:2",
+      "kind": "intent",
+      "text": "nak lagu yang saya kenal",
+      "payload": {
+        "intent": "familiar"
+      },
+      "offset": 67
+    },
+    {
+      "id": "intent-familiar:3",
+      "kind": "intent",
+      "text": "choose a recognised classic",
+      "payload": {
+        "intent": "familiar"
+      },
+      "offset": 68
+    },
+    {
+      "id": "intent-traditional:1",
+      "kind": "intent",
+      "text": "traditional Malay character and rhythm",
+      "payload": {
+        "intent": "traditional"
+      },
+      "offset": 69
+    },
+    {
+      "id": "intent-traditional:2",
+      "kind": "intent",
+      "text": "nak lagu irama malaysia atau nusantara",
+      "payload": {
+        "intent": "traditional"
+      },
+      "offset": 70
+    },
+    {
+      "id": "intent-traditional:3",
+      "kind": "intent",
+      "text": "something with zapin or joget character",
+      "payload": {
+        "intent": "traditional"
+      },
+      "offset": 71
+    },
+    {
+      "id": "intent-modern:1",
+      "kind": "intent",
+      "text": "a newer modern Siti release",
+      "payload": {
+        "intent": "modern"
+      },
+      "offset": 72
+    },
+    {
+      "id": "intent-modern:2",
+      "kind": "intent",
+      "text": "bagi yang moden dan baru sikit",
+      "payload": {
+        "intent": "modern"
+      },
+      "offset": 73
+    },
+    {
+      "id": "intent-modern:3",
+      "kind": "intent",
+      "text": "something from her recent era",
+      "payload": {
+        "intent": "modern"
+      },
+      "offset": 74
+    },
+    {
+      "id": "clarify-deep-reflective:1",
+      "kind": "clarification",
+      "text": "deep meaning as calm and reflective",
+      "payload": {
+        "clarification": "calm-reflective"
+      },
+      "offset": 75
+    },
+    {
+      "id": "clarify-deep-reflective:2",
+      "kind": "clarification",
+      "text": "mendalam tetapi tenang dan berfikir",
+      "payload": {
+        "clarification": "calm-reflective"
+      },
+      "offset": 76
+    },
+    {
+      "id": "clarify-deep-intense:1",
+      "kind": "clarification",
+      "text": "deep meaning emotionally intense",
+      "payload": {
+        "clarification": "emotionally-intense"
+      },
+      "offset": 77
+    },
+    {
+      "id": "clarify-deep-intense:2",
+      "kind": "clarification",
+      "text": "mendalam dengan emosi yang kuat",
+      "payload": {
+        "clarification": "emotionally-intense"
+      },
+      "offset": 78
+    },
+    {
+      "id": "clarify-power-vocal:1",
+      "kind": "clarification",
+      "text": "powerful meaning a commanding vocal performance",
+      "payload": {
+        "clarification": "powerful-vocals"
+      },
+      "offset": 79
+    },
+    {
+      "id": "clarify-power-vocal:2",
+      "kind": "clarification",
+      "text": "powerful maksud vokal yang hebat",
+      "payload": {
+        "clarification": "powerful-vocals"
+      },
+      "offset": 80
+    },
+    {
+      "id": "collection-siti-essentials",
+      "kind": "collection",
+      "text": "Recognised Siti Nurhaliza classics, signature songs and accessible starting points across eras.",
+      "payload": {
+        "collectionId": "siti-essentials"
+      },
+      "offset": 81
+    },
+    {
+      "id": "collection-romantic-siti",
+      "kind": "collection",
+      "text": "Romantic warmth, graceful love songs, date-night listening and emotionally expressive ballads.",
+      "payload": {
+        "collectionId": "romantic-siti"
+      },
+      "offset": 82
+    },
+    {
+      "id": "collection-traditional-nusantara",
+      "kind": "collection",
+      "text": "Malay traditional, ethnic creative, Nusantara, folk-rooted and rhythm-led repertoire.",
+      "payload": {
+        "collectionId": "traditional-nusantara"
+      },
+      "offset": 83
+    },
+    {
+      "id": "collection-elegant-evenings",
+      "kind": "collection",
+      "text": "Elegant and polished evening listening with graceful vocals, calm atmosphere and refined arrangements.",
+      "payload": {
+        "collectionId": "elegant-evenings"
+      },
+      "offset": 84
+    },
+    {
+      "id": "collection-powerful-vocals",
+      "kind": "collection",
+      "text": "Powerful vocal performances, emotional crescendos, dramatic intensity and confident presence.",
+      "payload": {
+        "collectionId": "powerful-vocals"
+      },
+      "offset": 85
+    },
+    {
+      "id": "collection-comfort-calm",
+      "kind": "collection",
+      "text": "Calm, comforting, peaceful and reflective songs with gentle but awake energy.",
+      "payload": {
+        "collectionId": "comfort-calm"
+      },
+      "offset": 86
+    },
+    {
+      "id": "collection-joyful-upbeat",
+      "kind": "collection",
+      "text": "Happy, cheerful, upbeat, lively and energetic music for cooking, driving and celebration.",
+      "payload": {
+        "collectionId": "joyful-upbeat"
+      },
+      "offset": 87
+    },
+    {
+      "id": "collection-nostalgic-classics",
+      "kind": "collection",
+      "text": "Nostalgic Siti classics, familiar favourites and songs associated with earlier catalogue eras.",
+      "payload": {
+        "collectionId": "nostalgic-classics"
+      },
+      "offset": 88
+    },
+    {
+      "id": "collection-modern-siti",
+      "kind": "collection",
+      "text": "Modern and recent Siti Nurhaliza releases with contemporary pop production and current collaborations.",
+      "payload": {
+        "collectionId": "modern-siti"
+      },
+      "offset": 89
+    },
+    {
+      "id": "collection-duets-collaborations",
+      "kind": "collection",
+      "text": "Duets, featured artists and collaborative recordings led by or prominently featuring Siti Nurhaliza.",
+      "payload": {
+        "collectionId": "duets-collaborations"
+      },
+      "offset": 90
+    },
+    {
+      "id": "collection-festive-frequency",
+      "kind": "collection",
+      "text": "Festive, celebratory and Hari Raya music with joyful communal energy.",
+      "payload": {
+        "collectionId": "festive-frequency"
+      },
+      "offset": 91
+    },
+    {
+      "id": "collection-hidden-gems",
+      "kind": "collection",
+      "text": "Less familiar deep cuts and discovery choices from across Siti Nurhaliza's verified catalogue.",
+      "payload": {
+        "collectionId": "hidden-gems"
+      },
+      "offset": 92
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Pink FM radio</title>
+  <desc id="desc">An original abstract pink tabletop radio icon</desc>
+  <rect width="512" height="512" rx="112" fill="#fff7fa"/>
+  <path d="M143 157c0-39 29-69 68-69h90c39 0 68 30 68 69" fill="none" stroke="#4a2036" stroke-width="30" stroke-linecap="round"/>
+  <rect x="70" y="137" width="372" height="282" rx="70" fill="#d94f83" stroke="#a8275c" stroke-width="13"/>
+  <rect x="105" y="178" width="302" height="86" rx="28" fill="#4a2036"/>
+  <path d="M135 221h242" stroke="#ffe9c5" stroke-width="5" stroke-linecap="round" opacity=".9"/>
+  <path d="M157 206v29m47-29v29m48-29v29m48-29v29m48-29v29" stroke="#ffe9c5" stroke-width="3" opacity=".5"/>
+  <path d="M276 190v62" stroke="#ff7188" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="169" cy="337" r="63" fill="#e7b8c9" stroke="#a8275c" stroke-width="10"/>
+  <circle cx="169" cy="337" r="30" fill="#4a2036" opacity=".18"/>
+  <circle cx="341" cy="337" r="55" fill="#ef9eba" stroke="#a8275c" stroke-width="12"/>
+  <path d="M341 293v35" stroke="#4a2036" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="403" cy="164" r="11" fill="#ffe9c5"/>
+</svg>

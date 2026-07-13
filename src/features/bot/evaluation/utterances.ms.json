@@ -1,0 +1,2916 @@
+{
+  "schemaVersion": 1,
+  "language": "ms",
+  "utterances": [
+    {
+      "id": "ms-001",
+      "utterance": "saya nak lagu tenang",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-002",
+      "utterance": "saya nak lagu gembira",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-003",
+      "utterance": "saya nak lagu romantik",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-004",
+      "utterance": "saya nak lagu yakin",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-005",
+      "utterance": "saya nak lagu bertenaga",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-006",
+      "utterance": "saya nak lagu nostalgia",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-007",
+      "utterance": "saya nak lagu anggun",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-008",
+      "utterance": "saya nak lagu nyaman",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-009",
+      "utterance": "saya nak lagu dramatik",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-010",
+      "utterance": "saya nak lagu damai",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-011",
+      "utterance": "saya nak lagu ceria",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-012",
+      "utterance": "saya nak lagu cinta",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-013",
+      "utterance": "saya nak lagu berani",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-014",
+      "utterance": "saya nak lagu rancak",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-015",
+      "utterance": "saya nak lagu klasik",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-016",
+      "utterance": "saya nak lagu elegan",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-017",
+      "utterance": "saya nak lagu hangat",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-018",
+      "utterance": "saya nak lagu emosi",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-019",
+      "utterance": "saya nak lagu lembut",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-020",
+      "utterance": "saya nak lagu riang",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-021",
+      "utterance": "saya nak lagu kasih",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-022",
+      "utterance": "saya nak lagu kuat",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-023",
+      "utterance": "saya nak lagu upbeat sikit",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-024",
+      "utterance": "saya nak lagu kenangan",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-025",
+      "utterance": "saya nak lagu berkelas",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-026",
+      "utterance": "saya nak lagu menenangkan hati",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-027",
+      "utterance": "saya nak lagu hebat",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-028",
+      "utterance": "saya nak lagu santai",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-029",
+      "utterance": "saya nak lagu seronok",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-030",
+      "utterance": "saya nak lagu mesra",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-031",
+      "utterance": "saya nak lagu bersemangat",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-032",
+      "utterance": "saya nak lagu lebih laju",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-033",
+      "utterance": "saya nak lagu zaman dulu",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-034",
+      "utterance": "saya nak lagu halus",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-035",
+      "utterance": "saya nak lagu teman",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-036",
+      "utterance": "saya nak lagu power ballad",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-037",
+      "utterance": "saya nak lagu menenangkan",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-038",
+      "utterance": "saya nak lagu bahagia",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-039",
+      "utterance": "saya nak lagu manis",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-040",
+      "utterance": "saya nak lagu vokal kuat",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-041",
+      "utterance": "saya nak lagu semangat",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-042",
+      "utterance": "saya nak lagu siti lama",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-043",
+      "utterance": "saya nak lagu mewah",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-044",
+      "utterance": "saya nak lagu dipujuk",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-045",
+      "utterance": "saya nak lagu grand",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-046",
+      "utterance": "bagi sesuatu yang tenang",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-047",
+      "utterance": "bagi sesuatu yang gembira",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-048",
+      "utterance": "bagi sesuatu yang romantik",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-049",
+      "utterance": "bagi sesuatu yang yakin",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-050",
+      "utterance": "bagi sesuatu yang bertenaga",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-051",
+      "utterance": "bagi sesuatu yang nostalgia",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-052",
+      "utterance": "bagi sesuatu yang anggun",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-053",
+      "utterance": "bagi sesuatu yang nyaman",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-054",
+      "utterance": "bagi sesuatu yang dramatik",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-055",
+      "utterance": "bagi sesuatu yang damai",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-056",
+      "utterance": "bagi sesuatu yang ceria",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-057",
+      "utterance": "bagi sesuatu yang cinta",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-058",
+      "utterance": "bagi sesuatu yang berani",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-059",
+      "utterance": "bagi sesuatu yang rancak",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-060",
+      "utterance": "bagi sesuatu yang klasik",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-061",
+      "utterance": "bagi sesuatu yang elegan",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-062",
+      "utterance": "bagi sesuatu yang hangat",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-063",
+      "utterance": "bagi sesuatu yang emosi",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-064",
+      "utterance": "bagi sesuatu yang lembut",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-065",
+      "utterance": "bagi sesuatu yang riang",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-066",
+      "utterance": "bagi sesuatu yang kasih",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-067",
+      "utterance": "bagi sesuatu yang kuat",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-068",
+      "utterance": "bagi sesuatu yang upbeat sikit",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-069",
+      "utterance": "bagi sesuatu yang kenangan",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-070",
+      "utterance": "bagi sesuatu yang berkelas",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-071",
+      "utterance": "bagi sesuatu yang menenangkan hati",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-072",
+      "utterance": "bagi sesuatu yang hebat",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-073",
+      "utterance": "bagi sesuatu yang santai",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-074",
+      "utterance": "bagi sesuatu yang seronok",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-075",
+      "utterance": "bagi sesuatu yang mesra",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-076",
+      "utterance": "bagi sesuatu yang bersemangat",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-077",
+      "utterance": "bagi sesuatu yang lebih laju",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-078",
+      "utterance": "bagi sesuatu yang zaman dulu",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-079",
+      "utterance": "bagi sesuatu yang halus",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-080",
+      "utterance": "bagi sesuatu yang teman",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-081",
+      "utterance": "bagi sesuatu yang power ballad",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-082",
+      "utterance": "bagi sesuatu yang menenangkan",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-083",
+      "utterance": "bagi sesuatu yang bahagia",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-084",
+      "utterance": "bagi sesuatu yang manis",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-085",
+      "utterance": "bagi sesuatu yang vokal kuat",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-086",
+      "utterance": "nak lagu tenang tapi juga ceria",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-087",
+      "utterance": "campurkan rasa ceria dan kasih",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-088",
+      "utterance": "sesuatu yang kasih serta bersemangat",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-089",
+      "utterance": "nak lagu bersemangat tapi juga semangat",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-090",
+      "utterance": "campurkan rasa semangat dan nostalgia",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-091",
+      "utterance": "sesuatu yang nostalgia serta elegan",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-092",
+      "utterance": "nak lagu elegan tapi juga menenangkan hati",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-093",
+      "utterance": "campurkan rasa menenangkan hati dan power ballad",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-094",
+      "utterance": "sesuatu yang power ballad serta menenangkan",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-095",
+      "utterance": "nak lagu menenangkan tapi juga romantik",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-096",
+      "utterance": "campurkan rasa gembira dan berani",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-097",
+      "utterance": "sesuatu yang cinta serta upbeat sikit",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-098",
+      "utterance": "nak lagu kuat tapi juga zaman dulu",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-099",
+      "utterance": "campurkan rasa lebih laju dan mewah",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-100",
+      "utterance": "sesuatu yang siti lama serta nyaman",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-101",
+      "utterance": "nak lagu anggun tapi juga emosi",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-102",
+      "utterance": "campurkan rasa hangat dan lembut",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-103",
+      "utterance": "sesuatu yang hebat serta seronok",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-104",
+      "utterance": "nak lagu santai tapi juga vokal kuat",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-105",
+      "utterance": "campurkan rasa bahagia dan bertenaga",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-106",
+      "utterance": "sesuatu yang romantik serta klasik",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-107",
+      "utterance": "nak lagu berani tapi juga berkelas",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-108",
+      "utterance": "campurkan rasa upbeat sikit dan teman",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-109",
+      "utterance": "sesuatu yang zaman dulu serta grand",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-110",
+      "utterance": "nak lagu mewah tapi juga tenang",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-111",
+      "utterance": "campurkan rasa nyaman dan ceria",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-112",
+      "utterance": "sesuatu yang emosi serta kasih",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-113",
+      "utterance": "nak lagu lembut tapi juga lebih laju",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-114",
+      "utterance": "campurkan rasa seronok dan siti lama",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-115",
+      "utterance": "sesuatu yang manis serta anggun",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-116",
+      "utterance": "nak lagu yakin tapi juga hangat",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-117",
+      "utterance": "campurkan rasa rancak dan hebat",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-118",
+      "utterance": "sesuatu yang kenangan serta santai",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-119",
+      "utterance": "nak lagu halus tapi juga bahagia",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-120",
+      "utterance": "campurkan rasa dipujuk dan romantik",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-121",
+      "utterance": "sesuatu yang dramatik serta berani",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-122",
+      "utterance": "nak lagu damai tapi juga kenangan",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-123",
+      "utterance": "campurkan rasa riang dan halus",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-124",
+      "utterance": "sesuatu yang mesra serta dipujuk",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-125",
+      "utterance": "nak lagu vokal kuat tapi juga dramatik",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-126",
+      "utterance": "campurkan rasa bertenaga dan damai",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-127",
+      "utterance": "sesuatu yang klasik serta riang",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-128",
+      "utterance": "nak lagu berkelas tapi juga mesra",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-129",
+      "utterance": "campurkan rasa teman dan vokal kuat",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-130",
+      "utterance": "sesuatu yang grand serta bertenaga",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-131",
+      "utterance": "nak lagu tenang tapi juga elegan",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "ms-132",
+      "utterance": "campurkan rasa ceria dan menenangkan hati",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-133",
+      "utterance": "sesuatu yang kasih serta power ballad",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-134",
+      "utterance": "nak lagu bersemangat tapi juga menenangkan",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-135",
+      "utterance": "campurkan rasa semangat dan gembira",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-136",
+      "utterance": "sesuatu yang nostalgia serta cinta",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-137",
+      "utterance": "nak lagu elegan tapi juga kuat",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-138",
+      "utterance": "campurkan rasa menenangkan hati dan lebih laju",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "ms-139",
+      "utterance": "sesuatu yang power ballad serta siti lama",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "ms-140",
+      "utterance": "nak lagu menenangkan tapi juga nyaman",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "ms-141",
+      "utterance": "campurkan rasa gembira dan emosi",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "ms-142",
+      "utterance": "sesuatu yang cinta serta lembut",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-143",
+      "utterance": "nak lagu kuat tapi juga seronok",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "ms-144",
+      "utterance": "campurkan rasa lebih laju dan manis",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "ms-145",
+      "utterance": "sesuatu yang siti lama serta yakin",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "ms-146",
+      "utterance": "lagu untuk masak",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cooking"
+      }
+    },
+    {
+      "id": "ms-147",
+      "utterance": "muzik masa kemas rumah yang ceria",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cleaning"
+      }
+    },
+    {
+      "id": "ms-148",
+      "utterance": "lagu masa memandu",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "driving"
+      }
+    },
+    {
+      "id": "ms-149",
+      "utterance": "muzik untuk buat kerja yang seronok",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      }
+    },
+    {
+      "id": "ms-150",
+      "utterance": "lagu untuk rehat",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "relaxing"
+      }
+    },
+    {
+      "id": "ms-151",
+      "utterance": "muzik untuk makan malam yang gembira",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "dinner"
+      }
+    },
+    {
+      "id": "ms-152",
+      "utterance": "lagu untuk majlis",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "celebration"
+      }
+    },
+    {
+      "id": "ms-153",
+      "utterance": "muzik untuk merenung yang riang",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "reflecting"
+      }
+    },
+    {
+      "id": "ms-154",
+      "utterance": "lagu untuk masak",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cooking"
+      }
+    },
+    {
+      "id": "ms-155",
+      "utterance": "muzik masa kemas rumah yang bahagia",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cleaning"
+      }
+    },
+    {
+      "id": "ms-156",
+      "utterance": "lagu masa memandu",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "driving"
+      }
+    },
+    {
+      "id": "ms-157",
+      "utterance": "muzik untuk buat kerja yang ceria",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      }
+    },
+    {
+      "id": "ms-158",
+      "utterance": "lagu untuk rehat",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "relaxing"
+      }
+    },
+    {
+      "id": "ms-159",
+      "utterance": "muzik untuk makan malam yang seronok",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "dinner"
+      }
+    },
+    {
+      "id": "ms-160",
+      "utterance": "lagu untuk majlis",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "celebration"
+      }
+    },
+    {
+      "id": "ms-161",
+      "utterance": "muzik untuk merenung yang gembira",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "reflecting"
+      }
+    },
+    {
+      "id": "ms-162",
+      "utterance": "lagu untuk masak",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cooking"
+      }
+    },
+    {
+      "id": "ms-163",
+      "utterance": "muzik masa kemas rumah yang riang",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cleaning"
+      }
+    },
+    {
+      "id": "ms-164",
+      "utterance": "lagu masa memandu",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "driving"
+      }
+    },
+    {
+      "id": "ms-165",
+      "utterance": "muzik untuk buat kerja yang bahagia",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      }
+    },
+    {
+      "id": "ms-166",
+      "utterance": "lagu untuk rehat",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "relaxing"
+      }
+    },
+    {
+      "id": "ms-167",
+      "utterance": "muzik untuk makan malam yang ceria",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "dinner"
+      }
+    },
+    {
+      "id": "ms-168",
+      "utterance": "lagu untuk majlis",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "celebration"
+      }
+    },
+    {
+      "id": "ms-169",
+      "utterance": "muzik untuk merenung yang seronok",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "reflecting"
+      }
+    },
+    {
+      "id": "ms-170",
+      "utterance": "lagu untuk masak",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cooking"
+      }
+    },
+    {
+      "id": "ms-171",
+      "utterance": "muzik masa kemas rumah yang gembira",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cleaning"
+      }
+    },
+    {
+      "id": "ms-172",
+      "utterance": "lagu masa memandu",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "driving"
+      }
+    },
+    {
+      "id": "ms-173",
+      "utterance": "muzik untuk buat kerja yang riang",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      }
+    },
+    {
+      "id": "ms-174",
+      "utterance": "lagu untuk rehat",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "relaxing"
+      }
+    },
+    {
+      "id": "ms-175",
+      "utterance": "muzik untuk makan malam yang bahagia",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "dinner"
+      }
+    },
+    {
+      "id": "ms-176",
+      "utterance": "lagu untuk majlis",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "celebration"
+      }
+    },
+    {
+      "id": "ms-177",
+      "utterance": "muzik untuk merenung yang ceria",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "reflecting"
+      }
+    },
+    {
+      "id": "ms-178",
+      "utterance": "lagu untuk masak",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cooking"
+      }
+    },
+    {
+      "id": "ms-179",
+      "utterance": "muzik masa kemas rumah yang seronok",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cleaning"
+      }
+    },
+    {
+      "id": "ms-180",
+      "utterance": "lagu masa memandu",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "driving"
+      }
+    },
+    {
+      "id": "ms-181",
+      "utterance": "muzik untuk buat kerja yang gembira",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      }
+    },
+    {
+      "id": "ms-182",
+      "utterance": "lagu untuk rehat",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "relaxing"
+      }
+    },
+    {
+      "id": "ms-183",
+      "utterance": "lagu untuk waktu pagi",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "morning"
+      }
+    },
+    {
+      "id": "ms-184",
+      "utterance": "muzik tengah hari please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "daytime"
+      }
+    },
+    {
+      "id": "ms-185",
+      "utterance": "sesuatu waktu senja",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "evening"
+      }
+    },
+    {
+      "id": "ms-186",
+      "utterance": "lagu untuk malam please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "night"
+      }
+    },
+    {
+      "id": "ms-187",
+      "utterance": "lagu untuk waktu pagi",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "morning"
+      }
+    },
+    {
+      "id": "ms-188",
+      "utterance": "muzik tengah hari please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "daytime"
+      }
+    },
+    {
+      "id": "ms-189",
+      "utterance": "sesuatu waktu senja",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "evening"
+      }
+    },
+    {
+      "id": "ms-190",
+      "utterance": "lagu untuk malam please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "night"
+      }
+    },
+    {
+      "id": "ms-191",
+      "utterance": "lagu untuk waktu pagi",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "morning"
+      }
+    },
+    {
+      "id": "ms-192",
+      "utterance": "muzik tengah hari please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "daytime"
+      }
+    },
+    {
+      "id": "ms-193",
+      "utterance": "sesuatu waktu senja",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "evening"
+      }
+    },
+    {
+      "id": "ms-194",
+      "utterance": "lagu untuk malam please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "night"
+      }
+    },
+    {
+      "id": "ms-195",
+      "utterance": "lagu untuk waktu pagi",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "morning"
+      }
+    },
+    {
+      "id": "ms-196",
+      "utterance": "muzik tengah hari please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "daytime"
+      }
+    },
+    {
+      "id": "ms-197",
+      "utterance": "sesuatu waktu senja",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "evening"
+      }
+    },
+    {
+      "id": "ms-198",
+      "utterance": "lagu untuk malam please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "night"
+      }
+    },
+    {
+      "id": "ms-199",
+      "utterance": "lagu untuk waktu pagi",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "morning"
+      }
+    },
+    {
+      "id": "ms-200",
+      "utterance": "muzik tengah hari please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "daytime"
+      }
+    },
+    {
+      "id": "ms-201",
+      "utterance": "lagi rancak",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      }
+    },
+    {
+      "id": "ms-202",
+      "utterance": "kurang dramatik",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "less-intense"
+      }
+    },
+    {
+      "id": "ms-203",
+      "utterance": "macam yang tadi",
+      "category": "intent",
+      "expected": {
+        "kind": "clarification"
+      }
+    },
+    {
+      "id": "ms-204",
+      "utterance": "bagi yang lain",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "different"
+      }
+    },
+    {
+      "id": "ms-205",
+      "utterance": "lagu kegemaran yang saya kenal",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "familiar"
+      }
+    },
+    {
+      "id": "ms-206",
+      "utterance": "hidden gem yang jarang dengar",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "ms-207",
+      "utterance": "nak lagu Siti lama",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "older"
+      }
+    },
+    {
+      "id": "ms-208",
+      "utterance": "bagi yang moden sikit",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "modern"
+      }
+    },
+    {
+      "id": "ms-209",
+      "utterance": "nak lagu tradisional",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "traditional"
+        ]
+      }
+    },
+    {
+      "id": "ms-210",
+      "utterance": "nak duet",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "duet"
+        ]
+      }
+    },
+    {
+      "id": "ms-211",
+      "utterance": "surprise saya",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "ms-212",
+      "utterance": "tenang tapi tak mengantuk",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-213",
+      "utterance": "lagi rancak 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      }
+    },
+    {
+      "id": "ms-214",
+      "utterance": "kurang dramatik 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "less-intense"
+      }
+    },
+    {
+      "id": "ms-215",
+      "utterance": "macam yang tadi 2",
+      "category": "intent",
+      "expected": {
+        "kind": "clarification"
+      }
+    },
+    {
+      "id": "ms-216",
+      "utterance": "bagi yang lain 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "different"
+      }
+    },
+    {
+      "id": "ms-217",
+      "utterance": "lagu kegemaran yang saya kenal 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "familiar"
+      }
+    },
+    {
+      "id": "ms-218",
+      "utterance": "hidden gem yang jarang dengar 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "ms-219",
+      "utterance": "nak lagu Siti lama 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "older"
+      }
+    },
+    {
+      "id": "ms-220",
+      "utterance": "bagi yang moden sikit 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "modern"
+      }
+    },
+    {
+      "id": "ms-221",
+      "utterance": "nak lagu tradisional 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "traditional"
+        ]
+      }
+    },
+    {
+      "id": "ms-222",
+      "utterance": "nak duet 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "duet"
+        ]
+      }
+    },
+    {
+      "id": "ms-223",
+      "utterance": "surprise saya 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "ms-224",
+      "utterance": "tenang tapi tak mengantuk 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-225",
+      "utterance": "lagi rancak 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      }
+    },
+    {
+      "id": "ms-226",
+      "utterance": "kurang dramatik 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "less-intense"
+      }
+    },
+    {
+      "id": "ms-227",
+      "utterance": "macam yang tadi 3",
+      "category": "intent",
+      "expected": {
+        "kind": "clarification"
+      }
+    },
+    {
+      "id": "ms-228",
+      "utterance": "bagi yang lain 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "different"
+      }
+    },
+    {
+      "id": "ms-229",
+      "utterance": "lagu kegemaran yang saya kenal 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "familiar"
+      }
+    },
+    {
+      "id": "ms-230",
+      "utterance": "hidden gem yang jarang dengar 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "ms-231",
+      "utterance": "nak lagu Siti lama 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "older"
+      }
+    },
+    {
+      "id": "ms-232",
+      "utterance": "bagi yang moden sikit 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "modern"
+      }
+    },
+    {
+      "id": "ms-233",
+      "utterance": "nak lagu tradisional 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "traditional"
+        ]
+      }
+    },
+    {
+      "id": "ms-234",
+      "utterance": "nak duet 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "duet"
+        ]
+      }
+    },
+    {
+      "id": "ms-235",
+      "utterance": "surprise saya 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "ms-236",
+      "utterance": "tenang tapi tak mengantuk 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-237",
+      "utterance": "lagi rancak 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      }
+    },
+    {
+      "id": "ms-238",
+      "utterance": "kurang dramatik 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "less-intense"
+      }
+    },
+    {
+      "id": "ms-239",
+      "utterance": "macam yang tadi 4",
+      "category": "intent",
+      "expected": {
+        "kind": "clarification"
+      }
+    },
+    {
+      "id": "ms-240",
+      "utterance": "bagi yang lain 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "different"
+      }
+    },
+    {
+      "id": "ms-241",
+      "utterance": "lagu kegemaran yang saya kenal 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "familiar"
+      }
+    },
+    {
+      "id": "ms-242",
+      "utterance": "hidden gem yang jarang dengar 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "ms-243",
+      "utterance": "nak lagu Siti lama 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "older"
+      }
+    },
+    {
+      "id": "ms-244",
+      "utterance": "bagi yang moden sikit 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "modern"
+      }
+    },
+    {
+      "id": "ms-245",
+      "utterance": "nak lagu tradisional 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "traditional"
+        ]
+      }
+    },
+    {
+      "id": "ms-246",
+      "utterance": "nak duet 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "duet"
+        ]
+      }
+    },
+    {
+      "id": "ms-247",
+      "utterance": "surprise saya 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "ms-248",
+      "utterance": "tenang tapi tak mengantuk 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "ms-249",
+      "utterance": "lagi rancak 5",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      }
+    },
+    {
+      "id": "ms-250",
+      "utterance": "kurang dramatik 5",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "less-intense"
+      }
+    },
+    {
+      "id": "ms-251",
+      "utterance": "bagi lagu yang mendalam 0",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-252",
+      "utterance": "bagi lagu yang mendalam 1",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-253",
+      "utterance": "bagi lagu yang mendalam 2",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-254",
+      "utterance": "bagi lagu yang mendalam 3",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-255",
+      "utterance": "bagi lagu yang mendalam 4",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-256",
+      "utterance": "bagi lagu yang mendalam 5",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-257",
+      "utterance": "bagi lagu yang mendalam 6",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-258",
+      "utterance": "bagi lagu yang mendalam 7",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-259",
+      "utterance": "bagi lagu yang mendalam 8",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-260",
+      "utterance": "bagi lagu yang mendalam 9",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-261",
+      "utterance": "bagi lagu yang mendalam 10 11",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-262",
+      "utterance": "bagi lagu yang mendalam 11 12",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-263",
+      "utterance": "bagi lagu yang mendalam 12 13",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-264",
+      "utterance": "bagi lagu yang mendalam 13 14",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-265",
+      "utterance": "bagi lagu yang mendalam 14 15",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-266",
+      "utterance": "bagi lagu yang mendalam 15 16",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-267",
+      "utterance": "bagi lagu yang mendalam 16 17",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-268",
+      "utterance": "bagi lagu yang mendalam 17 18",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-269",
+      "utterance": "bagi lagu yang mendalam 18 19",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-270",
+      "utterance": "bagi lagu yang mendalam 19 20",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-271",
+      "utterance": "bagi lagu yang mendalam 20 21",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-272",
+      "utterance": "bagi lagu yang mendalam 21 22",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-273",
+      "utterance": "bagi lagu yang mendalam 22 23",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-274",
+      "utterance": "bagi lagu yang mendalam 23 24",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-275",
+      "utterance": "bagi lagu yang mendalam 24 25",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "ms-entity-01",
+      "utterance": "Saya nak lagu Cindai",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "cindai"
+      }
+    },
+    {
+      "id": "ms-entity-02",
+      "utterance": "Saya nak lagu Purnama Merindu",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "purnama-merindu"
+      }
+    },
+    {
+      "id": "ms-entity-03",
+      "utterance": "Saya nak lagu Bukan Cinta Biasa",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "bukan-cinta-biasa"
+      }
+    },
+    {
+      "id": "ms-entity-04",
+      "utterance": "Saya nak lagu Aku Cinta Padamu",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "aku-cinta-padamu"
+      }
+    },
+    {
+      "id": "ms-entity-05",
+      "utterance": "Saya nak lagu Jerat Percintaan",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "jerat-percintaan"
+      }
+    },
+    {
+      "id": "ms-entity-06",
+      "utterance": "Saya nak lagu Sejarah",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "sejarah"
+      }
+    },
+    {
+      "id": "ms-entity-07",
+      "utterance": "Saya nak lagu Sesal",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "sesal"
+      }
+    },
+    {
+      "id": "ms-entity-08",
+      "utterance": "Saya nak lagu Magis",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "magis"
+      }
+    },
+    {
+      "id": "ms-entity-09",
+      "utterance": "Saya nak lagu Wanita",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "wanita"
+      }
+    },
+    {
+      "id": "ms-entity-10",
+      "utterance": "Saya nak lagu Terang",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "terang"
+      }
+    }
+  ]
+}

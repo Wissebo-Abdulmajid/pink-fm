@@ -1,0 +1,3441 @@
+{
+  "schemaVersion": 1,
+  "language": "en",
+  "utterances": [
+    {
+      "id": "en-001",
+      "utterance": "I want something peaceful",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-002",
+      "utterance": "I want something happy",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-003",
+      "utterance": "I want something romantic",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-004",
+      "utterance": "I want something confident",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-005",
+      "utterance": "I want something energetic",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-006",
+      "utterance": "I want something nostalgic",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-007",
+      "utterance": "I want something elegant",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-008",
+      "utterance": "I want something comforting",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-009",
+      "utterance": "I want something dramatic",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-010",
+      "utterance": "I want something calm",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-011",
+      "utterance": "I want something cheerful",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-012",
+      "utterance": "I want something tender",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-013",
+      "utterance": "I want something bold",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-014",
+      "utterance": "I want something upbeat",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-015",
+      "utterance": "I want something classic",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-016",
+      "utterance": "I want something classy",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-017",
+      "utterance": "I want something cosy",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-018",
+      "utterance": "I want something intense",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-019",
+      "utterance": "I want something serene",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-020",
+      "utterance": "I want something joyful",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-021",
+      "utterance": "I want something loving",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-022",
+      "utterance": "I want something assured",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-023",
+      "utterance": "I want something lively",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-024",
+      "utterance": "I want something old school",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-025",
+      "utterance": "I want something refined",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-026",
+      "utterance": "I want something warm",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-027",
+      "utterance": "I want something grand",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-028",
+      "utterance": "I want something soothing",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-029",
+      "utterance": "I want something uplifting",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-030",
+      "utterance": "I want something sweet",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-031",
+      "utterance": "I want something empowering",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-032",
+      "utterance": "I want something active",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-033",
+      "utterance": "I want something throwback",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-034",
+      "utterance": "I want something graceful",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-035",
+      "utterance": "I want something reassuring",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-036",
+      "utterance": "I want something epic",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-037",
+      "utterance": "I want something gentle",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-038",
+      "utterance": "I want something bright",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-039",
+      "utterance": "I want something affectionate",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-040",
+      "utterance": "I want something strong",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-041",
+      "utterance": "I want something dance",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-042",
+      "utterance": "I want something memories",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-043",
+      "utterance": "I want something sophisticated",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-044",
+      "utterance": "I want something safe",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-045",
+      "utterance": "I want something emotional",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-046",
+      "utterance": "Tune for a peaceful feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-047",
+      "utterance": "Tune for a happy feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-048",
+      "utterance": "Tune for a romantic feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-049",
+      "utterance": "Tune for a confident feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-050",
+      "utterance": "Tune for a energetic feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-051",
+      "utterance": "Tune for a nostalgic feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-052",
+      "utterance": "Tune for a elegant feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-053",
+      "utterance": "Tune for a comforting feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-054",
+      "utterance": "Tune for a dramatic feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-055",
+      "utterance": "Tune for a calm feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-056",
+      "utterance": "Tune for a cheerful feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-057",
+      "utterance": "Tune for a tender feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-058",
+      "utterance": "Tune for a bold feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-059",
+      "utterance": "Tune for a upbeat feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-060",
+      "utterance": "Tune for a classic feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-061",
+      "utterance": "Tune for a classy feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-062",
+      "utterance": "Tune for a cosy feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-063",
+      "utterance": "Tune for a intense feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-064",
+      "utterance": "Tune for a serene feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-065",
+      "utterance": "Tune for a joyful feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-066",
+      "utterance": "Tune for a loving feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-067",
+      "utterance": "Tune for a assured feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-068",
+      "utterance": "Tune for a lively feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-069",
+      "utterance": "Tune for a old school feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-070",
+      "utterance": "Tune for a refined feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-071",
+      "utterance": "Tune for a warm feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-072",
+      "utterance": "Tune for a grand feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-073",
+      "utterance": "Tune for a soothing feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-074",
+      "utterance": "Tune for a uplifting feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-075",
+      "utterance": "Tune for a sweet feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-076",
+      "utterance": "Tune for a empowering feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-077",
+      "utterance": "Tune for a active feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-078",
+      "utterance": "Tune for a throwback feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-079",
+      "utterance": "Tune for a graceful feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-080",
+      "utterance": "Tune for a reassuring feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-081",
+      "utterance": "Tune for a epic feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-082",
+      "utterance": "Tune for a gentle feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-083",
+      "utterance": "Tune for a bright feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-084",
+      "utterance": "Tune for a affectionate feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-085",
+      "utterance": "Tune for a strong feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-086",
+      "utterance": "Tune for a dance feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-087",
+      "utterance": "Tune for a memories feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-088",
+      "utterance": "Tune for a sophisticated feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-089",
+      "utterance": "Tune for a safe feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-090",
+      "utterance": "Tune for a emotional feeling",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-091",
+      "utterance": "Could you choose music that is peaceful?",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-092",
+      "utterance": "Could you choose music that is happy?",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-093",
+      "utterance": "Could you choose music that is romantic?",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-094",
+      "utterance": "Could you choose music that is confident?",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-095",
+      "utterance": "Could you choose music that is energetic?",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-096",
+      "utterance": "Could you choose music that is nostalgic?",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-097",
+      "utterance": "Could you choose music that is elegant?",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-098",
+      "utterance": "Could you choose music that is comforting?",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-099",
+      "utterance": "Could you choose music that is dramatic?",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-100",
+      "utterance": "Could you choose music that is calm?",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-101",
+      "utterance": "Could you choose music that is cheerful?",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-102",
+      "utterance": "Could you choose music that is tender?",
+      "category": "mood",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-103",
+      "utterance": "Something peaceful but also cheerful",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-104",
+      "utterance": "Mix cheerful with loving",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-105",
+      "utterance": "I feel like loving and empowering music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-106",
+      "utterance": "Something empowering but also dance",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-107",
+      "utterance": "Mix dance with nostalgic",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-108",
+      "utterance": "I feel like nostalgic and classy music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-109",
+      "utterance": "Something classy but also warm",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-110",
+      "utterance": "Mix warm with epic",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-111",
+      "utterance": "I feel like epic and gentle music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-112",
+      "utterance": "Something gentle but also romantic",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-113",
+      "utterance": "Mix happy with bold",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-114",
+      "utterance": "I feel like tender and lively music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-115",
+      "utterance": "Something assured but also throwback",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-116",
+      "utterance": "Mix active with sophisticated",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-117",
+      "utterance": "I feel like memories and comforting music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-118",
+      "utterance": "Something elegant but also intense",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-119",
+      "utterance": "Mix cosy with serene",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-120",
+      "utterance": "I feel like grand and uplifting music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-121",
+      "utterance": "Something soothing but also strong",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-122",
+      "utterance": "Mix bright with energetic",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-123",
+      "utterance": "I feel like romantic and classic music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-124",
+      "utterance": "Something bold but also refined",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-125",
+      "utterance": "Mix lively with reassuring",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-126",
+      "utterance": "I feel like throwback and emotional music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-127",
+      "utterance": "Something sophisticated but also peaceful",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-128",
+      "utterance": "Mix comforting with cheerful",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-129",
+      "utterance": "I feel like intense and loving music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-130",
+      "utterance": "Something serene but also active",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-131",
+      "utterance": "Mix uplifting with memories",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-132",
+      "utterance": "I feel like affectionate and elegant music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-133",
+      "utterance": "Something confident but also cosy",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-134",
+      "utterance": "Mix upbeat with grand",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-135",
+      "utterance": "I feel like old school and soothing music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-136",
+      "utterance": "Something graceful but also bright",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-137",
+      "utterance": "Mix safe with romantic",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-138",
+      "utterance": "I feel like dramatic and bold music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-139",
+      "utterance": "Something calm but also old school",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-140",
+      "utterance": "Mix joyful with graceful",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-141",
+      "utterance": "I feel like sweet and safe music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-142",
+      "utterance": "Something strong but also dramatic",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-143",
+      "utterance": "Mix energetic with calm",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-144",
+      "utterance": "I feel like classic and joyful music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-145",
+      "utterance": "Something refined but also sweet",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-146",
+      "utterance": "Mix reassuring with strong",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-147",
+      "utterance": "I feel like emotional and energetic music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-148",
+      "utterance": "Something peaceful but also classy",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-149",
+      "utterance": "Mix cheerful with warm",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-150",
+      "utterance": "I feel like loving and epic music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-151",
+      "utterance": "Something empowering but also gentle",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-152",
+      "utterance": "Mix dance with happy",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-153",
+      "utterance": "I feel like nostalgic and tender music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-154",
+      "utterance": "Something classy but also assured",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-155",
+      "utterance": "Mix warm with active",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-156",
+      "utterance": "I feel like epic and memories music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-157",
+      "utterance": "Something gentle but also comforting",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-158",
+      "utterance": "Mix happy with intense",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-159",
+      "utterance": "I feel like tender and serene music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-160",
+      "utterance": "Something assured but also uplifting",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-161",
+      "utterance": "Mix active with affectionate",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-162",
+      "utterance": "I feel like memories and confident music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-163",
+      "utterance": "Something elegant but also upbeat",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-164",
+      "utterance": "Mix cosy with old school",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-165",
+      "utterance": "I feel like grand and graceful music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-166",
+      "utterance": "Something soothing but also emotional",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful",
+          "dramatic"
+        ]
+      }
+    },
+    {
+      "id": "en-167",
+      "utterance": "Mix bright with peaceful",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "happy",
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-168",
+      "utterance": "I feel like romantic and cheerful music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "romantic",
+          "happy"
+        ]
+      }
+    },
+    {
+      "id": "en-169",
+      "utterance": "Something bold but also loving",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "confident",
+          "romantic"
+        ]
+      }
+    },
+    {
+      "id": "en-170",
+      "utterance": "Mix lively with empowering",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "energised",
+          "confident"
+        ]
+      }
+    },
+    {
+      "id": "en-171",
+      "utterance": "I feel like throwback and dance music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "nostalgic",
+          "energised"
+        ]
+      }
+    },
+    {
+      "id": "en-172",
+      "utterance": "Something sophisticated but also nostalgic",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "elegant",
+          "nostalgic"
+        ]
+      }
+    },
+    {
+      "id": "en-173",
+      "utterance": "Mix comforting with classy",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "comforted",
+          "elegant"
+        ]
+      }
+    },
+    {
+      "id": "en-174",
+      "utterance": "I feel like intense and warm music",
+      "category": "mood-combination",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "dramatic",
+          "comforted"
+        ]
+      }
+    },
+    {
+      "id": "en-175",
+      "utterance": "music for cooking",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cooking"
+      }
+    },
+    {
+      "id": "en-176",
+      "utterance": "something while I am cleaning yang cheerful",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cleaning"
+      }
+    },
+    {
+      "id": "en-177",
+      "utterance": "songs for driving",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "driving"
+      }
+    },
+    {
+      "id": "en-178",
+      "utterance": "music while working yang uplifting",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      }
+    },
+    {
+      "id": "en-179",
+      "utterance": "something for relaxing",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "relaxing"
+      }
+    },
+    {
+      "id": "en-180",
+      "utterance": "music for dinner yang happy",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "dinner"
+      }
+    },
+    {
+      "id": "en-181",
+      "utterance": "a song for a celebration",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "celebration"
+      }
+    },
+    {
+      "id": "en-182",
+      "utterance": "music for reflecting yang joyful",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "reflecting"
+      }
+    },
+    {
+      "id": "en-183",
+      "utterance": "music for cooking",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cooking"
+      }
+    },
+    {
+      "id": "en-184",
+      "utterance": "something while I am cleaning yang bright",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cleaning"
+      }
+    },
+    {
+      "id": "en-185",
+      "utterance": "songs for driving",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "driving"
+      }
+    },
+    {
+      "id": "en-186",
+      "utterance": "music while working yang cheerful",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      }
+    },
+    {
+      "id": "en-187",
+      "utterance": "something for relaxing",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "relaxing"
+      }
+    },
+    {
+      "id": "en-188",
+      "utterance": "music for dinner yang uplifting",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "dinner"
+      }
+    },
+    {
+      "id": "en-189",
+      "utterance": "a song for a celebration",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "celebration"
+      }
+    },
+    {
+      "id": "en-190",
+      "utterance": "music for reflecting yang happy",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "reflecting"
+      }
+    },
+    {
+      "id": "en-191",
+      "utterance": "music for cooking",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cooking"
+      }
+    },
+    {
+      "id": "en-192",
+      "utterance": "something while I am cleaning yang joyful",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cleaning"
+      }
+    },
+    {
+      "id": "en-193",
+      "utterance": "songs for driving",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "driving"
+      }
+    },
+    {
+      "id": "en-194",
+      "utterance": "music while working yang bright",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      }
+    },
+    {
+      "id": "en-195",
+      "utterance": "something for relaxing",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "relaxing"
+      }
+    },
+    {
+      "id": "en-196",
+      "utterance": "music for dinner yang cheerful",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "dinner"
+      }
+    },
+    {
+      "id": "en-197",
+      "utterance": "a song for a celebration",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "celebration"
+      }
+    },
+    {
+      "id": "en-198",
+      "utterance": "music for reflecting yang uplifting",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "reflecting"
+      }
+    },
+    {
+      "id": "en-199",
+      "utterance": "music for cooking",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cooking"
+      }
+    },
+    {
+      "id": "en-200",
+      "utterance": "something while I am cleaning yang happy",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cleaning"
+      }
+    },
+    {
+      "id": "en-201",
+      "utterance": "songs for driving",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "driving"
+      }
+    },
+    {
+      "id": "en-202",
+      "utterance": "music while working yang joyful",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      }
+    },
+    {
+      "id": "en-203",
+      "utterance": "something for relaxing",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "relaxing"
+      }
+    },
+    {
+      "id": "en-204",
+      "utterance": "music for dinner yang bright",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "dinner"
+      }
+    },
+    {
+      "id": "en-205",
+      "utterance": "a song for a celebration",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "celebration"
+      }
+    },
+    {
+      "id": "en-206",
+      "utterance": "music for reflecting yang cheerful",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "reflecting"
+      }
+    },
+    {
+      "id": "en-207",
+      "utterance": "music for cooking",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cooking"
+      }
+    },
+    {
+      "id": "en-208",
+      "utterance": "something while I am cleaning yang uplifting",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cleaning"
+      }
+    },
+    {
+      "id": "en-209",
+      "utterance": "songs for driving",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "driving"
+      }
+    },
+    {
+      "id": "en-210",
+      "utterance": "music while working yang happy",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      }
+    },
+    {
+      "id": "en-211",
+      "utterance": "something for relaxing",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "relaxing"
+      }
+    },
+    {
+      "id": "en-212",
+      "utterance": "music for dinner yang joyful",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "dinner"
+      }
+    },
+    {
+      "id": "en-213",
+      "utterance": "a song for a celebration",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "celebration"
+      }
+    },
+    {
+      "id": "en-214",
+      "utterance": "music for reflecting yang bright",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "reflecting"
+      }
+    },
+    {
+      "id": "en-215",
+      "utterance": "music for cooking",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cooking"
+      }
+    },
+    {
+      "id": "en-216",
+      "utterance": "something while I am cleaning yang cheerful",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "cleaning"
+      }
+    },
+    {
+      "id": "en-217",
+      "utterance": "songs for driving",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "driving"
+      }
+    },
+    {
+      "id": "en-218",
+      "utterance": "music while working yang uplifting",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "working"
+      }
+    },
+    {
+      "id": "en-219",
+      "utterance": "something for relaxing",
+      "category": "activity",
+      "expected": {
+        "kind": "recommendation",
+        "activity": "relaxing"
+      }
+    },
+    {
+      "id": "en-220",
+      "utterance": "music for the morning",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "morning"
+      }
+    },
+    {
+      "id": "en-221",
+      "utterance": "an afternoon selection please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "daytime"
+      }
+    },
+    {
+      "id": "en-222",
+      "utterance": "something for the evening",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "evening"
+      }
+    },
+    {
+      "id": "en-223",
+      "utterance": "quiet music at night please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "night"
+      }
+    },
+    {
+      "id": "en-224",
+      "utterance": "music for the morning",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "morning"
+      }
+    },
+    {
+      "id": "en-225",
+      "utterance": "an afternoon selection please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "daytime"
+      }
+    },
+    {
+      "id": "en-226",
+      "utterance": "something for the evening",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "evening"
+      }
+    },
+    {
+      "id": "en-227",
+      "utterance": "quiet music at night please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "night"
+      }
+    },
+    {
+      "id": "en-228",
+      "utterance": "music for the morning",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "morning"
+      }
+    },
+    {
+      "id": "en-229",
+      "utterance": "an afternoon selection please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "daytime"
+      }
+    },
+    {
+      "id": "en-230",
+      "utterance": "something for the evening",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "evening"
+      }
+    },
+    {
+      "id": "en-231",
+      "utterance": "quiet music at night please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "night"
+      }
+    },
+    {
+      "id": "en-232",
+      "utterance": "music for the morning",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "morning"
+      }
+    },
+    {
+      "id": "en-233",
+      "utterance": "an afternoon selection please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "daytime"
+      }
+    },
+    {
+      "id": "en-234",
+      "utterance": "something for the evening",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "evening"
+      }
+    },
+    {
+      "id": "en-235",
+      "utterance": "quiet music at night please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "night"
+      }
+    },
+    {
+      "id": "en-236",
+      "utterance": "music for the morning",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "morning"
+      }
+    },
+    {
+      "id": "en-237",
+      "utterance": "an afternoon selection please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "daytime"
+      }
+    },
+    {
+      "id": "en-238",
+      "utterance": "something for the evening",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "evening"
+      }
+    },
+    {
+      "id": "en-239",
+      "utterance": "quiet music at night please",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "night"
+      }
+    },
+    {
+      "id": "en-240",
+      "utterance": "music for the morning",
+      "category": "time",
+      "expected": {
+        "kind": "recommendation",
+        "time": "morning"
+      }
+    },
+    {
+      "id": "en-241",
+      "utterance": "more energetic",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      }
+    },
+    {
+      "id": "en-242",
+      "utterance": "less intense",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "less-intense"
+      }
+    },
+    {
+      "id": "en-243",
+      "utterance": "more like the last song",
+      "category": "intent",
+      "expected": {
+        "kind": "clarification"
+      }
+    },
+    {
+      "id": "en-244",
+      "utterance": "something different",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "different"
+      }
+    },
+    {
+      "id": "en-245",
+      "utterance": "a familiar favourite",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "familiar"
+      }
+    },
+    {
+      "id": "en-246",
+      "utterance": "a hidden gem discovery",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "en-247",
+      "utterance": "something older",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "older"
+      }
+    },
+    {
+      "id": "en-248",
+      "utterance": "a modern recent song",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "modern"
+      }
+    },
+    {
+      "id": "en-249",
+      "utterance": "a traditional song",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "traditional"
+        ]
+      }
+    },
+    {
+      "id": "en-250",
+      "utterance": "I want a duet",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "duet"
+        ]
+      }
+    },
+    {
+      "id": "en-251",
+      "utterance": "surprise me",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "en-252",
+      "utterance": "peaceful but not sleepy",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-253",
+      "utterance": "more energetic 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      }
+    },
+    {
+      "id": "en-254",
+      "utterance": "less intense 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "less-intense"
+      }
+    },
+    {
+      "id": "en-255",
+      "utterance": "more like the last song 2",
+      "category": "intent",
+      "expected": {
+        "kind": "clarification"
+      }
+    },
+    {
+      "id": "en-256",
+      "utterance": "something different 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "different"
+      }
+    },
+    {
+      "id": "en-257",
+      "utterance": "a familiar favourite 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "familiar"
+      }
+    },
+    {
+      "id": "en-258",
+      "utterance": "a hidden gem discovery 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "en-259",
+      "utterance": "something older 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "older"
+      }
+    },
+    {
+      "id": "en-260",
+      "utterance": "a modern recent song 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "modern"
+      }
+    },
+    {
+      "id": "en-261",
+      "utterance": "a traditional song 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "traditional"
+        ]
+      }
+    },
+    {
+      "id": "en-262",
+      "utterance": "I want a duet 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "duet"
+        ]
+      }
+    },
+    {
+      "id": "en-263",
+      "utterance": "surprise me 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "en-264",
+      "utterance": "peaceful but not sleepy 2",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-265",
+      "utterance": "more energetic 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      }
+    },
+    {
+      "id": "en-266",
+      "utterance": "less intense 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "less-intense"
+      }
+    },
+    {
+      "id": "en-267",
+      "utterance": "more like the last song 3",
+      "category": "intent",
+      "expected": {
+        "kind": "clarification"
+      }
+    },
+    {
+      "id": "en-268",
+      "utterance": "something different 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "different"
+      }
+    },
+    {
+      "id": "en-269",
+      "utterance": "a familiar favourite 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "familiar"
+      }
+    },
+    {
+      "id": "en-270",
+      "utterance": "a hidden gem discovery 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "en-271",
+      "utterance": "something older 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "older"
+      }
+    },
+    {
+      "id": "en-272",
+      "utterance": "a modern recent song 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "modern"
+      }
+    },
+    {
+      "id": "en-273",
+      "utterance": "a traditional song 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "traditional"
+        ]
+      }
+    },
+    {
+      "id": "en-274",
+      "utterance": "I want a duet 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "duet"
+        ]
+      }
+    },
+    {
+      "id": "en-275",
+      "utterance": "surprise me 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "en-276",
+      "utterance": "peaceful but not sleepy 3",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-277",
+      "utterance": "more energetic 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      }
+    },
+    {
+      "id": "en-278",
+      "utterance": "less intense 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "less-intense"
+      }
+    },
+    {
+      "id": "en-279",
+      "utterance": "more like the last song 4",
+      "category": "intent",
+      "expected": {
+        "kind": "clarification"
+      }
+    },
+    {
+      "id": "en-280",
+      "utterance": "something different 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "different"
+      }
+    },
+    {
+      "id": "en-281",
+      "utterance": "a familiar favourite 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "familiar"
+      }
+    },
+    {
+      "id": "en-282",
+      "utterance": "a hidden gem discovery 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "en-283",
+      "utterance": "something older 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "older"
+      }
+    },
+    {
+      "id": "en-284",
+      "utterance": "a modern recent song 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "modern"
+      }
+    },
+    {
+      "id": "en-285",
+      "utterance": "a traditional song 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "traditional"
+        ]
+      }
+    },
+    {
+      "id": "en-286",
+      "utterance": "I want a duet 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "duet"
+        ]
+      }
+    },
+    {
+      "id": "en-287",
+      "utterance": "surprise me 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "en-288",
+      "utterance": "peaceful but not sleepy 4",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-289",
+      "utterance": "more energetic 5",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "more-energetic"
+      }
+    },
+    {
+      "id": "en-290",
+      "utterance": "less intense 5",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "less-intense"
+      }
+    },
+    {
+      "id": "en-291",
+      "utterance": "more like the last song 5",
+      "category": "intent",
+      "expected": {
+        "kind": "clarification"
+      }
+    },
+    {
+      "id": "en-292",
+      "utterance": "something different 5",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "relation": "different"
+      }
+    },
+    {
+      "id": "en-293",
+      "utterance": "a familiar favourite 5",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "familiar"
+      }
+    },
+    {
+      "id": "en-294",
+      "utterance": "a hidden gem discovery 5",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "en-295",
+      "utterance": "something older 5",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "older"
+      }
+    },
+    {
+      "id": "en-296",
+      "utterance": "a modern recent song 5",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "era": "modern"
+      }
+    },
+    {
+      "id": "en-297",
+      "utterance": "a traditional song 5",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "traditional"
+        ]
+      }
+    },
+    {
+      "id": "en-298",
+      "utterance": "I want a duet 5",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "versionTypes": [
+          "duet"
+        ]
+      }
+    },
+    {
+      "id": "en-299",
+      "utterance": "surprise me 5",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "familiarity": "discovery"
+      }
+    },
+    {
+      "id": "en-300",
+      "utterance": "peaceful but not sleepy 5",
+      "category": "intent",
+      "expected": {
+        "kind": "recommendation",
+        "moods": [
+          "peaceful"
+        ]
+      }
+    },
+    {
+      "id": "en-301",
+      "utterance": "I want something powerful 0",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-302",
+      "utterance": "Give me something deep 1",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-303",
+      "utterance": "I want something powerful 2",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-304",
+      "utterance": "Give me something deep 3",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-305",
+      "utterance": "I want something powerful 4",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-306",
+      "utterance": "Give me something deep 5",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-307",
+      "utterance": "I want something powerful 6",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-308",
+      "utterance": "Give me something deep 7",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-309",
+      "utterance": "I want something powerful 8",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-310",
+      "utterance": "Give me something deep 9",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-311",
+      "utterance": "I want something powerful 10 11",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-312",
+      "utterance": "Give me something deep 11 12",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-313",
+      "utterance": "I want something powerful 12 13",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-314",
+      "utterance": "Give me something deep 13 14",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-315",
+      "utterance": "I want something powerful 14 15",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-316",
+      "utterance": "Give me something deep 15 16",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-317",
+      "utterance": "I want something powerful 16 17",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-318",
+      "utterance": "Give me something deep 17 18",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-319",
+      "utterance": "I want something powerful 18 19",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-320",
+      "utterance": "Give me something deep 19 20",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-321",
+      "utterance": "I want something powerful 20 21",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-322",
+      "utterance": "Give me something deep 21 22",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-323",
+      "utterance": "I want something powerful 22 23",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-324",
+      "utterance": "Give me something deep 23 24",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-325",
+      "utterance": "I want something powerful 24 25",
+      "category": "ambiguous",
+      "expected": {
+        "kind": "conflict"
+      }
+    },
+    {
+      "id": "en-entity-01",
+      "utterance": "Play Cindai",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "cindai"
+      }
+    },
+    {
+      "id": "en-entity-02",
+      "utterance": "Play Purnama Merindu",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "purnama-merindu"
+      }
+    },
+    {
+      "id": "en-entity-03",
+      "utterance": "Play Bukan Cinta Biasa",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "bukan-cinta-biasa"
+      }
+    },
+    {
+      "id": "en-entity-04",
+      "utterance": "Play Aku Cinta Padamu",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "aku-cinta-padamu"
+      }
+    },
+    {
+      "id": "en-entity-05",
+      "utterance": "Play Jerat Percintaan",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "jerat-percintaan"
+      }
+    },
+    {
+      "id": "en-entity-06",
+      "utterance": "Play Sejarah",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "sejarah"
+      }
+    },
+    {
+      "id": "en-entity-07",
+      "utterance": "Play Sesal",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "sesal"
+      }
+    },
+    {
+      "id": "en-entity-08",
+      "utterance": "Play Magis",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "magis"
+      }
+    },
+    {
+      "id": "en-entity-09",
+      "utterance": "Play Wanita",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "wanita"
+      }
+    },
+    {
+      "id": "en-entity-10",
+      "utterance": "Play Terang",
+      "category": "entity",
+      "expected": {
+        "kind": "recommendation",
+        "requestedTrackId": "terang"
+      }
+    }
+  ]
+}

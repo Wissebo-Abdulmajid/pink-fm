@@ -1,0 +1,19 @@
+{
+  "name": "Pink FM — Your personal mood radio",
+  "short_name": "Pink FM",
+  "description": "A private-feeling retro mood radio with explainable local recommendations and WisseBot.",
+  "id": "./#/g/siti",
+  "start_url": "./#/g/siti",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#fff7fa",
+  "theme_color": "#d94f83",
+  "categories": ["music", "entertainment", "lifestyle"],
+  "icons": [
+    { "src": "icons/pink-fm-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/pink-fm-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/pink-fm-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/pink-fm.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
