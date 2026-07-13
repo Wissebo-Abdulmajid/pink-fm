@@ -8,7 +8,7 @@ The default `siti` edition is centred on Siti Nurhaliza. Pink FM stores no music
 
 ## Current edition
 
-The Phase 2 Siti catalogue audit records:
+The Phase 3 Siti catalogue audit records:
 
 | Measure | Count |
 | --- | ---: |
@@ -20,7 +20,9 @@ The Phase 2 Siti catalogue audit records:
 | Data-driven collections | 12 |
 | Catalogue eras | 6 |
 
-The catalogue spans 1990s classics through recent releases, traditional recordings, studio material, duets, collaborations, selected festive music, and singles. It is intentionally curated rather than a claim of complete discography coverage. Run `npm run catalog:audit -- --slug siti` for the current distribution and editorial warnings.
+The catalogue spans 1990s classics through recent releases, traditional recordings, studio material, duets, collaborations, selected festive music, and singles. It is intentionally curated rather than a claim of complete discography coverage. Phase 3 desk-reviewed every one of the 37 metadata-only records, including provenance and configured destinations, but did not misrepresent that work as a listening review: 105 remain fully reviewed and 37 remain `verified-metadata`. See `docs/phase-3-catalogue-editorial-review.md` and run `npm run catalog:audit -- --slug siti` for the current distribution.
+
+The consolidated automated evidence and remaining physical work are in `docs/phase-3-release-report.md`.
 
 ## Screenshots
 
@@ -35,6 +37,8 @@ These captures are refreshed from the production preview by `npm run qa:browser`
 | ![Pink FM retro radio at mobile width](docs/screenshots/radio-mobile.png) | ![WisseBot local guide dialog at mobile width](docs/screenshots/wissebot-mobile.png) |
 
 ![Pink FM radio at desktop width](docs/screenshots/radio-desktop.png)
+
+The final automated browser matrix and its physical-device boundaries are recorded in `docs/phase-3-browser-qa.md`.
 
 ## Technology
 
@@ -82,9 +86,15 @@ Open the local URL printed by Vite and use `#/g/siti`. On Windows, if PowerShell
 | `npm run catalog:audit -- --slug <slug>` | Report scale, coverage, provenance, duplicates, and editorial warnings |
 | `npm run catalog:coverage -- --slug <slug>` | Print mood, era, collection, album, and curation coverage |
 | `npm run catalog:dedupe -- --slug <slug>` | Detect likely duplicate recordings and provider URLs |
+| `npm run catalog:editorial-review` | Re-run the Phase 3 metadata/provenance desk review and destination checks |
+| `npm run recommendations:simulate` | Run 3,150 recommendation-diversity simulations across all user-facing moods |
 | `npm run bot:embeddings -- --slug <slug>` | Regenerate matching model/index/binary embeddings |
 | `npm run bot:evaluation:generate` | Recreate the deterministic evaluation corpus |
 | `npm run bot:evaluate` | Run the real lightweight and semantic evaluation pipelines |
+| `npm run bot:hidden:generate` | Recreate the separately frozen Phase 3 holdout (do not use during tuning) |
+| `npm run bot:hidden:evaluate` | Evaluate instant mode on the frozen holdout |
+| `npm run bot:hidden:evaluate:enhanced` | Evaluate the retained optional E5 layer on the frozen holdout |
+| `npm run bot:benchmark` | Benchmark the four recorded multilingual model candidates (large downloads) |
 | `npm run icons:generate` | Recreate original Pink FM PNG icons |
 | `npm run qa:browser` | Exercise the production preview and refresh screenshots |
 | `npm run verify` | Run lint, types, content validation, catalogue audit, tests, and production build |
@@ -101,9 +111,10 @@ flowchart TD
   Loader --> Theme["Runtime CSS theme tokens"]
 
   Message["Listener message"] --> Normalise["Text normalisation"]
-  Normalise --> Rules["Deterministic multilingual rules"]
-  Rules --> Entities["Grounded entity + fuzzy-title matching"]
-  Entities --> Semantic["Opt-in semantic Web Worker"]
+  Normalise --> Rules["Level 1: deterministic multilingual rules"]
+  Rules --> Lite["Level 2: catalogue-aware semantic-lite retrieval"]
+  Lite --> Entities["Grounded entity + fuzzy-title matching"]
+  Entities --> Semantic["Level 3: opt-in semantic Web Worker"]
   Embeddings["Versioned precomputed embeddings"] --> Semantic
   Semantic --> Context["Conversation-context resolution"]
   Context --> Confidence["Confidence + conflict analysis"]
@@ -124,10 +135,11 @@ flowchart TD
 The important boundaries are explicit:
 
 1. Rule-based parsing owns negation, comparisons, corrections, and precise commands.
-2. Semantic interpretation recognises paraphrases and retrieves similar prototypes/tracks; it cannot reverse exact rules.
-3. Catalogue retrieval returns IDs that exist in the active profile.
-4. Recommendation scoring ranks only validated candidates.
-5. Response rendering uses structured evidence and verified profile metadata, not unrestricted generation.
+2. Semantic-lite interpretation adds no-download vocabulary, character n-gram, fuzzy, and catalogue signals synchronously.
+3. Full semantic interpretation recognises indirect paraphrases and retrieves similar prototypes/tracks; it cannot reverse exact rules and is never required.
+4. Catalogue retrieval returns IDs that exist in the active profile.
+5. Recommendation scoring ranks only validated candidates.
+6. Response rendering uses structured evidence and verified profile metadata, not unrestricted generation.
 
 ## Gift-profile format
 
@@ -199,13 +211,21 @@ The recommender is deterministic, content-based, and explainable. Source weights
 
 Recent-track, same-album, secondary-artist, and curation-confidence penalties are applied separately. A provisional candidate cannot casually outrank a closely matching reviewed track. Primary-artist policy is data-driven and defaults to `primary-only` for the Siti profile.
 
-Diversity reranking prevents a recommendation queue from collapsing into one album when similarly suitable alternatives exist. Session requests support another choice, something different, another era, more energy, less intensity, a deeper cut, a familiar favourite, a duet, something traditional, or something modern.
+Diversity reranking prevents a recommendation queue from collapsing into one album when similarly suitable alternatives exist. Clean profiles use a stable daily rotation among close-quality, mood-credible candidates; learned signals such as a favourite still take precedence. Session requests support another choice, something different, another era, more energy, less intensity, a deeper cut, a familiar favourite, a duet, something traditional, or something modern.
+
+Phase 3 ran 3,150 deterministic simulations: 50 runs for each of nine user-facing moods across clean history, favourites, heavy recent listening, era preference, familiarity, discovery, and time-of-day scenarios. Every mood produced 23–42 credible reviewed choices, clean-profile top-track concentration stayed at 10–14%, top-album concentration stayed at 12–26%, and the run found zero immediate repeats or unsuitable results. This is a software simulation, not a substitute for subjective listening review. The complete per-mood evidence is in `docs/phase-3-recommendation-diversity.md`.
 
 Explanations are derived from actual score contributions and structured request evidence. Technical details are tucked behind “Why this recommendation?” rather than dominating the radio display.
 
 ## WisseBot hybrid understanding
 
-WisseBot combines deterministic language handling with opt-in semantic embeddings:
+WisseBot now has three independently useful levels:
+
+1. **Instant deterministic understanding** owns explicit moods, negation, comparison, activities, time, era, versions, exclusions, and conversation corrections.
+2. **Local semantic-lite retrieval** adds no-download fuzzy vocabulary, approximate title/album/collection matching, character n-gram similarity, and catalogue signals.
+3. **Enhanced multilingual embeddings** run in a dedicated worker only after explicit listener approval and help with more indirect or unusual phrasing.
+
+Levels 1 and 2 are the default experience and are ready immediately. They provide the following without the full semantic model:
 
 - English, Bahasa Melayu, conversational Malay, and common English-Malay code-switching
 - exact multilingual synonym resources kept in editable data modules
@@ -221,17 +241,32 @@ Every interpretation becomes a `StructuredMusicRequest` with confidence and evid
 
 Response copy is assembled from the structured interpretation, selected track metadata, score contributions, and configured patterns. Unsupported requests about lyrics, private life, speculative facts, diagnosis, or capabilities are redirected without a generated factual answer.
 
-### Local semantic model
+### Optional enhanced semantic model
 
 The chosen model is `Xenova/multilingual-e5-small`, revision `761b726dd34fb83930e26aab4e9ac3899aa1fa78`, with quantised `q8` weights, mean pooling, L2 normalisation, and 384-dimensional embeddings. It was selected for multilingual coverage, compact retrieval-oriented representations, Transformers.js compatibility, and materially smaller browser cost than a text-generation model.
 
-The model is not in the initial application bundle. Opening WisseBot does not download it silently: Pink FM discloses an estimated 142 MB first-use download and requires opt-in. Inference runs in a dedicated worker, prefers WebGPU where supported, falls back to WASM, times out safely, and can be disabled at any time. Model resources use the browser/Hugging Face cache where available; the service worker does not intercept third-party model files.
+The model is not in the initial application bundle. Opening WisseBot does not download it silently: Pink FM discloses a conservative estimated 142 MB first-use download and requires a fresh in-session approval. Exact benchmarked model/tokenizer/config assets totalled 129.1 MiB (135.4 MB); the WebAssembly runtime is a separate lazy dependency and was about 23.5 MB in the Phase 2 browser trace. Inference runs in a dedicated worker, prefers WebGPU where supported, falls back to WASM, times out safely, and can be cancelled or disabled.
 
-Build-time measurements on the development machine were 12,994 ms for the first downloaded CPU model load, 2,945 ms for 142 track embeddings, and 211 ms for 93 prototypes. The final cached Node CPU evaluation loaded in 1,213 ms; its first and repeat test queries measured 21 ms and 25 ms. In a fresh headless Chrome profile with WebGPU unavailable, the automatic WASM path initialized in 14,455 ms and measured 81 ms then 32 ms for two browser requests. These are environment-specific diagnostics, not mobile promises. See `public/gifts/siti/embeddings/benchmark.json`, `docs/bot-evaluation.json`, `docs/browser-qa-semantic.json`, and `docs/semantic-model-benchmark.md` for the recorded conditions.
+Before activation, the dialog checks online state, effective connection type, data-saver preference, and an exact-revision Cache Storage signal where the browser exposes them. Missing Network Information APIs are benign. An uncached model on data saver or 2G requires a second confirmation. Offline activation is disabled unless the required model appears cached, while instant mode remains available.
 
-### Lightweight fallback
+Build-time measurements on the development machine were 12,994 ms for the first downloaded CPU model load, 2,945 ms for 142 track embeddings, and 211 ms for 93 prototypes. The final cached Node CPU holdout loaded in 1,189 ms; its first and repeat test queries measured 18 ms and 6 ms. In a fresh headless Chrome profile with WebGPU unavailable, the Phase 2 WASM path initialized in 14,455 ms and measured 81 ms then 32 ms for two browser requests. These are environment-specific diagnostics, not mobile promises. Real mid-range-phone time and peak memory remain physical acceptance work.
 
-The listener can choose “Continue with lightweight mode,” set it permanently in Settings, or disable `features.semanticUnderstanding` in profile JSON. Deterministic multilingual parsing, catalogue entity matching, recommendations, favourites, history, and every radio screen continue to work. A failed worker/model/index reports its state and falls back without making the main radio unusable.
+Phase 3 also benchmarked three alternatives on the frozen holdout:
+
+| Model | Required assets | English | Malay | Mixed | Mood F1 | Node CPU init |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Current multilingual E5 q8 | 129.1 MiB | 36.0% | 20.7% | 35.0% | 50.3% | 1,189 ms cached |
+| Multilingual MiniLM q8 | 129.1 MiB | 28.0% | 14.7% | 30.0% | 43.5% | 11,694 ms |
+| Granite 97M q8 | 117.5 MiB | 34.7% | 20.0% | 35.0% | 44.9% | 12,236 ms |
+| Granite 97M community GBQ4 | 82.6 MiB | 35.3% | 24.0% | 32.0% | 47.2% | 9,842 ms |
+
+No candidate met the preferred 50 MiB or acceptable 80 MiB target. The 82.6 MiB community conversion was closest but had lower mixed-language and mood performance and adds conversion provenance risk. Pink FM therefore retains E5 only as optional **Enhanced Understanding** and keeps instant mode as the default. See `docs/phase-3-model-benchmark.md` for methodology, grounding counts, memory observations, and limitations.
+
+### Instant fallback and model storage
+
+The listener can choose “Continue with instant mode,” select instant-only in Settings, or disable `features.semanticUnderstanding` in profile JSON. Deterministic multilingual parsing, catalogue entity matching, recommendations, favourites, history, and every radio screen continue to work. A failed worker/model/index reports its state and falls back without making the main radio unusable.
+
+The Pink FM service worker controls only same-origin app shell, profile JSON, assets, and compact precomputed embeddings. Third-party model requests are not intercepted. Transformers.js and the browser may use Cache Storage and ordinary HTTP caching; retention is best-effort and browser eviction remains possible. **Remove enhanced understanding data** deletes exact model-revision entries found in Cache Storage without touching favourites, history, or preferences, but cannot promise removal from an opaque browser HTTP cache. A changed model revision is treated as a new download and still requires consent.
 
 ## Bot evaluation
 
@@ -243,6 +278,24 @@ npm run bot:evaluate
 ```
 
 The evaluator runs the real providers and recommendation engine. It reports intent/kind accuracy, multi-label mood precision/recall/F1, negation, entities, clarification, unsupported requests, context follow-ups, grounding, and measured inference time. Two hard metrics must remain zero: hallucinated catalogue IDs and unsupported factual claims emitted by response templates. Evaluation results are evidence, not a claim that all natural language is solved; ambiguous colloquial phrasing remains an ongoing editorial area.
+
+### Frozen Phase 3 holdout
+
+Phase 3 generated a separate holdout before inspecting failures or changing parser rules. Its SHA-256 content hash is `bde67f3e6e5945920a8daabd37e071f71d0f55d1d1e95b5ae87eeb533b605465`. It contains 150 new English, 150 Malay, 100 mixed-language, 75 typo-heavy, 75 indirect/figurative, 50 genuinely ambiguous, and 50 unsupported requests, plus 50 five-turn conversations. The first 30 conversations are explicit manual-acceptance scripts. Clarification is scored separately and is not counted as direct understanding unless clarification was the labelled outcome.
+
+| Frozen metric | Untouched instant baseline | Untouched enhanced baseline | Final instant | Final enhanced E5 |
+| --- | ---: | ---: | ---: | ---: |
+| Strict direct accuracy | 26.1% | 28.4% | 43.3% | 43.6% |
+| Mood multi-label F1 | 39.9% | 43.3% | 49.2% | 50.3% |
+| Negation accuracy | 0% | 0% | 100% | 100% |
+| Clarification appropriateness | 83.3% | 75.0% | 100% | 58.3% |
+| Unsupported-request detection | 40.0% | 40.0% | 100% | 100% |
+| Context-follow-up accuracy | 21.6% | 24.0% | 78.4% | 79.2% |
+| Hallucinated catalogue tracks | 0 | 0 | 0 | 0 |
+| Unsupported factual claims | 0 | 0 | 0 | 0 |
+| Lyrics emitted | 0 | 0 | 0 | 0 |
+
+The final instant group scores were English 32.0%, Malay 16.0%, mixed 34.0%, noisy 26.7%, and indirect 6.7% under the deliberately strict direct metric. Those lower language scores are a real limitation, not hidden by the excellent safety metrics. Moderate fuzzy-title matches intentionally ask for confirmation, so the evaluator's 16.7% exact entity score includes some specification-compliant confirmations labelled as misses. Full failures and classifications are retained in `docs/phase-3-hidden-final-instant.json`; the enhanced counterpart is `docs/phase-3-hidden-final-enhanced.json`.
 
 ## Adding another artist edition
 
@@ -288,6 +341,8 @@ The manifest uses original Pink FM icons and a relative scope/start URL. The ser
 
 An update banner appears when a worker waits. After one successful online load, the interface can reopen cached catalogue metadata, local preferences, library history, and deterministic recommendations offline. External playback and a first-time semantic-model download may require connectivity.
 
+The Phase 3 shell cache is versioned `pink-fm-v3`; activation removes only outdated `pink-fm-*` caches. It deliberately leaves browser/Transformers model caches alone. Updating the application refreshes shell/profile resources under the normal strategies, while changing the configured model revision requires a separately consented model retrieval.
+
 ## GitHub Pages deployment
 
 The app works before a custom domain is approved.
@@ -301,7 +356,7 @@ The app works before a custom domain is approved.
    git branch -M main
    git remote add origin https://github.com/Wissebo-Abdulmajid/pink-fm.git
    git add .
-   git commit -m "Build Pink FM Phase 2"
+   git commit -m "Finalise Pink FM Phase 3"
    git push -u origin main
    ```
 
@@ -354,6 +409,8 @@ https://Wissebo-Abdulmajid.github.io/pink-fm/#/g/siti
 6. Keep the tag writable during testing and domain approval.
 7. Lock it only after the exact domain and hash route are proven stable.
 
+Use the printable `docs/physical-acceptance-checklist.md` for the actual handoff. Automated desktop checks are not evidence that NFC, installed-PWA behaviour, low-power/data-saver operation, iOS background constraints, phone cases, or screen readers work on the recipient's hardware. Every such item remains marked **REQUIRES PHYSICAL ACCEPTANCE TEST** until a person records device, OS, browser, network, result, and notes.
+
 Card copy:
 
 ```text
@@ -386,27 +443,31 @@ Primary flows should be retested with keyboard only, 200% zoom, screen-reader na
 
 ## Testing
 
-`npm run verify` is the deterministic release gate. It covers schemas and migration, controlled profile errors, scale/coverage invariants, ranking and diversity, curation/artist penalties, grounding, multilingual parsing, negation, contextual follow-ups, fuzzy entities, semantic failure, embedding corruption/staleness, local-storage migration, accessibility-focused component flows, feedback, catalogue search, and honest playback states.
+`npm run verify` is the deterministic release gate. It covers schemas and migration, controlled profile errors, scale/coverage invariants, ranking and diversity, curation/artist penalties, grounding, multilingual parsing, negation, contextual follow-ups, fuzzy entities, explicit semantic consent, cancellation/cache handling, semantic failure, embedding corruption/staleness, local-storage migration, accessibility-focused component flows, feedback, catalogue search, and honest playback states.
 
-`npm run bot:evaluate` is a separate, heavier semantic quality run because first use may need the public 142 MB model download. The checked-in report records the exact revision and environment. Browser QA then verifies feature splitting, opt-in disclosure, lightweight fallback, responsive layouts, keyboard flows, service-worker behaviour, and console errors.
+`npm run bot:evaluate` and `npm run bot:benchmark` are separate, heavier quality runs because the public models are large. The checked-in reports record exact revisions and environments. `npm run recommendations:simulate` exercises diversity separately. Browser QA verifies feature splitting, no silent download, opt-in disclosure, instant fallback, 320/390/tablet/desktop reflow, 200% text scaling, high contrast, 44-pixel radio targets, touch/keyboard flows, offline profile reopening, stale/corrupt indexes, service-worker behaviour, and console errors.
 
 ## Troubleshooting
 
 - **Profile configuration error:** run `npm run content:validate`; both UI and CLI report exact paths.
 - **Stale embeddings:** run `npm run bot:embeddings -- --slug <slug>`, then validate again.
 - **Catalogue audit errors:** fix duplicate IDs/URLs, missing provenance, unsafe links, or inconsistent collections before editing warnings.
-- **Enhanced understanding unavailable:** choose lightweight mode; the radio and rules remain functional.
-- **Large model is downloading:** WisseBot shows progress; cancel by returning to lightweight mode. First-use cost is not part of the initial app bundle.
+- **Enhanced understanding unavailable:** choose instant mode; the radio, semantic-lite retrieval, and deterministic rules remain functional.
+- **Large model is downloading:** WisseBot shows progress and a Cancel action. First-use cost is not part of the initial app bundle.
+- **Remove enhanced data found nothing:** Cache Storage may already be empty or the browser may hold opaque HTTP-cache entries that a static app cannot enumerate; this does not affect Pink FM preferences.
 - **Wrong Pages styling or assets:** verify the workflow-derived base and remove an incorrect `VITE_BASE_PATH` for repository-path hosting.
 - **Old content after deploy:** reload online once. Profile JSON is network-first and the update banner handles a waiting shell.
 - **No playback destination:** add at least one verified HTTPS service URL; Pink FM does not render pretend controls.
 - **Service-worker confusion in development:** registration is production-only. Unregister an older worker if a production build previously used the same origin.
+- **Chromium headless Dawn/Graphite cache crash on Windows:** this is a local QA-process failure before the page loads. Close stale headless processes first; if the exact sandboxed cache race persists, rerun only the disposable local harness with `QA_NO_SANDBOX=1`. Never use that flag for ordinary browsing or deployment.
 - **PowerShell blocks npm:** use `npm.cmd` or adjust your trusted local policy yourself.
 
 ## Known limitations
 
 - Emotional annotations are editorial and subjective; the 37 `verified-metadata` tracks still need a full human-quality listening review.
+- Frozen-holdout direct understanding remains weakest for indirect requests and informal Malay. Instant mode clarifies conservatively; enhanced mode improves retrieval but is optional and still not a general chatbot.
 - A structural URL check cannot guarantee future availability, regional access, account requirements, or provider behaviour.
+- Model cache persistence, first-use time, and memory depend on browser, storage pressure, connection, and hardware; no phone-performance claim is made from desktop Node or headless Chrome timings.
 - Precomputed embeddings understand catalogue descriptions; they do not verify historical facts or translate lyrics.
 - Static hosting provides no authentication, cross-device sync, or secure private messaging.
 - External music playback requires the provider and may require internet access.

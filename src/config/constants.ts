@@ -20,6 +20,7 @@ export const RECOMMENDATION_WEIGHTS = {
   version: 0.01,
   recentPenalty: 0.22,
   albumRepetitionPenalty: 0.045,
+  dailyRotationTolerance: 0.095,
   secondaryArtistPenalty: 0.08,
   curationPenalty: {
     reviewed: 0,

@@ -27,7 +27,7 @@ Chrome can also expose `navigator.gpu` while no adapter is available. The semant
 ## Evidence
 
 - `docs/browser-qa.json`: deterministic, offline, failure-path, and responsive run
-- `docs/browser-qa-semantic.json`: fresh-profile real semantic/WASM run
+- `docs/browser-qa-semantic-success-phase2.json`: preserved fresh-profile real semantic/WASM run
 - `docs/browser-qa-pages.json`: final `/pink-fm/` repository-base build and hash-route run
 - `docs/screenshots/`: refreshed welcome, mood, radio, WisseBot, and desktop captures
 

@@ -406,6 +406,7 @@
 .illuminated-display {
   display: grid;
   min-width: 0;
+  overflow: hidden;
   gap: 0.65rem;
   padding: 0.8rem;
   border: 1px solid rgb(255 255 255 / 0.24);
@@ -420,7 +421,8 @@
 
 .illuminated-display__station {
   display: grid;
-  grid-template-columns: 1fr auto;
+  min-width: 0;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: end;
   gap: 0.1rem 0.8rem;
 }
@@ -435,6 +437,7 @@
 }
 
 .illuminated-display__station strong {
+  min-width: 0;
   overflow: hidden;
   font-size: 0.86rem;
   text-overflow: ellipsis;

@@ -1,0 +1,2910 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-07-13T16:52:40.690Z",
+  "profile": "siti",
+  "scope": {
+    "activeTracks": 142,
+    "reviewedBefore": 105,
+    "metadataOnlyInspected": 37
+  },
+  "method": {
+    "inspectedFields": [
+      "mood vector",
+      "intensity",
+      "energy annotation",
+      "familiarity",
+      "era",
+      "collections",
+      "contexts",
+      "editorial explanation",
+      "semantic description",
+      "version identity",
+      "official destination",
+      "provenance"
+    ],
+    "linkChecksPerformed": true,
+    "limitation": "No audio listening session or rights-holder editorial notes were available. Subjective annotations were therefore not promoted solely from metadata."
+  },
+  "outcome": {
+    "promotedToReviewed": [],
+    "retainedMetadataOnly": [
+      "antara-waktu-dan-usia",
+      "usah-diragui",
+      "rindu-di-antara-kita",
+      "janji",
+      "nian-di-hati",
+      "engkau-bagaikan-permata",
+      "berpantun-kasih",
+      "indah-percintaan",
+      "lakaran-kehidupan",
+      "panas-berteduh-gelap-bersuluh",
+      "untuk-selamanya",
+      "dialah-di-hati",
+      "wanita",
+      "sekian-lama",
+      "bintang-malam",
+      "cinta-ini",
+      "pintu-rindu",
+      "nobody-else",
+      "remember-you-feat-sean-kingston",
+      "aku",
+      "mula-dan-akhir",
+      "bersandar-cinta",
+      "aku-bukan-malaikat",
+      "tertulis-nama-kita",
+      "kuasa-cintamu",
+      "tanpa-diri-mu",
+      "sehebat-matahari-feat-nao-zumar",
+      "hati-yang-rindu",
+      "aidilfitri-di-alaf-baru",
+      "nikmat-hari-raya",
+      "you-came-to-me-feat-dato-sri-siti-nurhaliza",
+      "dua-dunia-feat-siti-nurhaliza",
+      "mikraj-cinta",
+      "bersandar-cinta-orchestral",
+      "ikhlas",
+      "cinta-tak-mungkin",
+      "xiang-shui-yi-yang"
+    ],
+    "correctedTracks": [],
+    "deactivatedTracks": [],
+    "linksChanged": [],
+    "moodVectorsChanged": [],
+    "collectionMembershipsChanged": [],
+    "unreachableDestinations": [],
+    "recordsWithStructuralIssues": []
+  },
+  "records": [
+    {
+      "id": "antara-waktu-dan-usia",
+      "title": "Antara Waktu Dan Usia",
+      "album": "Siti Nurhaliza",
+      "releaseYear": 1996,
+      "era": "1990s classics",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 65,
+      "energyAnnotation": 37,
+      "familiarity": 45,
+      "dominantMoods": [
+        {
+          "mood": "romantic",
+          "value": 89
+        },
+        {
+          "mood": "elegant",
+          "value": 85
+        },
+        {
+          "mood": "dramatic",
+          "value": 71
+        }
+      ],
+      "collections": [
+        "hidden-gems",
+        "nostalgic-classics",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on romantic and elegant; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Antara Waktu Dan Usia is catalogued for romantic warmth, elegant phrasing and reflective ballad energy. Its strongest annotated dimensions are romantic, elegant, dramatic, with slow tempo character. Useful contexts include evening, date-night, reflecting.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-574251506"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-574251506"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/antara-waktu-dan-usia/574251506?i=574251590&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "usah-diragui",
+      "title": "Usah Diragui",
+      "album": "Aku Cinta Padamu",
+      "releaseYear": 1997,
+      "era": "1990s classics",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 53,
+      "energyAnnotation": 42,
+      "familiarity": 45,
+      "dominantMoods": [
+        {
+          "mood": "elegant",
+          "value": 86
+        },
+        {
+          "mood": "comforted",
+          "value": 70
+        },
+        {
+          "mood": "peaceful",
+          "value": 65
+        }
+      ],
+      "collections": [
+        "hidden-gems",
+        "nostalgic-classics"
+      ],
+      "contexts": [
+        "evening",
+        "relaxing",
+        "background-listening"
+      ],
+      "useCases": [
+        "evening",
+        "relaxing",
+        "background-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on elegant and comforted; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Usah Diragui is catalogued for balanced emotion, polished elegance and medium energy. Its strongest annotated dimensions are elegant, comforted, peaceful, with medium tempo character. Useful contexts include evening, relaxing, background-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-574180393"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-574180393"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/usah-diragui/574180393?i=574180450&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "rindu-di-antara-kita",
+      "title": "Rindu Di Antara Kita",
+      "album": "Aku Cinta Padamu",
+      "releaseYear": 1997,
+      "era": "1990s classics",
+      "versionType": "duet",
+      "featuredArtists": [
+        "Ciang Teng"
+      ],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 76,
+      "energyAnnotation": 54,
+      "familiarity": 46,
+      "dominantMoods": [
+        {
+          "mood": "romantic",
+          "value": 93
+        },
+        {
+          "mood": "dramatic",
+          "value": 92
+        },
+        {
+          "mood": "elegant",
+          "value": 87
+        }
+      ],
+      "collections": [
+        "duets-collaborations",
+        "hidden-gems",
+        "nostalgic-classics",
+        "powerful-vocals",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "focused-listening"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "focused-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on romantic and dramatic; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Rindu Di Antara Kita is catalogued for romantic duet interplay, expressive contrast and dramatic lift. Its strongest annotated dimensions are romantic, dramatic, elegant, with medium tempo character. Useful contexts include evening, date-night, focused-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-574180393"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-574180393"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/rindu-di-antara-kita/574180393?i=574180451&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "janji",
+      "title": "Janji",
+      "album": "Cindai",
+      "releaseYear": 1997,
+      "era": "1990s classics",
+      "versionType": "traditional",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Traditional Pop",
+        "traditional"
+      ],
+      "intensity": 81,
+      "energyAnnotation": 81,
+      "familiarity": 42,
+      "dominantMoods": [
+        {
+          "mood": "confident",
+          "value": 92
+        },
+        {
+          "mood": "nostalgic",
+          "value": 92
+        },
+        {
+          "mood": "elegant",
+          "value": 89
+        }
+      ],
+      "collections": [
+        "elegant-evenings",
+        "hidden-gems",
+        "nostalgic-classics",
+        "powerful-vocals",
+        "traditional-nusantara"
+      ],
+      "contexts": [
+        "cooking",
+        "celebration",
+        "daytime"
+      ],
+      "useCases": [
+        "cooking",
+        "celebration",
+        "daytime"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on confident and nostalgic; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Janji is catalogued for spirited traditional colour, rhythmic motion and confident elegance. Its strongest annotated dimensions are confident, nostalgic, elegant, with fast tempo character. Useful contexts include cooking, celebration, daytime.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-573126598"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-573126598"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/janji/573126598?i=573126642&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "nian-di-hati",
+      "title": "Nian Di Hati",
+      "album": "Pancawarna",
+      "releaseYear": 1997,
+      "era": "1990s classics",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 73,
+      "energyAnnotation": 93,
+      "familiarity": 42,
+      "dominantMoods": [
+        {
+          "mood": "energised",
+          "value": 93
+        },
+        {
+          "mood": "happy",
+          "value": 89
+        },
+        {
+          "mood": "confident",
+          "value": 84
+        }
+      ],
+      "collections": [
+        "hidden-gems",
+        "joyful-upbeat",
+        "nostalgic-classics"
+      ],
+      "contexts": [
+        "cooking",
+        "driving",
+        "getting-ready",
+        "daytime"
+      ],
+      "useCases": [
+        "cooking",
+        "driving",
+        "getting-ready",
+        "daytime"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on energised and happy; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Nian Di Hati is catalogued for bright pop energy, confidence and a lively forward pulse. Its strongest annotated dimensions are energised, happy, confident, with fast tempo character. Useful contexts include cooking, driving, getting-ready.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-574352019"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-574352019"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/nian-di-hati/574352019?i=574352075&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "engkau-bagaikan-permata",
+      "title": "Engkau Bagaikan Permata",
+      "album": "Pancawarna",
+      "releaseYear": 1999,
+      "era": "1990s classics",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 65,
+      "energyAnnotation": 37,
+      "familiarity": 48,
+      "dominantMoods": [
+        {
+          "mood": "romantic",
+          "value": 92
+        },
+        {
+          "mood": "elegant",
+          "value": 82
+        },
+        {
+          "mood": "dramatic",
+          "value": 74
+        }
+      ],
+      "collections": [
+        "hidden-gems",
+        "nostalgic-classics",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on romantic and elegant; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Engkau Bagaikan Permata is catalogued for romantic warmth, elegant phrasing and reflective ballad energy. Its strongest annotated dimensions are romantic, elegant, dramatic, with slow tempo character. Useful contexts include evening, date-night, reflecting.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-574352019"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-574352019"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/engkau-bagaikan-permata/574352019?i=574352077&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "berpantun-kasih",
+      "title": "Berpantun Kasih",
+      "album": "Sahmura",
+      "releaseYear": 1999,
+      "era": "1990s classics",
+      "versionType": "traditional",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "traditional"
+      ],
+      "intensity": 58,
+      "energyAnnotation": 47,
+      "familiarity": 49,
+      "dominantMoods": [
+        {
+          "mood": "nostalgic",
+          "value": 94
+        },
+        {
+          "mood": "elegant",
+          "value": 93
+        },
+        {
+          "mood": "confident",
+          "value": 74
+        }
+      ],
+      "collections": [
+        "elegant-evenings",
+        "hidden-gems",
+        "nostalgic-classics",
+        "traditional-nusantara"
+      ],
+      "contexts": [
+        "evening",
+        "cooking",
+        "heritage-listening"
+      ],
+      "useCases": [
+        "evening",
+        "cooking",
+        "heritage-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on nostalgic and elegant; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Berpantun Kasih is catalogued for graceful traditional colour, nostalgia and measured elegance. Its strongest annotated dimensions are nostalgic, elegant, confident, with medium tempo character. Useful contexts include evening, cooking, heritage-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-574380968"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-574380968"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/berpantun-kasih/574380968?i=574380980&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "indah-percintaan",
+      "title": "Indah Percintaan",
+      "album": "Safa",
+      "releaseYear": 1997,
+      "era": "1990s classics",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 51,
+      "energyAnnotation": 49,
+      "familiarity": 48,
+      "dominantMoods": [
+        {
+          "mood": "elegant",
+          "value": 87
+        },
+        {
+          "mood": "comforted",
+          "value": 72
+        },
+        {
+          "mood": "peaceful",
+          "value": 69
+        }
+      ],
+      "collections": [
+        "hidden-gems",
+        "nostalgic-classics"
+      ],
+      "contexts": [
+        "evening",
+        "relaxing",
+        "background-listening"
+      ],
+      "useCases": [
+        "evening",
+        "relaxing",
+        "background-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on elegant and comforted; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Indah Percintaan is catalogued for balanced emotion, polished elegance and medium energy. Its strongest annotated dimensions are elegant, comforted, peaceful, with medium tempo character. Useful contexts include evening, relaxing, background-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-574288251"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-574288251"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/indah-percintaan/574288251?i=574288266&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "lakaran-kehidupan",
+      "title": "Lakaran Kehidupan",
+      "album": "Safa",
+      "releaseYear": 2001,
+      "era": "2000s evolution",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 69,
+      "energyAnnotation": 29,
+      "familiarity": 45,
+      "dominantMoods": [
+        {
+          "mood": "dramatic",
+          "value": 85
+        },
+        {
+          "mood": "elegant",
+          "value": 80
+        },
+        {
+          "mood": "nostalgic",
+          "value": 78
+        }
+      ],
+      "collections": [
+        "hidden-gems",
+        "nostalgic-classics",
+        "powerful-vocals"
+      ],
+      "contexts": [
+        "night",
+        "reflecting",
+        "quiet-listening"
+      ],
+      "useCases": [
+        "night",
+        "reflecting",
+        "quiet-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on dramatic and elegant; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Lakaran Kehidupan is catalogued for reflective emotion, nostalgia and a measured dramatic pull. Its strongest annotated dimensions are dramatic, elegant, nostalgic, with slow tempo character. Useful contexts include night, reflecting, quiet-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-574288251"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-574288251"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/lakaran-kehidupan/574288251?i=574288511&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "panas-berteduh-gelap-bersuluh",
+      "title": "Panas Berteduh Gelap Bersuluh",
+      "album": "Sanggar Mustika",
+      "releaseYear": 2002,
+      "era": "2000s evolution",
+      "versionType": "traditional",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Worldwide",
+        "traditional"
+      ],
+      "intensity": 83,
+      "energyAnnotation": 83,
+      "familiarity": 45,
+      "dominantMoods": [
+        {
+          "mood": "elegant",
+          "value": 92
+        },
+        {
+          "mood": "confident",
+          "value": 90
+        },
+        {
+          "mood": "nostalgic",
+          "value": 85
+        }
+      ],
+      "collections": [
+        "elegant-evenings",
+        "hidden-gems",
+        "joyful-upbeat",
+        "nostalgic-classics",
+        "powerful-vocals",
+        "traditional-nusantara"
+      ],
+      "contexts": [
+        "cooking",
+        "celebration",
+        "daytime"
+      ],
+      "useCases": [
+        "cooking",
+        "celebration",
+        "daytime"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on elegant and confident; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Panas Berteduh Gelap Bersuluh is catalogued for spirited traditional colour, rhythmic motion and confident elegance. Its strongest annotated dimensions are elegant, confident, nostalgic, with fast tempo character. Useful contexts include cooking, celebration, daytime.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1266167994"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1266167994"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/panas-berteduh-gelap-bersuluh/1266167994?i=1266168554&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "untuk-selamanya",
+      "title": "Untuk Selamanya",
+      "album": "E.M.A.S",
+      "releaseYear": 2003,
+      "era": "2000s evolution",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 54,
+      "energyAnnotation": 43,
+      "familiarity": 49,
+      "dominantMoods": [
+        {
+          "mood": "elegant",
+          "value": 92
+        },
+        {
+          "mood": "comforted",
+          "value": 71
+        },
+        {
+          "mood": "peaceful",
+          "value": 69
+        }
+      ],
+      "collections": [
+        "elegant-evenings",
+        "hidden-gems",
+        "nostalgic-classics"
+      ],
+      "contexts": [
+        "evening",
+        "relaxing",
+        "background-listening"
+      ],
+      "useCases": [
+        "evening",
+        "relaxing",
+        "background-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on elegant and comforted; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Untuk Selamanya is catalogued for balanced emotion, polished elegance and medium energy. Its strongest annotated dimensions are elegant, comforted, peaceful, with medium tempo character. Useful contexts include evening, relaxing, background-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-573421556"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-573421556"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/untuk-selamanya/573421556?i=573421559&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "dialah-di-hati",
+      "title": "Dialah Di Hati",
+      "album": "Prasasti Seni",
+      "releaseYear": 2004,
+      "era": "2000s evolution",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 77,
+      "energyAnnotation": 92,
+      "familiarity": 44,
+      "dominantMoods": [
+        {
+          "mood": "energised",
+          "value": 92
+        },
+        {
+          "mood": "happy",
+          "value": 91
+        },
+        {
+          "mood": "confident",
+          "value": 83
+        }
+      ],
+      "collections": [
+        "hidden-gems",
+        "joyful-upbeat",
+        "nostalgic-classics"
+      ],
+      "contexts": [
+        "cooking",
+        "driving",
+        "getting-ready",
+        "daytime"
+      ],
+      "useCases": [
+        "cooking",
+        "driving",
+        "getting-ready",
+        "daytime"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on energised and happy; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Dialah Di Hati is catalogued for bright pop energy, confidence and a lively forward pulse. Its strongest annotated dimensions are energised, happy, confident, with fast tempo character. Useful contexts include cooking, driving, getting-ready.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-574386535"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-574386535"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/dialah-di-hati/574386535?i=574386547&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "wanita",
+      "title": "Wanita",
+      "album": "Hadiah Daripada Hati",
+      "releaseYear": 2007,
+      "era": "2000s evolution",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 58,
+      "energyAnnotation": 35,
+      "familiarity": 46,
+      "dominantMoods": [
+        {
+          "mood": "romantic",
+          "value": 88
+        },
+        {
+          "mood": "elegant",
+          "value": 86
+        },
+        {
+          "mood": "comforted",
+          "value": 72
+        }
+      ],
+      "collections": [
+        "hidden-gems",
+        "nostalgic-classics",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on romantic and elegant; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Wanita is catalogued for romantic warmth, elegant phrasing and reflective ballad energy. Its strongest annotated dimensions are romantic, elegant, comforted, with slow tempo character. Useful contexts include evening, date-night, reflecting.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1442496646"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1442496646"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/wanita/1442496646?i=1442496668&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "sekian-lama",
+      "title": "Sekian Lama",
+      "album": "Hadiah Daripada Hati",
+      "releaseYear": 2007,
+      "era": "2000s evolution",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 75,
+      "energyAnnotation": 90,
+      "familiarity": 42,
+      "dominantMoods": [
+        {
+          "mood": "happy",
+          "value": 91
+        },
+        {
+          "mood": "energised",
+          "value": 90
+        },
+        {
+          "mood": "confident",
+          "value": 81
+        }
+      ],
+      "collections": [
+        "hidden-gems",
+        "joyful-upbeat",
+        "nostalgic-classics"
+      ],
+      "contexts": [
+        "cooking",
+        "driving",
+        "getting-ready",
+        "daytime"
+      ],
+      "useCases": [
+        "cooking",
+        "driving",
+        "getting-ready",
+        "daytime"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on happy and energised; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Sekian Lama is catalogued for bright pop energy, confidence and a lively forward pulse. Its strongest annotated dimensions are happy, energised, confident, with fast tempo character. Useful contexts include cooking, driving, getting-ready.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1442496646"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1442496646"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/sekian-lama/1442496646?i=1442496863&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "bintang-malam",
+      "title": "Bintang Malam",
+      "album": "Lentera Timur",
+      "releaseYear": 2012,
+      "era": "2010s contemporary",
+      "versionType": "traditional",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "traditional"
+      ],
+      "intensity": 53,
+      "energyAnnotation": 51,
+      "familiarity": 47,
+      "dominantMoods": [
+        {
+          "mood": "elegant",
+          "value": 93
+        },
+        {
+          "mood": "nostalgic",
+          "value": 89
+        },
+        {
+          "mood": "comforted",
+          "value": 73
+        }
+      ],
+      "collections": [
+        "elegant-evenings",
+        "hidden-gems",
+        "traditional-nusantara"
+      ],
+      "contexts": [
+        "evening",
+        "cooking",
+        "heritage-listening"
+      ],
+      "useCases": [
+        "evening",
+        "cooking",
+        "heritage-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on elegant and nostalgic; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Bintang Malam is catalogued for graceful traditional colour, nostalgia and measured elegance. Its strongest annotated dimensions are elegant, nostalgic, comforted, with medium tempo character. Useful contexts include evening, cooking, heritage-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1442404651"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1442404651"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/bintang-malam/1442404651?i=1442404660&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "cinta-ini",
+      "title": "Cinta Ini",
+      "album": "Lentera Timur",
+      "releaseYear": 2012,
+      "era": "2010s contemporary",
+      "versionType": "traditional",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "traditional"
+      ],
+      "intensity": 78,
+      "energyAnnotation": 87,
+      "familiarity": 47,
+      "dominantMoods": [
+        {
+          "mood": "elegant",
+          "value": 94
+        },
+        {
+          "mood": "confident",
+          "value": 89
+        },
+        {
+          "mood": "nostalgic",
+          "value": 89
+        }
+      ],
+      "collections": [
+        "elegant-evenings",
+        "hidden-gems",
+        "joyful-upbeat",
+        "powerful-vocals",
+        "traditional-nusantara"
+      ],
+      "contexts": [
+        "cooking",
+        "celebration",
+        "daytime"
+      ],
+      "useCases": [
+        "cooking",
+        "celebration",
+        "daytime"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on elegant and confident; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Cinta Ini is catalogued for spirited traditional colour, rhythmic motion and confident elegance. Its strongest annotated dimensions are elegant, confident, nostalgic, with fast tempo character. Useful contexts include cooking, celebration, daytime.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1442404651"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1442404651"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/cinta-ini/1442404651?i=1442404931&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "pintu-rindu",
+      "title": "Pintu Rindu",
+      "album": "Tahajjud Cinta",
+      "releaseYear": 2009,
+      "era": "2010s contemporary",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 41,
+      "energyAnnotation": 27,
+      "familiarity": 46,
+      "dominantMoods": [
+        {
+          "mood": "comforted",
+          "value": 98
+        },
+        {
+          "mood": "peaceful",
+          "value": 92
+        },
+        {
+          "mood": "elegant",
+          "value": 89
+        }
+      ],
+      "collections": [
+        "comfort-calm",
+        "elegant-evenings",
+        "hidden-gems"
+      ],
+      "contexts": [
+        "quiet-morning",
+        "reflecting",
+        "relaxing"
+      ],
+      "useCases": [
+        "quiet-morning",
+        "reflecting",
+        "relaxing"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on comforted and peaceful; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Pintu Rindu is catalogued for serene reflection, comfort and an unhurried spiritual atmosphere. Its strongest annotated dimensions are comforted, peaceful, elegant, with slow tempo character. Useful contexts include quiet-morning, reflecting, relaxing.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1442374465"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1442374465"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/pintu-rindu/1442374465?i=1442374476&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "nobody-else",
+      "title": "Nobody Else",
+      "album": "All Your Love",
+      "releaseYear": 2011,
+      "era": "2010s contemporary",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "en"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 70,
+      "energyAnnotation": 78,
+      "familiarity": 49,
+      "dominantMoods": [
+        {
+          "mood": "confident",
+          "value": 83
+        },
+        {
+          "mood": "happy",
+          "value": 80
+        },
+        {
+          "mood": "energised",
+          "value": 78
+        }
+      ],
+      "collections": [
+        "hidden-gems",
+        "joyful-upbeat",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "driving",
+        "getting-ready",
+        "daytime"
+      ],
+      "useCases": [
+        "driving",
+        "getting-ready",
+        "daytime"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on confident and happy; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Nobody Else is catalogued for English-language pop energy, romantic brightness and confidence. Its strongest annotated dimensions are confident, happy, energised, with fast tempo character. Useful contexts include driving, getting-ready, daytime.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-466626765"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-466626765"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/nobody-else/466626765?i=466626777&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "remember-you-feat-sean-kingston",
+      "title": "Remember You (feat. Sean Kingston)",
+      "album": "All Your Love",
+      "releaseYear": 2011,
+      "era": "2010s contemporary",
+      "versionType": "duet",
+      "featuredArtists": [
+        "Sean Kingston"
+      ],
+      "languages": [
+        "en"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 70,
+      "energyAnnotation": 83,
+      "familiarity": 42,
+      "dominantMoods": [
+        {
+          "mood": "energised",
+          "value": 83
+        },
+        {
+          "mood": "happy",
+          "value": 82
+        },
+        {
+          "mood": "confident",
+          "value": 79
+        }
+      ],
+      "collections": [
+        "duets-collaborations",
+        "hidden-gems",
+        "joyful-upbeat",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "driving",
+        "getting-ready",
+        "daytime"
+      ],
+      "useCases": [
+        "driving",
+        "getting-ready",
+        "daytime"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on energised and happy; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Remember You (feat. Sean Kingston) is catalogued for English-language pop energy, romantic brightness and confidence. Its strongest annotated dimensions are energised, happy, confident, with fast tempo character. Useful contexts include driving, getting-ready, daytime.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-466626765"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-466626765"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/remember-you-feat-sean-kingston/466626765?i=466626806&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "aku",
+      "title": "Aku",
+      "album": "Fragmen",
+      "releaseYear": 2014,
+      "era": "2010s contemporary",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 57,
+      "energyAnnotation": 50,
+      "familiarity": 42,
+      "dominantMoods": [
+        {
+          "mood": "elegant",
+          "value": 87
+        },
+        {
+          "mood": "comforted",
+          "value": 69
+        },
+        {
+          "mood": "peaceful",
+          "value": 67
+        }
+      ],
+      "collections": [
+        "hidden-gems"
+      ],
+      "contexts": [
+        "evening",
+        "relaxing",
+        "background-listening"
+      ],
+      "useCases": [
+        "evening",
+        "relaxing",
+        "background-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on elegant and comforted; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Aku is catalogued for balanced emotion, polished elegance and medium energy. Its strongest annotated dimensions are elegant, comforted, peaceful, with medium tempo character. Useful contexts include evening, relaxing, background-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1443611673"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1443611673"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/aku/1443611673?i=1443611677&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "mula-dan-akhir",
+      "title": "Mula Dan Akhir",
+      "album": "Fragmen",
+      "releaseYear": 2014,
+      "era": "2010s contemporary",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 46,
+      "energyAnnotation": 51,
+      "familiarity": 45,
+      "dominantMoods": [
+        {
+          "mood": "comforted",
+          "value": 93
+        },
+        {
+          "mood": "peaceful",
+          "value": 77
+        },
+        {
+          "mood": "elegant",
+          "value": 74
+        }
+      ],
+      "collections": [
+        "comfort-calm",
+        "hidden-gems"
+      ],
+      "contexts": [
+        "morning",
+        "self-care",
+        "relaxing"
+      ],
+      "useCases": [
+        "morning",
+        "self-care",
+        "relaxing"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on comforted and peaceful; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Mula Dan Akhir is catalogued for comforting warmth, steady confidence and an uplifting middle energy. Its strongest annotated dimensions are comforted, peaceful, elegant, with medium tempo character. Useful contexts include morning, self-care, relaxing.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1443611673"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1443611673"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/mula-dan-akhir/1443611673?i=1443611833&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "bersandar-cinta",
+      "title": "Bersandar Cinta",
+      "album": "SimetriSiti",
+      "releaseYear": 2017,
+      "era": "late 2010s",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 61,
+      "energyAnnotation": 29,
+      "familiarity": 42,
+      "dominantMoods": [
+        {
+          "mood": "elegant",
+          "value": 89
+        },
+        {
+          "mood": "romantic",
+          "value": 88
+        },
+        {
+          "mood": "dramatic",
+          "value": 74
+        }
+      ],
+      "collections": [
+        "elegant-evenings",
+        "hidden-gems",
+        "modern-siti",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on elegant and romantic; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Bersandar Cinta is catalogued for romantic warmth, elegant phrasing and reflective ballad energy. Its strongest annotated dimensions are elegant, romantic, dramatic, with slow tempo character. Useful contexts include evening, date-night, reflecting.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1443196646"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1443196646"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/bersandar-cinta/1443196646?i=1443196650&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "aku-bukan-malaikat",
+      "title": "Aku Bukan Malaikat",
+      "album": "SimetriSiti",
+      "releaseYear": 2017,
+      "era": "late 2010s",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 59,
+      "energyAnnotation": 36,
+      "familiarity": 45,
+      "dominantMoods": [
+        {
+          "mood": "romantic",
+          "value": 93
+        },
+        {
+          "mood": "elegant",
+          "value": 83
+        },
+        {
+          "mood": "nostalgic",
+          "value": 71
+        }
+      ],
+      "collections": [
+        "hidden-gems",
+        "modern-siti",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on romantic and elegant; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Aku Bukan Malaikat is catalogued for romantic warmth, elegant phrasing and reflective ballad energy. Its strongest annotated dimensions are romantic, elegant, nostalgic, with slow tempo character. Useful contexts include evening, date-night, reflecting.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1443196646"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1443196646"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/aku-bukan-malaikat/1443196646?i=1443196657&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "tertulis-nama-kita",
+      "title": "Tertulis Nama Kita",
+      "album": "ManifestaSITI2020",
+      "releaseYear": 2020,
+      "era": "2020s modern",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Malaysian Pop",
+        "pop"
+      ],
+      "intensity": 64,
+      "energyAnnotation": 29,
+      "familiarity": 49,
+      "dominantMoods": [
+        {
+          "mood": "dramatic",
+          "value": 86
+        },
+        {
+          "mood": "nostalgic",
+          "value": 82
+        },
+        {
+          "mood": "elegant",
+          "value": 81
+        }
+      ],
+      "collections": [
+        "hidden-gems",
+        "modern-siti",
+        "powerful-vocals"
+      ],
+      "contexts": [
+        "night",
+        "reflecting",
+        "quiet-listening"
+      ],
+      "useCases": [
+        "night",
+        "reflecting",
+        "quiet-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on dramatic and nostalgic; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Tertulis Nama Kita is catalogued for reflective emotion, nostalgia and a measured dramatic pull. Its strongest annotated dimensions are dramatic, nostalgic, elegant, with slow tempo character. Useful contexts include night, reflecting, quiet-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1521304037"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1521304037"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/tertulis-nama-kita/1521304037?i=1521304198&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "kuasa-cintamu",
+      "title": "Kuasa Cintamu",
+      "album": "ManifestaSITI2020",
+      "releaseYear": 2020,
+      "era": "2020s modern",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Malaysian Pop",
+        "pop"
+      ],
+      "intensity": 49,
+      "energyAnnotation": 45,
+      "familiarity": 50,
+      "dominantMoods": [
+        {
+          "mood": "comforted",
+          "value": 87
+        },
+        {
+          "mood": "peaceful",
+          "value": 76
+        },
+        {
+          "mood": "elegant",
+          "value": 72
+        }
+      ],
+      "collections": [
+        "comfort-calm",
+        "hidden-gems",
+        "modern-siti"
+      ],
+      "contexts": [
+        "morning",
+        "self-care",
+        "relaxing"
+      ],
+      "useCases": [
+        "morning",
+        "self-care",
+        "relaxing"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on comforted and peaceful; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Kuasa Cintamu is catalogued for comforting warmth, steady confidence and an uplifting middle energy. Its strongest annotated dimensions are comforted, peaceful, elegant, with medium tempo character. Useful contexts include morning, self-care, relaxing.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1521304037"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1521304037"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/kuasa-cintamu/1521304037?i=1521304429&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "tanpa-diri-mu",
+      "title": "Tanpa Diri-Mu",
+      "album": "SITISM",
+      "releaseYear": 2023,
+      "era": "2020s modern",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 62,
+      "energyAnnotation": 30,
+      "familiarity": 50,
+      "dominantMoods": [
+        {
+          "mood": "romantic",
+          "value": 92
+        },
+        {
+          "mood": "elegant",
+          "value": 86
+        },
+        {
+          "mood": "nostalgic",
+          "value": 74
+        }
+      ],
+      "collections": [
+        "hidden-gems",
+        "modern-siti",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on romantic and elegant; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Tanpa Diri-Mu is catalogued for romantic warmth, elegant phrasing and reflective ballad energy. Its strongest annotated dimensions are romantic, elegant, nostalgic, with slow tempo character. Useful contexts include evening, date-night, reflecting.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1694424145"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1694424145"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/tanpa-diri-mu/1694424145?i=1694424446&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "sehebat-matahari-feat-nao-zumar",
+      "title": "Sehebat Matahari (feat. Nao Zumar)",
+      "album": "SITISM",
+      "releaseYear": 2023,
+      "era": "2020s modern",
+      "versionType": "duet",
+      "featuredArtists": [
+        "Nao Zumar"
+      ],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 75,
+      "energyAnnotation": 58,
+      "familiarity": 45,
+      "dominantMoods": [
+        {
+          "mood": "romantic",
+          "value": 97
+        },
+        {
+          "mood": "dramatic",
+          "value": 87
+        },
+        {
+          "mood": "elegant",
+          "value": 80
+        }
+      ],
+      "collections": [
+        "duets-collaborations",
+        "hidden-gems",
+        "modern-siti",
+        "powerful-vocals",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "focused-listening"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "focused-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on romantic and dramatic; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Sehebat Matahari (feat. Nao Zumar) is catalogued for romantic duet interplay, expressive contrast and dramatic lift. Its strongest annotated dimensions are romantic, dramatic, elegant, with medium tempo character. Useful contexts include evening, date-night, focused-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1694424145"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1694424145"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/sehebat-matahari-feat-nao-zumar/1694424145?i=1694424448&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "hati-yang-rindu",
+      "title": "Hati Yang Rindu",
+      "album": "Gema Bumantara",
+      "releaseYear": 2025,
+      "era": "recent releases",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 44,
+      "energyAnnotation": 44,
+      "familiarity": 44,
+      "dominantMoods": [
+        {
+          "mood": "comforted",
+          "value": 91
+        },
+        {
+          "mood": "peaceful",
+          "value": 83
+        },
+        {
+          "mood": "elegant",
+          "value": 80
+        }
+      ],
+      "collections": [
+        "comfort-calm",
+        "hidden-gems",
+        "modern-siti"
+      ],
+      "contexts": [
+        "morning",
+        "self-care",
+        "relaxing"
+      ],
+      "useCases": [
+        "morning",
+        "self-care",
+        "relaxing"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on comforted and peaceful; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Hati Yang Rindu is catalogued for comforting warmth, steady confidence and an uplifting middle energy. Its strongest annotated dimensions are comforted, peaceful, elegant, with medium tempo character. Useful contexts include morning, self-care, relaxing.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1848810439"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1848810439"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/hati-yang-rindu/1848810439?i=1848810441&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "aidilfitri-di-alaf-baru",
+      "title": "Aidilfitri Di Alaf Baru",
+      "album": "Gema Hari Raya",
+      "releaseYear": 1997,
+      "era": "1990s classics",
+      "versionType": "festive",
+      "featuredArtists": [
+        "Noraniza Idris",
+        "Anis Suraya",
+        "New Boyz",
+        "Liza Hanim"
+      ],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Worldwide",
+        "pop"
+      ],
+      "intensity": 80,
+      "energyAnnotation": 94,
+      "familiarity": 44,
+      "dominantMoods": [
+        {
+          "mood": "happy",
+          "value": 100
+        },
+        {
+          "mood": "energised",
+          "value": 94
+        },
+        {
+          "mood": "confident",
+          "value": 82
+        }
+      ],
+      "collections": [
+        "duets-collaborations",
+        "festive-frequency",
+        "hidden-gems",
+        "joyful-upbeat",
+        "nostalgic-classics"
+      ],
+      "contexts": [
+        "celebration",
+        "family-gathering",
+        "festive"
+      ],
+      "useCases": [
+        "celebration",
+        "family-gathering",
+        "festive"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on happy and energised; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Aidilfitri Di Alaf Baru is catalogued for festive joy, communal energy and a familiar celebratory signal. Its strongest annotated dimensions are happy, energised, confident, with fast tempo character. Useful contexts include celebration, family-gathering, festive.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-663686792"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-663686792"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/aidilfitri-di-alaf-baru/663686792?i=663686804&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "nikmat-hari-raya",
+      "title": "Nikmat Hari Raya",
+      "album": "Gema Hari Raya",
+      "releaseYear": 2000,
+      "era": "2000s evolution",
+      "versionType": "festive",
+      "featuredArtists": [
+        "Noraniza Idris",
+        "New Boyz",
+        "Aqasha"
+      ],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Worldwide",
+        "pop"
+      ],
+      "intensity": 77,
+      "energyAnnotation": 95,
+      "familiarity": 42,
+      "dominantMoods": [
+        {
+          "mood": "energised",
+          "value": 95
+        },
+        {
+          "mood": "happy",
+          "value": 95
+        },
+        {
+          "mood": "confident",
+          "value": 83
+        }
+      ],
+      "collections": [
+        "duets-collaborations",
+        "festive-frequency",
+        "hidden-gems",
+        "joyful-upbeat",
+        "nostalgic-classics"
+      ],
+      "contexts": [
+        "celebration",
+        "family-gathering",
+        "festive"
+      ],
+      "useCases": [
+        "celebration",
+        "family-gathering",
+        "festive"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on happy and energised; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Nikmat Hari Raya is catalogued for festive joy, communal energy and a familiar celebratory signal. Its strongest annotated dimensions are happy, energised, confident, with fast tempo character. Useful contexts include celebration, family-gathering, festive.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-663686792"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-663686792"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/nikmat-hari-raya/663686792?i=663686805&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "you-came-to-me-feat-dato-sri-siti-nurhaliza",
+      "title": "You Came to Me (feat. Dato' Sri Siti Nurhaliza)",
+      "album": "You Came to Me (feat. Dato' Sri Siti Nurhaliza) - Single",
+      "releaseYear": 2012,
+      "era": "2010s contemporary",
+      "versionType": "collaboration",
+      "featuredArtists": [
+        "Dato' Sri Siti Nurhaliza"
+      ],
+      "languages": [
+        "en"
+      ],
+      "genres": [
+        "Singer/Songwriter",
+        "pop"
+      ],
+      "intensity": 79,
+      "energyAnnotation": 53,
+      "familiarity": 47,
+      "dominantMoods": [
+        {
+          "mood": "romantic",
+          "value": 93
+        },
+        {
+          "mood": "dramatic",
+          "value": 92
+        },
+        {
+          "mood": "elegant",
+          "value": 86
+        }
+      ],
+      "collections": [
+        "duets-collaborations",
+        "hidden-gems",
+        "powerful-vocals",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "focused-listening"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "focused-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on romantic and dramatic; ranking confidence remains deliberately modest.",
+      "semanticDescription": "You Came to Me (feat. Dato' Sri Siti Nurhaliza) is catalogued for romantic duet interplay, expressive contrast and dramatic lift. Its strongest annotated dimensions are romantic, dramatic, elegant, with medium tempo character. Useful contexts include evening, date-night, focused-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1516262101"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1516262101"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/you-came-to-me-feat-dato-sri-siti-nurhaliza/1516262101?i=1516262247&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "dua-dunia-feat-siti-nurhaliza",
+      "title": "Dua Dunia (feat. Siti Nurhaliza)",
+      "album": "Dua Dunia (feat. Siti Nurhaliza) - Single",
+      "releaseYear": 2005,
+      "era": "2000s evolution",
+      "versionType": "collaboration",
+      "featuredArtists": [
+        "Siti Nurhaliza"
+      ],
+      "languages": [
+        "ms",
+        "mixed"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 80,
+      "energyAnnotation": 54,
+      "familiarity": 45,
+      "dominantMoods": [
+        {
+          "mood": "romantic",
+          "value": 93
+        },
+        {
+          "mood": "dramatic",
+          "value": 92
+        },
+        {
+          "mood": "elegant",
+          "value": 86
+        }
+      ],
+      "collections": [
+        "duets-collaborations",
+        "hidden-gems",
+        "nostalgic-classics",
+        "powerful-vocals",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "focused-listening"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "focused-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on romantic and dramatic; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Dua Dunia (feat. Siti Nurhaliza) is catalogued for romantic duet interplay, expressive contrast and dramatic lift. Its strongest annotated dimensions are romantic, dramatic, elegant, with medium tempo character. Useful contexts include evening, date-night, focused-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-723514639"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-723514639"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/dua-dunia-feat-siti-nurhaliza/723514639?i=723514797&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "mikraj-cinta",
+      "title": "Mikraj Cinta",
+      "album": "Mikraj Cinta - Single",
+      "releaseYear": 2015,
+      "era": "late 2010s",
+      "versionType": "studio",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 64,
+      "energyAnnotation": 32,
+      "familiarity": 46,
+      "dominantMoods": [
+        {
+          "mood": "romantic",
+          "value": 90
+        },
+        {
+          "mood": "elegant",
+          "value": 89
+        },
+        {
+          "mood": "nostalgic",
+          "value": 76
+        }
+      ],
+      "collections": [
+        "elegant-evenings",
+        "hidden-gems",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on romantic and elegant; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Mikraj Cinta is catalogued for romantic warmth, elegant phrasing and reflective ballad energy. Its strongest annotated dimensions are romantic, elegant, nostalgic, with slow tempo character. Useful contexts include evening, date-night, reflecting.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1445307750"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1445307750"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/mikraj-cinta/1445307750?i=1445307753&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "bersandar-cinta-orchestral",
+      "title": "Bersandar Cinta (feat. Dato' Sri Siti Nurhaliza) [From \"Aubrey Suwito and Friends with the Malaysian Philharmonic Orchestra\"]",
+      "album": "Bersandar Cinta (feat. Dato' Sri Siti Nurhaliza) [From \"Aubrey Suwito and Friends with the Malaysian Philharmonic Orchestra\"] - Single",
+      "releaseYear": 2017,
+      "era": "late 2010s",
+      "versionType": "collaboration",
+      "featuredArtists": [
+        "Dato' Sri Siti Nurhaliza"
+      ],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Malaysian Pop",
+        "pop"
+      ],
+      "intensity": 75,
+      "energyAnnotation": 58,
+      "familiarity": 43,
+      "dominantMoods": [
+        {
+          "mood": "romantic",
+          "value": 92
+        },
+        {
+          "mood": "dramatic",
+          "value": 91
+        },
+        {
+          "mood": "elegant",
+          "value": 86
+        }
+      ],
+      "collections": [
+        "duets-collaborations",
+        "hidden-gems",
+        "modern-siti",
+        "powerful-vocals",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "focused-listening"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "focused-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on romantic and dramatic; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Bersandar Cinta (feat. Dato' Sri Siti Nurhaliza) [From \"Aubrey Suwito and Friends with the Malaysian Philharmonic Orchestra\"] is catalogued for romantic duet interplay, expressive contrast and dramatic lift. Its strongest annotated dimensions are romantic, dramatic, elegant, with medium tempo character. Useful contexts include evening, date-night, focused-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1316321668"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1316321668"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/bersandar-cinta-feat-dato-sri-siti-nurhaliza-from-aubrey/1316321668?i=1316321677&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "ikhlas",
+      "title": "Ikhlas",
+      "album": "Ikhlas - Single",
+      "releaseYear": 2019,
+      "era": "late 2010s",
+      "versionType": "duet",
+      "featuredArtists": [
+        "Nissa Sabyan",
+        "Taufik Batisah"
+      ],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 80,
+      "energyAnnotation": 54,
+      "familiarity": 44,
+      "dominantMoods": [
+        {
+          "mood": "romantic",
+          "value": 93
+        },
+        {
+          "mood": "dramatic",
+          "value": 92
+        },
+        {
+          "mood": "elegant",
+          "value": 85
+        }
+      ],
+      "collections": [
+        "duets-collaborations",
+        "hidden-gems",
+        "modern-siti",
+        "powerful-vocals",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "focused-listening"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "focused-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on romantic and dramatic; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Ikhlas is catalogued for romantic duet interplay, expressive contrast and dramatic lift. Its strongest annotated dimensions are romantic, dramatic, elegant, with medium tempo character. Useful contexts include evening, date-night, focused-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1464658934"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1464658934"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/ikhlas/1464658934?i=1464658937&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "cinta-tak-mungkin",
+      "title": "Cinta Tak Mungkin",
+      "album": "Cinta Tak Mungkin - Single",
+      "releaseYear": 2024,
+      "era": "recent releases",
+      "versionType": "single",
+      "featuredArtists": [],
+      "languages": [
+        "ms"
+      ],
+      "genres": [
+        "Pop",
+        "pop"
+      ],
+      "intensity": 63,
+      "energyAnnotation": 31,
+      "familiarity": 42,
+      "dominantMoods": [
+        {
+          "mood": "romantic",
+          "value": 92
+        },
+        {
+          "mood": "elegant",
+          "value": 82
+        },
+        {
+          "mood": "nostalgic",
+          "value": 75
+        }
+      ],
+      "collections": [
+        "hidden-gems",
+        "modern-siti",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "reflecting"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on romantic and elegant; ranking confidence remains deliberately modest.",
+      "semanticDescription": "Cinta Tak Mungkin is catalogued for romantic warmth, elegant phrasing and reflective ballad energy. Its strongest annotated dimensions are romantic, elegant, nostalgic, with slow tempo character. Useful contexts include evening, date-night, reflecting.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-1734375730"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-1734375730"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/cinta-tak-mungkin/1734375730?i=1734375733&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    },
+    {
+      "id": "xiang-shui-yi-yang",
+      "title": "像水一樣",
+      "album": "像水一樣 - Single",
+      "releaseYear": 2026,
+      "era": "recent releases",
+      "versionType": "duet",
+      "featuredArtists": [
+        "Firdhaus"
+      ],
+      "languages": [
+        "zh",
+        "mixed"
+      ],
+      "genres": [
+        "Mandopop",
+        "pop"
+      ],
+      "intensity": 79,
+      "energyAnnotation": 57,
+      "familiarity": 43,
+      "dominantMoods": [
+        {
+          "mood": "romantic",
+          "value": 93
+        },
+        {
+          "mood": "dramatic",
+          "value": 87
+        },
+        {
+          "mood": "elegant",
+          "value": 80
+        }
+      ],
+      "collections": [
+        "duets-collaborations",
+        "hidden-gems",
+        "modern-siti",
+        "powerful-vocals",
+        "romantic-siti"
+      ],
+      "contexts": [
+        "evening",
+        "date-night",
+        "focused-listening"
+      ],
+      "useCases": [
+        "evening",
+        "date-night",
+        "focused-listening"
+      ],
+      "editorialNote": "Verified catalogue metadata with a provisional editorial profile centred on romantic and dramatic; ranking confidence remains deliberately modest.",
+      "semanticDescription": "像水一樣 is catalogued for romantic duet interplay, expressive contrast and dramatic lift. Its strongest annotated dimensions are romantic, dramatic, elegant, with medium tempo character. Useful contexts include evening, date-night, focused-listening.",
+      "provenance": {
+        "trackSourceIds": [
+          "apple-artist",
+          "apple-release-6784597042"
+        ],
+        "verificationSourceIds": [
+          "apple-artist",
+          "apple-release-6784597042"
+        ],
+        "verifiedAt": "2026-07-13",
+        "complete": true
+      },
+      "linkResults": [
+        {
+          "provider": "appleMusic",
+          "url": "https://music.apple.com/my/album/%E5%83%8F%E6%B0%B4%E4%B8%80%E6%A8%A3/6784597042?i=6784597045&uo=4",
+          "status": 200,
+          "reachable": true,
+          "method": "HEAD",
+          "note": "Provider endpoint responded successfully. This does not guarantee playback availability in every region."
+        }
+      ],
+      "structuralIssues": [],
+      "decision": "retain-verified-metadata",
+      "decisionReason": "Metadata and provenance passed desk review, but no independent listening review was available to justify a reviewed emotional profile."
+    }
+  ]
+}

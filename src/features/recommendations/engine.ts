@@ -36,6 +36,7 @@ export type RecommendationContext = {
   artistPolicy?: ArtistPolicy
   sessionTrackIds?: string[]
   deepCut?: boolean
+  rotationSeed?: string
   now?: number
 }
 
@@ -266,9 +267,72 @@ const stableHash = (value: string) => {
   return (hash >>> 0) / 4_294_967_295
 }
 
-export const deterministicTieBreak = (trackId: string, target: MoodVector) => {
+export const deterministicTieBreak = (
+  trackId: string,
+  target: MoodVector,
+  rotationSeed?: string,
+) => {
   const fingerprint = moodDimensionKeys.map((key) => target[key]).join('-')
-  return stableHash(`${trackId}:${fingerprint}`) * 0.000001
+  return stableHash(`${trackId}:${fingerprint}:${rotationSeed ?? 'stable'}`) * 0.000001
+}
+
+const hasLearnedRankingSignals = (listener: ListenerState) =>
+  listener.history.length > 0 ||
+  listener.lovedTrackIds.length > 0 ||
+  Object.keys(listener.moreLikeTrackIds).length > 0 ||
+  Object.keys(listener.preferredEras).length > 0 ||
+  Object.keys(listener.preferredCollections).length > 0 ||
+  Object.keys(listener.preferredVersionTypes).length > 0
+
+const applyDailyRotation = (
+  ranked: RankedCandidate[],
+  request: RecommendationRequest,
+) => {
+  const seed = request.context?.rotationSeed
+  const first = ranked[0]
+  if (
+    !seed ||
+    !first ||
+    request.context?.requestedTrackId ||
+    hasLearnedRankingSignals(request.listener)
+  ) return ranked
+
+  const primaryMood = moodDimensionKeys
+    .slice()
+    .sort((left, right) => request.target[right] - request.target[left])[0] ?? 'peaceful'
+  const eligible = ranked
+    .filter((candidate) =>
+      candidate.baseScore >= first.baseScore - RECOMMENDATION_WEIGHTS.dailyRotationTolerance &&
+      candidate.matchPercentage >= first.matchPercentage - 8 &&
+      candidate.track.moods[primaryMood] >= 45,
+    )
+    .slice(0, 24)
+  if (eligible.length < 2) return ranked
+
+  const byAlbum = new Map<string, RankedCandidate[]>()
+  for (const candidate of eligible) {
+    const album = candidate.track.albumId || candidate.track.album || candidate.track.id
+    byAlbum.set(album, [...(byAlbum.get(album) ?? []), candidate])
+  }
+  const albums = [...byAlbum.entries()].sort(([left], [right]) => left.localeCompare(right))
+  const fingerprint = moodDimensionKeys.map((key) => request.target[key]).join('-')
+  const sequence = seed.match(/(\d+)$/)?.[1]
+  const sequenceNumber = sequence === undefined ? null : Number(sequence)
+  const albumOffset = Math.floor(stableHash(`album:${fingerprint}`) * albums.length)
+  const albumIndex = Number.isSafeInteger(sequenceNumber)
+    ? (albumOffset + (sequenceNumber ?? 0)) % albums.length
+    : Math.min(
+        albums.length - 1,
+        Math.floor(stableHash(`album:${seed}:${fingerprint}`) * albums.length),
+      )
+  const albumCandidates = albums[albumIndex]?.[1] ?? eligible
+  const trackIndex = Math.min(
+    albumCandidates.length - 1,
+    Math.floor(stableHash(`track:${seed}:${fingerprint}`) * albumCandidates.length),
+  )
+  const selected = albumCandidates[trackIndex]
+  if (!selected || selected === first) return ranked
+  return [selected, ...ranked.filter((candidate) => candidate !== selected)]
 }
 
 const followsArtistPolicy = (track: Track, policy: ArtistPolicy | undefined) => {
@@ -422,7 +486,7 @@ export const scoreTrack = (
       RECOMMENDATION_WEIGHTS.recentPenalty,
     curationPenalty: curationPenalty(track),
     artistPolicyPenalty: artistPolicyPenalty(track, context),
-    tieBreak: deterministicTieBreak(track.id, request.target),
+    tieBreak: deterministicTieBreak(track.id, request.target, context.rotationSeed),
   }
   if (context.deepCut && track.familiarity <= 45) contributions.novelty += 0.025
   const baseScore =
@@ -492,11 +556,16 @@ export const diversityRerank = (ranked: RankedCandidate[], limit = ranked.length
   return selected
 }
 
-export const rankCandidates = (request: RecommendationRequest): RankedCandidate[] => {
+export const rankCandidates = (
+  request: RecommendationRequest,
+  limit?: number,
+): RankedCandidate[] => {
   const candidates = filterCandidates(request.tracks, request.listener, request.context)
-  const ranked = candidates
+  let ranked = candidates
     .map((track) => scoreTrack(track, request))
     .sort((a, b) => b.score - a.score || a.track.id.localeCompare(b.track.id))
+
+  ranked = applyDailyRotation(ranked, request)
 
   const lastTrackId = request.listener.history[0]?.trackId
   if (
@@ -511,15 +580,15 @@ export const rankCandidates = (request: RecommendationRequest): RankedCandidate[
       ranked[1] = first
     }
   }
-  return diversityRerank(ranked)
+  if (limit === 1) return ranked.slice(0, 1)
+  return diversityRerank(ranked, limit ?? ranked.length)
 }
 
 export const createRecommendationQueue = (
   request: RecommendationRequest,
   size = 8,
 ): RecommendationResult[] =>
-  rankCandidates(request)
-    .slice(0, size)
+  rankCandidates(request, size)
     .map(({ track, score, matchPercentage, primaryReasons, matchedMoods, stationName, frequency }) => ({
       track,
       score,
@@ -531,7 +600,7 @@ export const createRecommendationQueue = (
     }))
 
 export const recommendTrack = (request: RecommendationRequest): RecommendationResult => {
-  const result = rankCandidates(request)[0]
+  const result = rankCandidates(request, 1)[0]
   if (!result) throw new Error('No active tracks are available for recommendation.')
   return {
     track: result.track,

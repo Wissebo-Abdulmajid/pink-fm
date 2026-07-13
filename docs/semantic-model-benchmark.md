@@ -44,7 +44,7 @@ The production preview was exercised in a fresh temporary Google Chrome profile 
 | Runtime backend | WASM |
 | Unexpected console errors | 0 |
 
-The same run checked the opt-in disclosure, English/Malay/mixed lightweight interaction, corrupted and stale embedding handling, responsive layouts, reduced motion, offline cached profile data, and missing-profile handling. The machine-readable evidence is in `docs/browser-qa-semantic.json`.
+The same run checked the opt-in disclosure, English/Malay/mixed lightweight interaction, corrupted and stale embedding handling, responsive layouts, reduced motion, offline cached profile data, and missing-profile handling. Its machine-readable timing evidence is preserved in `docs/browser-qa-semantic-success-phase2.json`. The current `docs/browser-qa-semantic.json` records the later Phase 3 restricted-network fallback instead of overwriting that successful timing claim.
 
 ## Build and evaluation measurements
 

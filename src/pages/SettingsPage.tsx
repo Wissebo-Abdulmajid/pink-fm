@@ -1,8 +1,9 @@
 import { useState } from 'react'
-import { BrainCircuit, Download, Info, LockKeyhole, RotateCcw, Volume2 } from 'lucide-react'
+import { BrainCircuit, Download, Info, LockKeyhole, RotateCcw, Trash2, Volume2 } from 'lucide-react'
 import { useExperience } from '../app/providers'
 import { Modal } from '../components/common/Modal'
 import type { StreamingService } from '../config/schemas'
+import { removeEnhancedModelCache } from '../features/bot/semantic/enhancedMode'
 
 export default function SettingsPage() {
   const {
@@ -18,6 +19,31 @@ export default function SettingsPage() {
     resetPreferences,
   } = useExperience()
   const [confirmReset, setConfirmReset] = useState(false)
+  const [removingSemantic, setRemovingSemantic] = useState(false)
+  const [semanticRemovalStatus, setSemanticRemovalStatus] = useState('')
+
+  const removeSemanticData = async () => {
+    setRemovingSemantic(true)
+    setSemanticRemovalStatus('')
+    try {
+      const result = await removeEnhancedModelCache(
+        profile.gift.assistant.semantic.modelId,
+        profile.gift.assistant.semantic.modelRevision,
+      )
+      setSemanticMode('ask')
+      setSemanticRemovalStatus(
+        result.supported
+          ? result.deleted > 0
+            ? `Removed ${result.deleted} cached enhanced-understanding files. Favourites and listening history were not changed.`
+            : 'No matching enhanced-understanding files were found. Favourites and listening history were not changed.'
+          : 'This browser does not expose model Cache Storage. Its normal HTTP cache remains under browser control.',
+      )
+    } catch {
+      setSemanticRemovalStatus('The model cache could not be changed. Your Pink FM preferences were not affected.')
+    } finally {
+      setRemovingSemantic(false)
+    }
+  }
 
   return (
     <main className="page page--narrow settings-page" id="main-content">
@@ -54,13 +80,26 @@ export default function SettingsPage() {
               value={listener.semanticMode}
               onChange={(event) => setSemanticMode(event.target.value as typeof listener.semanticMode)}
             >
-              <option value="ask">Ask before enhanced mode</option>
-              <option value="enhanced">Enhanced local understanding</option>
-              <option value="lightweight">Lightweight multilingual rules only</option>
+              <option value="ask">Offer enhanced mode each session</option>
+              <option value="enhanced">Prefer enhanced mode (still ask first)</option>
+              <option value="lightweight">Instant understanding only</option>
             </select>
             <small>
-              Enhanced mode downloads about {profile.gift.assistant.semantic.estimatedDownloadMb} MB on first use and runs in a background worker. Lightweight mode never starts the model; recommendations remain fully available.
+              Enhanced mode downloads about {profile.gift.assistant.semantic.estimatedDownloadMb} MB on first use and runs in a background worker. Pink FM always asks before starting it. Instant mode never starts the model; recommendations remain fully available.
             </small>
+            <button
+              className="text-button settings-model-remove"
+              type="button"
+              onClick={() => void removeSemanticData()}
+              disabled={removingSemantic}
+            >
+              <Trash2 size={15} aria-hidden="true" />
+              {removingSemantic ? 'Removing enhanced data…' : 'Remove enhanced understanding data'}
+            </button>
+            <small>
+              Removes matching model files from Cache Storage only. Browser cache eviction is not guaranteed, and this never clears favourites, history or other preferences.
+            </small>
+            {semanticRemovalStatus && <p className="settings-inline-status" role="status">{semanticRemovalStatus}</p>}
           </div>
         </section>
       )}

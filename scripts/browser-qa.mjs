@@ -49,6 +49,7 @@ const browser = spawn(
   [
     '--headless=new',
     ...(runEnhancedModel ? [] : ['--disable-background-networking']),
+    ...(process.env.QA_NO_SANDBOX === '1' ? ['--no-sandbox'] : []),
     '--disable-gpu',
     '--no-default-browser-check',
     '--no-first-run',
@@ -56,8 +57,21 @@ const browser = spawn(
     '--user-data-dir=' + profileDirectory,
     'about:blank',
   ],
-  { stdio: 'ignore' },
+  { stdio: ['ignore', 'pipe', 'pipe'] },
 )
+const browserDiagnostics = []
+for (const stream of [browser.stdout, browser.stderr]) {
+  stream?.on('data', (chunk) => {
+    const value = String(chunk).trim()
+    if (value) browserDiagnostics.push(value)
+  })
+}
+browser.on('exit', (code, signal) => {
+  if (code && code !== 0) {
+    console.error(`Browser process exited with code ${code}${signal ? ` (${signal})` : ''}.`)
+    if (browserDiagnostics.length) console.error(browserDiagnostics.slice(-8).join('\n'))
+  }
+})
 
 const delay = (milliseconds) => new Promise((resolvePromise) => setTimeout(resolvePromise, milliseconds))
 
@@ -274,6 +288,20 @@ async function inspect(cdp, name, expectedText) {
           scrollWidth: root.scrollWidth,
           clientWidth: root.clientWidth,
           clientHeight: root.clientHeight,
+          overflowingElements: [...document.querySelectorAll('body *')]
+            .filter((element) => {
+              const rect = element.getBoundingClientRect()
+              return rect.right > root.clientWidth + 1 || rect.left < -1
+            })
+            .slice(0, 8)
+            .map((element) => ({
+              tag: element.tagName.toLowerCase(),
+              className: typeof element.className === 'string' ? element.className : '',
+              text: element.textContent?.trim().slice(0, 60) ?? '',
+              left: Math.round(element.getBoundingClientRect().left),
+              right: Math.round(element.getBoundingClientRect().right),
+              width: Math.round(element.getBoundingClientRect().width),
+            })),
         }
       }.toString() +
       ')(' + JSON.stringify(expectedText) + ')',
@@ -285,6 +313,9 @@ async function inspect(cdp, name, expectedText) {
 }
 
 async function capture(cdp, name) {
+  // Let short entrance transitions settle so release screenshots represent the
+  // stable interface instead of a partially transparent animation frame.
+  await delay(300)
   const screenshot = await cdp.send('Page.captureScreenshot', {
     captureBeyondViewport: false,
     format: 'png',
@@ -439,7 +470,7 @@ async function testEnhancedModel(cdp, checks, semanticPerformance) {
 async function run() {
   await waitForBrowser()
   const target = await readJson(
-    'http://127.0.0.1:' + debuggingPort + '/json/new?' + encodeURIComponent(origin),
+    'http://127.0.0.1:' + debuggingPort + '/json/new?' + encodeURIComponent('about:blank'),
     { method: 'PUT' },
   )
   const cdp = await openCdp(target.webSocketDebuggerUrl)
@@ -472,6 +503,7 @@ async function run() {
   await waitForSelector(cdp, '.retro-radio', 10000)
   checks.push(await inspect(cdp, 'radio-390', 'Why this frequency'))
   await capture(cdp, 'radio-mobile')
+  console.log('QA milestone: primary radio flow')
 
   const energyBefore = Number(await evaluate(cdp, "document.querySelector('#energy-dial').value"))
   await evaluate(cdp, "document.querySelector('#energy-dial').focus()")
@@ -487,13 +519,23 @@ async function run() {
   await clickSelector(cdp, '.radio-secondary-actions button:last-child')
   await waitForSelector(cdp, '.modal', 10000)
   checks.push(await inspect(cdp, 'wissebot-consent-390', 'Enhanced local understanding'))
+  const modelRequestsBeforeConsent = await evaluate(
+    cdp,
+    `performance.getEntriesByType('resource').filter((entry) => { const name = entry.name.toLowerCase(); return name.includes('huggingface') || name.includes('onnx/model') }).length`,
+  )
+  if (modelRequestsBeforeConsent !== 0) {
+    throw new Error('Opening WisseBot started semantic model network requests before consent.')
+  }
+  checks.push({ name: 'enhanced-model-no-silent-download', passed: true, modelRequests: 0 })
   await capture(cdp, 'wissebot-mobile')
   await clickSelector(cdp, '.modal [aria-label^="Close"]')
+  console.log('QA milestone: consent and multilingual instant mode')
 
   await startLightweight(cdp)
   await submitBotMessage(cdp, 'something romantic and cheerful')
   await submitBotMessage(cdp, 'nak lagu tenang tapi tak mengantuk')
   await submitBotMessage(cdp, 'yang macam tadi tapi lebih upbeat')
+  await submitBotMessage(cdp, 'malam ni saya masak untuk keluarga, nak sesuatu yang ceria tapi jangan terlalu kuat atau dramatik')
   checks.push(await inspect(cdp, 'wissebot-multilingual-390', 'Current recommendation'))
   await clickSelector(cdp, '.modal [aria-label^="Close"]')
 
@@ -511,6 +553,24 @@ async function run() {
   checks.push(await inspect(cdp, 'radio-320', 'Why this frequency'))
   await capture(cdp, 'radio-320')
 
+  const minimumRadioTarget = await evaluate(
+    cdp,
+    `Math.min(...[...document.querySelectorAll('.radio-presets button, .radio-secondary-actions button')].map((element) => Math.min(element.getBoundingClientRect().width, element.getBoundingClientRect().height)))`,
+  )
+  if (minimumRadioTarget < 44) throw new Error('A primary radio touch target is smaller than 44 CSS pixels.')
+  checks.push({ name: 'radio-touch-targets', passed: true, minimumCssPixels: minimumRadioTarget })
+
+  await evaluate(cdp, "document.documentElement.style.fontSize = '200%'")
+  await delay(200)
+  checks.push(await inspect(cdp, 'radio-320-text-zoom-200', 'Why this frequency'))
+  await evaluate(cdp, "document.documentElement.style.fontSize = ''")
+  await delay(100)
+
+  await evaluate(cdp, "document.documentElement.classList.add('high-contrast')")
+  checks.push(await inspect(cdp, 'radio-320-high-contrast', 'Why this frequency'))
+  await evaluate(cdp, "document.documentElement.classList.remove('high-contrast')")
+  console.log('QA milestone: 320px reflow, text zoom, contrast and touch targets')
+
   await navigate(cdp, '#/g/siti/library', '.catalogue-browser')
   checks.push(await inspect(cdp, 'library-320', 'Explore the catalogue'))
   const catalogueCount = Number(await evaluate(cdp, "document.querySelector('#catalogue-heading + small')?.textContent"))
@@ -524,6 +584,10 @@ async function run() {
   )
   checks.push(await inspect(cdp, 'library-long-title-320', 'Malaysian Philharmonic Orchestra'))
   checks.push({ name: 'catalogue-search-scale', passed: true, totalTracks: catalogueCount })
+
+  await navigate(cdp, '#/g/siti/settings', '.settings-page')
+  checks.push(await inspect(cdp, 'settings-enhanced-data-320', 'Remove enhanced understanding data'))
+  console.log('QA milestone: catalogue scale and settings')
 
   await setViewport(cdp, 768, 1024, true)
   await navigate(cdp, '#/g/siti/radio', '.retro-radio')
@@ -554,6 +618,7 @@ async function run() {
   }
   checks.push({ name: 'reduced-motion', passed: true, ...motion })
   await cdp.send('Emulation.setEmulatedMedia', { features: [] })
+  console.log('QA milestone: tablet, desktop and reduced motion')
 
   await navigate(cdp, '#/g/siti', '.welcome__content')
   await evaluate(cdp, 'navigator.serviceWorker.ready.then(() => true)')
@@ -574,6 +639,7 @@ async function run() {
     uploadThroughput: -1,
     connectionType: 'wifi',
   })
+  console.log('QA milestone: offline cached reopening')
 
   await navigate(cdp, '#/g/siti/radio', '.retro-radio')
   await testStaleAndCorruptIndexes(cdp, checks)
@@ -582,6 +648,7 @@ async function run() {
   } else {
     await testUnavailableModel(cdp, checks)
   }
+  console.log('QA milestone: semantic failure and index integrity fallbacks')
 
   await setViewport(cdp, 320, 760, true)
   await navigate(cdp, '#/g/does-not-exist', '.error-screen')

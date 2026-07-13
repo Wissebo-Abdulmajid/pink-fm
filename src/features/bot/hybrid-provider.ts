@@ -2,7 +2,7 @@ import { neutralMoodVector } from '../../config/constants'
 import { moodDimensionKeys, type MoodDimension, type MoodVector } from '../../config/schemas'
 import { LocalWisseBotProvider } from './local-provider'
 import { normaliseBotText } from './language/normalise'
-import { negators } from './language/resources'
+import { moodLanguage, negators } from './language/resources'
 import type {
   AssistantInterpretation,
   BotCatalogue,
@@ -34,6 +34,24 @@ const containsNegation = (message: string) => {
       normalised,
     ),
   )
+}
+
+const semanticMoodIsExplicitlyNegated = (
+  message: string,
+  match: SemanticPrototypeMatch,
+) => {
+  if (match.kind !== 'mood' || typeof match.payload.mood !== 'string') return false
+  const phrases = moodLanguage[match.payload.mood as MoodDimension] ?? []
+  const normalised = normaliseBotText(message)
+  return phrases.some((phrase) => {
+    const candidate = normaliseBotText(phrase)
+    const index = normalised.indexOf(candidate)
+    if (index < 0) return false
+    const prefix = normalised.slice(Math.max(0, index - 32), index).trim()
+    return negators.some((negator) =>
+      new RegExp(`(?:^|\\s)${normaliseBotText(negator).replace(/ /g, '\\s+')}(?:\\s+(?:very|too|terlalu|sangat))?\\s*$`).test(prefix),
+    )
+  })
 }
 
 const canonicalPrompt = (match: SemanticPrototypeMatch) => {
@@ -180,10 +198,14 @@ export class HybridWisseBotProvider implements MusicAssistantProvider {
 
       // Negation and entity substitutions remain deterministic-only. A semantic match may
       // retrieve tracks, but it is not allowed to reverse an explicit negative instruction.
-      if (containsNegation(message)) return deterministic
+      if (
+        containsNegation(message) &&
+        (deterministic.request?.excludedMoods.includes(String(top.payload.mood)) ||
+          semanticMoodIsExplicitlyNegated(message, top))
+      ) return deterministic
 
       const margin = top.score - (second?.score ?? 0)
-      if (top.score < 0.8 || margin < 0.015) return deterministic
+      if (top.score < 0.8 || (margin < 0.015 && second?.kind === top.kind)) return deterministic
       const prompt = canonicalPrompt(top)
       if (prompt) {
         const resolved = await this.deterministic.interpret(prompt, context)

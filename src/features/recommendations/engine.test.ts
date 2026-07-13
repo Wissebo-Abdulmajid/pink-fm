@@ -84,6 +84,12 @@ describe('recommendation engine', () => {
   it('uses deterministic tie-breaking', () => {
     const target = vector()
     expect(deterministicTieBreak('a', target)).toBe(deterministicTieBreak('a', target))
+    expect(deterministicTieBreak('a', target, 'day-1')).toBe(
+      deterministicTieBreak('a', target, 'day-1'),
+    )
+    expect(deterministicTieBreak('a', target, 'day-1')).not.toBe(
+      deterministicTieBreak('a', target, 'day-2'),
+    )
     const first = recommendTrack(
       request({ tracks: [makeTrack('z'), makeTrack('a')], target }),
     ).track.id
@@ -91,5 +97,26 @@ describe('recommendation engine', () => {
       request({ tracks: [makeTrack('a'), makeTrack('z')], target }),
     ).track.id
     expect(second).toBe(first)
+  })
+
+  it('rotates close clean-profile choices by day without overriding learned favourites', () => {
+    const tracks = Array.from({ length: 8 }, (_, index) => makeTrack(`choice-${index}`, {
+      album: `Album ${index}`,
+      albumId: `album-${index}`,
+      moods: vector({ peaceful: 91 - index, comforted: 82 - index }),
+    }))
+    const dayOne = recommendTrack(request({ tracks, context: { rotationSeed: 'day-1' } }))
+    const dayOneAgain = recommendTrack(request({ tracks, context: { rotationSeed: 'day-1' } }))
+    const acrossDays = new Set(Array.from({ length: 8 }, (_, index) =>
+      recommendTrack(request({ tracks, context: { rotationSeed: `day-${index}` } })).track.id,
+    ))
+
+    expect(dayOneAgain.track.id).toBe(dayOne.track.id)
+    expect(acrossDays.size).toBeGreaterThan(3)
+    expect(recommendTrack(request({
+      tracks,
+      listener: listener({ lovedTrackIds: ['choice-7'] }),
+      context: { rotationSeed: 'day-1' },
+    })).track.id).toBe('choice-7')
   })
 })

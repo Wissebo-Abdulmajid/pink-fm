@@ -10,6 +10,7 @@ import {
   Bot,
   BrainCircuit,
   CircleHelp,
+  CircleX,
   Gauge,
   Info,
   Radio,
@@ -25,6 +26,13 @@ import { Modal } from '../../components/common/Modal'
 import { profileRootUrl } from '../profiles/profile-loader'
 import { HybridWisseBotProvider } from './hybrid-provider'
 import { buildGroundedRecommendationResponse, describeStructuredRequest } from './responseBuilder'
+import { SemanticLiteInterpreter } from './semantic-lite/semanticLite'
+import {
+  inspectEnhancedModelCache,
+  readConnectionSignals,
+  type ConnectionSignals,
+  type EnhancedCacheStatus,
+} from './semantic/enhancedMode'
 import { SemanticClient } from './semantic/semanticClient'
 import type {
   ClarificationState,
@@ -47,18 +55,26 @@ const quickRefinements = [
 
 const boundedMessages = (messages: ConversationMessage[]) => messages.slice(-24)
 
-const useOnlineState = () => {
-  const [online, setOnline] = useState(() => navigator.onLine)
+const useConnectionSignals = () => {
+  const [signals, setSignals] = useState<ConnectionSignals>(() => readConnectionSignals())
   useEffect(() => {
-    const update = () => setOnline(navigator.onLine)
+    const update = () => setSignals(readConnectionSignals())
+    const connection = (navigator as Navigator & {
+      connection?: EventTarget
+      mozConnection?: EventTarget
+      webkitConnection?: EventTarget
+    }).connection ?? (navigator as Navigator & { mozConnection?: EventTarget }).mozConnection ??
+      (navigator as Navigator & { webkitConnection?: EventTarget }).webkitConnection
     window.addEventListener('online', update)
     window.addEventListener('offline', update)
+    connection?.addEventListener('change', update)
     return () => {
       window.removeEventListener('online', update)
       window.removeEventListener('offline', update)
+      connection?.removeEventListener('change', update)
     }
   }, [])
-  return online
+  return signals
 }
 
 export function WisseBotDialog({
@@ -78,7 +94,7 @@ export function WisseBotDialog({
     setSemanticMode,
   } = useExperience()
   const navigate = useNavigate()
-  const online = useOnlineState()
+  const connection = useConnectionSignals()
   const catalogue = useMemo(
     () => ({
       tracks: profile.tracks.tracks,
@@ -106,7 +122,14 @@ export function WisseBotDialog({
     semanticClient.getSnapshot,
     semanticClient.getSnapshot,
   )
-  const provider = useMemo(() => new HybridWisseBotProvider(catalogue), [catalogue])
+  const instantInterpreter = useMemo(
+    () => new SemanticLiteInterpreter(catalogue.tracks, catalogue.collections),
+    [catalogue.collections, catalogue.tracks],
+  )
+  const provider = useMemo(
+    () => new HybridWisseBotProvider(catalogue, instantInterpreter),
+    [catalogue, instantInterpreter],
+  )
   const [input, setInput] = useState('')
   const [messages, setMessages] = useState<ConversationMessage[]>([
     { role: 'assistant', text: profile.messages.bot.greeting },
@@ -118,27 +141,32 @@ export function WisseBotDialog({
   const [pendingClarification, setPendingClarification] = useState<ClarificationState | null>(null)
   const [mostRecentRefinement, setMostRecentRefinement] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
+  const [semanticActivated, setSemanticActivated] = useState(false)
+  const [constrainedConfirmed, setConstrainedConfirmed] = useState(false)
+  const [cacheStatus, setCacheStatus] = useState<EnhancedCacheStatus | null>(null)
   const messageEndRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => () => semanticClient.dispose(), [semanticClient])
 
   useEffect(() => {
-    const enhanced =
-      listener.semanticMode === 'enhanced' &&
-      profile.gift.features.semanticUnderstanding &&
-      profile.gift.assistant.semantic.enabled
-    provider.setSemanticInterpreter(enhanced ? semanticClient : null)
-    if (
-      open &&
-      enhanced &&
-      ['idle', 'consent-required', 'lightweight'].includes(semantic.state)
-    ) {
-      void semanticClient.enable().catch(() => undefined)
+    provider.setSemanticInterpreter(
+      semanticActivated && semantic.state === 'ready' ? semanticClient : instantInterpreter,
+    )
+  }, [instantInterpreter, provider, semantic.state, semanticActivated, semanticClient])
+
+  useEffect(() => {
+    if (!open || !profile.gift.assistant.semantic.enabled) return
+    let active = true
+    void inspectEnhancedModelCache(
+      profile.gift.assistant.semantic.modelId,
+      profile.gift.assistant.semantic.modelRevision,
+    ).then((status) => {
+      if (active) setCacheStatus(status)
+    })
+    return () => {
+      active = false
     }
-    if (listener.semanticMode === 'lightweight' && semantic.state !== 'lightweight') {
-      semanticClient.useLightweightMode()
-    }
-  }, [listener.semanticMode, open, profile.gift.assistant.semantic.enabled, profile.gift.features.semanticUnderstanding, provider, semantic.state, semanticClient])
+  }, [open, profile.gift.assistant.semantic.enabled, profile.gift.assistant.semantic.modelId, profile.gift.assistant.semantic.modelRevision])
 
   useEffect(() => {
     if (typeof messageEndRef.current?.scrollIntoView === 'function') {
@@ -239,7 +267,13 @@ export function WisseBotDialog({
   }
 
   const allowSemantic = async () => {
+    if (!cacheStatus?.cached && !connection.online) return
+    if (!cacheStatus?.cached && connection.constrained && !constrainedConfirmed) {
+      setConstrainedConfirmed(true)
+      return
+    }
     setSemanticMode('enhanced')
+    setSemanticActivated(true)
     try {
       await semanticClient.enable()
     } catch {
@@ -250,12 +284,23 @@ export function WisseBotDialog({
   const useLightweight = () => {
     setSemanticMode('lightweight')
     semanticClient.useLightweightMode()
-    provider.setSemanticInterpreter(null)
+    setSemanticActivated(false)
+    setConstrainedConfirmed(false)
+    provider.setSemanticInterpreter(instantInterpreter)
+  }
+
+  const cancelSemantic = () => {
+    semanticClient.cancel()
+    setSemanticActivated(false)
+    setConstrainedConfirmed(false)
+    setSemanticMode('ask')
+    provider.setSemanticInterpreter(instantInterpreter)
   }
 
   const understood = currentRequest ? describeStructuredRequest(currentRequest) : null
   const showConsent =
-    listener.semanticMode === 'ask' &&
+    listener.semanticMode !== 'lightweight' &&
+    !semanticActivated &&
     profile.gift.features.semanticUnderstanding &&
     profile.gift.assistant.semantic.enabled
   const progressPercentage = semantic.progress === null
@@ -273,9 +318,9 @@ export function WisseBotDialog({
         </span>
       </div>
 
-      {!online && (
+      {!connection.online && (
         <div className="bot-offline" role="status">
-          <WifiOff size={16} aria-hidden="true" /> Offline: lightweight requests and cached recommendations remain available.
+          <WifiOff size={16} aria-hidden="true" /> Offline: instant requests and cached recommendations remain available.
         </div>
       )}
 
@@ -285,22 +330,46 @@ export function WisseBotDialog({
           <div>
             <h3 id="semantic-consent-title">Enhanced local understanding</h3>
             <p>
-              Better paraphrase matching can run in a background worker. The first use downloads about{' '}
-              {profile.gift.assistant.semantic.estimatedDownloadMb} MB; no message is sent to Pink FM or a chat service.
+              Enhanced understanding helps WisseBot interpret more indirect and unusual requests. It requires a one-time download of approximately{' '}
+              {profile.gift.assistant.semantic.estimatedDownloadMb} MB. Pink FM remains fully usable without it.
             </p>
+            <p className="semantic-consent__network">
+              {cacheStatus?.cached
+                ? 'The selected model appears to be cached in this browser.'
+                : connection.online
+                  ? connection.effectiveType
+                    ? `Connection signal: ${connection.effectiveType}${connection.saveData ? ' with data saver enabled' : ''}.`
+                    : 'Your browser does not expose connection-quality details; you remain in control of the download.'
+                  : 'The model is not available offline on this device.'}
+            </p>
+            {constrainedConfirmed && !cacheStatus?.cached && (
+              <p className="semantic-consent__warning" role="alert">
+                Data saver or a slow connection is active. Download only if you are comfortable using approximately{' '}
+                {profile.gift.assistant.semantic.estimatedDownloadMb} MB now.
+              </p>
+            )}
             <div className="semantic-consent__actions">
-              <button className="button button--small" type="button" onClick={() => void allowSemantic()}>
-                Enable enhanced understanding
+              <button
+                className="button button--small"
+                type="button"
+                onClick={() => void allowSemantic()}
+                disabled={!connection.online && !cacheStatus?.cached}
+              >
+                {cacheStatus?.cached
+                  ? 'Start enhanced understanding'
+                  : constrainedConfirmed
+                    ? 'Download on this connection'
+                    : 'Download enhanced understanding'}
               </button>
               <button className="text-button" type="button" onClick={useLightweight}>
-                Continue with lightweight mode
+                Continue with instant mode
               </button>
             </div>
           </div>
         </section>
       )}
 
-      {!showConsent && (
+      {!showConsent && listener.semanticMode !== 'lightweight' && (
         <div className={`semantic-status semantic-status--${semantic.state}`} role="status" aria-live="polite">
           {semantic.state === 'ready' ? <BrainCircuit size={16} aria-hidden="true" /> : <Gauge size={16} aria-hidden="true" />}
           <span>
@@ -320,13 +389,33 @@ export function WisseBotDialog({
             </progress>
           )}
           {(semantic.state === 'unavailable' || semantic.state === 'stale-index') && (
-            <button className="text-button" type="button" onClick={useLightweight}>Use lightweight mode</button>
+            <button className="text-button" type="button" onClick={useLightweight}>Use instant mode</button>
+          )}
+          {(semantic.state === 'downloading' || semantic.state === 'initialising') && (
+            <button className="text-button" type="button" onClick={cancelSemantic}>
+              <CircleX size={14} aria-hidden="true" /> Cancel
+            </button>
+          )}
+        </div>
+      )}
+
+      {listener.semanticMode === 'lightweight' && !semanticActivated && (
+        <div className="semantic-status semantic-status--lightweight" role="status">
+          <Gauge size={16} aria-hidden="true" />
+          <span>
+            <strong>Instant understanding is ready.</strong>
+            <small>Multilingual rules and catalogue-aware fuzzy retrieval · no model download</small>
+          </span>
+          {profile.gift.assistant.semantic.enabled && (
+            <button className="text-button" type="button" onClick={() => setSemanticMode('ask')}>
+              View enhanced option
+            </button>
           )}
         </div>
       )}
 
       <div className="bot-toolbar">
-        <span><Info size={14} aria-hidden="true" /> Enhanced understanding runs locally in your browser.</span>
+        <span><Info size={14} aria-hidden="true" /> Instant understanding is always ready; enhanced requests also stay in this browser.</span>
         <button className="text-button" type="button" onClick={resetConversation}>
           <RefreshCw size={14} aria-hidden="true" /> Start a new request
         </button>

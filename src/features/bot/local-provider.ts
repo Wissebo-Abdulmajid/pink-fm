@@ -342,16 +342,29 @@ export class LocalWisseBotProvider implements MusicAssistantProvider {
     }
 
     const existing = contextRequest(context)
-    const similar = firstFollowUp(message, 'similar')
+    const pattern = (expression: RegExp) => message.match(expression)?.[0]
+    const similar = firstFollowUp(message, 'similar') ?? pattern(
+      /\b(?:use|jadikan|make)\b.{0,24}\b(?:reference|rujukan)\b|\b(?:similar|same|matching|seakan|serupa|hampir sama)\b.{0,22}\b(?:character|feeling|mood|idea|rasa|pilihan|track|lagu)\b/,
+    )
     const different = firstFollowUp(message, 'different')
     const another = firstFollowUp(message, 'another')
-    const rejectTrack = firstFollowUp(message, 'rejectTrack')
-    const rejectAlbum = firstFollowUp(message, 'rejectAlbum')
+    const rejectTrack = firstFollowUp(message, 'rejectTrack') ?? pattern(
+      /\b(?:do not|dont|not|exclude|reject|remove|take out|jangan|tolak|keluarkan)\b.{0,34}\b(?:track|song|title|selection|result|recommendation|lagu|pilihan)\b|\b(?:track|song|title|selection|lagu|pilihan)\b.{0,28}\b(?:dont|again|exclude|reject|remove|jangan|lagi|tolak)\b/,
+    )
+    const rejectAlbum = firstFollowUp(message, 'rejectAlbum') ?? pattern(
+      /\b(?:not|exclude|avoid|different|another|switch|outside|move|choose from|do not draw from|jangan|bukan|tukar|berlainan|keluarkan|cari)\b.{0,36}\b(?:album|release)\b|\b(?:album|release)\b.{0,28}\b(?:not|again|different|another|switch|jangan|lain|berlainan|tukar)\b/,
+    )
     const differentEra = firstFollowUp(message, 'differentEra')
-    const moreEnergy = firstFollowUp(message, 'moreEnergy')
-    const lessEnergy = firstFollowUp(message, 'lessEnergy')
+    const moreEnergy = firstFollowUp(message, 'moreEnergy') ?? pattern(
+      /\b(?:raise|increase|lift|more|upward|add|naikkan|tambah|lajukan|tenaga naik)\b.{0,30}\b(?:energy|momentum|movement|pace|pulse|tempo|gerak|rentak|tenaga|vibe)\b|\b(?:energy|momentum|movement|pace|pulse|tempo|gerak|rentak|tenaga)\b.{0,20}\b(?:up|higher|more|naik|bertambah)\b/,
+    )
+    const lessEnergy = firstFollowUp(message, 'lessEnergy') ?? pattern(
+      /\b(?:less rush|settle|slow|calm|lower|kurang laju|tenangkan|perlahan)\b.{0,26}\b(?:pace|rush|energy|tempo|rentak|laju|vibe)?\b/,
+    )
     const moreIntensity = firstFollowUp(message, 'moreIntensity')
-    const lessIntensity = firstFollowUp(message, 'lessIntensity')
+    const lessIntensity = firstFollowUp(message, 'lessIntensity') ?? pattern(
+      /\b(?:lower|pull|tone|dial|soften|gentler|easier|less|kurang|turunkan|lembut|jangan terlalu|jangan berat)\b.{0,34}\b(?:intensity|force|pressure|delivery|arc|emotion|emotional|tekanan|emosi|kuat|berat|dramatik)\b/,
+    )
     const genericMoodComparative = /\b(more|less|lebih|kurang)\b/.test(message)
     const followUp = Boolean(
       similar || different || another || rejectTrack || rejectAlbum || differentEra ||
@@ -454,7 +467,7 @@ export class LocalWisseBotProvider implements MusicAssistantProvider {
       matchedTerms.push(time.phrase)
     }
 
-    const notSleepy = /\b(not sleepy|not too slow|dont make it sleepy|jangan mengantuk|tak mengantuk|tidak mengantuk|jangan terlalu perlahan|tak terlalu slow)\b/.test(message)
+    const notSleepy = /\b(not sleepy|not too slow|dont make it sleepy|not send me to sleep|not put me to sleep|without becoming drowsy|rather than sleepy|avoid a lullaby|keep my eyes open|keeping the music awake|jangan mengantuk|tak mengantuk|tidak mengantuk|jangan terlalu perlahan|tak terlalu slow|jangan sampai mengantuk|mata kekal buka)\b/.test(message)
     if (notSleepy) {
       target.energised = Math.max(48, target.energised)
       target.happy = Math.max(52, target.happy)
@@ -473,6 +486,26 @@ export class LocalWisseBotProvider implements MusicAssistantProvider {
       request.excludedMoods.push('sad')
       request.evidence.push(evidence('excluded-affect', 'sad', 'not sad'))
       matchedTerms.push('not sad')
+    }
+
+    const avoidDrama =
+      /\b(?:avoid|exclude|without|nothing|keep|leave out|dial down|take out)\b.{0,42}\b(?:dramatic|drama|intense|intensity|sweeping|huge emotional|large emotional)\b/.test(message) ||
+      /\b(?:dramatic|drama|intense|intensity)\b.{0,18}\b(?:out|away)\b/.test(message) ||
+      /\b(?:jangan|tanpa|kurangkan|elak)\b.{0,42}\b(?:dramatik|drama|emosi yang terlalu besar|beban dramatik|emosi besar)\b/.test(message)
+    if (avoidDrama) {
+      request.evidence = request.evidence.filter(
+        (item) => !(item.concept === 'mood' && item.value === 'dramatic'),
+      )
+      const dramaticIndex = matchedMoods.indexOf('dramatic')
+      if (dramaticIndex >= 0) matchedMoods.splice(dramaticIndex, 1)
+      target.dramatic = Math.min(30, target.dramatic)
+      target.peaceful = Math.max(64, target.peaceful)
+      request.excludedMoods.push('dramatic')
+      request.intensity = { target: target.dramatic, direction: 'lower' }
+      constraints.maxIntensity = Math.min(58, context.previousRecommendedTrack?.intensity ?? 58)
+      request.evidence.push(evidence('excluded-mood', 'dramatic', 'avoid dramatic intensity'))
+      matchedTerms.push('avoid dramatic intensity')
+      refinement = 'less intense'
     }
 
     if (moreEnergy) {
@@ -522,7 +555,7 @@ export class LocalWisseBotProvider implements MusicAssistantProvider {
     }
 
     if (different || another) {
-      request.relationToPrevious = 'different'
+      if (!similar) request.relationToPrevious = 'different'
       const previousId = context.previousRecommendedTrack?.id ?? context.lastRecommendations.at(-1)
       if (previousId) request.exclusions.trackIds.push(previousId)
       const phrase = different ?? another

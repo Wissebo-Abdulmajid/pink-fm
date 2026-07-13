@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'pink-fm-v2'
+const CACHE_VERSION = 'pink-fm-v3'
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`
 const PROFILE_CACHE = `${CACHE_VERSION}-profiles`
 

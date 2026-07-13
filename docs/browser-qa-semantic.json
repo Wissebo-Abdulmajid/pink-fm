@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-07-13T15:23:52.773Z",
+  "createdAt": "2026-07-13T17:32:14.285Z",
   "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   "origin": "http://127.0.0.1:4173",
   "checks": [
@@ -13,7 +13,25 @@
       "horizontalOverflow": false,
       "scrollWidth": 390,
       "clientWidth": 390,
-      "clientHeight": 844
+      "clientHeight": 844,
+      "overflowingElements": [
+        {
+          "tag": "div",
+          "className": "welcome__speaker",
+          "text": "",
+          "left": 150,
+          "right": 550,
+          "width": 400
+        },
+        {
+          "tag": "span",
+          "className": "welcome__speaker-center",
+          "text": "",
+          "left": 295,
+          "right": 405,
+          "width": 110
+        }
+      ]
     },
     {
       "name": "mood-390",
@@ -24,7 +42,8 @@
       "horizontalOverflow": false,
       "scrollWidth": 390,
       "clientWidth": 390,
-      "clientHeight": 844
+      "clientHeight": 844,
+      "overflowingElements": []
     },
     {
       "name": "radio-390",
@@ -35,7 +54,8 @@
       "horizontalOverflow": false,
       "scrollWidth": 390,
       "clientWidth": 390,
-      "clientHeight": 844
+      "clientHeight": 844,
+      "overflowingElements": []
     },
     {
       "name": "keyboard-energy-dial",
@@ -56,7 +76,62 @@
       "horizontalOverflow": false,
       "scrollWidth": 390,
       "clientWidth": 390,
-      "clientHeight": 844
+      "clientHeight": 844,
+      "overflowingElements": [
+        {
+          "tag": "button",
+          "className": "bot-chip",
+          "text": "Less intense",
+          "left": 353,
+          "right": 456,
+          "width": 103
+        },
+        {
+          "tag": "button",
+          "className": "bot-chip",
+          "text": "More nostalgic",
+          "left": 463,
+          "right": 579,
+          "width": 116
+        },
+        {
+          "tag": "button",
+          "className": "bot-chip",
+          "text": "Same mood, different era",
+          "left": 587,
+          "right": 765,
+          "width": 178
+        },
+        {
+          "tag": "button",
+          "className": "bot-chip",
+          "text": "A deeper cut",
+          "left": 772,
+          "right": 875,
+          "width": 103
+        },
+        {
+          "tag": "button",
+          "className": "bot-chip",
+          "text": "Surprise me",
+          "left": 882,
+          "right": 982,
+          "width": 100
+        },
+        {
+          "tag": "button",
+          "className": "bot-chip",
+          "text": "Another choice",
+          "left": 989,
+          "right": 1109,
+          "width": 119
+        }
+      ]
+    },
+    {
+      "name": "enhanced-model-no-silent-download",
+      "passed": true,
+      "modelRequests": 0
     },
     {
       "name": "wissebot-multilingual-390",
@@ -67,7 +142,57 @@
       "horizontalOverflow": false,
       "scrollWidth": 390,
       "clientWidth": 390,
-      "clientHeight": 844
+      "clientHeight": 844,
+      "overflowingElements": [
+        {
+          "tag": "button",
+          "className": "bot-chip",
+          "text": "Less intense",
+          "left": 353,
+          "right": 456,
+          "width": 103
+        },
+        {
+          "tag": "button",
+          "className": "bot-chip",
+          "text": "More nostalgic",
+          "left": 463,
+          "right": 579,
+          "width": 116
+        },
+        {
+          "tag": "button",
+          "className": "bot-chip",
+          "text": "Same mood, different era",
+          "left": 587,
+          "right": 765,
+          "width": 178
+        },
+        {
+          "tag": "button",
+          "className": "bot-chip",
+          "text": "A deeper cut",
+          "left": 772,
+          "right": 875,
+          "width": 103
+        },
+        {
+          "tag": "button",
+          "className": "bot-chip",
+          "text": "Surprise me",
+          "left": 882,
+          "right": 982,
+          "width": 100
+        },
+        {
+          "tag": "button",
+          "className": "bot-chip",
+          "text": "Another choice",
+          "left": 989,
+          "right": 1109,
+          "width": 119
+        }
+      ]
     },
     {
       "name": "radio-320",
@@ -78,7 +203,102 @@
       "horizontalOverflow": false,
       "scrollWidth": 320,
       "clientWidth": 320,
-      "clientHeight": 760
+      "clientHeight": 760,
+      "overflowingElements": []
+    },
+    {
+      "name": "radio-touch-targets",
+      "passed": true,
+      "minimumCssPixels": 48
+    },
+    {
+      "name": "radio-320-text-zoom-200",
+      "title": "Pink FM — Your personal mood radio",
+      "hash": "#/g/siti/radio",
+      "expectedTextPresent": true,
+      "mainPresent": true,
+      "horizontalOverflow": false,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "clientHeight": 760,
+      "overflowingElements": [
+        {
+          "tag": "div",
+          "className": "illuminated-display__station",
+          "text": "Now tunedWisseBot MixWB.1",
+          "left": 63,
+          "right": 331,
+          "width": 268
+        },
+        {
+          "tag": "span",
+          "className": "",
+          "text": "Now tuned",
+          "left": 63,
+          "right": 331,
+          "width": 268
+        },
+        {
+          "tag": "b",
+          "className": "",
+          "text": "WB.1",
+          "left": 252,
+          "right": 331,
+          "width": 79
+        },
+        {
+          "tag": "div",
+          "className": "frequency-scale frequency-scale--compact",
+          "text": "889092949698100102104106FM · MHz",
+          "left": 63,
+          "right": 331,
+          "width": 268
+        },
+        {
+          "tag": "div",
+          "className": "illuminated-display__track",
+          "text": "78% match strengthCenderamayaSiti Nurhaliza",
+          "left": 63,
+          "right": 331,
+          "width": 268
+        },
+        {
+          "tag": "span",
+          "className": "",
+          "text": "78% match strength",
+          "left": 67,
+          "right": 322,
+          "width": 254
+        },
+        {
+          "tag": "h1",
+          "className": "",
+          "text": "Cenderamaya",
+          "left": 67,
+          "right": 326,
+          "width": 258
+        },
+        {
+          "tag": "p",
+          "className": "",
+          "text": "Siti Nurhaliza",
+          "left": 67,
+          "right": 326,
+          "width": 258
+        }
+      ]
+    },
+    {
+      "name": "radio-320-high-contrast",
+      "title": "Pink FM — Your personal mood radio",
+      "hash": "#/g/siti/radio",
+      "expectedTextPresent": true,
+      "mainPresent": true,
+      "horizontalOverflow": false,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "clientHeight": 760,
+      "overflowingElements": []
     },
     {
       "name": "library-320",
@@ -89,7 +309,8 @@
       "horizontalOverflow": false,
       "scrollWidth": 320,
       "clientWidth": 320,
-      "clientHeight": 760
+      "clientHeight": 760,
+      "overflowingElements": []
     },
     {
       "name": "library-long-title-320",
@@ -100,12 +321,25 @@
       "horizontalOverflow": false,
       "scrollWidth": 320,
       "clientWidth": 320,
-      "clientHeight": 760
+      "clientHeight": 760,
+      "overflowingElements": []
     },
     {
       "name": "catalogue-search-scale",
       "passed": true,
       "totalTracks": 142
+    },
+    {
+      "name": "settings-enhanced-data-320",
+      "title": "Pink FM — Your personal mood radio",
+      "hash": "#/g/siti/settings",
+      "expectedTextPresent": true,
+      "mainPresent": true,
+      "horizontalOverflow": false,
+      "scrollWidth": 320,
+      "clientWidth": 320,
+      "clientHeight": 760,
+      "overflowingElements": []
     },
     {
       "name": "radio-tablet-768",
@@ -116,7 +350,8 @@
       "horizontalOverflow": false,
       "scrollWidth": 768,
       "clientWidth": 768,
-      "clientHeight": 1024
+      "clientHeight": 1024,
+      "overflowingElements": []
     },
     {
       "name": "radio-desktop-1280",
@@ -127,7 +362,8 @@
       "horizontalOverflow": false,
       "scrollWidth": 1265,
       "clientWidth": 1265,
-      "clientHeight": 900
+      "clientHeight": 900,
+      "overflowingElements": []
     },
     {
       "name": "reduced-motion",
@@ -144,7 +380,8 @@
       "horizontalOverflow": false,
       "scrollWidth": 1280,
       "clientWidth": 1280,
-      "clientHeight": 900
+      "clientHeight": 900,
+      "overflowingElements": []
     },
     {
       "name": "stale-embedding-manifest",
@@ -155,8 +392,10 @@
       "passed": true
     },
     {
-      "name": "enhanced-model-wasm-no-webgpu",
-      "passed": true
+      "name": "enhanced-model-bounded-fallback",
+      "passed": true,
+      "terminalState": "semantic-status semantic-status--unavailable",
+      "status": "Failed to fetch"
     },
     {
       "name": "missing-profile-320",
@@ -167,17 +406,15 @@
       "horizontalOverflow": false,
       "scrollWidth": 320,
       "clientWidth": 320,
-      "clientHeight": 760
+      "clientHeight": 760,
+      "overflowingElements": []
     }
   ],
   "semanticPerformance": {
     "requested": true,
     "estimatedDownloadBytes": 148897792,
-    "wallClockModelReadyMs": 14455,
-    "readyStatus": "WASM · ready in 14.4s · requests stay in this browser",
-    "device": "WASM",
-    "firstInferenceStatus": "WASM · ready in 14.4s · last request 81ms · requests stay in this browser",
-    "repeatInferenceStatus": "WASM · ready in 14.4s · last request 32ms · requests stay in this browser"
+    "wallClockModelReadyMs": 6298,
+    "failureStatus": "Failed to fetch"
   },
   "expectedConsoleErrors": 5,
   "unexpectedConsoleErrors": []

@@ -55,18 +55,21 @@ describe('primary experience components', () => {
     expect(screen.getByText('Current recommendation')).toBeInTheDocument()
   })
 
-  it('discloses the enhanced model download before starting it', () => {
+  it('discloses the enhanced model download before starting it', async () => {
     renderExperience(<WisseBotDialog open onClose={() => undefined} />)
     expect(screen.getByRole('heading', { name: 'Enhanced local understanding' })).toBeInTheDocument()
-    expect(screen.getByText(/first use downloads about 142 MB/i)).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: 'Enable enhanced understanding' })).toBeInTheDocument()
+    expect(screen.getByText(/one-time download of approximately 142 MB/i)).toBeInTheDocument()
+    expect(screen.getByText(/Pink FM remains fully usable without it/i)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Download enhanced understanding' })).toBeInTheDocument()
+    await waitFor(() => expect(screen.getByText(/browser does not expose connection-quality details/i)).toBeInTheDocument())
   })
 
-  it('lets the listener explicitly continue in lightweight mode', async () => {
+  it('lets the listener explicitly continue in instant mode', async () => {
     const user = userEvent.setup()
     renderExperience(<WisseBotDialog open onClose={() => undefined} />)
-    await user.click(screen.getByRole('button', { name: 'Continue with lightweight mode' }))
-    expect(await screen.findByText('Lightweight multilingual rules are active.')).toBeInTheDocument()
+    await user.click(screen.getByRole('button', { name: 'Continue with instant mode' }))
+    expect(await screen.findByText('Instant understanding is ready.')).toBeInTheDocument()
+    expect(screen.getByText(/no model download/i)).toBeInTheDocument()
   })
 
   it('handles a Malay request through the shared grounded recommender', async () => {

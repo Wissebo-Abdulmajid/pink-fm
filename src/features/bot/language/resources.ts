@@ -48,7 +48,7 @@ export const moodLanguage: Record<MoodDimension, string[]> = {
 
 export const negators = [
   'not', 'no', 'without', 'dont', 'do not', 'never', 'less',
-  'jangan', 'tak', 'tidak', 'tanpa', 'bukan', 'kurang',
+  'nothing', 'avoid', 'exclude', 'jangan', 'tak', 'tidak', 'tanpa', 'bukan', 'kurang',
 ]
 
 export const intensityModifiers = {
@@ -69,17 +69,17 @@ export const activities: Array<PhraseResource & { context: string; moods: Partia
 ]
 
 export const followUpLanguage: Record<string, string[]> = {
-  moreEnergy: ['more energetic', 'more energy', 'more upbeat', 'livelier', 'lebih bertenaga', 'lagi rancak', 'lebih upbeat', 'upbeat lagi'],
+  moreEnergy: ['more energetic', 'more energy', 'more upbeat', 'livelier', 'raise the momentum', 'pick up the pace', 'increase the pace', 'lebih bertenaga', 'lagi rancak', 'lebih upbeat', 'upbeat lagi', 'tambah tenaga', 'naikkan rentak'],
   lessEnergy: ['less energetic', 'calmer', 'slow it down', 'lebih tenang', 'kurang rancak', 'perlahan sikit'],
   moreIntensity: ['more intense', 'more dramatic', 'go bigger', 'lebih dramatik', 'lagi mendalam'],
   lessIntensity: ['less intense', 'less dramatic', 'softer', 'tone it down', 'kurang intense', 'kurang dramatik', 'lembut sikit'],
   similar: ['similar', 'more like this', 'more like that', 'more like the last song', 'more like tadi', 'like the last one', 'like that', 'same feeling', 'same mood', 'macam tadi', 'macam yang tadi', 'lebih kurang tadi', 'mood yang sama'],
   different: ['something different', 'different one', 'not similar', 'lain sikit', 'yang lain', 'berbeza'],
-  another: ['another', 'another choice', 'something else', 'next one', 'satu lagi', 'lagu lain', 'bagi lagi'],
+  another: ['another', 'another choice', 'something else', 'next one', 'fresh choice', 'try again', 'same frequency', 'satu lagi', 'lagu lain', 'bagi lagi', 'pilihan baru', 'cuba lagi', 'syarat sama'],
   rejectTrack: ['not this song', 'not that song', 'dont play that', 'jangan lagu itu', 'jangan yang tadi', 'tak nak lagu ini'],
-  rejectAlbum: ['not that album', 'different album', 'another album', 'jangan album itu', 'album lain'],
+  rejectAlbum: ['not that album', 'different album', 'another album', 'exclude that album', 'exclude the album', 'avoid that album', 'previous album', 'switch album', 'jangan album itu', 'jangan album tadi', 'jangan album pilihan tadi', 'album lain', 'tukar album'],
   differentEra: ['different era', 'another era', 'same mood different era', 'era lain', 'zaman lain'],
-  startOver: ['start over', 'start again', 'new request', 'reset request', 'mula semula', 'permintaan baru'],
+  startOver: ['start over', 'start again', 'new request', 'fresh request', 'reset request', 'reset the tuning', 'clear the current', 'clear current', 'mula semula', 'mulakan permintaan', 'permintaan baru', 'kosongkan konteks'],
 }
 
 export const requestLanguage = {
@@ -102,11 +102,17 @@ export const timeLanguage: Record<'morning' | 'daytime' | 'evening' | 'night', s
 
 export const unsupportedPatterns = [
   /\b(private life|personal secrets?|gossip|rumou?rs?|relationship history)\b/,
+  /\b(unconfirmed|unverified|made up)\b.{0,35}\b(story|claim|information)\b.{0,25}\b(singer|artist|family)\b/,
   /\b(kehidupan peribadi|rahsia peribadi|gosip|cerita rumah tangga)\b/,
+  /\b(khabar angin|cerita peribadi|maklumat peribadi)\b.{0,35}\b(belum disahkan|artis|penyanyi|keluarga)\b/,
   /\b(give|show|write|quote|continue|sing)\b.{0,30}\b(lyrics?|lirik)\b/,
   /\b(lirik penuh|sambung lirik|nyanyi lirik)\b/,
+  /\b(reconstruct|continue|complete|recite|repeat)\b.{0,40}\b(verse|chorus|song words?)\b/,
+  /\b(sambung|lengkapkan|ulang|beri|bagi)\b.{0,45}\b(semua perkataan lagu|rangkap|korus)\b/,
   /\b(diagnose|therapy|depression|anxiety disorder|medical advice)\b/,
-  /\b(diagnos|kemurungan|nasihat perubatan)\b/,
+  /\b(diagnos|kemurungan|nasihat perubatan|penyakit mental)\b/,
+  /\b(private|personal)\b.{0,20}\b(contact|phone|email|address|details?)\b.{0,25}\b(artist|singer|management)\b/,
+  /\b(hubungan|alamat|telefon|emel)\b.{0,20}\b(peribadi|sulit)\b.{0,25}\b(artis|penyanyi|pengurusan)\b/,
   /\b(invent|fabricate|make up|hallucinate)\b.{0,40}\b(song|track|title|album|fact|story)\b/,
   /\b(reka|cipta|tokok tambah)\b.{0,40}\b(lagu|tajuk|album|fakta|cerita)\b/,
   /\b(pretend|act as|impersonate)\b.{0,25}\b(siti|artist|singer)\b/,
@@ -123,6 +129,14 @@ export const ambiguousConcepts: Record<string, { question: string; choices: stri
     question: 'Should “powerful” mean stronger vocals, more energy, or greater emotional intensity?',
     choices: ['Powerful vocals', 'More energetic', 'Emotionally intense'],
   },
+  power: {
+    question: 'Should “power” mean stronger vocals, more energy, or greater emotional intensity?',
+    choices: ['Powerful vocals', 'More energetic', 'Emotionally intense'],
+  },
+  kuat: {
+    question: 'Adakah “kuat” bermaksud vokal yang hebat, lebih bertenaga, atau emosi yang lebih mendalam?',
+    choices: ['Vokal yang hebat', 'Lebih bertenaga', 'Emosi yang kuat'],
+  },
   mendalam: {
     question: 'Adakah “mendalam” bermaksud emosi yang kuat, tenang dan reflektif, atau vokal yang hebat?',
     choices: ['Emosi yang kuat', 'Tenang dan reflektif', 'Vokal yang hebat'],
@@ -135,5 +149,6 @@ export const typoAliases: Record<string, string> = {
   nostaljik: 'nostalgic', nostagic: 'nostalgic', ellegant: 'elegant', dramtic: 'dramatic',
   tenag: 'tenang', tnang: 'tenang', mengantok: 'mengantuk', mengantukkk: 'mengantuk',
   rancakk: 'rancak', romantikk: 'romantik', sedi: 'sedih', duettt: 'duet', modenn: 'moden',
-  cam: 'macam', mcm: 'macam', sy: 'saya', xnak: 'tak nak', x: 'tak', tk: 'tak',
+  cam: 'macam', mcm: 'macam', sy: 'saya', bgi: 'bagi', plese: 'please',
+  xnak: 'tak nak', x: 'tak', tk: 'tak',
 }

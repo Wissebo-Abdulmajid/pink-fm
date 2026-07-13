@@ -146,7 +146,8 @@ export class SemanticClient implements SemanticInterpreter {
       })
     })()
       .catch((error) => {
-        if (this.snapshot.state !== 'stale-index') {
+        const cancelled = error instanceof Error && /cancelled/i.test(error.message)
+        if (!cancelled && this.snapshot.state !== 'stale-index') {
           this.update({
             state: 'unavailable',
             message: error instanceof Error ? error.message : 'Enhanced understanding is unavailable.',
@@ -165,6 +166,17 @@ export class SemanticClient implements SemanticInterpreter {
       state: 'lightweight',
       message: 'Lightweight multilingual rules are active.',
       progress: null,
+    })
+  }
+
+  cancel() {
+    this.worker?.terminate()
+    this.worker = null
+    this.enablePromise = null
+    this.rejectAll(new Error('Enhanced understanding download was cancelled.'))
+    this.update({
+      ...initialSnapshot(),
+      message: 'Enhanced understanding was cancelled. Instant mode is still ready.',
     })
   }
 

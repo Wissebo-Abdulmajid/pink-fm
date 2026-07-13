@@ -1,0 +1,759 @@
+{
+  "schemaVersion": 1,
+  "createdAt": "2026-07-13T17:03:20.518Z",
+  "profile": "siti",
+  "method": {
+    "simulationsPerScenario": 50,
+    "scenarios": [
+      "clean",
+      "favourites",
+      "heavy-recent",
+      "era-preference",
+      "familiar",
+      "discovery",
+      "time-of-day"
+    ],
+    "targetVariation": "Deterministic +/-8-point multidimensional variation around each configured preset.",
+    "dailyRotation": "A deterministic scenario seed models different calendar days; the same request remains stable within a day.",
+    "unsuitableDefinition": "Primary mood annotation below 40 or weighted mood similarity below 0.58.",
+    "immediateRepeatDefinition": "Selected track equals the most recent track supplied in simulated history."
+  },
+  "totals": {
+    "moods": 9,
+    "simulations": 3150,
+    "warnings": 0,
+    "immediateRepeats": 0,
+    "unsuitableResults": 0
+  },
+  "moods": [
+    {
+      "moodId": "peaceful",
+      "label": "Peaceful",
+      "simulations": 350,
+      "scenarios": {
+        "clean": {
+          "simulations": 50,
+          "uniqueTracks": 20,
+          "topTrackShare": 0.14
+        },
+        "favourites": {
+          "simulations": 50,
+          "uniqueTracks": 10,
+          "topTrackShare": 0.32
+        },
+        "heavy-recent": {
+          "simulations": 50,
+          "uniqueTracks": 3,
+          "topTrackShare": 0.46
+        },
+        "era-preference": {
+          "simulations": 50,
+          "uniqueTracks": 6,
+          "topTrackShare": 0.34
+        },
+        "familiar": {
+          "simulations": 50,
+          "uniqueTracks": 22,
+          "topTrackShare": 0.2
+        },
+        "discovery": {
+          "simulations": 50,
+          "uniqueTracks": 19,
+          "topTrackShare": 0.14
+        },
+        "time-of-day": {
+          "simulations": 50,
+          "uniqueTracks": 20,
+          "topTrackShare": 0.14
+        }
+      },
+      "uniqueTracks": 30,
+      "credibleReviewedUniqueTracks": 23,
+      "topTrack": {
+        "id": "kedamaian",
+        "count": 52,
+        "share": 0.14857142857142858
+      },
+      "topFiveConcentration": 0.5142857142857142,
+      "cleanTopTrack": {
+        "id": "biarlah-rahsia",
+        "count": 7,
+        "share": 0.14
+      },
+      "cleanTopFiveConcentration": 0.5,
+      "topAlbum": {
+        "id": "tahajjud-cinta",
+        "count": 82,
+        "share": 0.2342857142857143
+      },
+      "cleanTopAlbum": {
+        "id": "gema-bumantara",
+        "count": 13,
+        "share": 0.26
+      },
+      "topEra": {
+        "id": "2010s contemporary",
+        "count": 107,
+        "share": 0.3057142857142857
+      },
+      "immediateRepeats": 0,
+      "unsuitableResults": 0,
+      "unsuitableExamples": [],
+      "curationDistribution": {
+        "reviewed": 285,
+        "verifiedMetadata": 65,
+        "reviewedShare": 0.8142857142857143
+      },
+      "meanMoodSimilarity": 0.8254008074651918,
+      "warnings": []
+    },
+    {
+      "moodId": "happy",
+      "label": "Happy",
+      "simulations": 350,
+      "scenarios": {
+        "clean": {
+          "simulations": 50,
+          "uniqueTracks": 22,
+          "topTrackShare": 0.14
+        },
+        "favourites": {
+          "simulations": 50,
+          "uniqueTracks": 14,
+          "topTrackShare": 0.36
+        },
+        "heavy-recent": {
+          "simulations": 50,
+          "uniqueTracks": 4,
+          "topTrackShare": 0.34
+        },
+        "era-preference": {
+          "simulations": 50,
+          "uniqueTracks": 9,
+          "topTrackShare": 0.18
+        },
+        "familiar": {
+          "simulations": 50,
+          "uniqueTracks": 19,
+          "topTrackShare": 0.12
+        },
+        "discovery": {
+          "simulations": 50,
+          "uniqueTracks": 22,
+          "topTrackShare": 0.1
+        },
+        "time-of-day": {
+          "simulations": 50,
+          "uniqueTracks": 21,
+          "topTrackShare": 0.16
+        }
+      },
+      "uniqueTracks": 30,
+      "credibleReviewedUniqueTracks": 24,
+      "topTrack": {
+        "id": "warna-dunia",
+        "count": 34,
+        "share": 0.09714285714285714
+      },
+      "topFiveConcentration": 0.38,
+      "cleanTopTrack": {
+        "id": "sesuci-lebaran",
+        "count": 7,
+        "share": 0.14
+      },
+      "cleanTopFiveConcentration": 0.44,
+      "topAlbum": {
+        "id": "salam-aidilfitri",
+        "count": 44,
+        "share": 0.12571428571428572
+      },
+      "cleanTopAlbum": {
+        "id": "fragmen",
+        "count": 7,
+        "share": 0.14
+      },
+      "topEra": {
+        "id": "1990s classics",
+        "count": 110,
+        "share": 0.3142857142857143
+      },
+      "immediateRepeats": 0,
+      "unsuitableResults": 0,
+      "unsuitableExamples": [],
+      "curationDistribution": {
+        "reviewed": 326,
+        "verifiedMetadata": 24,
+        "reviewedShare": 0.9314285714285714
+      },
+      "meanMoodSimilarity": 0.838958834485046,
+      "warnings": []
+    },
+    {
+      "moodId": "romantic",
+      "label": "Romantic",
+      "simulations": 350,
+      "scenarios": {
+        "clean": {
+          "simulations": 50,
+          "uniqueTracks": 21,
+          "topTrackShare": 0.14
+        },
+        "favourites": {
+          "simulations": 50,
+          "uniqueTracks": 18,
+          "topTrackShare": 0.22
+        },
+        "heavy-recent": {
+          "simulations": 50,
+          "uniqueTracks": 3,
+          "topTrackShare": 0.68
+        },
+        "era-preference": {
+          "simulations": 50,
+          "uniqueTracks": 8,
+          "topTrackShare": 0.18
+        },
+        "familiar": {
+          "simulations": 50,
+          "uniqueTracks": 19,
+          "topTrackShare": 0.1
+        },
+        "discovery": {
+          "simulations": 50,
+          "uniqueTracks": 23,
+          "topTrackShare": 0.1
+        },
+        "time-of-day": {
+          "simulations": 50,
+          "uniqueTracks": 23,
+          "topTrackShare": 0.1
+        }
+      },
+      "uniqueTracks": 42,
+      "credibleReviewedUniqueTracks": 34,
+      "topTrack": {
+        "id": "satu-cinta-dua-jiwa",
+        "count": 45,
+        "share": 0.12857142857142856
+      },
+      "topFiveConcentration": 0.44285714285714284,
+      "cleanTopTrack": {
+        "id": "ikrar-cinta",
+        "count": 7,
+        "share": 0.14
+      },
+      "cleanTopFiveConcentration": 0.44,
+      "topAlbum": {
+        "id": "adiwarna",
+        "count": 58,
+        "share": 0.1657142857142857
+      },
+      "cleanTopAlbum": {
+        "id": "aku-cinta-padamu",
+        "count": 8,
+        "share": 0.16
+      },
+      "topEra": {
+        "id": "1990s classics",
+        "count": 116,
+        "share": 0.3314285714285714
+      },
+      "immediateRepeats": 0,
+      "unsuitableResults": 0,
+      "unsuitableExamples": [],
+      "curationDistribution": {
+        "reviewed": 337,
+        "verifiedMetadata": 13,
+        "reviewedShare": 0.9628571428571429
+      },
+      "meanMoodSimilarity": 0.8946656579992719,
+      "warnings": []
+    },
+    {
+      "moodId": "confident",
+      "label": "Confident",
+      "simulations": 350,
+      "scenarios": {
+        "clean": {
+          "simulations": 50,
+          "uniqueTracks": 27,
+          "topTrackShare": 0.12
+        },
+        "favourites": {
+          "simulations": 50,
+          "uniqueTracks": 17,
+          "topTrackShare": 0.18
+        },
+        "heavy-recent": {
+          "simulations": 50,
+          "uniqueTracks": 2,
+          "topTrackShare": 0.62
+        },
+        "era-preference": {
+          "simulations": 50,
+          "uniqueTracks": 15,
+          "topTrackShare": 0.16
+        },
+        "familiar": {
+          "simulations": 50,
+          "uniqueTracks": 19,
+          "topTrackShare": 0.16
+        },
+        "discovery": {
+          "simulations": 50,
+          "uniqueTracks": 25,
+          "topTrackShare": 0.12
+        },
+        "time-of-day": {
+          "simulations": 50,
+          "uniqueTracks": 22,
+          "topTrackShare": 0.14
+        }
+      },
+      "uniqueTracks": 40,
+      "credibleReviewedUniqueTracks": 35,
+      "topTrack": {
+        "id": "falling-in-love",
+        "count": 51,
+        "share": 0.1457142857142857
+      },
+      "topFiveConcentration": 0.42,
+      "cleanTopTrack": {
+        "id": "penghiburku-feat-joe-flizzow",
+        "count": 6,
+        "share": 0.12
+      },
+      "cleanTopFiveConcentration": 0.4,
+      "topAlbum": {
+        "id": "all-your-love",
+        "count": 92,
+        "share": 0.26285714285714284
+      },
+      "cleanTopAlbum": {
+        "id": "simetrisiti",
+        "count": 6,
+        "share": 0.12
+      },
+      "topEra": {
+        "id": "2010s contemporary",
+        "count": 132,
+        "share": 0.37714285714285717
+      },
+      "immediateRepeats": 0,
+      "unsuitableResults": 0,
+      "unsuitableExamples": [],
+      "curationDistribution": {
+        "reviewed": 344,
+        "verifiedMetadata": 6,
+        "reviewedShare": 0.9828571428571429
+      },
+      "meanMoodSimilarity": 0.8605491917469421,
+      "warnings": []
+    },
+    {
+      "moodId": "energised",
+      "label": "Energised",
+      "simulations": 350,
+      "scenarios": {
+        "clean": {
+          "simulations": 50,
+          "uniqueTracks": 22,
+          "topTrackShare": 0.12
+        },
+        "favourites": {
+          "simulations": 50,
+          "uniqueTracks": 16,
+          "topTrackShare": 0.24
+        },
+        "heavy-recent": {
+          "simulations": 50,
+          "uniqueTracks": 6,
+          "topTrackShare": 0.48
+        },
+        "era-preference": {
+          "simulations": 50,
+          "uniqueTracks": 5,
+          "topTrackShare": 0.24
+        },
+        "familiar": {
+          "simulations": 50,
+          "uniqueTracks": 24,
+          "topTrackShare": 0.14
+        },
+        "discovery": {
+          "simulations": 50,
+          "uniqueTracks": 23,
+          "topTrackShare": 0.12
+        },
+        "time-of-day": {
+          "simulations": 50,
+          "uniqueTracks": 23,
+          "topTrackShare": 0.1
+        }
+      },
+      "uniqueTracks": 33,
+      "credibleReviewedUniqueTracks": 27,
+      "topTrack": {
+        "id": "siapa-tak-mahu",
+        "count": 36,
+        "share": 0.10285714285714286
+      },
+      "topFiveConcentration": 0.4257142857142857,
+      "cleanTopTrack": {
+        "id": "sesuci-lebaran",
+        "count": 6,
+        "share": 0.12
+      },
+      "cleanTopFiveConcentration": 0.44,
+      "topAlbum": {
+        "id": "all-your-love",
+        "count": 58,
+        "share": 0.1657142857142857
+      },
+      "cleanTopAlbum": {
+        "id": "manifestasiti2020",
+        "count": 7,
+        "share": 0.14
+      },
+      "topEra": {
+        "id": "2010s contemporary",
+        "count": 85,
+        "share": 0.24285714285714285
+      },
+      "immediateRepeats": 0,
+      "unsuitableResults": 0,
+      "unsuitableExamples": [],
+      "curationDistribution": {
+        "reviewed": 322,
+        "verifiedMetadata": 28,
+        "reviewedShare": 0.92
+      },
+      "meanMoodSimilarity": 0.8608150184460962,
+      "warnings": []
+    },
+    {
+      "moodId": "nostalgic",
+      "label": "Nostalgic",
+      "simulations": 350,
+      "scenarios": {
+        "clean": {
+          "simulations": 50,
+          "uniqueTracks": 28,
+          "topTrackShare": 0.1
+        },
+        "favourites": {
+          "simulations": 50,
+          "uniqueTracks": 21,
+          "topTrackShare": 0.16
+        },
+        "heavy-recent": {
+          "simulations": 50,
+          "uniqueTracks": 2,
+          "topTrackShare": 0.98
+        },
+        "era-preference": {
+          "simulations": 50,
+          "uniqueTracks": 13,
+          "topTrackShare": 0.24
+        },
+        "familiar": {
+          "simulations": 50,
+          "uniqueTracks": 23,
+          "topTrackShare": 0.12
+        },
+        "discovery": {
+          "simulations": 50,
+          "uniqueTracks": 26,
+          "topTrackShare": 0.1
+        },
+        "time-of-day": {
+          "simulations": 50,
+          "uniqueTracks": 26,
+          "topTrackShare": 0.08
+        }
+      },
+      "uniqueTracks": 43,
+      "credibleReviewedUniqueTracks": 42,
+      "topTrack": {
+        "id": "seloka-budi",
+        "count": 64,
+        "share": 0.18285714285714286
+      },
+      "topFiveConcentration": 0.4057142857142857,
+      "cleanTopTrack": {
+        "id": "lela-manja",
+        "count": 5,
+        "share": 0.1
+      },
+      "cleanTopFiveConcentration": 0.34,
+      "topAlbum": {
+        "id": "lentera-timur",
+        "count": 90,
+        "share": 0.2571428571428571
+      },
+      "cleanTopAlbum": {
+        "id": "hadiah-daripada-hati",
+        "count": 7,
+        "share": 0.14
+      },
+      "topEra": {
+        "id": "2010s contemporary",
+        "count": 107,
+        "share": 0.3057142857142857
+      },
+      "immediateRepeats": 0,
+      "unsuitableResults": 0,
+      "unsuitableExamples": [],
+      "curationDistribution": {
+        "reviewed": 350,
+        "verifiedMetadata": 0,
+        "reviewedShare": 1
+      },
+      "meanMoodSimilarity": 0.8554045150225185,
+      "warnings": []
+    },
+    {
+      "moodId": "elegant",
+      "label": "Elegant",
+      "simulations": 350,
+      "scenarios": {
+        "clean": {
+          "simulations": 50,
+          "uniqueTracks": 22,
+          "topTrackShare": 0.12
+        },
+        "favourites": {
+          "simulations": 50,
+          "uniqueTracks": 20,
+          "topTrackShare": 0.2
+        },
+        "heavy-recent": {
+          "simulations": 50,
+          "uniqueTracks": 4,
+          "topTrackShare": 0.88
+        },
+        "era-preference": {
+          "simulations": 50,
+          "uniqueTracks": 9,
+          "topTrackShare": 0.2
+        },
+        "familiar": {
+          "simulations": 50,
+          "uniqueTracks": 26,
+          "topTrackShare": 0.1
+        },
+        "discovery": {
+          "simulations": 50,
+          "uniqueTracks": 26,
+          "topTrackShare": 0.14
+        },
+        "time-of-day": {
+          "simulations": 50,
+          "uniqueTracks": 22,
+          "topTrackShare": 0.1
+        }
+      },
+      "uniqueTracks": 44,
+      "credibleReviewedUniqueTracks": 39,
+      "topTrack": {
+        "id": "canggai",
+        "count": 56,
+        "share": 0.16
+      },
+      "topFiveConcentration": 0.4142857142857143,
+      "cleanTopTrack": {
+        "id": "syair-kamelia",
+        "count": 6,
+        "share": 0.12
+      },
+      "cleanTopFiveConcentration": 0.48,
+      "topAlbum": {
+        "id": "sahmura",
+        "count": 67,
+        "share": 0.19142857142857142
+      },
+      "cleanTopAlbum": {
+        "id": "lentera-timur",
+        "count": 6,
+        "share": 0.12
+      },
+      "topEra": {
+        "id": "1990s classics",
+        "count": 131,
+        "share": 0.3742857142857143
+      },
+      "immediateRepeats": 0,
+      "unsuitableResults": 0,
+      "unsuitableExamples": [],
+      "curationDistribution": {
+        "reviewed": 326,
+        "verifiedMetadata": 24,
+        "reviewedShare": 0.9314285714285714
+      },
+      "meanMoodSimilarity": 0.8700553539898879,
+      "warnings": []
+    },
+    {
+      "moodId": "comforted",
+      "label": "Comforted",
+      "simulations": 350,
+      "scenarios": {
+        "clean": {
+          "simulations": 50,
+          "uniqueTracks": 28,
+          "topTrackShare": 0.12
+        },
+        "favourites": {
+          "simulations": 50,
+          "uniqueTracks": 16,
+          "topTrackShare": 0.48
+        },
+        "heavy-recent": {
+          "simulations": 50,
+          "uniqueTracks": 4,
+          "topTrackShare": 0.5
+        },
+        "era-preference": {
+          "simulations": 50,
+          "uniqueTracks": 7,
+          "topTrackShare": 0.46
+        },
+        "familiar": {
+          "simulations": 50,
+          "uniqueTracks": 24,
+          "topTrackShare": 0.12
+        },
+        "discovery": {
+          "simulations": 50,
+          "uniqueTracks": 23,
+          "topTrackShare": 0.18
+        },
+        "time-of-day": {
+          "simulations": 50,
+          "uniqueTracks": 21,
+          "topTrackShare": 0.18
+        }
+      },
+      "uniqueTracks": 45,
+      "credibleReviewedUniqueTracks": 37,
+      "topTrack": {
+        "id": "kedamaian",
+        "count": 69,
+        "share": 0.19714285714285715
+      },
+      "topFiveConcentration": 0.4714285714285714,
+      "cleanTopTrack": {
+        "id": "kedamaian",
+        "count": 6,
+        "share": 0.12
+      },
+      "cleanTopFiveConcentration": 0.46,
+      "topAlbum": {
+        "id": "pancawarna",
+        "count": 70,
+        "share": 0.2
+      },
+      "cleanTopAlbum": {
+        "id": "tahajjud-cinta",
+        "count": 8,
+        "share": 0.16
+      },
+      "topEra": {
+        "id": "1990s classics",
+        "count": 103,
+        "share": 0.29428571428571426
+      },
+      "immediateRepeats": 0,
+      "unsuitableResults": 0,
+      "unsuitableExamples": [],
+      "curationDistribution": {
+        "reviewed": 326,
+        "verifiedMetadata": 24,
+        "reviewedShare": 0.9314285714285714
+      },
+      "meanMoodSimilarity": 0.8283387327957145,
+      "warnings": []
+    },
+    {
+      "moodId": "dramatic",
+      "label": "Dramatic",
+      "simulations": 350,
+      "scenarios": {
+        "clean": {
+          "simulations": 50,
+          "uniqueTracks": 24,
+          "topTrackShare": 0.12
+        },
+        "favourites": {
+          "simulations": 50,
+          "uniqueTracks": 16,
+          "topTrackShare": 0.44
+        },
+        "heavy-recent": {
+          "simulations": 50,
+          "uniqueTracks": 3,
+          "topTrackShare": 0.52
+        },
+        "era-preference": {
+          "simulations": 50,
+          "uniqueTracks": 8,
+          "topTrackShare": 0.34
+        },
+        "familiar": {
+          "simulations": 50,
+          "uniqueTracks": 19,
+          "topTrackShare": 0.08
+        },
+        "discovery": {
+          "simulations": 50,
+          "uniqueTracks": 22,
+          "topTrackShare": 0.1
+        },
+        "time-of-day": {
+          "simulations": 50,
+          "uniqueTracks": 22,
+          "topTrackShare": 0.12
+        }
+      },
+      "uniqueTracks": 34,
+      "credibleReviewedUniqueTracks": 27,
+      "topTrack": {
+        "id": "cahaya-seribu-liku",
+        "count": 46,
+        "share": 0.13142857142857142
+      },
+      "topFiveConcentration": 0.46,
+      "cleanTopTrack": {
+        "id": "dirgahayu",
+        "count": 6,
+        "share": 0.12
+      },
+      "cleanTopFiveConcentration": 0.4,
+      "topAlbum": {
+        "id": "prasasti-seni",
+        "count": 55,
+        "share": 0.15714285714285714
+      },
+      "cleanTopAlbum": {
+        "id": "dirgahayu-single",
+        "count": 6,
+        "share": 0.12
+      },
+      "topEra": {
+        "id": "2000s evolution",
+        "count": 85,
+        "share": 0.24285714285714285
+      },
+      "immediateRepeats": 0,
+      "unsuitableResults": 0,
+      "unsuitableExamples": [],
+      "curationDistribution": {
+        "reviewed": 322,
+        "verifiedMetadata": 28,
+        "reviewedShare": 0.92
+      },
+      "meanMoodSimilarity": 0.8717918953870804,
+      "warnings": []
+    }
+  ]
+}
