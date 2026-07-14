@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { BrainCircuit, Download, Info, LockKeyhole, RotateCcw, Trash2, Volume2 } from 'lucide-react'
 import { useExperience } from '../app/providers'
 import { Modal } from '../components/common/Modal'
-import type { StreamingService } from '../config/schemas'
+import type { PlaybackPreference, StreamingService } from '../config/schemas'
 import { removeEnhancedModelCache } from '../features/bot/semantic/enhancedMode'
 
 export default function SettingsPage() {
@@ -11,6 +11,8 @@ export default function SettingsPage() {
     profileSource,
     listener,
     setStreamingService,
+    setPlaybackPreference,
+    setEmbedConsent,
     setSoundEffects,
     setReducedMotion,
     setHighContrast,
@@ -52,9 +54,38 @@ export default function SettingsPage() {
       <p className="page-intro">Adjust the experience on this device. None of these choices require an account.</p>
 
       <section className="settings-section panel" aria-labelledby="playback-settings-heading">
-        <h2 id="playback-settings-heading">Listening destination</h2>
+        <h2 id="playback-settings-heading">Playback</h2>
         <div className="field">
-          <label htmlFor="streaming-service">Preferred streaming service</label>
+          <label htmlFor="playback-preference">Playback preference</label>
+          <select
+            className="select"
+            id="playback-preference"
+            value={listener.playbackPreference}
+            onChange={(event) => setPlaybackPreference(event.target.value as PlaybackPreference)}
+          >
+            <option value="automatic">Automatic</option>
+            <option value="spotify">Prefer Spotify</option>
+            <option value="youtube">Prefer YouTube</option>
+            <option value="apple">Prefer Apple Music</option>
+          </select>
+          <small>Automatic tries Spotify Embed, a verified official YouTube video, an Apple Music preview, then an external destination. An unavailable preference falls back without interrupting recommendations.</small>
+        </div>
+        <div className="field">
+          <label htmlFor="embed-consent">Embedded players</label>
+          <select
+            className="select"
+            id="embed-consent"
+            value={listener.embedConsent}
+            onChange={(event) => setEmbedConsent(event.target.value as typeof listener.embedConsent)}
+          >
+            <option value="ask">Ask before first load</option>
+            <option value="allowed">Allow embedded players</option>
+            <option value="external-only">External links only</option>
+          </select>
+          <small>Embedded providers receive network requests and may use their own cookies. Pink FM does not add analytics.</small>
+        </div>
+        <div className="field">
+          <label htmlFor="streaming-service">Preferred external destination</label>
           <select
             className="select"
             id="streaming-service"
@@ -65,7 +96,7 @@ export default function SettingsPage() {
             <option value="youtube">YouTube</option>
             <option value="appleMusic">Apple Music</option>
           </select>
-          <small>Pink FM uses a different available official link when your preferred service is not configured.</small>
+          <small>This affects secondary “Open in…” links. Pink FM uses another official destination when needed.</small>
         </div>
       </section>
 

@@ -2,7 +2,7 @@
 
 Pink FM is a mobile-first, installable retro mood-radio gift. The listener chooses how they want the music to feel, receives a catalogue-grounded recommendation, and can refine the station in English, Bahasa Melayu, or conversational English-Malay with WisseBot.
 
-The default `siti` edition is centred on Siti Nurhaliza. Pink FM stores no music or lyrics: playback always goes to a configured official streaming destination. The application remains a static, profile-driven PWA that can be hosted entirely on GitHub Pages.
+The default `siti` edition is centred on Siti Nurhaliza. Pink FM stores no music or lyrics: it uses authorised provider embeds and configured official destinations. The application remains a static, profile-driven PWA that can be hosted entirely on GitHub Pages.
 
 > Pink FM is an independent personal project and is not affiliated with or endorsed by the featured artist or streaming services.
 
@@ -87,6 +87,9 @@ Open the local URL printed by Vite and use `#/g/siti`. On Windows, if PowerShell
 | `npm run catalog:coverage -- --slug <slug>` | Print mood, era, collection, album, and curation coverage |
 | `npm run catalog:dedupe -- --slug <slug>` | Detect likely duplicate recordings and provider URLs |
 | `npm run catalog:editorial-review` | Re-run the Phase 3 metadata/provenance desk review and destination checks |
+| `npm run playback:prepare -- --slug <slug> --dry-run` | Classify Spotify destinations and report safe playback migration changes |
+| `npm run playback:prepare -- --slug <slug> --apply` | Persist reviewed schema-migration defaults after inspecting the dry run |
+| `npm run playback:audit -- --slug <slug>` | Generate JSON and Markdown in-site playback coverage reports |
 | `npm run recommendations:simulate` | Run 3,150 recommendation-diversity simulations across all user-facing moods |
 | `npm run bot:embeddings -- --slug <slug>` | Regenerate matching model/index/binary embeddings |
 | `npm run bot:evaluation:generate` | Recreate the deterministic evaluation corpus |
@@ -124,7 +127,17 @@ flowchart TD
   Request --> Engine
   Storage["Versioned profile-scoped localStorage"] --> Engine
   Engine --> Response["Evidence-backed response templates"]
-  Response --> Links["Configured official destinations"]
+  Response --> Select["Deterministic provider selection"]
+  Consent["Profile-scoped embed consent"] --> Select
+  Select --> Spotify["Spotify Embed iFrame API"]
+  Select --> YouTube["Verified official YouTube IFrame"]
+  Select --> Apple["Apple Music preview iframe"]
+  Select --> Links["Secondary official destination"]
+  Spotify --> Events["Literal playback events"]
+  YouTube --> Events
+  Apple --> Events
+  Links --> Events
+  Events --> Storage
   Response --> Storage
 
   SW["Manual service worker"] --> UI
@@ -140,6 +153,8 @@ The important boundaries are explicit:
 4. Catalogue retrieval returns IDs that exist in the active profile.
 5. Recommendation scoring ranks only validated candidates.
 6. Response rendering uses structured evidence and verified profile metadata, not unrestricted generation.
+7. Provider scripts and iframes load only after profile-scoped consent; the service worker never caches them.
+8. Recommendations, player loads, actual starts, pauses, completion, external opens, skips, and failures are distinct events.
 
 ## Gift-profile format
 
@@ -214,6 +229,34 @@ Recent-track, same-album, secondary-artist, and curation-confidence penalties ar
 Diversity reranking prevents a recommendation queue from collapsing into one album when similarly suitable alternatives exist. Clean profiles use a stable daily rotation among close-quality, mood-credible candidates; learned signals such as a favourite still take precedence. Session requests support another choice, something different, another era, more energy, less intensity, a deeper cut, a familiar favourite, a duet, something traditional, or something modern.
 
 Phase 3 ran 3,150 deterministic simulations: 50 runs for each of nine user-facing moods across clean history, favourites, heavy recent listening, era preference, familiarity, discovery, and time-of-day scenarios. Every mood produced 23–42 credible reviewed choices, clean-profile top-track concentration stayed at 10–14%, top-album concentration stayed at 12–26%, and the run found zero immediate repeats or unsuitable results. This is a software simulation, not a substitute for subjective listening review. The complete per-mood evidence is in `docs/phase-3-recommendation-diversity.md`.
+
+## In-site playback
+
+The radio owns one persistent, capability-aware player controller. A new recommendation loads into the current provider controller without leaving `RadioPage` and never autoplays. Automatic order is Spotify Embed, a manually verified official YouTube embed, an Apple Music preview, then an official external destination. A listener preference moves an available provider to the front; an unavailable preference falls through normally.
+
+Spotify uses the official `https://open.spotify.com/embed/iframe-api/v1` script. It needs no OAuth, client ID, access token, Web API call, Web Playback SDK, or backend. Only exact `open.spotify.com` HTTPS track URLs with valid 22-character identifiers become `spotify:track:` URIs. Album, playlist, artist, malformed, lookalike-host, credential-bearing, and unsafe-protocol URLs never count as track playback. Spotify controls and attribution remain visible. Provider behavior may be a preview or full playback depending on account, browser, device, region, cookie policy and Spotify itself, so Pink FM says “Playback provided by Spotify,” not “Full song available.”
+
+YouTube is fallback-only in automatic mode unless explicitly preferred. A record needs a valid 11-character video ID, `verifiedOfficial: true`, and a source ID present in catalogue provenance. Pink FM does no live search, ships no YouTube Data API key, and does not select fan uploads. The visible IFrame player keeps standard controls and uses `youtube-nocookie.com` where compatible.
+
+Apple Music remains `preview-or-external` in Phase 4. Pink FM derives an official `embed.music.apple.com` URL from the validated song destination, shows Apple’s native iframe controls, and labels it “Preview provided by Apple Music.” There is no MusicKit authentication, developer token, private key, signed token, or full-playback promise.
+
+Before the first embed, Pink FM explains that the provider receives a network request and may use its own cookies. The listener can allow embeds or remain external-only, and can change the profile-scoped decision and playback preference in Settings. Denial never disables recommendations, favourites, feedback, the queue, WisseBot, or external links. Pink FM adds no playback analytics.
+
+Playback events are literal: `recommended` and `player-loaded` are not listening; `playback-started` is the primary listening signal and the only event that increments play counts; `playback-paused`, `playback-completed`, `externally-opened`, `skipped`, and `failed` remain separate. Completion is recorded only if an adapter exposes a reliable signal.
+
+The compact queue shows the current result, a prepared next result, and the most recent track actually started inside Pink FM. Another choice, next recommendation, replay preparation, same mood/different era, and different album keep the listener on the radio. Pink FM does not promise gapless, automatic continuous, or cross-provider uninterrupted playback.
+
+### Adding playback data for another artist
+
+Keep `officialLinks` as canonical destinations. A valid direct Spotify track URL is sufficient; the adapter derives its URI. Add YouTube only after manual official-upload verification and add the exact provenance source to `catalog-sources.json`. Apple song links can use the official preview boundary without committing a duplicate embed URL. Then run:
+
+```bash
+npm run playback:prepare -- --slug <slug> --dry-run
+npm run playback:audit -- --slug <slug>
+npm run content:validate
+```
+
+Review every album-only, malformed, external-only and missing destination. Never invent a URL to improve coverage. The current Siti report is `docs/phase-4-playback-audit.md`; its Apple figures mean preview-capable, not universal full-track playback.
 
 Explanations are derived from actual score contributions and structured request evidence. Technical details are tucked behind “Why this recommendation?” rather than dominating the radio display.
 
@@ -341,7 +384,7 @@ The manifest uses original Pink FM icons and a relative scope/start URL. The ser
 
 An update banner appears when a worker waits. After one successful online load, the interface can reopen cached catalogue metadata, local preferences, library history, and deterministic recommendations offline. External playback and a first-time semantic-model download may require connectivity.
 
-The Phase 3 shell cache is versioned `pink-fm-v3`; activation removes only outdated `pink-fm-*` caches. It deliberately leaves browser/Transformers model caches alone. Updating the application refreshes shell/profile resources under the normal strategies, while changing the configured model revision requires a separately consented model retrieval.
+The Phase 4 shell cache is versioned `pink-fm-v4`; activation removes only outdated `pink-fm-*` caches. It deliberately leaves browser/Transformers model caches alone. Spotify/YouTube/Apple scripts, iframe pages, media, authentication and cookies are never permanent offline assets. Offline radio screens say plainly: “Music playback requires an internet connection.”
 
 ## GitHub Pages deployment
 
@@ -429,9 +472,9 @@ Do not place credentials or private data in the URL. An unusual slug provides ob
 
 ## Privacy limitations
 
-Favourites, feedback, settings, affinities, history, and conversation preferences use a versioned `localStorage` layer scoped by gift slug. Version-one and version-two state migrate to version three; malformed data resets safely. Browser storage is not encrypted and clearing site data removes it.
+Favourites, feedback, settings, affinities, recommendation rotation, actual listening history, playback events, embed consent, and conversation preferences use a versioned `localStorage` layer scoped by gift slug. Versions one through three migrate to version four without deleting favourites or prior history; malformed data resets safely. Browser storage is not encrypted and clearing site data removes it.
 
-The opt-in semantic message is processed locally in the worker; it is not sent to Pink FM or an LLM service. The browser may contact Hugging Face/CDN origins to obtain public model files on first use. Other people with access to the same browser profile may inspect local storage.
+The opt-in semantic message is processed locally in the worker; it is not sent to Pink FM or an LLM service. The browser may contact Hugging Face/CDN origins to obtain public model files on first use. Allowing playback embeds contacts the selected Spotify, YouTube or Apple service under that provider’s privacy and cookie behavior. Other people with access to the same browser profile may inspect local storage.
 
 Static hosting is public. `recipient.showName` affects display, not access. Never commit confidential recipient copy.
 
@@ -443,9 +486,9 @@ Primary flows should be retested with keyboard only, 200% zoom, screen-reader na
 
 ## Testing
 
-`npm run verify` is the deterministic release gate. It covers schemas and migration, controlled profile errors, scale/coverage invariants, ranking and diversity, curation/artist penalties, grounding, multilingual parsing, negation, contextual follow-ups, fuzzy entities, explicit semantic consent, cancellation/cache handling, semantic failure, embedding corruption/staleness, local-storage migration, accessibility-focused component flows, feedback, catalogue search, and honest playback states.
+`npm run verify` is the deterministic release gate. It covers schemas and migration, controlled profile errors, scale/coverage invariants, ranking and diversity, curation/artist penalties, grounding, multilingual parsing, negation, contextual follow-ups, fuzzy entities, both consent systems, provider URL security and selection, singleton/recoverable scripts, controller reuse/destruction, accurate playback events, semantic failure, embedding corruption/staleness, local-storage migration, accessibility-focused component flows, feedback, catalogue search, and honest playback states.
 
-`npm run bot:evaluate` and `npm run bot:benchmark` are separate, heavier quality runs because the public models are large. The checked-in reports record exact revisions and environments. `npm run recommendations:simulate` exercises diversity separately. Browser QA verifies feature splitting, no silent download, opt-in disclosure, instant fallback, 320/390/tablet/desktop reflow, 200% text scaling, high contrast, 44-pixel radio targets, touch/keyboard flows, offline profile reopening, stale/corrupt indexes, service-worker behaviour, and console errors.
+`npm run bot:evaluate` and `npm run bot:benchmark` are separate, heavier quality runs because the public models are large. The checked-in reports record exact revisions and environments. `npm run recommendations:simulate` exercises diversity separately. Browser QA verifies playback consent accepted/denied, no pre-consent provider request, a reviewed Spotify recommendation or honest blocked-provider fallback, persistent rapid changes, playback settings, 320/390/tablet/desktop reflow, 200% text scaling, high contrast, 44-pixel targets, touch/keyboard flows, honest offline playback, stale/corrupt indexes, service-worker behaviour, and console errors.
 
 ## Troubleshooting
 
@@ -458,6 +501,7 @@ Primary flows should be retested with keyboard only, 200% zoom, screen-reader na
 - **Wrong Pages styling or assets:** verify the workflow-derived base and remove an incorrect `VITE_BASE_PATH` for repository-path hosting.
 - **Old content after deploy:** reload online once. Profile JSON is network-first and the update banner handles a waiting shell.
 - **No playback destination:** add at least one verified HTTPS service URL; Pink FM does not render pretend controls.
+- **Provider embed blocked:** use Retry after changing the blocker/cookie/network condition or use the always-visible secondary official destination. An absent preferred provider is a normal fallback, not an error.
 - **Service-worker confusion in development:** registration is production-only. Unregister an older worker if a production build previously used the same origin.
 - **Chromium headless Dawn/Graphite cache crash on Windows:** this is a local QA-process failure before the page loads. Close stale headless processes first; if the exact sandboxed cache race persists, rerun only the disposable local harness with `QA_NO_SANDBOX=1`. Never use that flag for ordinary browsing or deployment.
 - **PowerShell blocks npm:** use `npm.cmd` or adjust your trusted local policy yourself.
@@ -470,7 +514,7 @@ Primary flows should be retested with keyboard only, 200% zoom, screen-reader na
 - Model cache persistence, first-use time, and memory depend on browser, storage pressure, connection, and hardware; no phone-performance claim is made from desktop Node or headless Chrome timings.
 - Precomputed embeddings understand catalogue descriptions; they do not verify historical facts or translate lyrics.
 - Static hosting provides no authentication, cross-device sync, or secure private messaging.
-- External music playback requires the provider and may require internet access.
+- Embedded and external music playback require the provider and an internet connection. Spotify availability/full-length behavior varies by login, browser, device, region, cookies and blockers; Apple is preview-or-external; YouTube remains intentionally sparse until official uploads are manually verified.
 
 ## Creator and licence
 

@@ -23,4 +23,24 @@ describe('profile configuration schemas', () => {
     expect(result.success).toBe(false)
     if (!result.success) expect(result.error.issues[0]?.message).toContain('Duplicate track id')
   })
+
+  it('rejects a Spotify album URL presented as track playback data', () => {
+    const track = makeTrack('album-playback')
+    expect(tracksFileSchema.safeParse({
+      schemaVersion: 3,
+      tracks: [{ ...track, playback: { ...track.playback, spotify: { url: 'https://open.spotify.com/album/5hYW2hAwvsaifyiNxDVVKC', entityType: 'track' } } }],
+    }).success).toBe(false)
+  })
+
+  it('rejects unverified or unprovenanced YouTube playback records', () => {
+    const track = makeTrack('youtube-schema')
+    const candidate = { ...track, playback: { ...track.playback, youtube: { videoId: 'AbCdEfGhI_1', verifiedOfficial: false, sourceId: '' } } }
+    expect(tracksFileSchema.safeParse({ schemaVersion: 3, tracks: [candidate] }).success).toBe(false)
+  })
+
+  it('rejects unsupported Apple embed hosts', () => {
+    const track = makeTrack('apple-schema')
+    const candidate = { ...track, playback: { ...track.playback, appleMusic: { url: 'https://music.apple.com/my/album/test/1?i=2', embedUrl: 'https://example.com/embed/1', playbackType: 'preview-or-external' } } }
+    expect(tracksFileSchema.safeParse({ schemaVersion: 3, tracks: [candidate] }).success).toBe(false)
+  })
 })

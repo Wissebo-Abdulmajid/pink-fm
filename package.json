@@ -21,6 +21,8 @@
     "catalog:coverage": "tsx scripts/catalog-coverage.ts",
     "catalog:dedupe": "tsx scripts/catalog-dedupe.ts",
     "catalog:editorial-review": "tsx scripts/editorial-review-phase3.ts --slug siti --check-links",
+    "playback:prepare": "tsx scripts/prepare-in-site-playback.ts",
+    "playback:audit": "tsx scripts/audit-playback-coverage.ts",
     "recommendations:simulate": "tsx scripts/recommendation-diversity.ts --slug siti --iterations 50",
     "bot:embeddings": "tsx scripts/precompute-embeddings.ts",
     "bot:evaluation:generate": "tsx scripts/generate-bot-evaluation.ts",
@@ -32,7 +34,7 @@
     "bot:benchmark": "tsx scripts/benchmark-semantic-models.ts",
     "icons:generate": "node scripts/generate-icons.mjs",
     "qa:browser": "node scripts/browser-qa.mjs",
-    "verify": "npm run lint && npm run typecheck && npm run content:validate && npm run catalog:audit -- --slug siti && npm run test && npm run build"
+    "verify": "npm run lint && npm run typecheck && npm run content:validate && npm run catalog:audit -- --slug siti && npm run playback:audit -- --slug siti && npm run test && npm run build"
   },
   "dependencies": {
     "@fontsource-variable/fraunces": "^5.2.9",

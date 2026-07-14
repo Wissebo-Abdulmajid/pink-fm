@@ -10,7 +10,7 @@ const serviceNames: Record<StreamingService, string> = {
 }
 
 export function PlaybackAction({ track }: { track: Track }) {
-  const { listener, markPlayed, profile } = useExperience()
+  const { listener, recordPlaybackEvent, profile } = useExperience()
   const preferred = listener.selectedStreamingService
   const alternatives = Object.entries(track.officialLinks) as [StreamingService, string][]
   const selected = track.officialLinks[preferred]
@@ -38,7 +38,7 @@ export function PlaybackAction({ track }: { track: Track }) {
           href={selected[1]}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => markPlayed(track.id)}
+          onClick={() => recordPlaybackEvent('externally-opened', track.id, 'external')}
         >
           <Music2 size={19} aria-hidden="true" />
           {profile.messages.radio.playOn} {serviceNames[selected[0]]}

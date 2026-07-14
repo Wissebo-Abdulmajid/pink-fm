@@ -13,6 +13,7 @@ export const moodDimensionKeys = [
 ] as const
 
 export const streamingServiceSchema = z.enum(['youtube', 'spotify', 'appleMusic'])
+export const playbackPreferenceSchema = z.enum(['automatic', 'spotify', 'youtube', 'apple'])
 export const artistPolicyModeSchema = z.enum([
   'primary-only',
   'primary-preferred',
@@ -191,6 +192,61 @@ const httpsOrEmptySchema = z.string().refine((value) => {
   }
 }, 'Expected an HTTPS URL or an empty string')
 
+const hasExactHost = (value: string, hosts: string[]) => {
+  if (value === '') return true
+  try {
+    const url = new URL(value)
+    return url.protocol === 'https:' && hosts.includes(url.hostname) && !url.username && !url.password
+  } catch {
+    return false
+  }
+}
+
+const spotifyUrlSchema = httpsOrEmptySchema.refine(
+  (value) => hasExactHost(value, ['open.spotify.com']),
+  'Expected an official open.spotify.com URL',
+)
+const appleMusicUrlSchema = httpsOrEmptySchema.refine(
+  (value) => hasExactHost(value, ['music.apple.com']),
+  'Expected an official music.apple.com URL',
+)
+const appleMusicEmbedUrlSchema = httpsOrEmptySchema.refine(
+  (value) => hasExactHost(value, ['embed.music.apple.com']),
+  'Expected an official embed.music.apple.com URL',
+)
+const youtubeUrlSchema = httpsOrEmptySchema.refine(
+  (value) => hasExactHost(value, ['youtube.com', 'www.youtube.com', 'youtu.be']),
+  'Expected an official YouTube URL',
+)
+const spotifyTrackUrlSchema = spotifyUrlSchema.refine((value) => {
+  if (!value) return false
+  try {
+    const parts = new URL(value).pathname.split('/').filter(Boolean)
+    if (parts[0]?.startsWith('intl-')) parts.shift()
+    return parts.length === 2 && parts[0] === 'track' && /^[A-Za-z0-9]{22}$/.test(parts[1] ?? '')
+  } catch {
+    return false
+  }
+}, 'Spotify playback URLs must identify a valid track')
+
+const trackPlaybackSchema = z.strictObject({
+  preferredProvider: playbackPreferenceSchema.default('automatic'),
+  spotify: z.strictObject({
+    url: spotifyTrackUrlSchema,
+    entityType: z.literal('track'),
+  }).nullable().default(null),
+  youtube: z.strictObject({
+    videoId: z.string().regex(/^[A-Za-z0-9_-]{11}$/, 'Expected a valid YouTube video id'),
+    verifiedOfficial: z.literal(true),
+    sourceId: slugSchema,
+  }).nullable().default(null),
+  appleMusic: z.strictObject({
+    url: appleMusicUrlSchema.refine(Boolean, 'An Apple Music URL is required'),
+    embedUrl: appleMusicEmbedUrlSchema.nullable().default(null),
+    playbackType: z.literal('preview-or-external'),
+  }).nullable().default(null),
+})
+
 const catalogueSlug = (value: string) =>
   value
     .normalize('NFKD')
@@ -236,6 +292,12 @@ const migrateTrackInput = (input: unknown) => {
     useCases: track.useCases ?? contexts,
     avoidWhen: track.avoidWhen ?? [],
     sourceIds: track.sourceIds ?? [],
+    playback: track.playback ?? {
+      preferredProvider: 'automatic',
+      spotify: null,
+      youtube: null,
+      appleMusic: null,
+    },
   }
 }
 
@@ -263,14 +325,15 @@ const trackObjectSchema = z.strictObject({
   artworkAlt: z.string().max(180),
   active: z.boolean(),
   officialLinks: z.strictObject({
-    youtube: httpsOrEmptySchema,
-    spotify: httpsOrEmptySchema,
-    appleMusic: httpsOrEmptySchema,
+    youtube: youtubeUrlSchema,
+    spotify: spotifyUrlSchema,
+    appleMusic: appleMusicUrlSchema,
   }),
   embed: z.strictObject({
     provider: z.enum(['none', 'youtube', 'spotify', 'appleMusic']),
     url: httpsOrEmptySchema.nullable(),
   }),
+  playback: trackPlaybackSchema,
   moods: moodVectorSchema,
   contexts: z.array(z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)).max(20),
   tempoClass: z.enum(['slow', 'medium', 'fast']),
@@ -312,12 +375,12 @@ const migrateTracksFileInput = (input: unknown) => {
   const file = input as Record<string, unknown>
   return {
     ...file,
-    schemaVersion: file.schemaVersion === 1 ? 2 : file.schemaVersion,
+    schemaVersion: file.schemaVersion === 1 || file.schemaVersion === 2 ? 3 : file.schemaVersion,
   }
 }
 
 const tracksFileObjectSchema = z.strictObject({
-    schemaVersion: z.literal(2),
+    schemaVersion: z.literal(3),
     tracks: z.array(trackSchema),
   })
 
@@ -604,6 +667,7 @@ export type MoodsFile = z.infer<typeof moodsFileSchema>
 export type Messages = z.infer<typeof messagesSchema>
 export type ProfileBundle = z.infer<typeof profileBundleSchema>
 export type StreamingService = z.infer<typeof streamingServiceSchema>
+export type PlaybackPreference = z.infer<typeof playbackPreferenceSchema>
 export type ArtistPolicyMode = z.infer<typeof artistPolicyModeSchema>
 export type ArtistPolicy = z.infer<typeof artistPolicySchema>
 export type CurationStatus = z.infer<typeof curationStatusSchema>

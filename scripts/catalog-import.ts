@@ -100,6 +100,12 @@ const csvRecordToTrack = (record: Record<string, string>) => ({
     provider: record.embedProvider || 'none',
     url: record.embedUrl || null,
   },
+  playback: jsonField(record.playback ?? '', {
+    preferredProvider: 'automatic',
+    spotify: null,
+    youtube: null,
+    appleMusic: null,
+  }),
   artwork: record.artwork || null,
 })
 
@@ -213,7 +219,7 @@ const run = async () => {
   }
 
   const output: TracksFile = {
-    schemaVersion: 2,
+    schemaVersion: 3,
     tracks: [...byId.values()],
   }
   const validated = tracksFileSchema.parse(output)

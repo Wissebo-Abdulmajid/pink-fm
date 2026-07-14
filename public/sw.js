@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'pink-fm-v3'
+const CACHE_VERSION = 'pink-fm-v4'
 const RUNTIME_CACHE = `${CACHE_VERSION}-runtime`
 const PROFILE_CACHE = `${CACHE_VERSION}-profiles`
 
@@ -65,6 +65,8 @@ self.addEventListener('fetch', (event) => {
   const { request } = event
   if (request.method !== 'GET') return
   const url = new URL(request.url)
+  // Provider scripts, iframe pages, media, authentication and cookies remain entirely
+  // outside Pink FM's caches. The service worker only handles same-origin app resources.
   if (url.origin !== self.location.origin) return
 
   if (

@@ -1,9 +1,11 @@
 import {
   ListenerStorage,
+  appendPlaybackEvent,
   createDefaultListenerState,
   learnFromLovedTrack,
   migrateListenerState,
 } from './storage'
+import { createPlaybackEvent } from '../features/player/playback-events'
 import { makeTrack } from '../test/fixtures'
 
 describe('listener storage', () => {
@@ -24,12 +26,12 @@ describe('listener storage', () => {
       favourites: ['legacy-track'],
       soundEffects: false,
     })
-    expect(migrated.schemaVersion).toBe(3)
+    expect(migrated.schemaVersion).toBe(4)
     expect(migrated.lovedTrackIds).toContain('legacy-track')
     expect(migrated.soundEffects).toBe(false)
   })
 
-  it('migrates version two into profile-scoped version three storage', () => {
+  it('migrates version two into profile-scoped version four storage', () => {
     const versionTwo = {
       ...createDefaultListenerState('spotify'),
       schemaVersion: 2,
@@ -42,10 +44,10 @@ describe('listener storage', () => {
     delete (versionTwo as Partial<typeof versionTwo>).semanticMode
     window.localStorage.setItem('pink-fm:listener:v2:migrated', JSON.stringify(versionTwo))
     const migrated = new ListenerStorage('migrated').getSnapshot()
-    expect(migrated.schemaVersion).toBe(3)
+    expect(migrated.schemaVersion).toBe(4)
     expect(migrated.lovedTrackIds).toContain('legacy-v2')
     expect(migrated.preferredCollections).toEqual({})
-    expect(window.localStorage.getItem('pink-fm:listener:v3:migrated')).not.toBeNull()
+    expect(window.localStorage.getItem('pink-fm:listener:v4:migrated')).not.toBeNull()
   })
 
   it('learns weak collection, version, artist and language affinities from love feedback', () => {
@@ -74,6 +76,34 @@ describe('listener storage', () => {
     storage.update((state) => ({ ...state, lovedTrackIds: ['track-a'] }))
     storage.reset()
     expect(storage.getSnapshot().lovedTrackIds).toEqual([])
-    expect(window.localStorage.getItem('pink-fm:listener:v3:test')).toBeNull()
+    expect(window.localStorage.getItem('pink-fm:listener:v4:test')).toBeNull()
+  })
+
+  it('does not count recommendations, iframe loads, external opens or failures as plays', () => {
+    const initial = createDefaultListenerState('spotify')
+    const types = ['recommended', 'player-loaded', 'externally-opened', 'failed'] as const
+    const result = types.reduce(
+      (state, type) => appendPlaybackEvent(state, createPlaybackEvent(type, 'track-a', 'spotify-embed')),
+      initial,
+    )
+    expect(result.playCounts['track-a']).toBeUndefined()
+    expect(result.playbackEvents).toHaveLength(4)
+  })
+
+  it('increments actual listening only when playback starts', () => {
+    const initial = createDefaultListenerState('spotify')
+    const historyEntry = { trackId: 'track-a', timestamp: 1, moodId: 'calm', stationName: 'Calm', target: initial.preferredMoods }
+    const result = appendPlaybackEvent(initial, createPlaybackEvent('playback-started', 'track-a', 'spotify-embed'), historyEntry)
+    expect(result.playCounts['track-a']).toBe(1)
+    expect(result.listeningHistory[0]?.trackId).toBe('track-a')
+  })
+
+  it('records skips without incrementing play count', () => {
+    const result = appendPlaybackEvent(
+      createDefaultListenerState('spotify'),
+      createPlaybackEvent('skipped', 'track-a', 'apple-preview'),
+    )
+    expect(result.playbackEvents[0]?.type).toBe('skipped')
+    expect(result.playCounts['track-a']).toBeUndefined()
   })
 })

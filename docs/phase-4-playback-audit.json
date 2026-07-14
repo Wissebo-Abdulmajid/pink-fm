@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-14T02:57:12.050Z",
+  "profile": "siti",
+  "totals": {
+    "activeTracks": 142,
+    "reviewedTracks": 105,
+    "directSpotifyTrackUrls": 11,
+    "spotifyAlbumOnlyUrls": 1,
+    "invalidSpotifyUrls": 0,
+    "spotifyEmbedPlayableTracks": 11,
+    "verifiedYouTubePlayableTracks": 0,
+    "applePreviewTracks": 142,
+    "externalOnlyTracks": 0,
+    "tracksWithoutDestination": 0,
+    "inSitePlayableTracks": 142,
+    "inSitePlaybackPercentage": 100,
+    "reviewedRecommendationReadyPercentage": 100,
+    "sitiEssentialsPercentage": 100
+  },
+  "targets": {
+    "reviewedRecommendationReady80Percent": true,
+    "sitiEssentials90Percent": true,
+    "twelvePlayableReviewedPerMood": {
+      "peaceful": true,
+      "happy": true,
+      "romantic": true,
+      "confident": true,
+      "energised": true,
+      "nostalgic": true,
+      "elegant": true,
+      "comforted": true,
+      "dramatic": true
+    }
+  },
+  "coverageByMood": {
+    "peaceful": {
+      "total": 39,
+      "inSitePlayable": 39,
+      "percentage": 100
+    },
+    "happy": {
+      "total": 47,
+      "inSitePlayable": 47,
+      "percentage": 100
+    },
+    "romantic": {
+      "total": 68,
+      "inSitePlayable": 68,
+      "percentage": 100
+    },
+    "confident": {
+      "total": 67,
+      "inSitePlayable": 67,
+      "percentage": 100
+    },
+    "energised": {
+      "total": 41,
+      "inSitePlayable": 41,
+      "percentage": 100
+    },
+    "nostalgic": {
+      "total": 69,
+      "inSitePlayable": 69,
+      "percentage": 100
+    },
+    "elegant": {
+      "total": 99,
+      "inSitePlayable": 99,
+      "percentage": 100
+    },
+    "comforted": {
+      "total": 58,
+      "inSitePlayable": 58,
+      "percentage": 100
+    },
+    "dramatic": {
+      "total": 72,
+      "inSitePlayable": 72,
+      "percentage": 100
+    }
+  },
+  "coverageByCollection": {
+    "comfort-calm": {
+      "total": 17,
+      "inSitePlayable": 17,
+      "percentage": 100
+    },
+    "duets-collaborations": {
+      "total": 18,
+      "inSitePlayable": 18,
+      "percentage": 100
+    },
+    "elegant-evenings": {
+      "total": 48,
+      "inSitePlayable": 48,
+      "percentage": 100
+    },
+    "festive-frequency": {
+      "total": 6,
+      "inSitePlayable": 6,
+      "percentage": 100
+    },
+    "hidden-gems": {
+      "total": 37,
+      "inSitePlayable": 37,
+      "percentage": 100
+    },
+    "joyful-upbeat": {
+      "total": 34,
+      "inSitePlayable": 34,
+      "percentage": 100
+    },
+    "modern-siti": {
+      "total": 35,
+      "inSitePlayable": 35,
+      "percentage": 100
+    },
+    "nostalgic-classics": {
+      "total": 78,
+      "inSitePlayable": 78,
+      "percentage": 100
+    },
+    "powerful-vocals": {
+      "total": 51,
+      "inSitePlayable": 51,
+      "percentage": 100
+    },
+    "romantic-siti": {
+      "total": 62,
+      "inSitePlayable": 62,
+      "percentage": 100
+    },
+    "siti-essentials": {
+      "total": 26,
+      "inSitePlayable": 26,
+      "percentage": 100
+    },
+    "traditional-nusantara": {
+      "total": 27,
+      "inSitePlayable": 27,
+      "percentage": 100
+    }
+  },
+  "coverageByEra": {
+    "1990s classics": {
+      "total": 41,
+      "inSitePlayable": 41,
+      "percentage": 100
+    },
+    "2000s evolution": {
+      "total": 37,
+      "inSitePlayable": 37,
+      "percentage": 100
+    },
+    "2010s contemporary": {
+      "total": 26,
+      "inSitePlayable": 26,
+      "percentage": 100
+    },
+    "2020s modern": {
+      "total": 14,
+      "inSitePlayable": 14,
+      "percentage": 100
+    },
+    "late 2010s": {
+      "total": 11,
+      "inSitePlayable": 11,
+      "percentage": 100
+    },
+    "recent releases": {
+      "total": 13,
+      "inSitePlayable": 13,
+      "percentage": 100
+    }
+  },
+  "coverageByRecommendationReadiness": {
+    "reviewed": {
+      "total": 105,
+      "inSitePlayable": 105,
+      "percentage": 100
+    },
+    "metadataVerified": {
+      "total": 37,
+      "inSitePlayable": 37,
+      "percentage": 100
+    },
+    "provisional": {
+      "total": 0,
+      "inSitePlayable": 0,
+      "percentage": 0
+    }
+  },
+  "gaps": {
+    "spotifyAlbumOnly": [
+      {
+        "id": "aku-cinta-padamu",
+        "title": "Aku Cinta Padamu",
+        "url": "https://open.spotify.com/album/2qSbdOw1byknZvx0RJsfHL"
+      }
+    ],
+    "invalidSpotify": [],
+    "externalOnly": [],
+    "withoutDestination": [],
+    "mostFrequentlyRecommendedWithoutInSitePlayback": []
+  }
+}

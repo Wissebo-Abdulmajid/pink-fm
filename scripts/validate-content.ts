@@ -74,6 +74,24 @@ const checkLinks = (profilePath: string, tracks: Track[]) => {
   const seenUrls = new Map<string, string>()
   let missingArtwork = 0
   for (const track of tracks) {
+    if (track.embed.url) {
+      const allowedEmbedHosts: Record<string, string[]> = {
+        spotify: ['open.spotify.com'],
+        youtube: ['youtube.com', 'www.youtube.com', 'www.youtube-nocookie.com'],
+        appleMusic: ['music.apple.com', 'embed.music.apple.com'],
+      }
+      try {
+        const embedUrl = new URL(track.embed.url)
+        if (
+          embedUrl.protocol !== 'https:' ||
+          !(allowedEmbedHosts[track.embed.provider] ?? []).includes(embedUrl.hostname)
+        ) {
+          report('error', resolve(profilePath, 'tracks.json'), `${track.id}.embed uses an unsupported iframe host.`)
+        }
+      } catch {
+        report('error', resolve(profilePath, 'tracks.json'), `${track.id}.embed is not a valid URL.`)
+      }
+    }
     for (const [service, link] of Object.entries(track.officialLinks)) {
       if (!link) continue
       try {
@@ -140,6 +158,13 @@ const checkRelationships = (
       if (!sourceIds.has(sourceId)) {
         report('error', tracksPath, `${track.id} references unknown source "${sourceId}".`)
       }
+    }
+    if (track.playback.youtube && !sourceIds.has(track.playback.youtube.sourceId)) {
+      report(
+        'error',
+        tracksPath,
+        `${track.id} YouTube playback references unknown source "${track.playback.youtube.sourceId}".`,
+      )
     }
     const verification = sources.trackVerification[track.id]
     if (!verification) {

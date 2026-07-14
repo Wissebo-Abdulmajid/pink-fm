@@ -1,7 +1,7 @@
 import type { MoodVector } from './schemas'
 
 export const PROFILE_SCHEMA_VERSION = 1
-export const STORAGE_SCHEMA_VERSION = 3
+export const STORAGE_SCHEMA_VERSION = 4
 export const PROFILE_FILES = ['gift.json', 'moods.json', 'tracks.json', 'messages.json'] as const
 
 export const RECOMMENDATION_WEIGHTS = {

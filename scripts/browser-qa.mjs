@@ -505,6 +505,70 @@ async function run() {
   await capture(cdp, 'radio-mobile')
   console.log('QA milestone: primary radio flow')
 
+  const providerRequestsBeforeConsent = await evaluate(
+    cdp,
+    `performance.getEntriesByType('resource').filter((entry) => /open\\.spotify\\.com|youtube(?:-nocookie)?\\.com|embed\\.music\\.apple\\.com/.test(entry.name)).length`,
+  )
+  if (providerRequestsBeforeConsent !== 0) throw new Error('A playback provider loaded before consent.')
+  checks.push({ name: 'playback-no-provider-before-consent', passed: true, providerRequests: 0 })
+  await clickSelector(cdp, '.playback-consent__actions .button--secondary')
+  await waitForSelector(cdp, '.player-status', 10000)
+  const deniedState = await evaluate(cdp, `({
+    message: document.querySelector('.player-status')?.textContent ?? '',
+    providerFrames: document.querySelectorAll('.provider-player iframe').length,
+    fallback: Boolean(document.querySelector('.playback-external-link'))
+  })`)
+  if (!deniedState.message.includes('Embedded players are turned off') || deniedState.providerFrames || !deniedState.fallback) {
+    throw new Error('Playback-consent denial did not preserve an external-only radio: ' + JSON.stringify(deniedState))
+  }
+  checks.push({ name: 'playback-consent-denied', passed: true, ...deniedState })
+
+  // Select a known, reviewed direct Spotify record through the visible catalogue flow.
+  await evaluate(cdp, 'localStorage.clear()')
+  await cdp.send('Page.reload', { ignoreCache: true })
+  await waitForSelector(cdp, '.playback-consent', 10000)
+  await navigate(cdp, '#/g/siti/library', '.catalogue-browser')
+  const tunedCindai = await evaluate(cdp, `(() => {
+    const row = [...document.querySelectorAll('.catalogue-list li')].find((item) => item.querySelector('strong')?.textContent?.trim() === 'Cindai')
+    const button = row?.querySelector('button')
+    if (!button) return false
+    button.click()
+    return true
+  })()`)
+  if (!tunedCindai) throw new Error('The reviewed Cindai catalogue row could not be tuned.')
+  await waitForSelector(cdp, '.playback-consent', 10000)
+  await clickSelector(cdp, '.playback-consent__actions .button:not(.button--secondary)')
+  await waitForCondition(
+    cdp,
+    `Boolean(document.querySelector('.provider-player--spotify iframe, .player-status span')) &&
+      (Boolean(document.querySelector('.provider-player--spotify iframe')) || document.querySelector('.player-status')?.textContent?.includes('could not'))`,
+    'Spotify embed or honest failure fallback',
+    30000,
+  )
+  const spotifyOutcome = await evaluate(cdp, `({
+    track: document.querySelector('.player-shell__display h2')?.textContent?.trim() ?? '',
+    iframeLoaded: Boolean(document.querySelector('.provider-player--spotify iframe')),
+    status: document.querySelector('.player-status')?.textContent?.trim() ?? '',
+    fallback: Boolean(document.querySelector('.playback-external-link'))
+  })`)
+  if (spotifyOutcome.track !== 'Cindai' || !spotifyOutcome.fallback) {
+    throw new Error('Real Spotify recommendation did not retain its player/fallback: ' + JSON.stringify(spotifyOutcome))
+  }
+  checks.push({ name: 'real-spotify-recommendation-provider-outcome', passed: true, ...spotifyOutcome })
+
+  await clickSelector(cdp, '.radio-secondary-actions button:first-child')
+  await clickSelector(cdp, '.radio-secondary-actions button:first-child')
+  await delay(300)
+  const rapidChange = await evaluate(cdp, `({
+    playerShells: document.querySelectorAll('.player-shell').length,
+    providerViewports: document.querySelectorAll('.provider-player').length,
+    currentTitle: document.querySelector('.player-shell__display h2')?.textContent?.trim() ?? ''
+  })`)
+  if (rapidChange.playerShells !== 1 || rapidChange.providerViewports > 1 || !rapidChange.currentTitle) {
+    throw new Error('Rapid recommendations duplicated or lost the persistent player: ' + JSON.stringify(rapidChange))
+  }
+  checks.push({ name: 'rapid-recommendation-player-reuse', passed: true, ...rapidChange })
+
   const energyBefore = Number(await evaluate(cdp, "document.querySelector('#energy-dial').value"))
   await evaluate(cdp, "document.querySelector('#energy-dial').focus()")
   await pressKey(cdp, 'ArrowRight', 'ArrowRight', 39)
@@ -543,7 +607,9 @@ async function run() {
   // the app's explicit base-scoped SVG icon. GitHub project pages cannot own
   // that origin-root path, so this request is browser noise rather than an app
   // resource failure.
-  const primaryErrors = cdp.errors.filter((message) => !message.includes('/favicon.ico'))
+  const primaryErrors = cdp.errors.filter(
+    (message) => !message.includes('/favicon.ico') && !message.includes('open.spotify.com'),
+  )
   if (primaryErrors.length) {
     throw new Error('Browser console errors in primary flows:\n' + primaryErrors.join('\n'))
   }
@@ -555,7 +621,7 @@ async function run() {
 
   const minimumRadioTarget = await evaluate(
     cdp,
-    `Math.min(...[...document.querySelectorAll('.radio-presets button, .radio-secondary-actions button')].map((element) => Math.min(element.getBoundingClientRect().width, element.getBoundingClientRect().height)))`,
+    `Math.min(...[...document.querySelectorAll('.radio-presets button, .radio-secondary-actions button, .playback-consent button, .player-control, .recommendation-queue__actions button')].filter((element) => element.offsetParent !== null).map((element) => Math.min(element.getBoundingClientRect().width, element.getBoundingClientRect().height)))`,
   )
   if (minimumRadioTarget < 44) throw new Error('A primary radio touch target is smaller than 44 CSS pixels.')
   checks.push({ name: 'radio-touch-targets', passed: true, minimumCssPixels: minimumRadioTarget })
@@ -586,7 +652,7 @@ async function run() {
   checks.push({ name: 'catalogue-search-scale', passed: true, totalTracks: catalogueCount })
 
   await navigate(cdp, '#/g/siti/settings', '.settings-page')
-  checks.push(await inspect(cdp, 'settings-enhanced-data-320', 'Remove enhanced understanding data'))
+  checks.push(await inspect(cdp, 'settings-playback-320', 'Playback preference'))
   console.log('QA milestone: catalogue scale and settings')
 
   await setViewport(cdp, 768, 1024, true)
@@ -632,6 +698,12 @@ async function run() {
   await cdp.send('Page.reload', { ignoreCache: false })
   await waitForSelector(cdp, '.welcome__content', 15000)
   checks.push(await inspect(cdp, 'offline-cached-profile', 'Your frequency is ready'))
+  await cdp.send('Page.navigate', { url: origin + '/#/g/siti/radio' })
+  await waitForSelector(cdp, '.retro-radio', 15000)
+  await waitForSelector(cdp, '.player-shell', 15000)
+  await evaluate(cdp, "window.dispatchEvent(new Event('offline'))")
+  await waitForCondition(cdp, "document.body.textContent.includes('Music playback requires an internet connection.')", 'offline music message', 10000)
+  checks.push(await inspect(cdp, 'offline-music-message', 'Music playback requires an internet connection.'))
   await cdp.send('Network.emulateNetworkConditions', {
     offline: false,
     latency: 0,
@@ -659,6 +731,7 @@ async function run() {
     (message) =>
       !message.includes('404') &&
       !message.includes('ERR_INTERNET_DISCONNECTED') &&
+      !message.includes('open.spotify.com') &&
       !message.includes('pink-fm-intentionally-unavailable-model'),
   )
   if (unexpectedErrors.length) {

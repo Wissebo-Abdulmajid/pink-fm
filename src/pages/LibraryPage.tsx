@@ -6,16 +6,21 @@ import type { StreamingService } from '../config/schemas'
 import { formatHistoryTime } from '../lib/time'
 
 const serviceOrder: StreamingService[] = ['spotify', 'youtube', 'appleMusic']
+const externalProvider = (service: StreamingService | undefined) =>
+  service === 'spotify' ? 'spotify-embed' as const
+    : service === 'youtube' ? 'youtube-embed' as const
+      : service === 'appleMusic' ? 'apple-preview' as const
+        : 'external' as const
 
 export default function LibraryPage() {
-  const { slug, profile, listener, tuneTarget, clearHistory, markPlayed } = useExperience()
+  const { slug, profile, listener, tuneTarget, clearHistory, recordPlaybackEvent } = useExperience()
   const navigate = useNavigate()
   const tracksById = new Map(profile.tracks.tracks.map((track) => [track.id, track]))
   const lovedTracks = listener.lovedTrackIds.flatMap((id) => {
     const track = tracksById.get(id)
     return track ? [track] : []
   })
-  const recent = listener.history.slice(0, 8)
+  const recent = listener.listeningHistory.slice(0, 8)
   const mostRequestedMood = Object.entries(listener.moodSelectionCounts).sort((a, b) => b[1] - a[1])[0]
   const mostPlayed = Object.entries(listener.playCounts).sort((a, b) => b[1] - a[1]).slice(0, 3)
   const favouriteStation = Object.entries(listener.favouriteStationCounts).sort((a, b) => b[1] - a[1])[0]
@@ -135,7 +140,7 @@ export default function LibraryPage() {
                       Tune<span className="sr-only"> {track.title}</span>
                     </button>
                     {link && (
-                      <a href={link} target="_blank" rel="noopener noreferrer" onClick={() => markPlayed(track.id)}>
+                      <a href={link} target="_blank" rel="noopener noreferrer" onClick={() => recordPlaybackEvent('externally-opened', track.id, externalProvider(service))}>
                         Listen<span className="sr-only"> to {track.title}</span>
                       </a>
                     )}
@@ -171,7 +176,7 @@ export default function LibraryPage() {
                     <span className="record-list__disc" aria-hidden="true" />
                     <span><strong>{track.title}</strong><small>{track.artist}</small></span>
                     {link && (
-                      <a href={link} target="_blank" rel="noopener noreferrer" onClick={() => markPlayed(track.id)}>
+                      <a href={link} target="_blank" rel="noopener noreferrer" onClick={() => recordPlaybackEvent('externally-opened', track.id, externalProvider(service))}>
                         Listen<span className="sr-only"> to {track.title}</span>
                       </a>
                     )}
