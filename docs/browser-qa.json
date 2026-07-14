@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-07-14T04:29:43.888Z",
+  "createdAt": "2026-07-14T05:01:50.361Z",
   "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   "origin": "http://127.0.0.1:4173",
   "checks": [
@@ -434,7 +434,7 @@
     {
       "name": "semantic-model-unavailable",
       "passed": true,
-      "status": "Failed to fetch"
+      "status": "Unauthorized access to file: \"https://huggingface.co/Xenova/pink-fm-intentionally-unavailable-model/resolve/main/config.json\"."
     },
     {
       "name": "missing-profile-320",

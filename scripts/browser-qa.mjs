@@ -1,12 +1,11 @@
 import { spawn } from 'node:child_process'
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
-import { tmpdir } from 'node:os'
 import { dirname, join, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const projectRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..')
 const outputDirectory = join(projectRoot, 'docs', 'screenshots')
-const profileDirectory = join(tmpdir(), 'pink-fm-browser-qa-' + process.pid)
+const profileDirectory = join(projectRoot, '.cache', 'browser-qa', 'pink-fm-browser-qa-' + process.pid + '-' + Date.now())
 const origin = (process.env.QA_BASE_URL ?? 'http://127.0.0.1:4173').replace(/\/$/, '')
 const runEnhancedModel = process.env.QA_SEMANTIC === '1'
 const reportName = runEnhancedModel
@@ -674,11 +673,13 @@ async function run() {
   })
   await cdp.send('Page.reload', { ignoreCache: false })
   await waitForSelector(cdp, '.retro-radio', 10000)
+  await waitForSelector(cdp, '.frequency-scale__needle', 10000)
   const motion = await evaluate(
     cdp,
     '(' +
       function reducedMotionInspection() {
         const needle = document.querySelector('.frequency-scale__needle')
+        if (!needle) return { media: matchMedia('(prefers-reduced-motion: reduce)').matches, transitionSeconds: 999 }
         return {
           media: matchMedia('(prefers-reduced-motion: reduce)').matches,
           transitionSeconds: Number.parseFloat(getComputedStyle(needle).transitionDuration) || 0,

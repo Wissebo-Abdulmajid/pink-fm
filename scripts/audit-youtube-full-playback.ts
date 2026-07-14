@@ -1,4 +1,4 @@
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { moodDimensionKeys, tracksFileSchema, type Track } from '../src/config/schemas.ts'
@@ -22,6 +22,10 @@ const previewOnly = active.filter((track) => track.playbackCoverage === 'preview
 const externalOnly = active.filter((track) => track.playbackCoverage === 'external-only')
 const unavailable = active.filter((track) => track.playbackCoverage === 'unavailable')
 const allSources = active.flatMap((track) => track.fullPlaybackSources.map((source) => ({ track, source })))
+const phase42CandidatesPath = resolve(docsRoot, 'phase-4-2-youtube-candidates.json')
+const phase42Candidates = existsSync(phase42CandidatesPath)
+  ? (JSON.parse(readFileSync(phase42CandidatesPath, 'utf8')) as { candidates?: Array<{ matchConfidence?: string; reason?: string }> }).candidates ?? []
+  : []
 
 const countBy = (items: Track[], key: (track: Track) => string | string[]) => {
   const counts: Record<string, number> = {}
@@ -81,6 +85,25 @@ const report = {
   replacementRateInSimulation: full.length < active.length ? 1 - full.length / active.length : 0,
   secondaryArtistFallbackRate: 0,
   brokenSourceCount: 0,
+  phase42: {
+    officialLyricVideos: allSources.filter(({ source }) => source.id.includes('lyric')).length,
+    topicSources: allSources.filter(({ source }) => source.authority === 'youtube-topic' || source.id.includes('topic')).length,
+    sourceAuthorityCounts: Object.fromEntries(
+      Object.entries(
+        allSources.reduce<Record<string, number>>((counts, { source }) => ({
+          ...counts,
+          [source.authority]: (counts[source.authority] ?? 0) + 1,
+        }), {}),
+      ).sort(([left], [right]) => left.localeCompare(right)),
+    ),
+    rejectedCandidates: phase42Candidates.filter((candidate) => candidate.matchConfidence === 'rejected').length,
+    ambiguousCandidates: phase42Candidates.filter((candidate) => candidate.matchConfidence === 'ambiguous').length,
+    primarySourceFailureSimulations: full.length,
+    backupSourceSuccessRate: full.length === 0
+      ? 0
+      : full.filter((track) => track.fullPlaybackSources.length >= 2).length / full.length,
+    nearestTrackRetuneRate: full.length < active.length ? (active.length - full.length) / active.length : 0,
+  },
   targetGap: {
     minimum80Tracks: Math.max(0, 80 - full.length),
     preferred100Tracks: Math.max(0, 100 - full.length),
@@ -132,7 +155,61 @@ writeFileSync(
   ].join('\n'),
 )
 
+writeFileSync(
+  resolve(docsRoot, 'phase-4-2-full-song-audit.json'),
+  `${JSON.stringify(report, null, 2)}\n`,
+)
+writeFileSync(
+  resolve(docsRoot, 'phase-4-2-full-song-audit.md'),
+  [
+    '# Phase 4.2 Full-Song Audit',
+    '',
+    `- Total active tracks: ${report.activeTracks}`,
+    `- Full-playable tracks: ${report.guaranteedFullSubscriptionFreeTracks}`,
+    `- Exact studio / official-audio sources: ${report.exactStudioFullSources}`,
+    `- Official music videos: ${report.officialMusicVideos}`,
+    `- Official audio sources: ${report.officialAudioTopicSources}`,
+    `- Topic sources: ${report.phase42.topicSources}`,
+    `- Official lyric videos: ${report.phase42.officialLyricVideos}`,
+    `- Live and alternate sources: ${report.officialLiveAlternateSources}`,
+    `- Tracks with two or more sources: ${report.tracksWithTwoOrMoreSources}`,
+    `- Tracks with one source: ${report.tracksWithOneSource}`,
+    `- Preview-only tracks: ${report.previewOnlyTracks}`,
+    `- External-only tracks: ${report.externalOnlyTracks}`,
+    `- Unavailable tracks: ${report.unavailableTracks}`,
+    `- Generated main-radio recommendation guarantee: ${report.recommendationGuaranteePercentage}%`,
+    `- Backup-source success rate in structural simulation: ${(report.phase42.backupSourceSuccessRate * 100).toFixed(1)}%`,
+    `- Nearest-track retune rate in structural simulation: ${(report.phase42.nearestTrackRetuneRate * 100).toFixed(1)}%`,
+    `- Broken source count: ${report.brokenSourceCount}`,
+    '',
+    '## Full Coverage By Mood',
+    '',
+    ...Object.entries(report.fullPlayableByMood).map(([mood, count]) => `- ${mood}: ${count}`),
+    '',
+    '## Full Coverage By Collection',
+    '',
+    ...Object.entries(report.fullPlayableByCollection).map(([collection, count]) => `- ${collection}: ${count}`),
+    '',
+    '## Full Coverage By Era',
+    '',
+    ...Object.entries(report.fullPlayableByEra).map(([era, count]) => `- ${era}: ${count}`),
+    '',
+    '## Source Authority Counts',
+    '',
+    ...Object.entries(report.phase42.sourceAuthorityCounts).map(([authority, count]) => `- ${authority}: ${count}`),
+    '',
+    '## Candidate Review Summary',
+    '',
+    `- Rejected candidates: ${report.phase42.rejectedCandidates}`,
+    `- Ambiguous candidates: ${report.phase42.ambiguousCandidates}`,
+    '',
+    'This audit counts only `full-subscription-free` sources toward guaranteed radio coverage. Apple previews, Spotify embeds and external destinations are reported separately and do not satisfy Phase 4.2 full-song coverage.',
+    '',
+  ].join('\n'),
+)
+
 console.log(`Phase 4.1 full-song audit: ${slug}`)
 console.log(`guaranteedFullSubscriptionFreeTracks: ${report.guaranteedFullSubscriptionFreeTracks}`)
 console.log(`recommendationGuaranteePercentage: ${report.recommendationGuaranteePercentage}`)
 console.log('Reports: docs/phase-4-1-full-song-audit.{json,md}')
+console.log('Reports: docs/phase-4-2-full-song-audit.{json,md}')

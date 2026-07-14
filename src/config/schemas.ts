@@ -583,6 +583,7 @@ export const youtubeAuthoritySchema = z.strictObject({
   active: z.boolean(),
   evidenceUrl: youtubeUrlSchema.refine(Boolean, 'An evidence URL is required'),
   verifiedAt: isoDateSchema,
+  notes: z.string().max(500).default(''),
 })
 
 export const youtubeAuthoritiesFileSchema = z
