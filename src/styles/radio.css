@@ -730,6 +730,275 @@
   font-size: 0.65rem;
 }
 
+/* Phase 4: the provider remains visibly integrated into the radio casing. */
+.player-shell {
+  width: min(100% - 1.25rem, 760px);
+  margin: 0.8rem auto 1rem;
+  padding: clamp(0.75rem, 2vw, 1rem);
+  border: 1px solid color-mix(in srgb, var(--color-primary-strong) 28%, transparent);
+  border-radius: 1rem;
+  background: color-mix(in srgb, var(--color-surface) 92%, var(--color-primary) 8%);
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, white 45%, transparent);
+  overflow: hidden;
+}
+
+.player-shell__display {
+  min-width: 0;
+  margin-bottom: 0.7rem;
+}
+
+.player-shell__display > span,
+.player-status span {
+  color: var(--color-muted-text);
+  font-size: 0.78rem;
+}
+
+.player-shell__display h2 {
+  margin: 0.15rem 0;
+  overflow-wrap: anywhere;
+  font-size: clamp(1.05rem, 4.8vw, 1.5rem);
+}
+
+.player-shell__display p,
+.player-status {
+  margin: 0;
+}
+
+.player-shell__coverage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.55rem;
+  align-items: baseline;
+  margin-top: 0.35rem;
+}
+
+.player-shell__coverage strong {
+  letter-spacing: 0.08em;
+  color: var(--color-primary-strong);
+  font-size: 0.72rem;
+}
+
+.player-shell__coverage span,
+.player-shell__version {
+  color: var(--color-muted-text);
+  font-size: 0.78rem;
+}
+
+.player-status {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.25rem 0.8rem;
+  margin-bottom: 0.55rem;
+}
+
+.provider-player {
+  width: 100%;
+  min-width: 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: #171217;
+}
+
+.provider-player--spotify { min-height: 152px; }
+.provider-player--youtube { aspect-ratio: 16 / 9; min-height: 200px; }
+.provider-player--apple { min-height: 175px; }
+
+.provider-player iframe {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  border: 0;
+}
+
+.provider-player--spotify iframe { min-height: 152px; }
+.provider-player--youtube iframe { height: 100% !important; min-height: 200px; }
+.provider-player--apple iframe { height: 175px; }
+
+.player-control {
+  min-width: 7rem;
+  min-height: 44px;
+  margin-top: 0.65rem;
+}
+
+.playback-external-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  margin-top: 0.55rem;
+  color: var(--color-muted-text);
+  font-size: 0.84rem;
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+.playback-network-note {
+  margin: 0.55rem 0 0;
+  color: var(--color-muted-text);
+  font-size: 0.75rem;
+}
+
+.playback-consent {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.65rem;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  background: color-mix(in srgb, var(--color-surface-alt) 80%, white 20%);
+}
+
+.playback-consent h3,
+.playback-consent p { margin: 0 0 0.5rem; }
+
+.playback-consent__actions,
+.recommendation-queue__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.playback-consent__actions .button,
+.recommendation-queue__actions button {
+  min-height: 44px;
+}
+
+.recommendation-queue {
+  margin-top: 0.7rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid color-mix(in srgb, var(--color-primary-strong) 18%, transparent);
+}
+
+.recommendation-queue > p {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.45rem;
+}
+
+.recommendation-queue dl {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0 0 0.6rem;
+}
+
+.recommendation-queue dl div {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: 0.5rem;
+}
+
+.recommendation-queue dt {
+  color: var(--color-muted-text);
+  font-size: 0.75rem;
+}
+
+.recommendation-queue dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.recommendation-queue__actions button {
+  padding: 0.55rem 0.7rem;
+  border: 1px solid color-mix(in srgb, var(--color-primary-strong) 24%, transparent);
+  border-radius: 0.65rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 0.75rem;
+}
+
+.recommendation-queue__actions button svg {
+  width: 15px;
+  vertical-align: middle;
+}
+
+.playback-test-page {
+  display: grid;
+  gap: 0.8rem;
+  padding-block: 1rem 5rem;
+}
+
+.playback-test-page__details {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.6rem 0 0;
+}
+
+.playback-test-page__details div {
+  display: grid;
+  grid-template-columns: minmax(6rem, 0.45fr) minmax(0, 1fr);
+  gap: 0.5rem;
+}
+
+.playback-test-page__details dt {
+  color: var(--color-muted-text);
+  font-size: 0.72rem;
+}
+
+.playback-test-page__details dd {
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.playback-test-page__actions,
+.playback-test-page__source-list {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.playback-test-page__actions {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+}
+
+.playback-test-page__actions button,
+.playback-test-page__source-list button {
+  min-height: 44px;
+  padding: 0.65rem;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 22%, transparent);
+  border-radius: 0.75rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.playback-test-page__source-list {
+  padding: 0;
+  list-style: none;
+}
+
+.playback-test-page__source-list button {
+  display: grid;
+  width: 100%;
+  gap: 0.1rem;
+}
+
+.playback-test-page__source-list span,
+.playback-test-page__source-list small {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: var(--color-muted-text);
+  font-size: 0.72rem;
+}
+
+@media (max-width: 420px) {
+  .player-shell { width: calc(100% - 0.75rem); padding: 0.65rem; }
+  .playback-consent { grid-template-columns: 1fr; }
+  .playback-consent__actions .button { width: 100%; }
+  .recommendation-queue dl div { grid-template-columns: 1fr; gap: 0; }
+  .provider-player--youtube { min-height: 200px; }
+  .playback-test-page__details div { grid-template-columns: 1fr; gap: 0.05rem; }
+}
+
 .feedback-controls {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

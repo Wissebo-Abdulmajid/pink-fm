@@ -649,6 +649,25 @@ export class LocalWisseBotProvider implements MusicAssistantProvider {
       request.evidence.push(evidence('version', item.version, phrase))
       matchedTerms.push(phrase)
     }
+    const onlyFullSongs = /\b(?:only full songs?|full songs? only|play something that works here|don'?t open another app|no external apps?|inside pink fm|works here|lagu penuh sahaja|hanya lagu penuh|jangan buka app lain|tak mahu preview|no previews?)\b/.test(message)
+    if (onlyFullSongs) {
+      constraints.requireFullPlayback = true
+      constraints.allowPreviewsWhenFullSongsUnavailable = false
+      request.evidence.push(evidence('playback', 'full-song-only', 'full songs only'))
+      matchedTerms.push('full songs only')
+    }
+    const noLiveVersions = /\b(?:no live versions?|studio version only|not live|jangan live|bukan live)\b/.test(message)
+    if (noLiveVersions) {
+      constraints.allowOfficialAlternateVersions = false
+      request.evidence.push(evidence('playback-version', 'no-live', 'no live versions'))
+      matchedTerms.push('no live versions')
+    }
+    const liveIsOkay = /\b(?:live version is okay|live is okay|official live is okay|boleh live|live pun boleh)\b/.test(message)
+    if (liveIsOkay) {
+      constraints.allowOfficialAlternateVersions = true
+      request.evidence.push(evidence('playback-version', 'live-ok', 'live version is okay'))
+      matchedTerms.push('live version is okay')
+    }
 
     const hasHighPrecisionInterpretation = request.evidence.some(
       (item) => item.source === 'exact-rule',

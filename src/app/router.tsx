@@ -10,6 +10,7 @@ const RadioPage = lazy(() => import('../pages/RadioPage'))
 const LibraryPage = lazy(() => import('../pages/LibraryPage'))
 const SettingsPage = lazy(() => import('../pages/SettingsPage'))
 const AboutPage = lazy(() => import('../pages/AboutPage'))
+const PlaybackTestPage = lazy(() => import('../pages/PlaybackTestPage'))
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage'))
 
 const PageFallback = () => <LoadingTuner heading="Changing frequency" message="One clear signal, coming up…" />
@@ -27,6 +28,7 @@ export function AppRouter() {
             <Route path="library" element={<LibraryPage />} />
             <Route path="settings" element={<SettingsPage />} />
             <Route path="about" element={<AboutPage />} />
+            <Route path="playback-test" element={<PlaybackTestPage />} />
           </Route>
         </Route>
         <Route path="*" element={<NotFoundPage />} />

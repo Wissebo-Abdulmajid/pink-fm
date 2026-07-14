@@ -10,11 +10,13 @@ import {
   messagesSchema,
   moodsFileSchema,
   tracksFileSchema,
+  youtubeAuthoritiesFileSchema,
   type CatalogSources,
   type CollectionsFile,
   type GiftConfig,
   type Track,
   type TracksFile,
+  type YouTubeAuthoritiesFile,
 } from '../src/config/schemas.ts'
 import { catalogueContentHash } from './catalog-shared.ts'
 
@@ -74,6 +76,24 @@ const checkLinks = (profilePath: string, tracks: Track[]) => {
   const seenUrls = new Map<string, string>()
   let missingArtwork = 0
   for (const track of tracks) {
+    if (track.embed.url) {
+      const allowedEmbedHosts: Record<string, string[]> = {
+        spotify: ['open.spotify.com'],
+        youtube: ['youtube.com', 'www.youtube.com', 'www.youtube-nocookie.com'],
+        appleMusic: ['music.apple.com', 'embed.music.apple.com'],
+      }
+      try {
+        const embedUrl = new URL(track.embed.url)
+        if (
+          embedUrl.protocol !== 'https:' ||
+          !(allowedEmbedHosts[track.embed.provider] ?? []).includes(embedUrl.hostname)
+        ) {
+          report('error', resolve(profilePath, 'tracks.json'), `${track.id}.embed uses an unsupported iframe host.`)
+        }
+      } catch {
+        report('error', resolve(profilePath, 'tracks.json'), `${track.id}.embed is not a valid URL.`)
+      }
+    }
     for (const [service, link] of Object.entries(track.officialLinks)) {
       if (!link) continue
       try {
@@ -81,7 +101,12 @@ const checkLinks = (profilePath: string, tracks: Track[]) => {
         if (url.protocol !== 'https:') {
           report('error', resolve(profilePath, 'tracks.json'), `${track.id}.${service} is not HTTPS.`)
         }
-        url.search = ''
+        if (service === 'youtube' && url.searchParams.get('v')) {
+          const videoId = url.searchParams.get('v')
+          url.search = videoId ? `?v=${videoId}` : ''
+        } else {
+          url.search = ''
+        }
         url.hash = ''
         const canonical = url.toString().replace(/\/$/, '')
         const previous = seenUrls.get(canonical)
@@ -122,6 +147,7 @@ const checkRelationships = (
   tracksFile: TracksFile,
   collections: CollectionsFile,
   sources: CatalogSources,
+  youtubeAuthorities: YouTubeAuthoritiesFile,
 ) => {
   const tracks = tracksFile.tracks
   const collectionIds = new Set(collections.collections.map((collection) => collection.id))
@@ -129,6 +155,11 @@ const checkRelationships = (
   const trackIds = new Set(tracks.map((track) => track.id))
   const tracksPath = resolve(profilePath, 'tracks.json')
   const sourcesPath = resolve(profilePath, 'catalog-sources.json')
+  const trustedYoutubeChannels = new Set(
+    youtubeAuthorities.channels
+      .filter((channel) => channel.active)
+      .map((channel) => channel.channelId),
+  )
 
   for (const track of tracks) {
     for (const collectionId of track.collections) {
@@ -139,6 +170,29 @@ const checkRelationships = (
     for (const sourceId of track.sourceIds) {
       if (!sourceIds.has(sourceId)) {
         report('error', tracksPath, `${track.id} references unknown source "${sourceId}".`)
+      }
+    }
+    if (track.playback.youtube && !sourceIds.has(track.playback.youtube.sourceId)) {
+      report(
+        'error',
+        tracksPath,
+        `${track.id} YouTube playback references unknown source "${track.playback.youtube.sourceId}".`,
+      )
+    }
+    for (const fullSource of track.fullPlaybackSources) {
+      if (!sourceIds.has(fullSource.provenanceSourceId)) {
+        report(
+          'error',
+          tracksPath,
+          `${track.id} full playback source "${fullSource.id}" references unknown provenance "${fullSource.provenanceSourceId}".`,
+        )
+      }
+      if (!trustedYoutubeChannels.has(fullSource.channelId)) {
+        report(
+          'error',
+          tracksPath,
+          `${track.id} full playback source "${fullSource.id}" uses unregistered YouTube channel "${fullSource.channelId}".`,
+        )
       }
     }
     const verification = sources.trackVerification[track.id]
@@ -317,6 +371,11 @@ const validateProfile = (profileName: string) => {
   const tracks = readAndParse(profilePath, 'tracks.json', tracksFileSchema)
   const collections = readAndParse(profilePath, 'collections.json', collectionsFileSchema)
   const sources = readAndParse(profilePath, 'catalog-sources.json', catalogSourcesSchema)
+  const youtubeAuthorities = readAndParse(
+    profilePath,
+    'youtube-authorities.json',
+    youtubeAuthoritiesFileSchema,
+  )
   readAndParse(profilePath, 'messages.json', messagesSchema)
 
   if (gift) {
@@ -336,8 +395,8 @@ const validateProfile = (profileName: string) => {
       report('warning', resolve(profilePath, 'tracks.json'), `Only ${activeCount} active track(s); ten or more are recommended.`)
     }
   }
-  if (gift && tracks && collections && sources) {
-    checkRelationships(profilePath, gift, tracks, collections, sources)
+  if (gift && tracks && collections && sources && youtubeAuthorities) {
+    checkRelationships(profilePath, gift, tracks, collections, sources, youtubeAuthorities)
     checkEmbeddings(profilePath, gift, tracks, collections)
   }
 }

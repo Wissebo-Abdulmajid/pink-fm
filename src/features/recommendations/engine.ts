@@ -8,6 +8,7 @@ import {
   type TrackVersionType,
 } from '../../config/schemas'
 import type { ListenerState } from '../../lib/storage'
+import { isRadioEligible } from './full-playback'
 
 export type RecommendationContext = {
   activity?: string
@@ -37,6 +38,9 @@ export type RecommendationContext = {
   sessionTrackIds?: string[]
   deepCut?: boolean
   rotationSeed?: string
+  requireFullPlayback?: boolean
+  allowOfficialAlternateVersions?: boolean
+  allowPreviewsWhenFullSongsUnavailable?: boolean
   now?: number
 }
 
@@ -386,17 +390,37 @@ export const filterCandidates = (
     const requested = tracks.find(
       (track) => track.active && track.id === context.requestedTrackId && followsArtistPolicy(track, context.artistPolicy),
     )
-    return requested ? [requested] : []
+    if (
+      requested &&
+      (
+        !context.requireFullPlayback ||
+        isRadioEligible(requested, context.allowOfficialAlternateVersions ?? true)
+      )
+    ) return [requested]
   }
-  const hardFiltered = tracks.filter((track) => passesHardFilters(track, listener, context, now))
+  const fullPlaybackFiltered = context.requireFullPlayback
+    ? tracks.filter((track) => isRadioEligible(track, context.allowOfficialAlternateVersions ?? true))
+    : tracks
+  const hardFiltered = fullPlaybackFiltered.filter((track) => passesHardFilters(track, listener, context, now))
   const constrained = hardFiltered.filter((track) => passesSoftFilters(track, context))
   if (constrained.length > 0) return constrained
   if (hardFiltered.length > 0) return hardFiltered
+  if (context.requireFullPlayback && context.allowPreviewsWhenFullSongsUnavailable) {
+    const previewFallback = tracks
+      .filter((track) => track.active && track.playbackCoverage === 'preview-only')
+      .filter((track) => passesHardFilters(track, listener, context, now))
+    const previewConstrained = previewFallback.filter((track) => passesSoftFilters(track, context))
+    if (previewConstrained.length > 0) return previewConstrained
+    if (previewFallback.length > 0) return previewFallback
+  }
 
   // A long session may exhaust every unseen candidate. Preserve explicit artist/album/track
   // exclusions, but allow prior session tracks again before declaring the catalogue empty.
   const withoutSession = { ...context, sessionTrackIds: [] }
-  return tracks.filter((track) => passesHardFilters(track, listener, withoutSession, now))
+  const exhaustedPool = context.requireFullPlayback
+    ? tracks.filter((track) => isRadioEligible(track, context.allowOfficialAlternateVersions ?? true))
+    : tracks
+  return exhaustedPool.filter((track) => passesHardFilters(track, listener, withoutSession, now))
 }
 
 const humanMood = (mood: MoodDimension) =>

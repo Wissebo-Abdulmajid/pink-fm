@@ -1093,7 +1093,7 @@ const sourcesOutput = resolve(
   process.cwd(),
   'public/gifts/siti/catalog-sources.json',
 )
-writeJsonFile(tracksOutput, { schemaVersion: 2, tracks: preparedTracks })
+writeJsonFile(tracksOutput, { schemaVersion: 3, tracks: preparedTracks })
 writeJsonFile(sourcesOutput, catalogSources)
 
 const reviewed = preparedTracks.filter(

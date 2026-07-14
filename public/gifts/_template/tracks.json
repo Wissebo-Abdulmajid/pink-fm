@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
   "tracks": [
     {
       "id": "replace-me-demo-signal",
@@ -32,6 +32,12 @@
       "embed": {
         "provider": "none",
         "url": null
+      },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
       },
       "moods": {
         "peaceful": 70,

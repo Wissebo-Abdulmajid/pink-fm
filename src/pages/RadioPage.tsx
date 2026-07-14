@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, type CSSProperties } from 'react'
+import { lazy, Suspense, useEffect, useRef, useState, type CSSProperties } from 'react'
 import { Bot, BookmarkPlus, Gauge, RotateCw, Volume2 } from 'lucide-react'
 import { useOutletContext } from 'react-router-dom'
 import { useExperience } from '../app/providers'
@@ -6,9 +6,10 @@ import { RecommendationFeedback } from '../components/feedback/RecommendationFee
 import { MoodIcon } from '../components/common/MoodIcon'
 import { FrequencyScale } from '../components/radio/FrequencyScale'
 import { TrackArtwork } from '../components/radio/TrackArtwork'
-import { PlaybackAction } from '../features/player/PlaybackAction'
 import type { LayoutOutletContext } from '../layouts/AppLayout'
 import { clamp } from '../lib/utils'
+
+const EmbeddedRadioPlayer = lazy(() => import('../features/player/EmbeddedRadioPlayer'))
 
 export default function RadioPage() {
   const {
@@ -137,6 +138,10 @@ export default function RadioPage() {
           </div>
         </div>
 
+        <Suspense fallback={<p className="player-loading" role="status">Preparing the radio player…</p>}>
+          <EmbeddedRadioPlayer track={recommendation.track} station={recommendation.stationName} />
+        </Suspense>
+
         <div className="radio-presets" aria-label="Quick mood presets">
           {profile.moods.moods.slice(0, 5).map((mood, index) => (
             <button type="button" key={mood.id} onClick={() => tuneMood(mood)} aria-label={`Preset ${index + 1}: ${mood.label}`}>
@@ -155,7 +160,6 @@ export default function RadioPage() {
           <div className="mood-tags" aria-label="Matched moods">
             {recommendation.matchedMoods.slice(0, 4).map((mood) => <span key={mood}>{mood}</span>)}
           </div>
-          <PlaybackAction track={recommendation.track} />
         </div>
       </section>
 

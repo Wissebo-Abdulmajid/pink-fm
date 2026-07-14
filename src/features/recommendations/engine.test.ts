@@ -75,6 +75,40 @@ describe('recommendation engine', () => {
     )
   })
 
+  it('keeps the guaranteed radio queue on full-subscription-free tracks', () => {
+    const preview = makeTrack('preview-best-match', {
+      moods: vector({ peaceful: 100, comforted: 100 }),
+      playbackCoverage: 'preview-only',
+      fullPlaybackSources: [],
+    })
+    const full = makeTrack('full-second-match', {
+      moods: vector({ peaceful: 88, comforted: 80 }),
+    })
+    const result = recommendTrack(request({
+      tracks: [preview, full],
+      context: { requireFullPlayback: true },
+    }))
+    expect(result.track.id).toBe('full-second-match')
+  })
+
+  it('allows previews only when the explicit fallback setting is enabled', () => {
+    const preview = makeTrack('preview-only', {
+      playbackCoverage: 'preview-only',
+      fullPlaybackSources: [],
+    })
+    expect(() => recommendTrack(request({
+      tracks: [preview],
+      context: { requireFullPlayback: true },
+    }))).toThrow(/No active tracks/)
+    expect(recommendTrack(request({
+      tracks: [preview],
+      context: {
+        requireFullPlayback: true,
+        allowPreviewsWhenFullSongsUnavailable: true,
+      },
+    })).track.id).toBe('preview-only')
+  })
+
   it('builds explanations from matched mood dimensions', () => {
     const result = recommendTrack(request())
     expect(result.matchedMoods).toContain('peaceful')

@@ -93,7 +93,7 @@ if (!hasArgument('--apply')) {
   throw new Error('Refusing to apply while reviewed duplicate conflicts remain.')
 } else {
   const output = tracksFileSchema.parse({
-    schemaVersion: 2,
+    schemaVersion: 3,
     tracks: tracks.filter((track) => !proposedRemovals.has(track.id)),
   })
   const tracksPath = resolve(catalog.profilePath, 'tracks.json')

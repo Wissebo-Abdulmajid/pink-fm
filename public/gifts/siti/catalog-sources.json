@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastFullAudit": "2026-07-13",
+  "lastFullAudit": "2026-07-14",
   "sources": [
     {
       "id": "apple-artist",
@@ -329,6 +329,62 @@
       "url": "https://music.apple.com/my/album/%E5%83%8F%E6%B0%B4%E4%B8%80%E6%A8%A3-single/6784597042?uo=4",
       "checkedAt": "2026-07-13",
       "notes": "Provider-supplied release metadata. Dates may describe the available digital edition."
+    },
+    {
+      "id": "youtube-siti-official",
+      "type": "official-youtube-channel",
+      "provider": "YouTube",
+      "url": "https://www.youtube.com/channel/UCNq-mu-iXUmiAWyDOcJmZZg",
+      "checkedAt": "2026-07-14",
+      "notes": "Reviewed artist-official YouTube channel used for full-song embedded playback candidates."
+    },
+    {
+      "id": "youtube-suria-records",
+      "type": "official-youtube-channel",
+      "provider": "YouTube",
+      "url": "https://www.youtube.com/channel/UCBd5pENmJrvi6PQq-2ndBhw",
+      "checkedAt": "2026-07-14",
+      "notes": "Reviewed label-official Suria Records YouTube channel used for full-song embedded playback candidates."
+    },
+    {
+      "id": "youtube-mvm-music",
+      "type": "official-youtube-channel",
+      "provider": "YouTube",
+      "url": "https://www.youtube.com/channel/UCquIzvgQ4PxPDZqFXhuT_gw",
+      "checkedAt": "2026-07-14",
+      "notes": "Reviewed licensed broadcaster channel used for full-song embedded playback candidates."
+    },
+    {
+      "id": "youtube-suriarecords-src",
+      "type": "official-youtube-channel",
+      "provider": "YouTube",
+      "url": "https://www.youtube.com/channel/UCBd5pENmJrvi6PQq-2ndBhw",
+      "checkedAt": "2026-07-14",
+      "notes": "Trusted label-official source used for Phase 4.2 full-song playback acquisition."
+    },
+    {
+      "id": "youtube-siti-nurhaliza",
+      "type": "official-youtube-channel",
+      "provider": "YouTube",
+      "url": "https://www.youtube.com/channel/UCNq-mu-iXUmiAWyDOcJmZZg",
+      "checkedAt": "2026-07-14",
+      "notes": "Trusted artist-official source used for Phase 4.2 full-song playback acquisition."
+    },
+    {
+      "id": "youtube-siti-nurhaliza-official-channel",
+      "type": "official-youtube-channel",
+      "provider": "YouTube",
+      "url": "https://www.youtube.com/channel/UCQ6Zv5O57OuG9y3WIbnCHSQ",
+      "checkedAt": "2026-07-14",
+      "notes": "Trusted artist-official source used for Phase 4.2 full-song playback acquisition."
+    },
+    {
+      "id": "youtube-universal-music-malaysia",
+      "type": "official-youtube-channel",
+      "provider": "YouTube",
+      "url": "https://www.youtube.com/channel/UCNO_HN4PCwAIjlGBZiv8_6A",
+      "checkedAt": "2026-07-14",
+      "notes": "Trusted label-official source used for Phase 4.2 full-song playback acquisition."
     }
   ],
   "trackVerification": {

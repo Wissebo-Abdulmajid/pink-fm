@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 4,
   "tracks": [
     {
       "id": "cindai",
@@ -36,7 +36,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=N2zJlMofr9Y",
         "spotify": "https://open.spotify.com/track/5hYW2hAwvsaifyiNxDVVKC",
         "appleMusic": "https://music.apple.com/my/album/cindai/573126598?i=573126640&uo=4"
       },
@@ -44,6 +44,76 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "N2zJlMofr9Y",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "cindai-official-mv",
+          "provider": "youtube",
+          "videoId": "N2zJlMofr9Y",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 296,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=N2zJlMofr9Y",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "cindai-official-lyric-suria",
+          "provider": "youtube",
+          "videoId": "InbmXtsF6vQ",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 297,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=InbmXtsF6vQ",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 2
+        },
+        {
+          "id": "cindai-official-music-video-xjjuco4gg00",
+          "provider": "youtube",
+          "videoId": "xJJuCo4Gg00",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 296,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=xJJuCo4Gg00",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 3
+        }
+      ],
       "moods": {
         "peaceful": 35,
         "happy": 72,
@@ -98,7 +168,10 @@
         "apple-artist",
         "apple-release-573126598",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-siti-official",
+        "youtube-suria-records",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -134,7 +207,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=q0VgfdlXfIc",
         "spotify": "https://open.spotify.com/track/3hCfrrBnKmZsbep5rZ7f61",
         "appleMusic": "https://music.apple.com/my/album/purnama-merindu/574417117?i=574417274&uo=4"
       },
@@ -142,6 +215,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "q0VgfdlXfIc",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-suria-records"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "purnama-merindu-official-mv",
+          "provider": "youtube",
+          "videoId": "q0VgfdlXfIc",
+          "version": "music-video",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 267,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=q0VgfdlXfIc",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 1
+        },
+        {
+          "id": "purnama-merindu-official-music-video-n9oksd6yw-0",
+          "provider": "youtube",
+          "videoId": "n9OKSd6YW-0",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 267,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=n9OKSd6YW-0",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 62,
         "happy": 38,
@@ -195,7 +319,9 @@
         "apple-artist",
         "apple-release-574417117",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-suria-records",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -232,7 +358,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=eZ4Q5KLeP3E",
         "spotify": "https://open.spotify.com/track/4arXMX7u6GSz4EJG92db1F",
         "appleMusic": "https://music.apple.com/my/album/bukan-cinta-biasa/573421556?i=573421557&uo=4"
       },
@@ -240,6 +366,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "eZ4Q5KLeP3E",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "bukan-cinta-biasa-official-mv",
+          "provider": "youtube",
+          "videoId": "eZ4Q5KLeP3E",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 275,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=eZ4Q5KLeP3E",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "bukan-cinta-biasa-official-lyric-video-etcfe1s-ze8",
+          "provider": "youtube",
+          "videoId": "ETCfe1s-ZE8",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 313,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=ETCfe1s-ZE8",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 52,
         "happy": 45,
@@ -293,7 +470,9 @@
         "apple-artist",
         "apple-release-573421556",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-siti-official",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -330,7 +509,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=2o3S1LqDr2U",
         "spotify": "https://open.spotify.com/album/2qSbdOw1byknZvx0RJsfHL",
         "appleMusic": "https://music.apple.com/my/album/aku-cinta-padamu/574180393?i=574180439&uo=4"
       },
@@ -338,6 +517,76 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "2o3S1LqDr2U",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-suria-records"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "aku-cinta-padamu-official-lyric-suria",
+          "provider": "youtube",
+          "videoId": "2o3S1LqDr2U",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 328,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=2o3S1LqDr2U",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 1
+        },
+        {
+          "id": "aku-cinta-padamu-official-lyric-siti",
+          "provider": "youtube",
+          "videoId": "ub-HuJ7cIro",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 318,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=ub-HuJ7cIro",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 2
+        },
+        {
+          "id": "aku-cinta-padamu-official-music-video-tbmzkzcf9zk",
+          "provider": "youtube",
+          "videoId": "tbmZKZCF9zk",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 343,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=tbmZKZCF9zk",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 3
+        }
+      ],
       "moods": {
         "peaceful": 58,
         "happy": 48,
@@ -391,7 +640,10 @@
         "apple-artist",
         "apple-release-574180393",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-suria-records",
+        "youtube-siti-official",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -440,6 +692,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 45,
         "happy": 54,
@@ -531,7 +791,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=cYjwS7sf4sI",
         "spotify": "https://open.spotify.com/track/46LVlVqvTkznjpDobFWL7b",
         "appleMusic": "https://music.apple.com/my/album/biarlah-rahsia/1444110731?i=1444110733&uo=4"
       },
@@ -539,6 +799,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "cYjwS7sf4sI",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-suria-records"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "biarlah-rahsia-official-mv",
+          "provider": "youtube",
+          "videoId": "cYjwS7sf4sI",
+          "version": "music-video",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 258,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=cYjwS7sf4sI",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 68,
         "happy": 32,
@@ -592,7 +884,8 @@
         "apple-artist",
         "apple-release-1444110731",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-suria-records"
       ]
     },
     {
@@ -628,7 +921,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=K-kzBAW3uSg",
         "spotify": "https://open.spotify.com/track/5aGtASRxHzDvNx6hCxl4s5",
         "appleMusic": "https://music.apple.com/my/album/destinasi-cinta/1444110731?i=1444110736&uo=4"
       },
@@ -636,6 +929,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "K-kzBAW3uSg",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "destinasi-cinta-youtube-topic",
+          "provider": "youtube",
+          "videoId": "K-kzBAW3uSg",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 205,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=K-kzBAW3uSg",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 35,
         "happy": 88,
@@ -690,7 +1015,8 @@
         "apple-artist",
         "apple-release-1444110731",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-siti-official"
       ]
     },
     {
@@ -728,7 +1054,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=JZzPldJo4eM",
         "spotify": "https://open.spotify.com/track/0XDA8Rp5slzCTeYen5vgcH",
         "appleMusic": "https://music.apple.com/my/album/anta-permana/1521304037?i=1521304578&uo=4"
       },
@@ -736,6 +1062,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "JZzPldJo4eM",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "anta-permana-official-mv",
+          "provider": "youtube",
+          "videoId": "JZzPldJo4eM",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 207,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=JZzPldJo4eM",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "anta-permana-official-live",
+          "provider": "youtube",
+          "videoId": "BktXD2W1P3M",
+          "version": "live",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 214,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=BktXD2W1P3M",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 28,
         "happy": 62,
@@ -789,7 +1166,8 @@
         "apple-artist",
         "apple-release-1521304037",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-siti-official"
       ]
     },
     {
@@ -824,7 +1202,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=0NRnLJmQFBU",
         "spotify": "https://open.spotify.com/track/0Ck4AsFNZT7q4LzjyHuNqs",
         "appleMusic": "https://music.apple.com/my/album/lebih-indah/1443611673?i=1443611851&uo=4"
       },
@@ -832,6 +1210,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "0NRnLJmQFBU",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "lebih-indah-official-video",
+          "provider": "youtube",
+          "videoId": "0NRnLJmQFBU",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 173,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=0NRnLJmQFBU",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "lebih-indah-official-alt",
+          "provider": "youtube",
+          "videoId": "x8GQC2miK0s",
+          "version": "alternate",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 243,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=x8GQC2miK0s",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 72,
         "happy": 64,
@@ -885,7 +1314,8 @@
         "apple-artist",
         "apple-release-1443611673",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-siti-official"
       ]
     },
     {
@@ -921,7 +1351,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=tzwXY-Womqc",
         "spotify": "https://open.spotify.com/track/487aH0z2Z5tpFYK5pG7uht",
         "appleMusic": "https://music.apple.com/my/album/wajah-kekasih/574180393?i=574180440&uo=4"
       },
@@ -929,6 +1359,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "tzwXY-Womqc",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-suria-records"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "wajah-kekasih-official-ost",
+          "provider": "youtube",
+          "videoId": "tzwXY-Womqc",
+          "version": "music-video",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 340,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=tzwXY-Womqc",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 1
+        },
+        {
+          "id": "wajah-kekasih-official-lyric-video-lok0j1modge",
+          "provider": "youtube",
+          "videoId": "lOk0j1MoDgE",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 321,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=lOk0j1MoDgE",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 66,
         "happy": 38,
@@ -982,7 +1463,9 @@
         "apple-artist",
         "apple-release-574180393",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-suria-records",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -1018,7 +1501,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=_i4MjPw7ar0",
         "spotify": "https://open.spotify.com/track/6H0VKTMGQxartORpXViL4y",
         "appleMusic": "https://music.apple.com/my/album/kau-kekasihku/574352019?i=574352081&uo=4"
       },
@@ -1026,6 +1509,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "_i4MjPw7ar0",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-suria-records"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "kau-kekasihku-official-mv",
+          "provider": "youtube",
+          "videoId": "_i4MjPw7ar0",
+          "version": "music-video",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 336,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=_i4MjPw7ar0",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 1
+        },
+        {
+          "id": "kau-kekasihku-official-music-video-ay1i1-lol38",
+          "provider": "youtube",
+          "videoId": "Ay1i1_lol38",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 336,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=Ay1i1_lol38",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 54,
         "happy": 52,
@@ -1079,7 +1613,9 @@
         "apple-artist",
         "apple-release-574352019",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-suria-records",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -1116,7 +1652,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=D2cgyd6z6HU",
         "spotify": "https://open.spotify.com/track/2M9BfgDbZtHfK2Kk3WtQV0",
         "appleMusic": "https://music.apple.com/my/album/balqis/574380968?i=574380970&uo=4"
       },
@@ -1124,6 +1660,76 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "D2cgyd6z6HU",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "balqis-official-mv",
+          "provider": "youtube",
+          "videoId": "D2cgyd6z6HU",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 308,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=D2cgyd6z6HU",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "balqis-official-lyric",
+          "provider": "youtube",
+          "videoId": "-NsuS_iPSPU",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 277,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=-NsuS_iPSPU",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 2
+        },
+        {
+          "id": "balqis-official-music-video-7wpi2de816s",
+          "provider": "youtube",
+          "videoId": "7wpI2De816s",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 319,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=7wpI2De816s",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 3
+        }
+      ],
       "moods": {
         "peaceful": 38,
         "happy": 68,
@@ -1178,7 +1784,9 @@
         "apple-artist",
         "apple-release-574380968",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-siti-official",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -1214,7 +1822,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=9biAM6CEFVQ",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/jawapan-di-persimpangan/574251506?i=574251507&uo=4"
       },
@@ -1222,6 +1830,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "9biAM6CEFVQ",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "jawapan-di-persimpangan-official-music-video-9biam6cefvq",
+          "provider": "youtube",
+          "videoId": "9biAM6CEFVQ",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 264,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=9biAM6CEFVQ",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "jawapan-di-persimpangan-official-lyric-video-0biebpdwtog",
+          "provider": "youtube",
+          "videoId": "0bieBpdwTOg",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 264,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=0bieBpdwTOg",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 40,
         "happy": 36,
@@ -1270,7 +1929,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574251506"
+        "apple-release-574251506",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -1313,6 +1973,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 64,
         "happy": 48,
@@ -1397,7 +2065,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=VvPbwCehrgQ",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/jerat-percintaan/574251506?i=574251589&uo=4"
       },
@@ -1405,6 +2073,76 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "VvPbwCehrgQ",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "jerat-percintaan-official-mv-siti",
+          "provider": "youtube",
+          "videoId": "VvPbwCehrgQ",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 269,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=VvPbwCehrgQ",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "jerat-percintaan-official-mv-suria",
+          "provider": "youtube",
+          "videoId": "_JWQkyQdko4",
+          "version": "music-video",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 294,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=_JWQkyQdko4",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 2
+        },
+        {
+          "id": "jerat-percintaan-official-music-video-gwqlxz88fek",
+          "provider": "youtube",
+          "videoId": "GwqlxZ88fEk",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 294,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=GwqlxZ88fEk",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 3
+        }
+      ],
       "moods": {
         "peaceful": 66,
         "happy": 45,
@@ -1453,7 +2191,10 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574251506"
+        "apple-release-574251506",
+        "youtube-siti-official",
+        "youtube-suria-records",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -1489,7 +2230,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=7iKafDI-CWg",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/antara-waktu-dan-usia/574251506?i=574251590&uo=4"
       },
@@ -1497,6 +2238,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "7iKafDI-CWg",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "antara-waktu-dan-usia-official-music-video-7ikafdi-cwg",
+          "provider": "youtube",
+          "videoId": "7iKafDI-CWg",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 326,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=7iKafDI-CWg",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 58,
         "happy": 41,
@@ -1545,7 +2318,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574251506"
+        "apple-release-574251506",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -1581,7 +2355,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=d0mDOWWrgtU",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/sanggar-bayu/574251506?i=574251592&uo=4"
       },
@@ -1589,6 +2363,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "d0mDOWWrgtU",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-suriarecords-src"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "sanggar-bayu-official-lyric-video-d0mdowwrgtu",
+          "provider": "youtube",
+          "videoId": "d0mDOWWrgtU",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 280,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=d0mDOWWrgtU",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 37,
         "happy": 36,
@@ -1637,7 +2443,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574251506"
+        "apple-release-574251506",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -1680,6 +2487,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 56,
         "happy": 19,
@@ -1762,7 +2577,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=eKldiU9lFTk",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/kesilapanku-keegoanmu/574180393?i=574180448&uo=4"
       },
@@ -1770,6 +2585,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "eKldiU9lFTk",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "kesilapanku-keegoanmu-official-music-video-ekldiu9lftk",
+          "provider": "youtube",
+          "videoId": "eKldiU9lFTk",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 333,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=eKldiU9lFTk",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "kesilapanku-keegoanmu-official-lyric-video-b5icjokm3bq",
+          "provider": "youtube",
+          "videoId": "B5IcJokM3bQ",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 333,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=B5IcJokM3bQ",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 64,
         "happy": 43,
@@ -1818,7 +2684,9 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574180393"
+        "apple-release-574180393",
+        "youtube-siti-nurhaliza",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -1853,7 +2721,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=0vzFlgla6m0",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/khayalan-cinta/574180393?i=574180449&uo=4"
       },
@@ -1861,6 +2729,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "0vzFlgla6m0",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "khayalan-cinta-official-music-video-0vzflgla6m0",
+          "provider": "youtube",
+          "videoId": "0vzFlgla6m0",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 333,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=0vzFlgla6m0",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 63,
         "happy": 41,
@@ -1909,7 +2809,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574180393"
+        "apple-release-574180393",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -1944,7 +2845,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=Ap_p54YX2zQ",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/usah-diragui/574180393?i=574180450&uo=4"
       },
@@ -1952,6 +2853,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "Ap_p54YX2zQ",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "usah-diragui-official-music-video-ap-p54yx2zq",
+          "provider": "youtube",
+          "videoId": "Ap_p54YX2zQ",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 302,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=Ap_p54YX2zQ",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 65,
         "happy": 58,
@@ -1999,7 +2932,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574180393"
+        "apple-release-574180393",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -2041,7 +2975,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=w4b-wjnpc-U",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/rindu-di-antara-kita/574180393?i=574180451&uo=4"
       },
@@ -2049,6 +2983,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "w4b-wjnpc-U",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-suriarecords-src"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "rindu-di-antara-kita-official-lyric-video-w4b-wjnpc-u",
+          "provider": "youtube",
+          "videoId": "w4b-wjnpc-U",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 283,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=w4b-wjnpc-U",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 48,
         "happy": 60,
@@ -2098,7 +3064,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574180393"
+        "apple-release-574180393",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -2134,7 +3101,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=GU4HGk3Qdxg",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/laksamana-mati-dibunuh/573126598?i=573126641&uo=4"
       },
@@ -2142,6 +3109,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "GU4HGk3Qdxg",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "laksamana-mati-dibunuh-official-music-video-gu4hgk3qdxg",
+          "provider": "youtube",
+          "videoId": "GU4HGk3Qdxg",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 326,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=GU4HGk3Qdxg",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 33,
         "happy": 76,
@@ -2191,7 +3190,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-573126598"
+        "apple-release-573126598",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -2229,7 +3229,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=avEQPSdmNcw",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/janji/573126598?i=573126642&uo=4"
       },
@@ -2237,6 +3237,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "avEQPSdmNcw",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "janji-official-music-video-aveqpsdmncw",
+          "provider": "youtube",
+          "videoId": "avEQPSdmNcw",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 199,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=avEQPSdmNcw",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "janji-official-lyric-video-pw9wz53vubq",
+          "provider": "youtube",
+          "videoId": "pw9wz53vUbQ",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 199,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=pw9wz53vUbQ",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 27,
         "happy": 77,
@@ -2286,7 +3337,9 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-573126598"
+        "apple-release-573126598",
+        "youtube-siti-nurhaliza",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -2323,7 +3376,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=mLeTYLVSVyw",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/lela-manja/573126598?i=573126643&uo=4"
       },
@@ -2331,6 +3384,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "mLeTYLVSVyw",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "lela-manja-official-music-video-mletylvsvyw",
+          "provider": "youtube",
+          "videoId": "mLeTYLVSVyw",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 270,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=mLeTYLVSVyw",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "lela-manja-official-lyric-video-imyxyymupiw",
+          "provider": "youtube",
+          "videoId": "imYXYymupiw",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 255,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=imYXYymupiw",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 70,
         "happy": 56,
@@ -2380,7 +3484,9 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-573126598"
+        "apple-release-573126598",
+        "youtube-siti-nurhaliza",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -2418,7 +3524,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=x7AEOz-ao5I",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/joget-pahang/573126598?i=573126647&uo=4"
       },
@@ -2426,6 +3532,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "x7AEOz-ao5I",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "joget-pahang-official-music-video-x7aeoz-ao5i",
+          "provider": "youtube",
+          "videoId": "x7AEOz-ao5I",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 236,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=x7AEOz-ao5I",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "joget-pahang-official-lyric-video-v8sga3lfvdk",
+          "provider": "youtube",
+          "videoId": "v8sGA3lfVdk",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 231,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=v8sGA3lfVdk",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 29,
         "happy": 83,
@@ -2475,7 +3632,9 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-573126598"
+        "apple-release-573126598",
+        "youtube-siti-nurhaliza",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -2513,7 +3672,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=IyCmgkkarBE",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/joget-berhibur/573126598?i=573126749&uo=4"
       },
@@ -2521,6 +3680,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "IyCmgkkarBE",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "joget-berhibur-official-music-video-iycmgkkarbe",
+          "provider": "youtube",
+          "videoId": "IyCmgkkarBE",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 277,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=IyCmgkkarBE",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 35,
         "happy": 79,
@@ -2570,7 +3761,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-573126598"
+        "apple-release-573126598",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -2605,7 +3797,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=B3VqRP7Wq2I",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/sendiri/574417117?i=574417275&uo=4"
       },
@@ -2613,6 +3805,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "B3VqRP7Wq2I",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "sendiri-official-music-video-b3vqrp7wq2i",
+          "provider": "youtube",
+          "videoId": "B3VqRP7Wq2I",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 327,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=B3VqRP7Wq2I",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 60,
         "happy": 19,
@@ -2660,7 +3884,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574417117"
+        "apple-release-574417117",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -2695,7 +3920,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=Capy70_V6dQ",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/diari-hatimu/574417117?i=574417279&uo=4"
       },
@@ -2703,6 +3928,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "Capy70_V6dQ",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "diari-hatimu-official-music-video-capy70-v6dq",
+          "provider": "youtube",
+          "videoId": "Capy70_V6dQ",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 362,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=Capy70_V6dQ",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "diari-hatimu-official-lyric-video-csuhcocfpno",
+          "provider": "youtube",
+          "videoId": "csuHcOcfpno",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 357,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=csuHcOcfpno",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 59,
         "happy": 42,
@@ -2751,7 +4027,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574417117"
+        "apple-release-574417117",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -2787,7 +4064,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=zsnlFBMpFRk",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/satu-cinta-dua-jiwa/574417117?i=574417280&uo=4"
       },
@@ -2795,6 +4072,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "zsnlFBMpFRk",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "satu-cinta-dua-jiwa-official-music-video-zsnlfbmpfrk",
+          "provider": "youtube",
+          "videoId": "zsnlFBMpFRk",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 251,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=zsnlFBMpFRk",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "satu-cinta-dua-jiwa-official-lyric-video-n7hrt23zbv8",
+          "provider": "youtube",
+          "videoId": "n7HRT23ZBv8",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 248,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=n7HRT23ZBv8",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 66,
         "happy": 46,
@@ -2843,7 +4171,9 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574417117"
+        "apple-release-574417117",
+        "youtube-siti-nurhaliza",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -2878,7 +4208,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=mg1x1D32va8",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/tak-boleh-lupa/574417117?i=574417282&uo=4"
       },
@@ -2886,6 +4216,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "mg1x1D32va8",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-suriarecords-src"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "tak-boleh-lupa-official-lyric-video-mg1x1d32va8",
+          "provider": "youtube",
+          "videoId": "mg1x1D32va8",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 286,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=mg1x1D32va8",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 30,
         "happy": 88,
@@ -2935,7 +4297,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574417117"
+        "apple-release-574417117",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -2970,7 +4333,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=OmBbSqF70w8",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/gelora-asmara/574417117?i=574417283&uo=4"
       },
@@ -2978,6 +4341,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "OmBbSqF70w8",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "gelora-asmara-official-music-video-ombbsqf70w8",
+          "provider": "youtube",
+          "videoId": "OmBbSqF70w8",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 262,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=OmBbSqF70w8",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "gelora-asmara-official-lyric-video-kao-ch2sxpe",
+          "provider": "youtube",
+          "videoId": "KAo_CH2SXPE",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 261,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=KAo_CH2SXPE",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 54,
         "happy": 23,
@@ -3025,7 +4439,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574417117"
+        "apple-release-574417117",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -3061,7 +4476,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=IkH2ZSyd_og",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/nian-di-hati/574352019?i=574352075&uo=4"
       },
@@ -3069,6 +4484,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "IkH2ZSyd_og",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "nian-di-hati-official-music-video-ikh2zsyd-og",
+          "provider": "youtube",
+          "videoId": "IkH2ZSyd_og",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 323,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=IkH2ZSyd_og",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "nian-di-hati-official-music-video-xp09h4d-i38",
+          "provider": "youtube",
+          "videoId": "XP09H4d-i38",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 323,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=XP09H4d-i38",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 23,
         "happy": 89,
@@ -3118,7 +4584,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574352019"
+        "apple-release-574352019",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -3154,7 +4621,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=BAr06mB0GHQ",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/seribu-kemanisan/574352019?i=574352076&uo=4"
       },
@@ -3162,6 +4629,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "BAr06mB0GHQ",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "seribu-kemanisan-official-music-video-bar06mb0ghq",
+          "provider": "youtube",
+          "videoId": "BAr06mB0GHQ",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 300,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=BAr06mB0GHQ",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "seribu-kemanisan-official-lyric-video-9897knagt08",
+          "provider": "youtube",
+          "videoId": "9897KNagT08",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 293,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=9897KNagT08",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 58,
         "happy": 40,
@@ -3210,7 +4728,9 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574352019"
+        "apple-release-574352019",
+        "youtube-siti-nurhaliza",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -3246,7 +4766,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=6tqpnkmjdWI",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/engkau-bagaikan-permata/574352019?i=574352077&uo=4"
       },
@@ -3254,6 +4774,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "6tqpnkmjdWI",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "engkau-bagaikan-permata-official-music-video-6tqpnkmjdwi",
+          "provider": "youtube",
+          "videoId": "6tqpnkmjdWI",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 313,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=6tqpnkmjdWI",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "engkau-bagaikan-permata-official-lyric-video-1e-yjx77aqw",
+          "provider": "youtube",
+          "videoId": "1e_yjx77aQw",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 309,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=1e_yjx77aQw",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 65,
         "happy": 42,
@@ -3302,7 +4873,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574352019"
+        "apple-release-574352019",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -3347,6 +4919,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 35,
         "happy": 36,
@@ -3438,6 +5018,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 83,
         "happy": 61,
@@ -3523,7 +5111,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=mkTONSV5Goc",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/joget-kasih-tak-sudah/574380968?i=574380972&uo=4"
       },
@@ -3531,6 +5119,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "mkTONSV5Goc",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "joget-kasih-tak-sudah-official-music-video-mktonsv5goc",
+          "provider": "youtube",
+          "videoId": "mkTONSV5Goc",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 327,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=mkTONSV5Goc",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 31,
         "happy": 81,
@@ -3580,7 +5200,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574380968"
+        "apple-release-574380968",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -3624,6 +5245,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 29,
         "happy": 81,
@@ -3718,6 +5347,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 71,
         "happy": 60,
@@ -3811,6 +5448,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 65,
         "happy": 62,
@@ -3905,6 +5550,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 69,
         "happy": 55,
@@ -3990,7 +5643,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=ff2MgEo4T28",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/azimat-cinta/574288251?i=574288260&uo=4"
       },
@@ -3998,6 +5651,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "ff2MgEo4T28",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "azimat-cinta-official-music-video-ff2mgeo4t28",
+          "provider": "youtube",
+          "videoId": "ff2MgEo4T28",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 303,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=ff2MgEo4T28",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "azimat-cinta-official-lyric-video-7hd6ini4g4m",
+          "provider": "youtube",
+          "videoId": "7Hd6InI4g4M",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 301,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=7Hd6InI4g4M",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 60,
         "happy": 44,
@@ -4046,7 +5750,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574288251"
+        "apple-release-574288251",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -4081,7 +5786,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=6sXS_mBg0Us",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/bicara-manis-menghiris-kalbu/574288251?i=574288261&uo=4"
       },
@@ -4089,6 +5794,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "6sXS_mBg0Us",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "bicara-manis-menghiris-kalbu-official-music-video-6sxs-mbg0us",
+          "provider": "youtube",
+          "videoId": "6sXS_mBg0Us",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 279,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=6sXS_mBg0Us",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "bicara-manis-menghiris-kalbu-official-lyric-video-iyjmzbddvi0",
+          "provider": "youtube",
+          "videoId": "iyjMzbDDVI0",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 275,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=iyjMzbDDVI0",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 54,
         "happy": 19,
@@ -4136,7 +5892,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574288251"
+        "apple-release-574288251",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -4172,7 +5929,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=_iXscpzsGnw",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/jalinan-cinta/574288251?i=574288262&uo=4"
       },
@@ -4180,6 +5937,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "_iXscpzsGnw",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "jalinan-cinta-official-lyric-video-ixscpzsgnw",
+          "provider": "youtube",
+          "videoId": "_iXscpzsGnw",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 238,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=_iXscpzsGnw",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 59,
         "happy": 46,
@@ -4228,7 +6017,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574288251"
+        "apple-release-574288251",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -4263,7 +6053,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=yOE7EWf4DyI",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/indah-percintaan/574288251?i=574288266&uo=4"
       },
@@ -4271,6 +6061,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "yOE7EWf4DyI",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "indah-percintaan-official-music-video-yoe7ewf4dyi",
+          "provider": "youtube",
+          "videoId": "yOE7EWf4DyI",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 362,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=yOE7EWf4DyI",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 69,
         "happy": 53,
@@ -4318,7 +6140,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574288251"
+        "apple-release-574288251",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -4354,7 +6177,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=pqj2-qRwwb8",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/percayalah/574288251?i=574288510&uo=4"
       },
@@ -4362,6 +6185,76 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "pqj2-qRwwb8",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "percayalah-official-mv",
+          "provider": "youtube",
+          "videoId": "pqj2-qRwwb8",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 298,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=pqj2-qRwwb8",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "percayalah-official-live-suria",
+          "provider": "youtube",
+          "videoId": "AMnQDYCz9Os",
+          "version": "live",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 318,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=AMnQDYCz9Os",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 2
+        },
+        {
+          "id": "percayalah-official-music-video-8nfudxrr-hs",
+          "provider": "youtube",
+          "videoId": "8nFuDxRR_hs",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 288,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=8nFuDxRR_hs",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 3
+        }
+      ],
       "moods": {
         "peaceful": 62,
         "happy": 47,
@@ -4410,7 +6303,10 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574288251"
+        "apple-release-574288251",
+        "youtube-siti-official",
+        "youtube-suria-records",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -4446,7 +6342,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=HKITDCosbfU",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/lakaran-kehidupan/574288251?i=574288511&uo=4"
       },
@@ -4454,6 +6350,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "HKITDCosbfU",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "lakaran-kehidupan-official-music-video-hkitdcosbfu",
+          "provider": "youtube",
+          "videoId": "HKITDCosbfU",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 230,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=HKITDCosbfU",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 58,
         "happy": 27,
@@ -4501,7 +6429,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574288251"
+        "apple-release-574288251",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -4540,7 +6469,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=-AjZG2s7jnc",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/nirmala/1266167994?i=1266168552&uo=4"
       },
@@ -4548,6 +6477,76 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "-AjZG2s7jnc",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "nirmala-official-mv",
+          "provider": "youtube",
+          "videoId": "-AjZG2s7jnc",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 350,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=-AjZG2s7jnc",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "nirmala-official-lyric-suria",
+          "provider": "youtube",
+          "videoId": "3fvm5KkOoLs",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 339,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=3fvm5KkOoLs",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 2
+        },
+        {
+          "id": "nirmala-official-music-video-2flbz2niefy",
+          "provider": "youtube",
+          "videoId": "2flbz2nIefY",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 350,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=2flbz2nIefY",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 3
+        }
+      ],
       "moods": {
         "peaceful": 28,
         "happy": 83,
@@ -4597,7 +6596,10 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1266167994"
+        "apple-release-1266167994",
+        "youtube-siti-official",
+        "youtube-suria-records",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -4632,7 +6634,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=V3cGUbyOCqA",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/joget-senyum-memikat/1266167994?i=1266168553&uo=4"
       },
@@ -4640,6 +6642,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "V3cGUbyOCqA",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "joget-senyum-memikat-official-music-video-v3cgubyocqa",
+          "provider": "youtube",
+          "videoId": "V3cGUbyOCqA",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 286,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=V3cGUbyOCqA",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "joget-senyum-memikat-official-lyric-video-kmfgzyollg0",
+          "provider": "youtube",
+          "videoId": "kmfGzyoLlg0",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 270,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=kmfGzyoLlg0",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 35,
         "happy": 76,
@@ -4689,7 +6742,9 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1266167994"
+        "apple-release-1266167994",
+        "youtube-siti-nurhaliza",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -4736,6 +6791,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 31,
         "happy": 78,
@@ -4822,7 +6885,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=P8PLAYZFj4Q",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/kurik-kundi/1266167994?i=1266168555&uo=4"
       },
@@ -4830,6 +6893,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "P8PLAYZFj4Q",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "kurik-kundi-official-lyric-video-p8playzfj4q",
+          "provider": "youtube",
+          "videoId": "P8PLAYZFj4Q",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 350,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=P8PLAYZFj4Q",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 29,
         "happy": 83,
@@ -4879,7 +6974,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1266167994"
+        "apple-release-1266167994",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -4916,7 +7012,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=lL0o14IDI4c",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/badarsila/1266167994?i=1266168557&uo=4"
       },
@@ -4924,6 +7020,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "lL0o14IDI4c",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "badarsila-official-music-video-ll0o14idi4c",
+          "provider": "youtube",
+          "videoId": "lL0o14IDI4c",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 274,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=lL0o14IDI4c",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "badarsila-official-lyric-video-b-gev-qww2k",
+          "provider": "youtube",
+          "videoId": "B_gEV_qww2k",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 263,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=B_gEV_qww2k",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 33,
         "happy": 79,
@@ -4973,7 +7120,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1266167994"
+        "apple-release-1266167994",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -5017,6 +7165,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 69,
         "happy": 61,
@@ -5102,7 +7258,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=wMK7MIVlidk",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/debaran-cinta/573421556?i=573421558&uo=4"
       },
@@ -5110,6 +7266,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "wMK7MIVlidk",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "debaran-cinta-official-music-video-wmk7mivlidk",
+          "provider": "youtube",
+          "videoId": "wMK7MIVlidk",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 300,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=wMK7MIVlidk",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 63,
         "happy": 41,
@@ -5158,7 +7346,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-573421556"
+        "apple-release-573421556",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -5202,6 +7391,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 69,
         "happy": 59,
@@ -5294,6 +7491,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 39,
         "happy": 42,
@@ -5377,7 +7582,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=JEISwV7hsxI",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/janji-kasih/573421556?i=573421562&uo=4"
       },
@@ -5385,6 +7590,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "JEISwV7hsxI",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "janji-kasih-official-music-video-jeiswv7hsxi",
+          "provider": "youtube",
+          "videoId": "JEISwV7hsxI",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 306,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=JEISwV7hsxI",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "janji-kasih-official-lyric-video-8h-o7ytpmue",
+          "provider": "youtube",
+          "videoId": "8H_o7yTPMUE",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 304,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=8H_o7yTPMUE",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 59,
         "happy": 47,
@@ -5433,7 +7689,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-573421556"
+        "apple-release-573421556",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -5476,6 +7733,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 56,
         "happy": 24,
@@ -5559,7 +7824,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=t-HEfyyXGrw",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/dialah-di-hati/574386535?i=574386547&uo=4"
       },
@@ -5567,6 +7832,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "t-HEfyyXGrw",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "dialah-di-hati-official-lyric-video-t-hefyyxgrw",
+          "provider": "youtube",
+          "videoId": "t-HEfyyXGrw",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 262,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=t-HEfyyXGrw",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "dialah-di-hati-official-lyric-video-ysnc2tsxoy8",
+          "provider": "youtube",
+          "videoId": "YSnc2Tsxoy8",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 262,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=YSnc2Tsxoy8",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 22,
         "happy": 91,
@@ -5616,7 +7932,9 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574386535"
+        "apple-release-574386535",
+        "youtube-siti-nurhaliza",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -5661,6 +7979,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 35,
         "happy": 39,
@@ -5744,7 +8070,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=yjh9NUb8cNo",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/cinta-tak-berganti/574386535?i=574386629&uo=4"
       },
@@ -5752,6 +8078,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "yjh9NUb8cNo",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-suriarecords-src"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "cinta-tak-berganti-official-lyric-video-yjh9nub8cno",
+          "provider": "youtube",
+          "videoId": "yjh9NUb8cNo",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 286,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=yjh9NUb8cNo",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 59,
         "happy": 43,
@@ -5800,7 +8158,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574386535"
+        "apple-release-574386535",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -5844,6 +8203,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 33,
         "happy": 42,
@@ -5929,7 +8296,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=-28X2APE9yI",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/lagu-rindu/574386535?i=574386632&uo=4"
       },
@@ -5937,6 +8304,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "-28X2APE9yI",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "lagu-rindu-official-music-video-28x2ape9yi",
+          "provider": "youtube",
+          "videoId": "-28X2APE9yI",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 283,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=-28X2APE9yI",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "lagu-rindu-official-lyric-video-uurtrsy7rkw",
+          "provider": "youtube",
+          "videoId": "uurTrSy7Rkw",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 274,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=uurTrSy7Rkw",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 60,
         "happy": 40,
@@ -5985,7 +8403,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574386535"
+        "apple-release-574386535",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -6020,7 +8439,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=D-Q4QPoCrG4",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/pejam-matamu/574386535?i=574386634&uo=4"
       },
@@ -6028,6 +8447,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "D-Q4QPoCrG4",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "pejam-matamu-official-music-video-d-q4qpocrg4",
+          "provider": "youtube",
+          "videoId": "D-Q4QPoCrG4",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 297,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=D-Q4QPoCrG4",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "pejam-matamu-official-lyric-video-aqak7rwgbc0",
+          "provider": "youtube",
+          "videoId": "aqaK7rWGbc0",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 292,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=aqaK7rWGbc0",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 66,
         "happy": 46,
@@ -6076,7 +8546,9 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574386535"
+        "apple-release-574386535",
+        "youtube-siti-nurhaliza",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -6119,6 +8591,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 25,
         "happy": 89,
@@ -6211,6 +8691,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 61,
         "happy": 21,
@@ -6302,6 +8790,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 39,
         "happy": 39,
@@ -6395,6 +8891,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 39,
         "happy": 36,
@@ -6487,6 +8991,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 23,
         "happy": 90,
@@ -6580,6 +9092,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 61,
         "happy": 46,
@@ -6672,6 +9192,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 64,
         "happy": 48,
@@ -6763,6 +9291,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 57,
         "happy": 20,
@@ -6854,6 +9390,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 61,
         "happy": 46,
@@ -6946,6 +9490,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 22,
         "happy": 91,
@@ -7038,6 +9590,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 64,
         "happy": 59,
@@ -7131,6 +9691,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 64,
         "happy": 56,
@@ -7226,6 +9794,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 34,
         "happy": 83,
@@ -7319,6 +9895,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 72,
         "happy": 59,
@@ -7413,6 +9997,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 33,
         "happy": 81,
@@ -7507,6 +10099,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 35,
         "happy": 83,
@@ -7599,6 +10199,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 97,
         "happy": 58,
@@ -7691,6 +10299,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 92,
         "happy": 53,
@@ -7783,6 +10399,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 95,
         "happy": 60,
@@ -7874,6 +10498,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 95,
         "happy": 58,
@@ -7964,6 +10596,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 94,
         "happy": 56,
@@ -8054,6 +10694,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 39,
         "happy": 77,
@@ -8145,6 +10793,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 31,
         "happy": 80,
@@ -8235,6 +10891,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 32,
         "happy": 81,
@@ -8324,6 +10988,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 35,
         "happy": 78,
@@ -8420,6 +11092,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 38,
         "happy": 82,
@@ -8510,6 +11190,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 67,
         "happy": 56,
@@ -8600,6 +11288,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 57,
         "happy": 26,
@@ -8690,6 +11386,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 77,
         "happy": 67,
@@ -8779,6 +11483,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 76,
         "happy": 67,
@@ -8868,6 +11580,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 24,
         "happy": 87,
@@ -8962,6 +11682,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 61,
         "happy": 47,
@@ -9058,6 +11786,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 29,
         "happy": 87,
@@ -9151,6 +11887,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 58,
         "happy": 42,
@@ -9242,6 +11986,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 61,
         "happy": 27,
@@ -9333,6 +12085,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 66,
         "happy": 44,
@@ -9431,6 +12191,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 44,
         "happy": 56,
@@ -9523,6 +12291,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 27,
         "happy": 91,
@@ -9608,7 +12384,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=JAGNmOlMdfQ",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/aku-bidadari-syurgamu/1521304037?i=1521304185&uo=4"
       },
@@ -9616,6 +12392,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "JAGNmOlMdfQ",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-mvm-music"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "aku-bidadari-syurgamu-official-mv",
+          "provider": "youtube",
+          "videoId": "JAGNmOlMdfQ",
+          "version": "music-video",
+          "authority": "licensed-broadcaster",
+          "channelId": "UCquIzvgQ4PxPDZqFXhuT_gw",
+          "channelName": "MVM MUSIC",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 263,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=JAGNmOlMdfQ",
+          "provenanceSourceId": "youtube-mvm-music",
+          "priority": 1
+        },
+        {
+          "id": "aku-bidadari-syurgamu-official-audio",
+          "provider": "youtube",
+          "videoId": "oA3FNjs_gpY",
+          "version": "official-audio",
+          "authority": "licensed-broadcaster",
+          "channelId": "UCquIzvgQ4PxPDZqFXhuT_gw",
+          "channelName": "MVM MUSIC",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 239,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=oA3FNjs_gpY",
+          "provenanceSourceId": "youtube-mvm-music",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 79,
         "happy": 67,
@@ -9663,7 +12490,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1521304037"
+        "apple-release-1521304037",
+        "youtube-mvm-music"
       ]
     },
     {
@@ -9707,6 +12535,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 59,
         "happy": 25,
@@ -9804,6 +12640,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 31,
         "happy": 69,
@@ -9889,7 +12733,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=89JYsqcwl6E",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/kuasa-cintamu/1521304037?i=1521304429&uo=4"
       },
@@ -9897,6 +12741,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "89JYsqcwl6E",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza-official-channel"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "kuasa-cintamu-official-music-video-89jysqcwl6e",
+          "provider": "youtube",
+          "videoId": "89JYsqcwl6E",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCQ6Zv5O57OuG9y3WIbnCHSQ",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 272,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=89JYsqcwl6E",
+          "provenanceSourceId": "youtube-siti-nurhaliza-official-channel",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 76,
         "happy": 63,
@@ -9944,7 +12820,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1521304037"
+        "apple-release-1521304037",
+        "youtube-siti-nurhaliza-official-channel"
       ]
     },
     {
@@ -9987,6 +12864,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 76,
         "happy": 66,
@@ -10069,7 +12954,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=hdleEjp5cGY",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/menyapa-dunia/1694424145?i=1694424444&uo=4"
       },
@@ -10077,6 +12962,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "hdleEjp5cGY",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza-official-channel"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "menyapa-dunia-official-lyric-video-hdleejp5cgy",
+          "provider": "youtube",
+          "videoId": "hdleEjp5cGY",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCQ6Zv5O57OuG9y3WIbnCHSQ",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 186,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=hdleEjp5cGY",
+          "provenanceSourceId": "youtube-siti-nurhaliza-official-channel",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 27,
         "happy": 87,
@@ -10126,7 +13043,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1694424145"
+        "apple-release-1694424145",
+        "youtube-siti-nurhaliza-official-channel"
       ]
     },
     {
@@ -10170,6 +13088,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 65,
         "happy": 43,
@@ -10268,6 +13194,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 43,
         "happy": 56,
@@ -10353,7 +13287,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=c76rAokD05Q",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/romansa-kita/1694424145?i=1694424698&uo=4"
       },
@@ -10361,6 +13295,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "c76rAokD05Q",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza-official-channel"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "romansa-kita-official-lyric-video-c76raokd05q",
+          "provider": "youtube",
+          "videoId": "c76rAokD05Q",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCQ6Zv5O57OuG9y3WIbnCHSQ",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 216,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=c76rAokD05Q",
+          "provenanceSourceId": "youtube-siti-nurhaliza-official-channel",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 60,
         "happy": 48,
@@ -10409,7 +13375,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1694424145"
+        "apple-release-1694424145",
+        "youtube-siti-nurhaliza-official-channel"
       ]
     },
     {
@@ -10444,7 +13411,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=fqg5Gl51b2M",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/teratas/1694424145?i=1694424700&uo=4"
       },
@@ -10452,6 +13419,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "fqg5Gl51b2M",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza-official-channel"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "teratas-official-lyric-video-fqg5gl51b2m",
+          "provider": "youtube",
+          "videoId": "fqg5Gl51b2M",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCQ6Zv5O57OuG9y3WIbnCHSQ",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 260,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=fqg5Gl51b2M",
+          "provenanceSourceId": "youtube-siti-nurhaliza-official-channel",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 32,
         "happy": 74,
@@ -10500,7 +13499,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1694424145"
+        "apple-release-1694424145",
+        "youtube-siti-nurhaliza-official-channel"
       ]
     },
     {
@@ -10535,7 +13535,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=M2f0ayR_ljc",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/menjaga-cintamu-original-soundtrack-from-anwar-the/1694424145?i=1694424704&uo=4"
       },
@@ -10543,6 +13543,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "M2f0ayR_ljc",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza-official-channel"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "menjaga-cintamu-original-soundtrack-from-anwar-the-untold-story-official-lyric-video-m2f0ayr-ljc",
+          "provider": "youtube",
+          "videoId": "M2f0ayR_ljc",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCQ6Zv5O57OuG9y3WIbnCHSQ",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 252,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=M2f0ayR_ljc",
+          "provenanceSourceId": "youtube-siti-nurhaliza-official-channel",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 66,
         "happy": 42,
@@ -10591,7 +13623,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1694424145"
+        "apple-release-1694424145",
+        "youtube-siti-nurhaliza-official-channel"
       ]
     },
     {
@@ -10626,7 +13659,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=6RReyvtT_mw",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/magis/1694424145?i=1694424867&uo=4"
       },
@@ -10634,6 +13667,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "6RReyvtT_mw",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza-official-channel"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "magis-official-lyric-video-6rreyvtt-mw",
+          "provider": "youtube",
+          "videoId": "6RReyvtT_mw",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCQ6Zv5O57OuG9y3WIbnCHSQ",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 197,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=6RReyvtT_mw",
+          "provenanceSourceId": "youtube-siti-nurhaliza-official-channel",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 28,
         "happy": 74,
@@ -10682,7 +13747,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1694424145"
+        "apple-release-1694424145",
+        "youtube-siti-nurhaliza-official-channel"
       ]
     },
     {
@@ -10733,6 +13799,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 27,
         "happy": 83,
@@ -10827,6 +13901,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 83,
         "happy": 67,
@@ -10920,6 +14002,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 28,
         "happy": 80,
@@ -11012,6 +14102,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 75,
         "happy": 68,
@@ -11102,6 +14200,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 79,
         "happy": 62,
@@ -11185,7 +14291,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=7_AefsYp-hA",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/kesuma/1848810439?i=1848810450&uo=4"
       },
@@ -11193,6 +14299,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "7_AefsYp-hA",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza-official-channel"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "kesuma-official-music-video-7-aefsyp-ha",
+          "provider": "youtube",
+          "videoId": "7_AefsYp-hA",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCQ6Zv5O57OuG9y3WIbnCHSQ",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 260,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=7_AefsYp-hA",
+          "provenanceSourceId": "youtube-siti-nurhaliza-official-channel",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 33,
         "happy": 73,
@@ -11241,7 +14379,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1848810439"
+        "apple-release-1848810439",
+        "youtube-siti-nurhaliza-official-channel"
       ]
     },
     {
@@ -11285,6 +14424,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 67,
         "happy": 62,
@@ -11382,7 +14529,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=lWX-YypupTE",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/aidilfitri-di-alaf-baru/663686792?i=663686804&uo=4"
       },
@@ -11390,6 +14537,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "lWX-YypupTE",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "aidilfitri-di-alaf-baru-official-music-video-lwx-yypupte",
+          "provider": "youtube",
+          "videoId": "lWX-YypupTE",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 263,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=lWX-YypupTE",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "aidilfitri-di-alaf-baru-official-lyric-video-gjxvxsftsym",
+          "provider": "youtube",
+          "videoId": "gJXVXSFTsYM",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 259,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=gJXVXSFTsYM",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 28,
         "happy": 100,
@@ -11439,7 +14637,9 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-663686792"
+        "apple-release-663686792",
+        "youtube-siti-nurhaliza",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -11493,6 +14693,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 32,
         "happy": 95,
@@ -11578,7 +14786,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=vblN9x0IlxA",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/sesuci-lebaran/663686792?i=663686806&uo=4"
       },
@@ -11586,6 +14794,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "vblN9x0IlxA",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "sesuci-lebaran-official-music-video-vbln9x0ilxa",
+          "provider": "youtube",
+          "videoId": "vblN9x0IlxA",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 260,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=vblN9x0IlxA",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "sesuci-lebaran-official-lyric-video-rbkoi7cuzkk",
+          "provider": "youtube",
+          "videoId": "rbKOi7CuzKk",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 350,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=rbKOi7CuzKk",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 32,
         "happy": 98,
@@ -11634,7 +14893,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-663686792"
+        "apple-release-663686792",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -11670,7 +14930,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=EEP6lM2-WvQ",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/nazam-lebaran/664487155?i=664487156&uo=4"
       },
@@ -11678,6 +14938,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "EEP6lM2-WvQ",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "nazam-lebaran-official-music-video-eep6lm2-wvq",
+          "provider": "youtube",
+          "videoId": "EEP6lM2-WvQ",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 345,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=EEP6lM2-WvQ",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "nazam-lebaran-official-lyric-video-ep-gqah1ipe",
+          "provider": "youtube",
+          "videoId": "eP-GQAH1ipE",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 340,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=eP-GQAH1ipE",
+          "provenanceSourceId": "youtube-suriarecords-src",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 34,
         "happy": 98,
@@ -11726,7 +15037,9 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-664487155"
+        "apple-release-664487155",
+        "youtube-siti-nurhaliza",
+        "youtube-suriarecords-src"
       ]
     },
     {
@@ -11762,7 +15075,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=OWf2AieK_zc",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/bila-hari-raya-menjelma/664487155?i=664487161&uo=4"
       },
@@ -11770,6 +15083,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "OWf2AieK_zc",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "bila-hari-raya-menjelma-official-music-video-owf2aiek-zc",
+          "provider": "youtube",
+          "videoId": "OWf2AieK_zc",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 284,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=OWf2AieK_zc",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 1
+        },
+        {
+          "id": "bila-hari-raya-menjelma-official-lyric-video-dxmxwqrzmbk",
+          "provider": "youtube",
+          "videoId": "DXmxwqRzMbk",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 284,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=DXmxwqRzMbk",
+          "provenanceSourceId": "youtube-siti-nurhaliza",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 34,
         "happy": 100,
@@ -11818,7 +15182,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-664487155"
+        "apple-release-664487155",
+        "youtube-siti-nurhaliza"
       ]
     },
     {
@@ -11868,6 +15233,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 35,
         "happy": 42,
@@ -11966,6 +15339,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 48,
         "happy": 58,
@@ -12066,6 +15447,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 48,
         "happy": 55,
@@ -12163,6 +15552,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 50,
         "happy": 58,
@@ -12254,6 +15651,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 55,
         "happy": 23,
@@ -12345,6 +15750,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 63,
         "happy": 46,
@@ -12436,6 +15849,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 43,
         "happy": 58,
@@ -12534,6 +15955,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 47,
         "happy": 62,
@@ -12635,6 +16064,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 48,
         "happy": 54,
@@ -12720,7 +16157,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=u0KTPGuCjC4",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/cinta-tak-mungkin/1734375730?i=1734375733&uo=4"
       },
@@ -12728,6 +16165,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "u0KTPGuCjC4",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza-official-channel"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "cinta-tak-mungkin-official-lyric-video-u0ktpgucjc4",
+          "provider": "youtube",
+          "videoId": "u0KTPGuCjC4",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCQ6Zv5O57OuG9y3WIbnCHSQ",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 227,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=u0KTPGuCjC4",
+          "provenanceSourceId": "youtube-siti-nurhaliza-official-channel",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 65,
         "happy": 48,
@@ -12776,7 +16245,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1734375730"
+        "apple-release-1734375730",
+        "youtube-siti-nurhaliza-official-channel"
       ]
     },
     {
@@ -12812,7 +16282,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=QMte0Vkokzo",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/sejarah/1779075735?i=1779076138&uo=4"
       },
@@ -12820,6 +16290,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "QMte0Vkokzo",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza-official-channel"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "sejarah-official-music-video-qmte0vkokzo",
+          "provider": "youtube",
+          "videoId": "QMte0Vkokzo",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCQ6Zv5O57OuG9y3WIbnCHSQ",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 335,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=QMte0Vkokzo",
+          "provenanceSourceId": "youtube-siti-nurhaliza-official-channel",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 33,
         "happy": 37,
@@ -12868,7 +16370,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1779075735"
+        "apple-release-1779075735",
+        "youtube-siti-nurhaliza-official-channel"
       ]
     },
     {
@@ -12909,7 +16412,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=YKNkQQBdlBI",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/menamakanmu-cinta/1827253698?i=1827253701&uo=4"
       },
@@ -12917,6 +16420,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "YKNkQQBdlBI",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza-official-channel"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "menamakanmu-cinta-official-music-video-yknkqqbdlbi",
+          "provider": "youtube",
+          "videoId": "YKNkQQBdlBI",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCQ6Zv5O57OuG9y3WIbnCHSQ",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 272,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=YKNkQQBdlBI",
+          "provenanceSourceId": "youtube-siti-nurhaliza-official-channel",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 66,
         "happy": 47,
@@ -12966,7 +16501,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1827253698"
+        "apple-release-1827253698",
+        "youtube-siti-nurhaliza-official-channel"
       ]
     },
     {
@@ -13001,7 +16537,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=8SKvJl32YGk",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/sesal/1807913067?i=1807913068&uo=4"
       },
@@ -13009,6 +16545,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "8SKvJl32YGk",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-universal-music-malaysia"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "sesal-official-music-video-8skvjl32ygk",
+          "provider": "youtube",
+          "videoId": "8SKvJl32YGk",
+          "version": "music-video",
+          "authority": "label-official",
+          "channelId": "UCNO_HN4PCwAIjlGBZiv8_6A",
+          "channelName": "Universal Music Malaysia",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 233,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=8SKvJl32YGk",
+          "provenanceSourceId": "youtube-universal-music-malaysia",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 58,
         "happy": 22,
@@ -13056,7 +16624,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1807913067"
+        "apple-release-1807913067",
+        "youtube-universal-music-malaysia"
       ]
     },
     {
@@ -13092,7 +16661,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=qb61v9sl80g",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/beraya-dengan-saya/1879717949?i=1879717950&uo=4"
       },
@@ -13100,6 +16669,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "qb61v9sl80g",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-nurhaliza-official-channel"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "beraya-dengan-saya-official-music-video-qb61v9sl80g",
+          "provider": "youtube",
+          "videoId": "qb61v9sl80g",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCQ6Zv5O57OuG9y3WIbnCHSQ",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 236,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=qb61v9sl80g",
+          "provenanceSourceId": "youtube-siti-nurhaliza-official-channel",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 29,
         "happy": 100,
@@ -13148,7 +16749,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1879717949"
+        "apple-release-1879717949",
+        "youtube-siti-nurhaliza-official-channel"
       ]
     },
     {
@@ -13199,6 +16801,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 48,
         "happy": 56,

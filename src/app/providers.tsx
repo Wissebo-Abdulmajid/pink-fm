@@ -4,15 +4,17 @@ import {
   useContext,
   useEffect,
   useMemo,
+  useRef,
   useState,
   useSyncExternalStore,
   type ReactNode,
 } from 'react'
-import { moodDimensionKeys, type MoodPreset, type MoodVector, type ProfileBundle, type StreamingService } from '../config/schemas'
+import { moodDimensionKeys, type MoodPreset, type MoodVector, type PlaybackPreference, type ProfileBundle, type StreamingService } from '../config/schemas'
 import type { RecommendationContext, RecommendationResult } from '../features/recommendations/engine'
 import { markNotTodayUntil, recommendTrack } from '../features/recommendations/engine'
 import { applyProfileTheme, clearProfileTheme } from '../features/profiles/theme'
 import {
+  appendPlaybackEvent,
   ListenerStorage,
   learnFromLovedTrack,
   type ListenerState,
@@ -21,6 +23,9 @@ import {
 import { getTimeOfDay } from '../lib/time'
 import { clamp } from '../lib/utils'
 import { playUiSound, type UiSound } from '../features/player/sound-effects'
+import { createPlaybackEvent, type PlaybackEventType } from '../features/player/playback-events'
+import { selectPlaybackProvider } from '../features/player/provider-selection'
+import type { PlaybackProviderId } from '../features/player/playback-types'
 
 type TuneOptions = {
   stationName?: string
@@ -37,19 +42,28 @@ type ExperienceContextValue = {
   currentMood: MoodPreset | null
   currentTarget: MoodVector | null
   recommendation: RecommendationResult | null
+  previousRecommendation: RecommendationResult | null
+  nextRecommendation: RecommendationResult | null
   tuneMood: (mood: MoodPreset) => RecommendationResult
   tuneTarget: (target: MoodVector, options?: TuneOptions) => RecommendationResult
   chooseAnother: () => RecommendationResult | null
+  playNextRecommendation: () => RecommendationResult | null
+  sameMoodDifferentEra: () => RecommendationResult | null
+  differentAlbum: () => RecommendationResult | null
   toggleLove: () => void
   notToday: () => RecommendationResult | null
   moreLikeThis: () => void
   lessIntense: () => RecommendationResult | null
   moreEnergetic: () => RecommendationResult | null
-  markPlayed: (trackId: string) => void
+  recordPlaybackEvent: (type: PlaybackEventType, trackId: string, provider: PlaybackProviderId) => void
   saveCurrentPreset: () => void
   clearHistory: () => void
   resetPreferences: () => void
   setStreamingService: (service: StreamingService) => void
+  setPlaybackPreference: (preference: PlaybackPreference) => void
+  setEmbedConsent: (consent: ListenerState['embedConsent']) => void
+  setAllowOfficialAlternateVersions: (enabled: boolean) => void
+  setAllowPreviewsWhenFullSongsUnavailable: (enabled: boolean) => void
   setSoundEffects: (enabled: boolean) => void
   setSoundVolume: (volume: number) => void
   setReducedMotion: (enabled: boolean) => void
@@ -95,6 +109,9 @@ export function ExperienceProvider({
   const [currentMood, setCurrentMood] = useState<MoodPreset | null>(null)
   const [currentTarget, setCurrentTarget] = useState<MoodVector | null>(listener.lastTarget)
   const [recommendation, setRecommendation] = useState<RecommendationResult | null>(null)
+  const recommendationRef = useRef<RecommendationResult | null>(null)
+  const [previousRecommendation, setPreviousRecommendation] = useState<RecommendationResult | null>(null)
+  const [nextRecommendation, setNextRecommendation] = useState<RecommendationResult | null>(null)
 
   useEffect(() => {
     applyProfileTheme(profile.gift)
@@ -124,6 +141,9 @@ export function ExperienceProvider({
       const context = {
         timeOfDay: getTimeOfDay(),
         artistPolicy: profile.gift.artistPolicy,
+        requireFullPlayback: true,
+        allowOfficialAlternateVersions: listener.allowOfficialAlternateVersions,
+        allowPreviewsWhenFullSongsUnavailable: listener.allowPreviewsWhenFullSongsUnavailable,
         rotationSeed: `day-${Math.floor(Date.now() / (1000 * 60 * 60 * 24))}`,
         ...(options.context ?? {}),
       }
@@ -135,19 +155,39 @@ export function ExperienceProvider({
         listener: storage.getSnapshot(),
         context,
       })
+      const historyEntry = {
+        trackId: result.track.id,
+        timestamp: Date.now(),
+        moodId,
+        stationName,
+        target: normalisedTarget,
+      }
+      const snapshot = storage.getSnapshot()
+      const queueContext: RecommendationContext = { ...context }
+      delete queueContext.requestedTrackId
+      const queued = recommendTrack({
+        tracks: profile.tracks.tracks,
+        target: normalisedTarget,
+        stationName,
+        frequency,
+        listener: { ...snapshot, history: [historyEntry, ...snapshot.history].slice(0, 80) },
+        context: {
+          ...queueContext,
+          excludedTrackIds: [result.track.id, ...(context.excludedTrackIds ?? [])],
+          rotationSeed: `${context.rotationSeed ?? 'pink-fm'}-next`,
+        },
+      })
       setCurrentTarget(normalisedTarget)
+      setPreviousRecommendation(recommendationRef.current)
       setRecommendation(result)
+      recommendationRef.current = result
+      setNextRecommendation(queued)
+      const selectedProvider = selectPlaybackProvider(result.track, storage.getSnapshot().playbackPreference).provider
       storage.update((state) => ({
         ...state,
         lastTarget: normalisedTarget,
         history: [
-          {
-            trackId: result.track.id,
-            timestamp: Date.now(),
-            moodId,
-            stationName,
-            target: normalisedTarget,
-          },
+          historyEntry,
           ...state.history,
         ].slice(0, 80),
         moodSelectionCounts: {
@@ -160,11 +200,24 @@ export function ExperienceProvider({
         },
         preferredMoods: blendTarget(state.preferredMoods, normalisedTarget, 0.025),
         completedOnboarding: true,
+        playbackEvents: [
+          createPlaybackEvent('recommended', result.track.id, selectedProvider),
+          ...state.playbackEvents,
+        ].slice(0, 240),
       }))
       playSound('confirm')
       return result
     },
-    [currentMood, playSound, profile.gift.artistPolicy, profile.gift.station.frequencyLabel, profile.tracks.tracks, storage],
+    [
+      currentMood,
+      listener.allowOfficialAlternateVersions,
+      listener.allowPreviewsWhenFullSongsUnavailable,
+      playSound,
+      profile.gift.artistPolicy,
+      profile.gift.station.frequencyLabel,
+      profile.tracks.tracks,
+      storage,
+    ],
   )
 
   const tuneMood = useCallback(
@@ -184,10 +237,38 @@ export function ExperienceProvider({
 
   const chooseAnother = useCallback(() => {
     if (!currentTarget) return null
+    if (recommendation) {
+      const provider = selectPlaybackProvider(recommendation.track, storage.getSnapshot().playbackPreference).provider
+      storage.update((state) => appendPlaybackEvent(
+        state,
+        createPlaybackEvent('skipped', recommendation.track.id, provider),
+      ))
+    }
     return tuneTarget(currentTarget, currentMood?.surprise
       ? { context: { surprise: true, noveltyPreference: 'novel' } }
       : {})
-  }, [currentMood?.surprise, currentTarget, tuneTarget])
+  }, [currentMood?.surprise, currentTarget, recommendation, storage, tuneTarget])
+
+  const playNextRecommendation = useCallback(() => {
+    if (!currentTarget || !nextRecommendation) return null
+    return tuneTarget(currentTarget, {
+      stationName: nextRecommendation.stationName,
+      frequency: nextRecommendation.frequency,
+      context: { requestedTrackId: nextRecommendation.track.id },
+    })
+  }, [currentTarget, nextRecommendation, tuneTarget])
+
+  const sameMoodDifferentEra = useCallback(() => {
+    if (!currentTarget || !recommendation) return null
+    return tuneTarget(currentTarget, { context: { excludedEras: [recommendation.track.era] } })
+  }, [currentTarget, recommendation, tuneTarget])
+
+  const differentAlbum = useCallback(() => {
+    if (!currentTarget || !recommendation) return null
+    return tuneTarget(currentTarget, {
+      context: { excludedAlbumIds: recommendation.track.albumId ? [recommendation.track.albumId] : [] },
+    })
+  }, [currentTarget, recommendation, tuneTarget])
 
   const toggleLove = useCallback(() => {
     if (!recommendation) return
@@ -246,14 +327,23 @@ export function ExperienceProvider({
     return tuneTarget(target, { context: { minEnergy: Math.max(40, target.energised - 24) } })
   }, [currentTarget, tuneTarget])
 
-  const markPlayed = useCallback(
-    (trackId: string) => {
-      storage.update((state) => ({
-        ...state,
-        playCounts: { ...state.playCounts, [trackId]: (state.playCounts[trackId] ?? 0) + 1 },
-      }))
+  const recordPlaybackEvent = useCallback(
+    (type: PlaybackEventType, trackId: string, provider: PlaybackProviderId) => {
+      storage.update((state) => appendPlaybackEvent(
+        state,
+        createPlaybackEvent(type, trackId, provider),
+        type === 'playback-started'
+          ? {
+              trackId,
+              timestamp: Date.now(),
+              moodId: currentMood?.id ?? 'custom',
+              stationName: recommendation?.stationName ?? 'Pink FM',
+              target: currentTarget ?? state.lastTarget ?? state.preferredMoods,
+            }
+          : undefined,
+      ))
     },
-    [storage],
+    [currentMood?.id, currentTarget, recommendation?.stationName, storage],
   )
 
   const saveCurrentPreset = useCallback(() => {
@@ -271,6 +361,8 @@ export function ExperienceProvider({
     storage.update((state) => ({
       ...state,
       history: [],
+      listeningHistory: [],
+      playbackEvents: [],
       playCounts: {},
       moodSelectionCounts: {},
       favouriteStationCounts: {},
@@ -282,10 +374,31 @@ export function ExperienceProvider({
     setCurrentMood(null)
     setCurrentTarget(null)
     setRecommendation(null)
+    recommendationRef.current = null
+    setPreviousRecommendation(null)
+    setNextRecommendation(null)
   }, [storage])
 
   const setStreamingService = useCallback(
     (service: StreamingService) => storage.update((state) => ({ ...state, selectedStreamingService: service })),
+    [storage],
+  )
+  const setPlaybackPreference = useCallback(
+    (playbackPreference: PlaybackPreference) => storage.update((state) => ({ ...state, playbackPreference })),
+    [storage],
+  )
+  const setEmbedConsent = useCallback(
+    (embedConsent: ListenerState['embedConsent']) => storage.update((state) => ({ ...state, embedConsent })),
+    [storage],
+  )
+  const setAllowOfficialAlternateVersions = useCallback(
+    (allowOfficialAlternateVersions: boolean) =>
+      storage.update((state) => ({ ...state, allowOfficialAlternateVersions })),
+    [storage],
+  )
+  const setAllowPreviewsWhenFullSongsUnavailable = useCallback(
+    (allowPreviewsWhenFullSongsUnavailable: boolean) =>
+      storage.update((state) => ({ ...state, allowPreviewsWhenFullSongsUnavailable })),
     [storage],
   )
   const setSoundEffects = useCallback(
@@ -318,19 +431,28 @@ export function ExperienceProvider({
       currentMood,
       currentTarget,
       recommendation,
+      previousRecommendation,
+      nextRecommendation,
       tuneMood,
       tuneTarget,
       chooseAnother,
+      playNextRecommendation,
+      sameMoodDifferentEra,
+      differentAlbum,
       toggleLove,
       notToday,
       moreLikeThis,
       lessIntense,
       moreEnergetic,
-      markPlayed,
+      recordPlaybackEvent,
       saveCurrentPreset,
       clearHistory,
       resetPreferences,
       setStreamingService,
+      setPlaybackPreference,
+      setEmbedConsent,
+      setAllowOfficialAlternateVersions,
+      setAllowPreviewsWhenFullSongsUnavailable,
       setSoundEffects,
       setSoundVolume,
       setReducedMotion,
@@ -343,9 +465,14 @@ export function ExperienceProvider({
       clearHistory,
       currentMood,
       currentTarget,
+      previousRecommendation,
+      nextRecommendation,
+      playNextRecommendation,
+      sameMoodDifferentEra,
+      differentAlbum,
       lessIntense,
       listener,
-      markPlayed,
+      recordPlaybackEvent,
       moreEnergetic,
       moreLikeThis,
       notToday,
@@ -361,6 +488,10 @@ export function ExperienceProvider({
       setSoundEffects,
       setSoundVolume,
       setStreamingService,
+      setPlaybackPreference,
+      setEmbedConsent,
+      setAllowOfficialAlternateVersions,
+      setAllowPreviewsWhenFullSongsUnavailable,
       slug,
       toggleLove,
       tuneMood,

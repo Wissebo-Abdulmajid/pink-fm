@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-07-13T17:31:23.567Z",
+  "createdAt": "2026-07-14T05:01:50.361Z",
   "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   "origin": "http://127.0.0.1:4173",
   "checks": [
@@ -58,10 +58,38 @@
       "overflowingElements": []
     },
     {
+      "name": "playback-no-provider-before-consent",
+      "passed": true,
+      "providerRequests": 0
+    },
+    {
+      "name": "playback-consent-denied",
+      "passed": true,
+      "message": "External listening destinationEmbedded players are turned off",
+      "providerFrames": 0,
+      "fallback": true
+    },
+    {
+      "name": "real-youtube-recommendation-provider-outcome",
+      "passed": true,
+      "track": "Cindai",
+      "coverage": "FULL SONGPlayback via official YouTube source",
+      "iframeLoaded": false,
+      "status": "Playback via official YouTube sourceLoading the selected provider…",
+      "fallback": true
+    },
+    {
+      "name": "rapid-recommendation-player-reuse",
+      "passed": true,
+      "playerShells": 1,
+      "providerViewports": 1,
+      "currentTitle": "Nirmala"
+    },
+    {
       "name": "keyboard-energy-dial",
       "passed": true,
-      "before": 15,
-      "after": 20
+      "before": 85,
+      "after": 90
     },
     {
       "name": "touch-mood-preset",
@@ -209,7 +237,7 @@
     {
       "name": "radio-touch-targets",
       "passed": true,
-      "minimumCssPixels": 48
+      "minimumCssPixels": 44
     },
     {
       "name": "radio-320-text-zoom-200",
@@ -257,7 +285,7 @@
         {
           "tag": "div",
           "className": "illuminated-display__track",
-          "text": "78% match strengthCenderamayaSiti Nurhaliza",
+          "text": "70% match strengthKau KekasihkuSiti Nurhaliza",
           "left": 63,
           "right": 331,
           "width": 268
@@ -265,15 +293,15 @@
         {
           "tag": "span",
           "className": "",
-          "text": "78% match strength",
+          "text": "70% match strength",
           "left": 67,
-          "right": 322,
-          "width": 254
+          "right": 323,
+          "width": 255
         },
         {
           "tag": "h1",
           "className": "",
-          "text": "Cenderamaya",
+          "text": "Kau Kekasihku",
           "left": 67,
           "right": 326,
           "width": 258
@@ -330,7 +358,7 @@
       "totalTracks": 142
     },
     {
-      "name": "settings-enhanced-data-320",
+      "name": "settings-playback-320",
       "title": "Pink FM — Your personal mood radio",
       "hash": "#/g/siti/settings",
       "expectedTextPresent": true,
@@ -384,6 +412,18 @@
       "overflowingElements": []
     },
     {
+      "name": "offline-music-message",
+      "title": "Pink FM — Your personal mood radio",
+      "hash": "#/g/siti/radio",
+      "expectedTextPresent": true,
+      "mainPresent": true,
+      "horizontalOverflow": false,
+      "scrollWidth": 1265,
+      "clientWidth": 1265,
+      "clientHeight": 900,
+      "overflowingElements": []
+    },
+    {
       "name": "stale-embedding-manifest",
       "passed": true
     },
@@ -394,7 +434,7 @@
     {
       "name": "semantic-model-unavailable",
       "passed": true,
-      "status": "Failed to fetch"
+      "status": "Unauthorized access to file: \"https://huggingface.co/Xenova/pink-fm-intentionally-unavailable-model/resolve/main/config.json\"."
     },
     {
       "name": "missing-profile-320",
@@ -413,6 +453,6 @@
     "requested": false,
     "estimatedDownloadBytes": 148897792
   },
-  "expectedConsoleErrors": 5,
+  "expectedConsoleErrors": 6,
   "unexpectedConsoleErrors": []
 }

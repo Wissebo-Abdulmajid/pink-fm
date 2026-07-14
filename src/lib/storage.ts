@@ -2,11 +2,26 @@ import { z } from 'zod'
 import { STORAGE_SCHEMA_VERSION } from '../config/constants'
 import {
   moodVectorSchema,
+  playbackPreferenceSchema,
   streamingServiceSchema,
   type MoodVector,
   type StreamingService,
   type Track,
 } from '../config/schemas'
+import type { PlaybackEventRecord } from '../features/player/playback-events'
+
+const playbackProviderIdSchema = z.enum(['spotify-embed', 'youtube-embed', 'apple-preview', 'external'])
+const playbackEventTypeSchema = z.enum([
+  'recommended', 'player-loaded', 'playback-started', 'playback-paused',
+  'playback-completed', 'externally-opened', 'skipped', 'failed',
+])
+const playbackEventRecordSchema = z.strictObject({
+  id: z.string(),
+  type: playbackEventTypeSchema,
+  trackId: z.string(),
+  provider: playbackProviderIdSchema,
+  timestamp: z.number().int().nonnegative(),
+})
 
 const historyEntrySchema = z.strictObject({
   trackId: z.string(),
@@ -29,6 +44,8 @@ export const listenerStateSchema = z.strictObject({
   moreLikeTrackIds: z.record(z.string(), z.number().int().nonnegative()),
   savedPresets: z.array(savedPresetSchema),
   history: z.array(historyEntrySchema),
+  listeningHistory: z.array(historyEntrySchema),
+  playbackEvents: z.array(playbackEventRecordSchema),
   playCounts: z.record(z.string(), z.number().int().nonnegative()),
   moodSelectionCounts: z.record(z.string(), z.number().int().nonnegative()),
   preferredEras: z.record(z.string(), z.number()),
@@ -42,6 +59,10 @@ export const listenerStateSchema = z.strictObject({
   reducedMotion: z.boolean(),
   highContrast: z.boolean(),
   selectedStreamingService: streamingServiceSchema,
+  playbackPreference: playbackPreferenceSchema,
+  embedConsent: z.enum(['ask', 'allowed', 'external-only']),
+  allowOfficialAlternateVersions: z.boolean(),
+  allowPreviewsWhenFullSongsUnavailable: z.boolean(),
   completedOnboarding: z.boolean(),
   favouriteStationCounts: z.record(z.string(), z.number().int().nonnegative()),
   lastTarget: moodVectorSchema.nullable(),
@@ -61,6 +82,8 @@ export const createDefaultListenerState = (
   moreLikeTrackIds: {},
   savedPresets: [],
   history: [],
+  listeningHistory: [],
+  playbackEvents: [],
   playCounts: {},
   moodSelectionCounts: {},
   preferredEras: {},
@@ -84,6 +107,10 @@ export const createDefaultListenerState = (
   reducedMotion: false,
   highContrast: false,
   selectedStreamingService: streamingService,
+  playbackPreference: 'automatic',
+  embedConsent: 'ask',
+  allowOfficialAlternateVersions: true,
+  allowPreviewsWhenFullSongsUnavailable: false,
   completedOnboarding: false,
   favouriteStationCounts: {},
   lastTarget: null,
@@ -109,7 +136,7 @@ export const migrateListenerState = (
 
   if (!raw || typeof raw !== 'object') return createDefaultListenerState(streamingService)
   const legacy = raw as LegacyState
-  if (legacy.schemaVersion === 2) {
+  if (legacy.schemaVersion === 2 || legacy.schemaVersion === 3) {
     const defaults = createDefaultListenerState(streamingService)
     const versionTwo = raw as Record<string, unknown>
     const migrated = {
@@ -120,6 +147,12 @@ export const migrateListenerState = (
       preferredArtistIds: versionTwo.preferredArtistIds ?? {},
       preferredLanguages: versionTwo.preferredLanguages ?? {},
       semanticMode: versionTwo.semanticMode ?? 'ask',
+      listeningHistory: versionTwo.listeningHistory ?? [],
+      playbackEvents: versionTwo.playbackEvents ?? [],
+      playbackPreference: versionTwo.playbackPreference ?? 'automatic',
+      embedConsent: versionTwo.embedConsent ?? 'ask',
+      allowOfficialAlternateVersions: versionTwo.allowOfficialAlternateVersions ?? true,
+      allowPreviewsWhenFullSongsUnavailable: versionTwo.allowPreviewsWhenFullSongsUnavailable ?? false,
     }
     const result = listenerStateSchema.safeParse(migrated)
     return result.success ? result.data : defaults
@@ -186,7 +219,7 @@ export class ListenerStorage {
       const value = window.localStorage.getItem(this.key)
       if (value) return migrateListenerState(JSON.parse(value) as unknown, this.defaultService)
       const slug = this.key.split(':').at(-1) ?? ''
-      for (const version of [2, 1]) {
+      for (const version of [3, 2, 1]) {
         const legacyKey = `pink-fm:listener:v${version}:${slug}`
         const legacyValue = window.localStorage.getItem(legacyKey)
         if (!legacyValue) continue
@@ -249,6 +282,21 @@ export class ListenerStorage {
     return this.snapshot
   }
 }
+
+export const appendPlaybackEvent = (
+  state: ListenerState,
+  event: PlaybackEventRecord,
+  historyEntry?: HistoryEntry,
+): ListenerState => ({
+  ...state,
+  playbackEvents: [event, ...state.playbackEvents].slice(0, 240),
+  playCounts: event.type === 'playback-started'
+    ? { ...state.playCounts, [event.trackId]: (state.playCounts[event.trackId] ?? 0) + 1 }
+    : state.playCounts,
+  listeningHistory: event.type === 'playback-started' && historyEntry
+    ? [historyEntry, ...state.listeningHistory].slice(0, 80)
+    : state.listeningHistory,
+})
 
 const blendMoodPreference = (current: MoodVector, track: Track, strength = 0.08): MoodVector =>
   Object.fromEntries(

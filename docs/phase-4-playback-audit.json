@@ -1,0 +1,508 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-07-14T14:47:36.946Z",
+  "profile": "siti",
+  "totals": {
+    "activeTracks": 142,
+    "reviewedTracks": 105,
+    "directSpotifyTrackUrls": 11,
+    "spotifyAlbumOnlyUrls": 1,
+    "invalidSpotifyUrls": 0,
+    "spotifyEmbedPlayableTracks": 11,
+    "verifiedYouTubePlayableTracks": 66,
+    "applePreviewTracks": 142,
+    "externalOnlyTracks": 75,
+    "tracksWithoutDestination": 0,
+    "inSitePlayableTracks": 67,
+    "inSitePlaybackPercentage": 47.2,
+    "reviewedRecommendationReadyPercentage": 52.4,
+    "sitiEssentialsPercentage": 80.8
+  },
+  "targets": {
+    "reviewedRecommendationReady80Percent": false,
+    "sitiEssentials90Percent": false,
+    "twelvePlayableReviewedPerMood": {
+      "peaceful": true,
+      "happy": true,
+      "romantic": true,
+      "confident": true,
+      "energised": true,
+      "nostalgic": true,
+      "elegant": true,
+      "comforted": true,
+      "dramatic": true
+    }
+  },
+  "coverageByMood": {
+    "peaceful": {
+      "total": 39,
+      "inSitePlayable": 19,
+      "percentage": 48.7
+    },
+    "happy": {
+      "total": 47,
+      "inSitePlayable": 23,
+      "percentage": 48.9
+    },
+    "romantic": {
+      "total": 68,
+      "inSitePlayable": 37,
+      "percentage": 54.4
+    },
+    "confident": {
+      "total": 67,
+      "inSitePlayable": 28,
+      "percentage": 41.8
+    },
+    "energised": {
+      "total": 41,
+      "inSitePlayable": 23,
+      "percentage": 56.1
+    },
+    "nostalgic": {
+      "total": 69,
+      "inSitePlayable": 44,
+      "percentage": 63.8
+    },
+    "elegant": {
+      "total": 99,
+      "inSitePlayable": 51,
+      "percentage": 51.5
+    },
+    "comforted": {
+      "total": 58,
+      "inSitePlayable": 33,
+      "percentage": 56.9
+    },
+    "dramatic": {
+      "total": 72,
+      "inSitePlayable": 45,
+      "percentage": 62.5
+    }
+  },
+  "coverageByCollection": {
+    "comfort-calm": {
+      "total": 17,
+      "inSitePlayable": 3,
+      "percentage": 17.6
+    },
+    "duets-collaborations": {
+      "total": 18,
+      "inSitePlayable": 4,
+      "percentage": 22.2
+    },
+    "elegant-evenings": {
+      "total": 48,
+      "inSitePlayable": 20,
+      "percentage": 41.7
+    },
+    "festive-frequency": {
+      "total": 6,
+      "inSitePlayable": 5,
+      "percentage": 83.3
+    },
+    "hidden-gems": {
+      "total": 37,
+      "inSitePlayable": 12,
+      "percentage": 32.4
+    },
+    "joyful-upbeat": {
+      "total": 34,
+      "inSitePlayable": 16,
+      "percentage": 47.1
+    },
+    "modern-siti": {
+      "total": 35,
+      "inSitePlayable": 14,
+      "percentage": 40
+    },
+    "nostalgic-classics": {
+      "total": 78,
+      "inSitePlayable": 51,
+      "percentage": 65.4
+    },
+    "powerful-vocals": {
+      "total": 51,
+      "inSitePlayable": 20,
+      "percentage": 39.2
+    },
+    "romantic-siti": {
+      "total": 62,
+      "inSitePlayable": 33,
+      "percentage": 53.2
+    },
+    "siti-essentials": {
+      "total": 26,
+      "inSitePlayable": 21,
+      "percentage": 80.8
+    },
+    "traditional-nusantara": {
+      "total": 27,
+      "inSitePlayable": 12,
+      "percentage": 44.4
+    }
+  },
+  "coverageByEra": {
+    "1990s classics": {
+      "total": 41,
+      "inSitePlayable": 33,
+      "percentage": 80.5
+    },
+    "2000s evolution": {
+      "total": 37,
+      "inSitePlayable": 18,
+      "percentage": 48.6
+    },
+    "2010s contemporary": {
+      "total": 26,
+      "inSitePlayable": 2,
+      "percentage": 7.7
+    },
+    "2020s modern": {
+      "total": 14,
+      "inSitePlayable": 8,
+      "percentage": 57.1
+    },
+    "late 2010s": {
+      "total": 11,
+      "inSitePlayable": 0,
+      "percentage": 0
+    },
+    "recent releases": {
+      "total": 13,
+      "inSitePlayable": 6,
+      "percentage": 46.2
+    }
+  },
+  "coverageByRecommendationReadiness": {
+    "reviewed": {
+      "total": 105,
+      "inSitePlayable": 55,
+      "percentage": 52.4
+    },
+    "metadataVerified": {
+      "total": 37,
+      "inSitePlayable": 12,
+      "percentage": 32.4
+    },
+    "provisional": {
+      "total": 0,
+      "inSitePlayable": 0,
+      "percentage": 0
+    }
+  },
+  "gaps": {
+    "spotifyAlbumOnly": [
+      {
+        "id": "aku-cinta-padamu",
+        "title": "Aku Cinta Padamu",
+        "url": "https://open.spotify.com/album/2qSbdOw1byknZvx0RJsfHL"
+      }
+    ],
+    "invalidSpotify": [],
+    "externalOnly": [
+      {
+        "id": "mahligai-asmara",
+        "title": "Mahligai Asmara"
+      },
+      {
+        "id": "bicara-luka",
+        "title": "Bicara Luka"
+      },
+      {
+        "id": "lelaki-warkah-seorang-anak",
+        "title": "Lelaki (Warkah Seorang Anak)"
+      },
+      {
+        "id": "kedamaian",
+        "title": "Kedamaian"
+      },
+      {
+        "id": "zapin-cinta-asmara",
+        "title": "Zapin Cinta Asmara"
+      },
+      {
+        "id": "canggai",
+        "title": "Canggai"
+      },
+      {
+        "id": "pawana-sampaikanlah-salam",
+        "title": "Pawana Sampaikanlah Salam"
+      },
+      {
+        "id": "berpantun-kasih",
+        "title": "Berpantun Kasih"
+      },
+      {
+        "id": "panas-berteduh-gelap-bersuluh",
+        "title": "Panas Berteduh Gelap Bersuluh"
+      },
+      {
+        "id": "syair-kamelia",
+        "title": "Syair Kamelia"
+      },
+      {
+        "id": "untuk-selamanya",
+        "title": "Untuk Selamanya"
+      },
+      {
+        "id": "oda-bumi-anbia",
+        "title": "Oda Bumi Anbia"
+      },
+      {
+        "id": "airmata-ibu",
+        "title": "Airmata Ibu"
+      },
+      {
+        "id": "pendirianku",
+        "title": "Pendirianku"
+      },
+      {
+        "id": "cahaya-seribu-liku",
+        "title": "Cahaya Seribu Liku"
+      },
+      {
+        "id": "siti-situ-sana-sini",
+        "title": "Siti Situ Sana Sini"
+      },
+      {
+        "id": "cuba-untuk-mengerti",
+        "title": "Cuba Untuk Mengerti"
+      },
+      {
+        "id": "hidup-penuh-bicara",
+        "title": "Hidup Penuh Bicara"
+      },
+      {
+        "id": "intrig-cinta",
+        "title": "Intrig Cinta"
+      },
+      {
+        "id": "ku-mahu",
+        "title": "Ku Mahu"
+      },
+      {
+        "id": "melawan-kesepian",
+        "title": "Melawan Kesepian"
+      },
+      {
+        "id": "mulanya-cinta",
+        "title": "Mulanya Cinta"
+      },
+      {
+        "id": "tanpa-kalian",
+        "title": "Tanpa Kalian"
+      },
+      {
+        "id": "wanita",
+        "title": "Wanita"
+      },
+      {
+        "id": "sekian-lama",
+        "title": "Sekian Lama"
+      },
+      {
+        "id": "di-kayangan-kita",
+        "title": "Di Kayangan Kita"
+      },
+      {
+        "id": "bintang-malam",
+        "title": "Bintang Malam"
+      },
+      {
+        "id": "cinta-ini",
+        "title": "Cinta Ini"
+      },
+      {
+        "id": "seloka-budi",
+        "title": "Seloka Budi"
+      },
+      {
+        "id": "senyum-minang-manis",
+        "title": "Senyum Minang Manis"
+      },
+      {
+        "id": "joget-menanti-kasih",
+        "title": "Joget Menanti Kasih"
+      },
+      {
+        "id": "asma-ul-husna",
+        "title": "Asma Ul Husna"
+      },
+      {
+        "id": "pintu-rindu",
+        "title": "Pintu Rindu"
+      },
+      {
+        "id": "tahajjud-cinta",
+        "title": "Tahajjud Cinta"
+      },
+      {
+        "id": "ku-percaya-ada-cinta",
+        "title": "Ku Percaya Ada Cinta"
+      },
+      {
+        "id": "selawat",
+        "title": "Selawat"
+      },
+      {
+        "id": "all-your-love",
+        "title": "All Your Love"
+      },
+      {
+        "id": "nobody-else",
+        "title": "Nobody Else"
+      },
+      {
+        "id": "falling-in-love",
+        "title": "Falling In Love"
+      },
+      {
+        "id": "fight-for-love",
+        "title": "Fight for Love"
+      },
+      {
+        "id": "remember-you-feat-sean-kingston",
+        "title": "Remember You (feat. Sean Kingston)"
+      },
+      {
+        "id": "aku",
+        "title": "Aku"
+      },
+      {
+        "id": "jaga-dia-untukku",
+        "title": "Jaga Dia Untukku"
+      },
+      {
+        "id": "mula-dan-akhir",
+        "title": "Mula Dan Akhir"
+      },
+      {
+        "id": "terbaik-bagimu",
+        "title": "Terbaik Bagimu"
+      },
+      {
+        "id": "warna-dunia",
+        "title": "Warna Dunia"
+      },
+      {
+        "id": "bersandar-cinta",
+        "title": "Bersandar Cinta"
+      },
+      {
+        "id": "penghiburku-feat-joe-flizzow",
+        "title": "Penghiburku (feat. Joe Flizzow)"
+      },
+      {
+        "id": "ikrar-cinta",
+        "title": "Ikrar Cinta"
+      },
+      {
+        "id": "segala-perasaan",
+        "title": "Segala Perasaan"
+      },
+      {
+        "id": "aku-bukan-malaikat",
+        "title": "Aku Bukan Malaikat"
+      },
+      {
+        "id": "kisah-ku-inginkan",
+        "title": "Kisah Ku Inginkan"
+      },
+      {
+        "id": "siapa-tak-mahu",
+        "title": "Siapa Tak Mahu"
+      },
+      {
+        "id": "tertulis-nama-kita",
+        "title": "Tertulis Nama Kita"
+      },
+      {
+        "id": "7-nasihat",
+        "title": "7 Nasihat"
+      },
+      {
+        "id": "terang",
+        "title": "Terang"
+      },
+      {
+        "id": "tanpa-diri-mu",
+        "title": "Tanpa Diri-Mu"
+      },
+      {
+        "id": "sehebat-matahari-feat-nao-zumar",
+        "title": "Sehebat Matahari (feat. Nao Zumar)"
+      },
+      {
+        "id": "kumbang-bunga",
+        "title": "Kumbang Bunga"
+      },
+      {
+        "id": "hati-yang-rindu",
+        "title": "Hati Yang Rindu"
+      },
+      {
+        "id": "rencong",
+        "title": "Rencong"
+      },
+      {
+        "id": "pesanan-buat-diri",
+        "title": "Pesanan Buat Diri"
+      },
+      {
+        "id": "syurgaloka",
+        "title": "Syurgaloka"
+      },
+      {
+        "id": "cenderamaya",
+        "title": "Cenderamaya"
+      },
+      {
+        "id": "nikmat-hari-raya",
+        "title": "Nikmat Hari Raya"
+      },
+      {
+        "id": "dirgahayu",
+        "title": "Dirgahayu"
+      },
+      {
+        "id": "you-came-to-me-feat-dato-sri-siti-nurhaliza",
+        "title": "You Came to Me (feat. Dato' Sri Siti Nurhaliza)"
+      },
+      {
+        "id": "dua-dunia-feat-siti-nurhaliza",
+        "title": "Dua Dunia (feat. Siti Nurhaliza)"
+      },
+      {
+        "id": "muara-hati",
+        "title": "Muara Hati"
+      },
+      {
+        "id": "galau",
+        "title": "Galau"
+      },
+      {
+        "id": "mikraj-cinta",
+        "title": "Mikraj Cinta"
+      },
+      {
+        "id": "milikmu-selamanya",
+        "title": "Milikmu Selamanya"
+      },
+      {
+        "id": "bersandar-cinta-orchestral",
+        "title": "Bersandar Cinta (feat. Dato' Sri Siti Nurhaliza) [From \"Aubrey Suwito and Friends with the Malaysian Philharmonic Orchestra\"]"
+      },
+      {
+        "id": "ikhlas",
+        "title": "Ikhlas"
+      },
+      {
+        "id": "xiang-shui-yi-yang",
+        "title": "像水一樣"
+      }
+    ],
+    "withoutDestination": [],
+    "mostFrequentlyRecommendedWithoutInSitePlayback": []
+  }
+}
