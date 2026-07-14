@@ -112,6 +112,12 @@ export const slugifyForSource = (value: string) =>
     .replace(/^-|-$/g, '')
     .slice(0, 80)
 
+const slugifyAuthorityName = (value: string) =>
+  normaliseLoose(value)
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 80)
+
 export const normaliseForMatch = (value: string) => {
   let next = value
     .normalize('NFKD')
@@ -257,7 +263,7 @@ export const classifyCatalogueCandidate = (
     reason,
     reviewStatus: matchConfidence === 'exact-high-confidence' ? 'accepted' : 'pending',
     sourceUrl: video.sourceUrl,
-    provenanceSourceId: authority ? `youtube-${slugifyForSource(authority.name)}` : 'youtube-untrusted',
+    provenanceSourceId: authority ? `youtube-${slugifyAuthorityName(authority.name)}` : 'youtube-untrusted',
   }
 }
 
@@ -275,7 +281,7 @@ export const candidateToFullPlaybackSource = (
   const version = youtubeKindToSourceVersion(candidate.versionClassification)
   if (!version) throw new Error(`Cannot convert rejected candidate ${candidate.videoId} to a source.`)
   return {
-    id: `${slugifyForSource(candidate.trackId)}-${slugifyForSource(candidate.versionClassification)}-${candidate.videoId}`,
+    id: `${slugifyForSource(candidate.trackId)}-${slugifyForSource(candidate.versionClassification)}-${slugifyForSource(candidate.videoId)}`,
     provider: 'youtube',
     videoId: candidate.videoId,
     version,

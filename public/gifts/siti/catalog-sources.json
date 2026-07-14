@@ -353,6 +353,22 @@
       "url": "https://www.youtube.com/channel/UCquIzvgQ4PxPDZqFXhuT_gw",
       "checkedAt": "2026-07-14",
       "notes": "Reviewed licensed broadcaster channel used for full-song embedded playback candidates."
+    },
+    {
+      "id": "youtube-suriarecords-src",
+      "type": "official-youtube-channel",
+      "provider": "YouTube",
+      "url": "https://www.youtube.com/channel/UCBd5pENmJrvi6PQq-2ndBhw",
+      "checkedAt": "2026-07-14",
+      "notes": "Trusted label-official source used for Phase 4.2 full-song playback acquisition."
+    },
+    {
+      "id": "youtube-siti-nurhaliza",
+      "type": "official-youtube-channel",
+      "provider": "YouTube",
+      "url": "https://www.youtube.com/channel/UCNq-mu-iXUmiAWyDOcJmZZg",
+      "checkedAt": "2026-07-14",
+      "notes": "Trusted artist-official source used for Phase 4.2 full-song playback acquisition."
     }
   ],
   "trackVerification": {

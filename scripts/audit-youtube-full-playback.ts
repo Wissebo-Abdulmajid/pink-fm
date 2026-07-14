@@ -24,7 +24,9 @@ const unavailable = active.filter((track) => track.playbackCoverage === 'unavail
 const allSources = active.flatMap((track) => track.fullPlaybackSources.map((source) => ({ track, source })))
 const phase42CandidatesPath = resolve(docsRoot, 'phase-4-2-youtube-candidates.json')
 const phase42Candidates = existsSync(phase42CandidatesPath)
-  ? (JSON.parse(readFileSync(phase42CandidatesPath, 'utf8')) as { candidates?: Array<{ matchConfidence?: string; reason?: string }> }).candidates ?? []
+  ? (JSON.parse(readFileSync(phase42CandidatesPath, 'utf8')) as {
+      candidates?: Array<{ matchConfidence?: string; reason?: string; reviewStatus?: string }>
+    }).candidates ?? []
   : []
 
 const countBy = (items: Track[], key: (track: Track) => string | string[]) => {
@@ -38,6 +40,18 @@ const countBy = (items: Track[], key: (track: Track) => string | string[]) => {
   }
   return Object.fromEntries(Object.entries(counts).sort(([left], [right]) => left.localeCompare(right)))
 }
+
+const candidateReviewStatusCounts = Object.fromEntries(
+  Object.entries(
+    phase42Candidates.reduce<Record<string, number>>((counts, candidate) => {
+      const status = candidate.reviewStatus ?? 'unreviewed'
+      return {
+        ...counts,
+        [status]: (counts[status] ?? 0) + 1,
+      }
+    }, {}),
+  ).sort(([left], [right]) => left.localeCompare(right)),
+)
 
 const fullByMood = Object.fromEntries(
   moodDimensionKeys.map((mood) => [mood, full.filter((track) => track.moods[mood] >= 55).length]),
@@ -96,7 +110,8 @@ const report = {
         }), {}),
       ).sort(([left], [right]) => left.localeCompare(right)),
     ),
-    rejectedCandidates: phase42Candidates.filter((candidate) => candidate.matchConfidence === 'rejected').length,
+    candidateReviewStatusCounts,
+    rejectedCandidates: phase42Candidates.filter((candidate) => candidate.reviewStatus === 'rejected').length,
     ambiguousCandidates: phase42Candidates.filter((candidate) => candidate.matchConfidence === 'ambiguous').length,
     primarySourceFailureSimulations: full.length,
     backupSourceSuccessRate: full.length === 0
@@ -200,8 +215,11 @@ writeFileSync(
     '',
     '## Candidate Review Summary',
     '',
-    `- Rejected candidates: ${report.phase42.rejectedCandidates}`,
+    `- Literal rejected candidates: ${report.phase42.rejectedCandidates}`,
     `- Ambiguous candidates: ${report.phase42.ambiguousCandidates}`,
+    ...Object.entries(report.phase42.candidateReviewStatusCounts).map(([status, count]) =>
+      `- ${status}: ${count}`
+    ),
     '',
     'This audit counts only `full-subscription-free` sources toward guaranteed radio coverage. Apple previews, Spotify embeds and external destinations are reported separately and do not satisfy Phase 4.2 full-song coverage.',
     '',

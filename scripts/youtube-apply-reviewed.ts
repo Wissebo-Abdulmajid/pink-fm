@@ -38,6 +38,12 @@ const tracksFile = loadTracksFile(slug)
 const candidates = readJsonFile<CandidateFile>(candidatesPath).candidates
 const applicable = candidates.filter(candidateCanBeApplied)
 const byTrackId = new Map<string, CatalogueVideoCandidate[]>()
+const versionPriority = (candidate: CatalogueVideoCandidate) => {
+  if (candidate.versionClassification === 'official-music-video') return 0
+  if (candidate.versionClassification === 'official-audio' || candidate.versionClassification === 'youtube-topic') return 1
+  if (candidate.versionClassification === 'official-lyric-video') return 2
+  return 3
+}
 
 for (const candidate of applicable) {
   byTrackId.set(candidate.trackId, [...(byTrackId.get(candidate.trackId) ?? []), candidate])
@@ -53,6 +59,12 @@ const nextTracks: TracksFile = {
     const existingVideoIds = new Set(track.fullPlaybackSources.map((source) => source.videoId))
     const newSources = additions
       .filter((candidate) => !existingVideoIds.has(candidate.videoId))
+      .sort((left, right) =>
+        versionPriority(left) - versionPriority(right) ||
+        (right.durationSeconds ?? 0) - (left.durationSeconds ?? 0) ||
+        left.videoId.localeCompare(right.videoId)
+      )
+      .slice(0, Math.max(0, 8 - track.fullPlaybackSources.length))
       .map((candidate, index) => candidateToFullPlaybackSource({
         ...candidate,
         proposedPriority: track.fullPlaybackSources.length + index + 1,

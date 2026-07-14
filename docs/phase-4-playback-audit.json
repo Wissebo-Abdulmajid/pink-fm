@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-14T13:02:50.571Z",
+  "generatedAt": "2026-07-14T13:40:09.140Z",
   "profile": "siti",
   "totals": {
     "activeTracks": 142,
@@ -9,107 +9,107 @@
     "spotifyAlbumOnlyUrls": 1,
     "invalidSpotifyUrls": 0,
     "spotifyEmbedPlayableTracks": 11,
-    "verifiedYouTubePlayableTracks": 15,
+    "verifiedYouTubePlayableTracks": 54,
     "applePreviewTracks": 142,
-    "externalOnlyTracks": 126,
+    "externalOnlyTracks": 87,
     "tracksWithoutDestination": 0,
-    "inSitePlayableTracks": 16,
-    "inSitePlaybackPercentage": 11.3,
-    "reviewedRecommendationReadyPercentage": 15.2,
-    "sitiEssentialsPercentage": 61.5
+    "inSitePlayableTracks": 55,
+    "inSitePlaybackPercentage": 38.7,
+    "reviewedRecommendationReadyPercentage": 42.9,
+    "sitiEssentialsPercentage": 69.2
   },
   "targets": {
     "reviewedRecommendationReady80Percent": false,
     "sitiEssentials90Percent": false,
     "twelvePlayableReviewedPerMood": {
-      "peaceful": false,
-      "happy": false,
+      "peaceful": true,
+      "happy": true,
       "romantic": true,
-      "confident": false,
-      "energised": false,
-      "nostalgic": false,
+      "confident": true,
+      "energised": true,
+      "nostalgic": true,
       "elegant": true,
-      "comforted": false,
+      "comforted": true,
       "dramatic": true
     }
   },
   "coverageByMood": {
     "peaceful": {
       "total": 39,
-      "inSitePlayable": 7,
-      "percentage": 17.9
+      "inSitePlayable": 16,
+      "percentage": 41
     },
     "happy": {
       "total": 47,
-      "inSitePlayable": 7,
-      "percentage": 14.9
+      "inSitePlayable": 18,
+      "percentage": 38.3
     },
     "romantic": {
       "total": 68,
-      "inSitePlayable": 12,
-      "percentage": 17.6
+      "inSitePlayable": 30,
+      "percentage": 44.1
     },
     "confident": {
       "total": 67,
-      "inSitePlayable": 8,
-      "percentage": 11.9
+      "inSitePlayable": 22,
+      "percentage": 32.8
     },
     "energised": {
       "total": 41,
-      "inSitePlayable": 5,
-      "percentage": 12.2
+      "inSitePlayable": 17,
+      "percentage": 41.5
     },
     "nostalgic": {
       "total": 69,
-      "inSitePlayable": 11,
-      "percentage": 15.9
+      "inSitePlayable": 38,
+      "percentage": 55.1
     },
     "elegant": {
       "total": 99,
-      "inSitePlayable": 16,
-      "percentage": 16.2
+      "inSitePlayable": 42,
+      "percentage": 42.4
     },
     "comforted": {
       "total": 58,
-      "inSitePlayable": 11,
-      "percentage": 19
+      "inSitePlayable": 28,
+      "percentage": 48.3
     },
     "dramatic": {
       "total": 72,
-      "inSitePlayable": 13,
-      "percentage": 18.1
+      "inSitePlayable": 37,
+      "percentage": 51.4
     }
   },
   "coverageByCollection": {
     "comfort-calm": {
       "total": 17,
-      "inSitePlayable": 1,
-      "percentage": 5.9
+      "inSitePlayable": 2,
+      "percentage": 11.8
     },
     "duets-collaborations": {
       "total": 18,
-      "inSitePlayable": 1,
-      "percentage": 5.6
+      "inSitePlayable": 3,
+      "percentage": 16.7
     },
     "elegant-evenings": {
       "total": 48,
-      "inSitePlayable": 7,
-      "percentage": 14.6
+      "inSitePlayable": 20,
+      "percentage": 41.7
     },
     "festive-frequency": {
       "total": 6,
-      "inSitePlayable": 0,
-      "percentage": 0
+      "inSitePlayable": 4,
+      "percentage": 66.7
     },
     "hidden-gems": {
       "total": 37,
-      "inSitePlayable": 0,
-      "percentage": 0
+      "inSitePlayable": 10,
+      "percentage": 27
     },
     "joyful-upbeat": {
       "total": 34,
-      "inSitePlayable": 2,
-      "percentage": 5.9
+      "inSitePlayable": 14,
+      "percentage": 41.2
     },
     "modern-siti": {
       "total": 35,
@@ -118,40 +118,40 @@
     },
     "nostalgic-classics": {
       "total": 78,
-      "inSitePlayable": 12,
-      "percentage": 15.4
+      "inSitePlayable": 51,
+      "percentage": 65.4
     },
     "powerful-vocals": {
       "total": 51,
-      "inSitePlayable": 4,
-      "percentage": 7.8
+      "inSitePlayable": 15,
+      "percentage": 29.4
     },
     "romantic-siti": {
       "total": 62,
-      "inSitePlayable": 11,
-      "percentage": 17.7
+      "inSitePlayable": 28,
+      "percentage": 45.2
     },
     "siti-essentials": {
       "total": 26,
-      "inSitePlayable": 16,
-      "percentage": 61.5
+      "inSitePlayable": 18,
+      "percentage": 69.2
     },
     "traditional-nusantara": {
       "total": 27,
-      "inSitePlayable": 3,
-      "percentage": 11.1
+      "inSitePlayable": 12,
+      "percentage": 44.4
     }
   },
   "coverageByEra": {
     "1990s classics": {
       "total": 41,
-      "inSitePlayable": 7,
-      "percentage": 17.1
+      "inSitePlayable": 33,
+      "percentage": 80.5
     },
     "2000s evolution": {
       "total": 37,
-      "inSitePlayable": 5,
-      "percentage": 13.5
+      "inSitePlayable": 18,
+      "percentage": 48.6
     },
     "2010s contemporary": {
       "total": 26,
@@ -177,13 +177,13 @@
   "coverageByRecommendationReadiness": {
     "reviewed": {
       "total": 105,
-      "inSitePlayable": 16,
-      "percentage": 15.2
+      "inSitePlayable": 45,
+      "percentage": 42.9
     },
     "metadataVerified": {
       "total": 37,
-      "inSitePlayable": 0,
-      "percentage": 0
+      "inSitePlayable": 10,
+      "percentage": 27
     },
     "provisional": {
       "total": 0,
@@ -202,92 +202,12 @@
     "invalidSpotify": [],
     "externalOnly": [
       {
-        "id": "jawapan-di-persimpangan",
-        "title": "Jawapan Di Persimpangan"
-      },
-      {
         "id": "mahligai-asmara",
         "title": "Mahligai Asmara"
       },
       {
-        "id": "antara-waktu-dan-usia",
-        "title": "Antara Waktu Dan Usia"
-      },
-      {
-        "id": "sanggar-bayu",
-        "title": "Sanggar Bayu"
-      },
-      {
         "id": "bicara-luka",
         "title": "Bicara Luka"
-      },
-      {
-        "id": "kesilapanku-keegoanmu",
-        "title": "Kesilapanku, Keegoanmu"
-      },
-      {
-        "id": "khayalan-cinta",
-        "title": "Khayalan Cinta"
-      },
-      {
-        "id": "usah-diragui",
-        "title": "Usah Diragui"
-      },
-      {
-        "id": "rindu-di-antara-kita",
-        "title": "Rindu Di Antara Kita"
-      },
-      {
-        "id": "laksamana-mati-dibunuh",
-        "title": "Laksamana Mati Dibunuh"
-      },
-      {
-        "id": "janji",
-        "title": "Janji"
-      },
-      {
-        "id": "lela-manja",
-        "title": "Lela Manja"
-      },
-      {
-        "id": "joget-pahang",
-        "title": "Joget Pahang"
-      },
-      {
-        "id": "joget-berhibur",
-        "title": "Joget Berhibur"
-      },
-      {
-        "id": "sendiri",
-        "title": "Sendiri"
-      },
-      {
-        "id": "diari-hatimu",
-        "title": "Diari Hatimu"
-      },
-      {
-        "id": "satu-cinta-dua-jiwa",
-        "title": "Satu Cinta Dua Jiwa"
-      },
-      {
-        "id": "tak-boleh-lupa",
-        "title": "Tak Boleh Lupa"
-      },
-      {
-        "id": "gelora-asmara",
-        "title": "Gelora Asmara"
-      },
-      {
-        "id": "nian-di-hati",
-        "title": "Nian Di Hati"
-      },
-      {
-        "id": "seribu-kemanisan",
-        "title": "Seribu Kemanisan"
-      },
-      {
-        "id": "engkau-bagaikan-permata",
-        "title": "Engkau Bagaikan Permata"
       },
       {
         "id": "lelaki-warkah-seorang-anak",
@@ -296,10 +216,6 @@
       {
         "id": "kedamaian",
         "title": "Kedamaian"
-      },
-      {
-        "id": "joget-kasih-tak-sudah",
-        "title": "Joget Kasih Tak Sudah"
       },
       {
         "id": "zapin-cinta-asmara",
@@ -318,48 +234,12 @@
         "title": "Berpantun Kasih"
       },
       {
-        "id": "azimat-cinta",
-        "title": "Azimat Cinta"
-      },
-      {
-        "id": "bicara-manis-menghiris-kalbu",
-        "title": "Bicara Manis Menghiris Kalbu"
-      },
-      {
-        "id": "jalinan-cinta",
-        "title": "Jalinan Cinta"
-      },
-      {
-        "id": "indah-percintaan",
-        "title": "Indah Percintaan"
-      },
-      {
-        "id": "lakaran-kehidupan",
-        "title": "Lakaran Kehidupan"
-      },
-      {
-        "id": "joget-senyum-memikat",
-        "title": "Joget Senyum Memikat"
-      },
-      {
         "id": "panas-berteduh-gelap-bersuluh",
         "title": "Panas Berteduh Gelap Bersuluh"
       },
       {
-        "id": "kurik-kundi",
-        "title": "Kurik Kundi"
-      },
-      {
-        "id": "badarsila",
-        "title": "Badarsila"
-      },
-      {
         "id": "syair-kamelia",
         "title": "Syair Kamelia"
-      },
-      {
-        "id": "debaran-cinta",
-        "title": "Debaran Cinta"
       },
       {
         "id": "untuk-selamanya",
@@ -370,36 +250,16 @@
         "title": "Oda Bumi Anbia"
       },
       {
-        "id": "janji-kasih",
-        "title": "Janji Kasih"
-      },
-      {
         "id": "airmata-ibu",
         "title": "Airmata Ibu"
-      },
-      {
-        "id": "dialah-di-hati",
-        "title": "Dialah Di Hati"
       },
       {
         "id": "pendirianku",
         "title": "Pendirianku"
       },
       {
-        "id": "cinta-tak-berganti",
-        "title": "Cinta Tak Berganti"
-      },
-      {
         "id": "cahaya-seribu-liku",
         "title": "Cahaya Seribu Liku"
-      },
-      {
-        "id": "lagu-rindu",
-        "title": "Lagu Rindu"
-      },
-      {
-        "id": "pejam-matamu",
-        "title": "Pejam Matamu"
       },
       {
         "id": "siti-situ-sana-sini",
@@ -626,24 +486,8 @@
         "title": "Cenderamaya"
       },
       {
-        "id": "aidilfitri-di-alaf-baru",
-        "title": "Aidilfitri Di Alaf Baru"
-      },
-      {
         "id": "nikmat-hari-raya",
         "title": "Nikmat Hari Raya"
-      },
-      {
-        "id": "sesuci-lebaran",
-        "title": "Sesuci Lebaran"
-      },
-      {
-        "id": "nazam-lebaran",
-        "title": "Nazam Lebaran"
-      },
-      {
-        "id": "bila-hari-raya-menjelma",
-        "title": "Bila Hari Raya Menjelma"
       },
       {
         "id": "dirgahayu",

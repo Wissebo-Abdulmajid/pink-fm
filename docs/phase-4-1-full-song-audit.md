@@ -2,42 +2,42 @@
 
 - Total catalogue tracks: 142
 - Active tracks: 142
-- Guaranteed full-subscription-free tracks: 15
-- Official music videos: 14
-- Official audio / Topic-style sources: 7
+- Guaranteed full-subscription-free tracks: 54
+- Official music videos: 55
+- Official audio / Topic-style sources: 38
 - Official live / alternate sources: 3
-- Tracks with two or more sources: 9
-- Tracks with one source: 6
-- Preview-only tracks: 127
+- Tracks with two or more sources: 36
+- Tracks with one source: 18
+- Preview-only tracks: 88
 - External-only tracks: 0
 - Unavailable tracks: 0
 - Generated main-radio recommendation guarantee: 100%
-- Gap to 80 verified full-playable Siti tracks: 65
-- Gap to 100 preferred verified full-playable Siti tracks: 85
+- Gap to 80 verified full-playable Siti tracks: 26
+- Gap to 100 preferred verified full-playable Siti tracks: 46
 
 ## Full-Playable By Mood
 
-- peaceful: 8
-- happy: 7
-- romantic: 12
-- confident: 12
-- energised: 5
-- nostalgic: 11
-- elegant: 15
-- comforted: 11
-- dramatic: 13
+- peaceful: 27
+- happy: 25
+- romantic: 39
+- confident: 41
+- energised: 22
+- nostalgic: 44
+- elegant: 52
+- comforted: 41
+- dramatic: 45
 
 ## Recommendation Guarantee Checks
 
-- peaceful: jerat-percintaan (full-subscription-free)
-- happy: lebih-indah (full-subscription-free)
-- romantic: lebih-indah (full-subscription-free)
-- confident: balqis (full-subscription-free)
-- energised: balqis (full-subscription-free)
-- nostalgic: bukan-cinta-biasa (full-subscription-free)
-- elegant: destinasi-cinta (full-subscription-free)
-- comforted: lebih-indah (full-subscription-free)
-- dramatic: jerat-percintaan (full-subscription-free)
+- peaceful: indah-percintaan (full-subscription-free)
+- happy: janji-kasih (full-subscription-free)
+- romantic: seribu-kemanisan (full-subscription-free)
+- confident: pejam-matamu (full-subscription-free)
+- energised: dialah-di-hati (full-subscription-free)
+- nostalgic: janji-kasih (full-subscription-free)
+- elegant: biarlah-rahsia (full-subscription-free)
+- comforted: lela-manja (full-subscription-free)
+- dramatic: balqis (full-subscription-free)
 
 ## Limitation
 

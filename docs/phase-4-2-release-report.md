@@ -2,81 +2,91 @@
 
 ## Summary
 
-Phase 4.2 adds a trusted-channel YouTube acquisition and review pipeline, candidate review reports, a hidden manual playback-test route, stricter authority notes, and Phase 4.2 audit outputs.
+Phase 4.2 completed a conservative YouTube trusted-channel acquisition review for the Siti profile. The temporary local `YOUTUBE_DATA_API_KEY` was used before this report was written; it was not printed, persisted, committed or added to project files.
 
-No new YouTube sources were activated in this environment because `YOUTUBE_DATA_API_KEY` is not set and there is no cached trusted-channel upload dataset. The full-song catalogue therefore remains at the Phase 4.1 baseline of 15 verified full-subscription-free Siti tracks.
+The review accepted only clear full-length, embeddable, official trusted-channel uploads with matching track identity and recorded provenance. It did not force the requested 60-track target. The final audited result is 54 guaranteed full-subscription-free tracks, leaving a gap of 6 tracks to the 60-track milestone.
 
-## Baseline
+## Candidate Review
 
-- Starting commit: `f040829296a1f0c7f62c35d20c99aec83870e6da`
-- Branch: `feature/youtube-catalog-expansion`
-- Baseline tests: 144 passing tests across 21 files.
-- Baseline guaranteed full-subscription-free tracks: 15.
-- Baseline generated main-radio guarantee: 100%.
+- Candidate records reviewed: 1,852
+- Accepted exact official candidates: 72
+- Accepted candidate tracks: 49
+- New full-playable tracks added: 39
+- Wrong song: 1,269
+- Medley / compilation: 329
+- Needs listening review: 95
+- Duplicate / lower-priority backup: 46
+- Preview / short duration: 29
+- Alternate / live / acoustic version: 12
+- Pending candidates: 0
 
-## Final audited coverage
-
-- Total active tracks: 142.
-- Full-playable tracks: 15.
-- New active source count: 0.
-- Tracks with two or more sources: 9.
-- Tracks with one source: 6.
-- Official music videos: 14.
-- Official audio sources: 7.
-- Topic sources: 1.
-- Official lyric videos identified by source ID: 5.
-- Live and alternate sources: 3.
-- Preview-only tracks: 127.
-- External-only tracks: 0.
-- Unavailable tracks: 0.
-- Target gap to 60 full-playable tracks: 45.
-- Target gap to 80 full-playable tracks: 65.
-- Target gap to 100 full-playable tracks: 85.
-
-## Coverage by mood
-
-- peaceful: 8
-- happy: 7
-- romantic: 12
-- confident: 12
-- energised: 5
-- nostalgic: 11
-- elegant: 15
-- comforted: 11
-- dramatic: 13
-
-## Coverage by collection
-
-- comfort-calm: 1
-- elegant-evenings: 7
-- joyful-upbeat: 2
-- modern-siti: 2
-- nostalgic-classics: 12
-- powerful-vocals: 3
-- romantic-siti: 10
-- siti-essentials: 15
-- traditional-nusantara: 3
-
-## Trusted authorities used
+Accepted sources came only from the registered active authorities in `public/gifts/siti/youtube-authorities.json`:
 
 - `UCNq-mu-iXUmiAWyDOcJmZZg` — Siti Nurhaliza — artist-official
 - `UCBd5pENmJrvi6PQq-2ndBhw` — SuriaRecords (SRC) — label-official
 - `UCquIzvgQ4PxPDZqFXhuT_gw` — MVM MUSIC — licensed-broadcaster
 
-## Acquisition result
+## Final Audited Coverage
 
-- API key present: no.
-- API calls made: 0.
-- Estimated YouTube quota used: 0.
-- Discovered upload cache records: 0.
-- Automatically matched records: 0.
-- Manually reviewed records: 0.
-- Rejected candidates: 0.
-- Ambiguous candidates: 0.
+- Total active tracks: 142
+- Full-playable tracks: 54
+- Preview-only tracks: 88
+- New active YouTube source count: 72
+- Total full-playback sources: 96
+- Tracks with two or more sources: 36
+- Tracks with one source: 18
+- Official music videos: 55
+- Official audio / lyric-video sources: 38
+- Live and alternate sources: 3
+- Broken source count: 0
+- Target gap to 60 full-playable tracks: 6
+- Target gap to 80 full-playable tracks: 26
+- Target gap to 100 full-playable tracks: 46
 
-The tooling is ready for a reviewer to run with a local `YOUTUBE_DATA_API_KEY`, but no live acquisition was performed during this Codex run.
+## Coverage by Mood
 
-## Guarantee status
+- peaceful: 27
+- happy: 25
+- romantic: 39
+- confident: 41
+- energised: 22
+- nostalgic: 44
+- elegant: 52
+- comforted: 41
+- dramatic: 45
+
+## Coverage by Collection
+
+- comfort-calm: 2
+- duets-collaborations: 2
+- elegant-evenings: 20
+- festive-frequency: 4
+- hidden-gems: 10
+- joyful-upbeat: 14
+- modern-siti: 2
+- nostalgic-classics: 51
+- powerful-vocals: 14
+- romantic-siti: 27
+- siti-essentials: 17
+- traditional-nusantara: 12
+
+## Source Authority Counts
+
+- artist-official: 70
+- label-official: 24
+- licensed-broadcaster: 2
+
+## QA Status
+
+- `npm.cmd run youtube:apply-reviewed -- --slug=siti --apply`: passed; added 72 sources and raised full coverage from 15 to 54 tracks.
+- `npm.cmd run youtube:recheck -- --slug=siti`: passed.
+- `npm.cmd run youtube:verify -- --slug=siti`: passed.
+- `npm.cmd run youtube:audit -- --slug=siti`: passed.
+- `npm.cmd run verify`: passed with the existing artwork fallback and partial-album coverage warnings.
+- `npm.cmd run build`: passed for `/`.
+- `VITE_BASE_PATH=/pink-fm/ npm.cmd run build`: passed for `/pink-fm/`.
+
+## Guarantee Status
 
 - Main radio recommendation guarantee: 100% in structural audit.
 - WisseBot guarantee: preserved through the existing full-song recommendation context.
@@ -87,22 +97,8 @@ The tooling is ready for a reviewer to run with a local `YOUTUBE_DATA_API_KEY`, 
 - No provider credential committed: preserved.
 - No untrusted upload activated: preserved.
 
-## QA status
+## Honest Limitations
 
-- TypeScript: passed.
-- ESLint: passed.
-- Tests: 151 passing across 22 files.
-- Content validation: passed with the existing artwork fallback warning.
-- Catalogue audit: passed with the existing partial-album coverage warnings.
-- Playback audit: passed.
-- YouTube source audit: passed structurally; live API checks skipped because no key is set.
-- Root build: passed.
-- `/pink-fm/` build: passed.
-- Root browser QA: passed, 29 checks, zero unexpected console errors.
-- `/pink-fm/` browser QA: blocked by Chromium/Edge GPU persistent-cache launch failure after the Pages build passed and a fresh Pages preview returned HTTP 200.
-- Real YouTube playback: pending outside restricted environment.
-- Physical Android/iPhone tests: not performed.
+The 60-track full-song target was not reached. The remaining gap is intentional: candidates with wrong identity, compilation/medley structure, unclear labels, live/alternate versions, short duration, duplicate evidence or listening-review uncertainty were not accepted merely to improve the count.
 
-## Unresolved limitation
-
-The requested catalogue expansion target cannot be honestly satisfied in this run without a YouTube Data API key, cached trusted-channel uploads, or manually reviewed source data. The implementation deliberately reports the gap rather than fabricating sources.
+Real YouTube playback can still vary by region, account, cookies, blockers and YouTube policy changes. The local structural verifier confirms trusted channels, embeddability flags, durations, full-length flags, provenance and source URL consistency; it does not guarantee future real-world playback availability.
