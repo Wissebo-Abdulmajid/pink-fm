@@ -42,8 +42,8 @@ describe('catalogue playback integrity', () => {
 
   it('counts only full-subscription-free tracks as guaranteed radio coverage', () => {
     const full = tracks.filter((track) => isRadioEligible(track))
-    expect(full).toHaveLength(54)
-    expect(tracks.filter((track) => track.playbackCoverage === 'preview-only')).toHaveLength(88)
+    expect(full).toHaveLength(66)
+    expect(tracks.filter((track) => track.playbackCoverage === 'preview-only')).toHaveLength(76)
     expect(full.every((track) => track.fullPlaybackSources.some((source) => source.priority === 1))).toBe(true)
   })
 

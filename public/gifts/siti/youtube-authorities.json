@@ -27,6 +27,24 @@
       "evidenceUrl": "https://www.youtube.com/channel/UCquIzvgQ4PxPDZqFXhuT_gw",
       "verifiedAt": "2026-07-14",
       "notes": "Licensed broadcaster channel already represented by an accepted Phase 4.1 source. Additional uploads require explicit review before activation."
+    },
+    {
+      "channelId": "UCQ6Zv5O57OuG9y3WIbnCHSQ",
+      "name": "Siti Nurhaliza Official Artist Channel",
+      "authority": "artist-official",
+      "active": true,
+      "evidenceUrl": "https://www.youtube.com/@sitinurhaliza",
+      "verifiedAt": "2026-07-14",
+      "notes": "Artist-official YouTube channel verified during Phase 4.3 via YouTube oEmbed author URL @sitinurhaliza and watch-page owner metadata on accepted full-length official lyric/music-video sources."
+    },
+    {
+      "channelId": "UCNO_HN4PCwAIjlGBZiv8_6A",
+      "name": "Universal Music Malaysia",
+      "authority": "label-official",
+      "active": true,
+      "evidenceUrl": "https://www.youtube.com/channel/UCNO_HN4PCwAIjlGBZiv8_6A",
+      "verifiedAt": "2026-07-14",
+      "notes": "Label-official YouTube channel verified during Phase 4.3 via YouTube oEmbed and watch-page owner metadata for the accepted official Sesal music video."
     }
   ]
 }

@@ -2,57 +2,58 @@
   "slug": "siti",
   "totalCatalogueTracks": 142,
   "activeTracks": 142,
-  "guaranteedFullSubscriptionFreeTracks": 54,
-  "exactStudioFullSources": 38,
-  "officialMusicVideos": 55,
-  "officialAudioTopicSources": 38,
+  "guaranteedFullSubscriptionFreeTracks": 66,
+  "exactStudioFullSources": 44,
+  "officialMusicVideos": 61,
+  "officialAudioTopicSources": 44,
   "officialLiveAlternateSources": 3,
   "tracksWithTwoOrMoreSources": 36,
-  "tracksWithOneSource": 18,
-  "previewOnlyTracks": 88,
+  "tracksWithOneSource": 30,
+  "previewOnlyTracks": 76,
   "externalOnlyTracks": 0,
   "unavailableTracks": 0,
   "fullPlayableByMood": {
-    "peaceful": 27,
-    "happy": 25,
-    "romantic": 39,
-    "confident": 41,
-    "energised": 22,
-    "nostalgic": 44,
-    "elegant": 52,
-    "comforted": 41,
-    "dramatic": 45
+    "peaceful": 33,
+    "happy": 31,
+    "romantic": 48,
+    "confident": 50,
+    "energised": 28,
+    "nostalgic": 51,
+    "elegant": 63,
+    "comforted": 49,
+    "dramatic": 54
   },
   "fullPlayableByCollection": {
-    "comfort-calm": 2,
-    "duets-collaborations": 2,
+    "comfort-calm": 3,
+    "duets-collaborations": 3,
     "elegant-evenings": 20,
-    "festive-frequency": 4,
-    "hidden-gems": 10,
-    "joyful-upbeat": 14,
-    "modern-siti": 2,
+    "festive-frequency": 5,
+    "hidden-gems": 12,
+    "joyful-upbeat": 16,
+    "modern-siti": 14,
     "nostalgic-classics": 51,
-    "powerful-vocals": 14,
-    "romantic-siti": 27,
-    "siti-essentials": 17,
+    "powerful-vocals": 19,
+    "romantic-siti": 32,
+    "siti-essentials": 20,
     "traditional-nusantara": 12
   },
   "fullPlayableByEra": {
     "1990s classics": 33,
     "2000s evolution": 18,
     "2010s contemporary": 1,
-    "2020s modern": 2
+    "2020s modern": 8,
+    "recent releases": 6
   },
   "recommendationGuaranteePercentage": 100,
   "recommendationChecks": [
     {
       "mood": "peaceful",
-      "trackId": "indah-percintaan",
+      "trackId": "sesal",
       "guaranteedFull": true
     },
     {
       "mood": "happy",
-      "trackId": "janji-kasih",
+      "trackId": "lebih-indah",
       "guaranteedFull": true
     },
     {
@@ -62,7 +63,7 @@
     },
     {
       "mood": "confident",
-      "trackId": "pejam-matamu",
+      "trackId": "azimat-cinta",
       "guaranteedFull": true
     },
     {
@@ -72,7 +73,7 @@
     },
     {
       "mood": "nostalgic",
-      "trackId": "janji-kasih",
+      "trackId": "debaran-cinta",
       "guaranteedFull": true
     },
     {
@@ -87,39 +88,40 @@
     },
     {
       "mood": "dramatic",
-      "trackId": "balqis",
+      "trackId": "sanggar-bayu",
       "guaranteedFull": true
     }
   ],
-  "replacementRateInSimulation": 0.619718309859155,
+  "replacementRateInSimulation": 0.5352112676056338,
   "secondaryArtistFallbackRate": 0,
   "brokenSourceCount": 0,
   "phase42": {
-    "officialLyricVideos": 36,
+    "officialLyricVideos": 42,
     "topicSources": 1,
     "sourceAuthorityCounts": {
-      "artist-official": 70,
-      "label-official": 24,
+      "artist-official": 81,
+      "label-official": 25,
       "licensed-broadcaster": 2
     },
     "candidateReviewStatusCounts": {
-      "accepted": 72,
+      "accepted": 84,
       "alternate-version": 12,
       "duplicate": 46,
       "medley": 329,
       "needs-listening-review": 95,
       "preview": 29,
+      "rejected": 2,
       "wrong-song": 1269
     },
-    "rejectedCandidates": 0,
+    "rejectedCandidates": 2,
     "ambiguousCandidates": 1555,
-    "primarySourceFailureSimulations": 54,
-    "backupSourceSuccessRate": 0.6666666666666666,
-    "nearestTrackRetuneRate": 0.6197183098591549
+    "primarySourceFailureSimulations": 66,
+    "backupSourceSuccessRate": 0.5454545454545454,
+    "nearestTrackRetuneRate": 0.5352112676056338
   },
   "targetGap": {
-    "minimum80Tracks": 26,
-    "preferred100Tracks": 46
+    "minimum80Tracks": 14,
+    "preferred100Tracks": 34
   },
   "nonFullTrackIds": [
     "seluruh-cinta",
@@ -178,21 +180,14 @@
     "siapa-tak-mahu",
     "tertulis-nama-kita",
     "7-nasihat",
-    "kuasa-cintamu",
     "terang",
-    "menyapa-dunia",
     "tanpa-diri-mu",
     "sehebat-matahari-feat-nao-zumar",
-    "romansa-kita",
-    "teratas",
-    "menjaga-cintamu-original-soundtrack-from-anwar-the-untold-story",
-    "magis",
     "kumbang-bunga",
     "hati-yang-rindu",
     "rencong",
     "pesanan-buat-diri",
     "syurgaloka",
-    "kesuma",
     "cenderamaya",
     "nikmat-hari-raya",
     "dirgahayu",
@@ -204,11 +199,6 @@
     "milikmu-selamanya",
     "bersandar-cinta-orchestral",
     "ikhlas",
-    "cinta-tak-mungkin",
-    "sejarah",
-    "menamakanmu-cinta",
-    "sesal",
-    "beraya-dengan-saya",
     "xiang-shui-yi-yang"
   ]
 }

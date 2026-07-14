@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-14T13:40:09.140Z",
+  "generatedAt": "2026-07-14T14:47:36.946Z",
   "profile": "siti",
   "totals": {
     "activeTracks": 142,
@@ -9,14 +9,14 @@
     "spotifyAlbumOnlyUrls": 1,
     "invalidSpotifyUrls": 0,
     "spotifyEmbedPlayableTracks": 11,
-    "verifiedYouTubePlayableTracks": 54,
+    "verifiedYouTubePlayableTracks": 66,
     "applePreviewTracks": 142,
-    "externalOnlyTracks": 87,
+    "externalOnlyTracks": 75,
     "tracksWithoutDestination": 0,
-    "inSitePlayableTracks": 55,
-    "inSitePlaybackPercentage": 38.7,
-    "reviewedRecommendationReadyPercentage": 42.9,
-    "sitiEssentialsPercentage": 69.2
+    "inSitePlayableTracks": 67,
+    "inSitePlaybackPercentage": 47.2,
+    "reviewedRecommendationReadyPercentage": 52.4,
+    "sitiEssentialsPercentage": 80.8
   },
   "targets": {
     "reviewedRecommendationReady80Percent": false,
@@ -36,60 +36,60 @@
   "coverageByMood": {
     "peaceful": {
       "total": 39,
-      "inSitePlayable": 16,
-      "percentage": 41
+      "inSitePlayable": 19,
+      "percentage": 48.7
     },
     "happy": {
       "total": 47,
-      "inSitePlayable": 18,
-      "percentage": 38.3
+      "inSitePlayable": 23,
+      "percentage": 48.9
     },
     "romantic": {
       "total": 68,
-      "inSitePlayable": 30,
-      "percentage": 44.1
+      "inSitePlayable": 37,
+      "percentage": 54.4
     },
     "confident": {
       "total": 67,
-      "inSitePlayable": 22,
-      "percentage": 32.8
+      "inSitePlayable": 28,
+      "percentage": 41.8
     },
     "energised": {
       "total": 41,
-      "inSitePlayable": 17,
-      "percentage": 41.5
+      "inSitePlayable": 23,
+      "percentage": 56.1
     },
     "nostalgic": {
       "total": 69,
-      "inSitePlayable": 38,
-      "percentage": 55.1
+      "inSitePlayable": 44,
+      "percentage": 63.8
     },
     "elegant": {
       "total": 99,
-      "inSitePlayable": 42,
-      "percentage": 42.4
+      "inSitePlayable": 51,
+      "percentage": 51.5
     },
     "comforted": {
       "total": 58,
-      "inSitePlayable": 28,
-      "percentage": 48.3
+      "inSitePlayable": 33,
+      "percentage": 56.9
     },
     "dramatic": {
       "total": 72,
-      "inSitePlayable": 37,
-      "percentage": 51.4
+      "inSitePlayable": 45,
+      "percentage": 62.5
     }
   },
   "coverageByCollection": {
     "comfort-calm": {
       "total": 17,
-      "inSitePlayable": 2,
-      "percentage": 11.8
+      "inSitePlayable": 3,
+      "percentage": 17.6
     },
     "duets-collaborations": {
       "total": 18,
-      "inSitePlayable": 3,
-      "percentage": 16.7
+      "inSitePlayable": 4,
+      "percentage": 22.2
     },
     "elegant-evenings": {
       "total": 48,
@@ -98,23 +98,23 @@
     },
     "festive-frequency": {
       "total": 6,
-      "inSitePlayable": 4,
-      "percentage": 66.7
+      "inSitePlayable": 5,
+      "percentage": 83.3
     },
     "hidden-gems": {
       "total": 37,
-      "inSitePlayable": 10,
-      "percentage": 27
+      "inSitePlayable": 12,
+      "percentage": 32.4
     },
     "joyful-upbeat": {
       "total": 34,
-      "inSitePlayable": 14,
-      "percentage": 41.2
+      "inSitePlayable": 16,
+      "percentage": 47.1
     },
     "modern-siti": {
       "total": 35,
-      "inSitePlayable": 2,
-      "percentage": 5.7
+      "inSitePlayable": 14,
+      "percentage": 40
     },
     "nostalgic-classics": {
       "total": 78,
@@ -123,18 +123,18 @@
     },
     "powerful-vocals": {
       "total": 51,
-      "inSitePlayable": 15,
-      "percentage": 29.4
+      "inSitePlayable": 20,
+      "percentage": 39.2
     },
     "romantic-siti": {
       "total": 62,
-      "inSitePlayable": 28,
-      "percentage": 45.2
+      "inSitePlayable": 33,
+      "percentage": 53.2
     },
     "siti-essentials": {
       "total": 26,
-      "inSitePlayable": 18,
-      "percentage": 69.2
+      "inSitePlayable": 21,
+      "percentage": 80.8
     },
     "traditional-nusantara": {
       "total": 27,
@@ -160,8 +160,8 @@
     },
     "2020s modern": {
       "total": 14,
-      "inSitePlayable": 2,
-      "percentage": 14.3
+      "inSitePlayable": 8,
+      "percentage": 57.1
     },
     "late 2010s": {
       "total": 11,
@@ -170,20 +170,20 @@
     },
     "recent releases": {
       "total": 13,
-      "inSitePlayable": 0,
-      "percentage": 0
+      "inSitePlayable": 6,
+      "percentage": 46.2
     }
   },
   "coverageByRecommendationReadiness": {
     "reviewed": {
       "total": 105,
-      "inSitePlayable": 45,
-      "percentage": 42.9
+      "inSitePlayable": 55,
+      "percentage": 52.4
     },
     "metadataVerified": {
       "total": 37,
-      "inSitePlayable": 10,
-      "percentage": 27
+      "inSitePlayable": 12,
+      "percentage": 32.4
     },
     "provisional": {
       "total": 0,
@@ -422,16 +422,8 @@
         "title": "7 Nasihat"
       },
       {
-        "id": "kuasa-cintamu",
-        "title": "Kuasa Cintamu"
-      },
-      {
         "id": "terang",
         "title": "Terang"
-      },
-      {
-        "id": "menyapa-dunia",
-        "title": "Menyapa Dunia"
       },
       {
         "id": "tanpa-diri-mu",
@@ -440,22 +432,6 @@
       {
         "id": "sehebat-matahari-feat-nao-zumar",
         "title": "Sehebat Matahari (feat. Nao Zumar)"
-      },
-      {
-        "id": "romansa-kita",
-        "title": "Romansa Kita"
-      },
-      {
-        "id": "teratas",
-        "title": "Teratas"
-      },
-      {
-        "id": "menjaga-cintamu-original-soundtrack-from-anwar-the-untold-story",
-        "title": "Menjaga Cintamu (Original Soundtrack From Anwar, The Untold Story)"
-      },
-      {
-        "id": "magis",
-        "title": "Magis"
       },
       {
         "id": "kumbang-bunga",
@@ -476,10 +452,6 @@
       {
         "id": "syurgaloka",
         "title": "Syurgaloka"
-      },
-      {
-        "id": "kesuma",
-        "title": "Kesuma"
       },
       {
         "id": "cenderamaya",
@@ -524,26 +496,6 @@
       {
         "id": "ikhlas",
         "title": "Ikhlas"
-      },
-      {
-        "id": "cinta-tak-mungkin",
-        "title": "Cinta Tak Mungkin"
-      },
-      {
-        "id": "sejarah",
-        "title": "Sejarah"
-      },
-      {
-        "id": "menamakanmu-cinta",
-        "title": "Menamakanmu Cinta"
-      },
-      {
-        "id": "sesal",
-        "title": "SESAL"
-      },
-      {
-        "id": "beraya-dengan-saya",
-        "title": "Beraya Dengan Saya"
       },
       {
         "id": "xiang-shui-yi-yang",
