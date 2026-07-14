@@ -1,6 +1,6 @@
 # Phase 4 playback audit
 
-Generated 2026-07-14T05:55:17.775Z. Apple figures are preview-capable embeds, not universal full-track claims.
+Generated 2026-07-14T13:02:50.571Z. Apple figures are preview-capable embeds, not universal full-track claims.
 
 ## Totals
 
