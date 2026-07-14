@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "channels": [
+    {
+      "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+      "name": "Siti Nurhaliza",
+      "authority": "artist-official",
+      "active": true,
+      "evidenceUrl": "https://www.youtube.com/channel/UCNq-mu-iXUmiAWyDOcJmZZg",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+      "name": "SuriaRecords (SRC)",
+      "authority": "label-official",
+      "active": true,
+      "evidenceUrl": "https://www.youtube.com/channel/UCBd5pENmJrvi6PQq-2ndBhw",
+      "verifiedAt": "2026-07-14"
+    },
+    {
+      "channelId": "UCquIzvgQ4PxPDZqFXhuT_gw",
+      "name": "MVM MUSIC",
+      "authority": "licensed-broadcaster",
+      "active": true,
+      "evidenceUrl": "https://www.youtube.com/channel/UCquIzvgQ4PxPDZqFXhuT_gw",
+      "verifiedAt": "2026-07-14"
+    }
+  ]
+}

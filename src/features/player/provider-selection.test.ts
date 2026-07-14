@@ -4,8 +4,8 @@ import { selectPlaybackProvider } from './provider-selection'
 const youtube = { videoId: 'AbCdEfGhI_1', verifiedOfficial: true as const, sourceId: 'official-source' }
 
 describe('playback provider selection', () => {
-  it('selects Spotify first when a direct track URL exists', () => {
-    expect(selectPlaybackProvider(makeTrack('spotify')).provider).toBe('spotify-embed')
+  it('selects full-song YouTube first when a verified full source exists', () => {
+    expect(selectPlaybackProvider(makeTrack('youtube-full')).provider).toBe('youtube-embed')
   })
 
   it('selects verified official YouTube when Spotify is absent', () => {
@@ -14,12 +14,22 @@ describe('playback provider selection', () => {
   })
 
   it('selects Apple preview after Spotify and YouTube', () => {
-    const track = makeTrack('apple', { officialLinks: { spotify: '', youtube: '', appleMusic: 'https://music.apple.com/my/album/test/123?i=456' } })
+    const track = makeTrack('apple', {
+      officialLinks: { spotify: '', youtube: '', appleMusic: 'https://music.apple.com/my/album/test/123?i=456' },
+      playbackCoverage: 'preview-only',
+      fullPlaybackSources: [],
+      playback: { preferredProvider: 'automatic', spotify: null, youtube: null, appleMusic: null },
+    })
     expect(selectPlaybackProvider(track).provider).toBe('apple-preview')
   })
 
   it('selects external last', () => {
-    const track = makeTrack('external', { officialLinks: { spotify: 'https://open.spotify.com/album/5hYW2hAwvsaifyiNxDVVKC', youtube: '', appleMusic: '' } })
+    const track = makeTrack('external', {
+      officialLinks: { spotify: 'https://open.spotify.com/album/5hYW2hAwvsaifyiNxDVVKC', youtube: '', appleMusic: '' },
+      playbackCoverage: 'external-only',
+      fullPlaybackSources: [],
+      playback: { preferredProvider: 'automatic', spotify: null, youtube: null, appleMusic: null },
+    })
     expect(selectPlaybackProvider(track).provider).toBe('external')
   })
 
@@ -29,6 +39,12 @@ describe('playback provider selection', () => {
   })
 
   it('falls back without error when a preference is unavailable', () => {
-    expect(selectPlaybackProvider(makeTrack('fallback'), 'youtube').provider).toBe('spotify-embed')
+    const track = makeTrack('fallback', {
+      officialLinks: { spotify: 'https://open.spotify.com/track/5hYW2hAwvsaifyiNxDVVKC', youtube: '', appleMusic: '' },
+      playbackCoverage: 'external-only',
+      fullPlaybackSources: [],
+      playback: { preferredProvider: 'automatic', spotify: null, youtube: null, appleMusic: null },
+    })
+    expect(selectPlaybackProvider(track, 'youtube').provider).toBe('spotify-embed')
   })
 })

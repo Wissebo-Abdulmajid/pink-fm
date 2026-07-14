@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-07-14T02:59:29.547Z",
+  "createdAt": "2026-07-14T04:29:43.888Z",
   "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   "origin": "http://127.0.0.1:4173",
   "checks": [
@@ -70,11 +70,12 @@
       "fallback": true
     },
     {
-      "name": "real-spotify-recommendation-provider-outcome",
+      "name": "real-youtube-recommendation-provider-outcome",
       "passed": true,
       "track": "Cindai",
+      "coverage": "FULL SONGPlayback via official YouTube source",
       "iframeLoaded": false,
-      "status": "Playback provided by SpotifySpotify’s embedded player could not be loaded.",
+      "status": "Playback via official YouTube sourceLoading the selected provider…",
       "fallback": true
     },
     {
@@ -82,7 +83,7 @@
       "passed": true,
       "playerShells": 1,
       "providerViewports": 1,
-      "currentTitle": "Joget Senyum Memikat"
+      "currentTitle": "Nirmala"
     },
     {
       "name": "keyboard-energy-dial",
@@ -284,7 +285,7 @@
         {
           "tag": "div",
           "className": "illuminated-display__track",
-          "text": "78% match strengthCenderamayaSiti Nurhaliza",
+          "text": "70% match strengthKau KekasihkuSiti Nurhaliza",
           "left": 63,
           "right": 331,
           "width": 268
@@ -292,15 +293,15 @@
         {
           "tag": "span",
           "className": "",
-          "text": "78% match strength",
+          "text": "70% match strength",
           "left": 67,
-          "right": 322,
-          "width": 254
+          "right": 323,
+          "width": 255
         },
         {
           "tag": "h1",
           "className": "",
-          "text": "Cenderamaya",
+          "text": "Kau Kekasihku",
           "left": 67,
           "right": 326,
           "width": 258
@@ -452,6 +453,6 @@
     "requested": false,
     "estimatedDownloadBytes": 148897792
   },
-  "expectedConsoleErrors": 7,
+  "expectedConsoleErrors": 6,
   "unexpectedConsoleErrors": []
 }

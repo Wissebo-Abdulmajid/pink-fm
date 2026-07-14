@@ -23,6 +23,10 @@
     "catalog:editorial-review": "tsx scripts/editorial-review-phase3.ts --slug siti --check-links",
     "playback:prepare": "tsx scripts/prepare-in-site-playback.ts",
     "playback:audit": "tsx scripts/audit-playback-coverage.ts",
+    "youtube:prepare": "tsx scripts/prepare-youtube-full-playback.ts",
+    "youtube:audit": "tsx scripts/audit-youtube-full-playback.ts",
+    "youtube:verify": "tsx scripts/verify-youtube-sources.ts",
+    "youtube:browser": "node scripts/test-youtube-embeds.mjs",
     "recommendations:simulate": "tsx scripts/recommendation-diversity.ts --slug siti --iterations 50",
     "bot:embeddings": "tsx scripts/precompute-embeddings.ts",
     "bot:evaluation:generate": "tsx scripts/generate-bot-evaluation.ts",
@@ -34,7 +38,7 @@
     "bot:benchmark": "tsx scripts/benchmark-semantic-models.ts",
     "icons:generate": "node scripts/generate-icons.mjs",
     "qa:browser": "node scripts/browser-qa.mjs",
-    "verify": "npm run lint && npm run typecheck && npm run content:validate && npm run catalog:audit -- --slug siti && npm run playback:audit -- --slug siti && npm run test && npm run build"
+    "verify": "npm run lint && npm run typecheck && npm run content:validate && npm run catalog:audit -- --slug siti && npm run playback:audit -- --slug siti && npm run youtube:audit -- --slug=siti && npm run youtube:verify -- --slug=siti && npm run test && npm run build"
   },
   "dependencies": {
     "@fontsource-variable/fraunces": "^5.2.9",

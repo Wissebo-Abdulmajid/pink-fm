@@ -1,4 +1,5 @@
 import type { Track } from '../../../../config/schemas'
+import { fullPlaybackSourcesForRadio, selectPrimaryFullPlaybackSource } from '../../../recommendations/full-playback'
 import { playbackCapabilities } from '../../provider-selection'
 import type { PlaybackProviderAdapter, PlaybackState } from '../../playback-types'
 import { loadYouTubeIframeApi, type YouTubePlayer } from './youtube-iframe-api'
@@ -11,10 +12,12 @@ export class YouTubePlaybackAdapter implements PlaybackProviderAdapter {
   private player: YouTubePlayer | null = null
   private playerPromise: Promise<YouTubePlayer> | null = null
   private latestVideoId: string | null = null
+  private sourceQueue: string[] = []
 
   constructor(private readonly onState: (state: PlaybackState) => void) {}
 
   canHandle(track: Track) {
+    if (selectPrimaryFullPlaybackSource(track)) return true
     const item = track.playback.youtube
     return Boolean(item?.verifiedOfficial && item.sourceId && isYouTubeVideoId(item.videoId))
   }
@@ -34,7 +37,16 @@ export class YouTubePlaybackAdapter implements PlaybackProviderAdapter {
         playerVars: { controls: 1, playsinline: 1, rel: 0 },
         events: {
           onReady: () => { this.onState('ready'); resolve(player) },
-          onError: () => this.onState('failed'),
+          onError: () => {
+            const fallback = this.sourceQueue.shift()
+            if (fallback && this.player) {
+              this.latestVideoId = fallback
+              this.onState('loading')
+              this.player.cueVideoById(fallback)
+              return
+            }
+            this.onState('failed')
+          },
           onStateChange: (event: { data: number }) => {
             if (event.data === api.PlayerState.PLAYING) this.onState('playing')
             else if (event.data === api.PlayerState.PAUSED) this.onState('paused')
@@ -52,8 +64,10 @@ export class YouTubePlaybackAdapter implements PlaybackProviderAdapter {
   }
 
   async loadTrack(track: Track) {
-    const videoId = track.playback.youtube?.videoId
+    const fullSources = fullPlaybackSourcesForRadio(track)
+    const videoId = fullSources[0]?.videoId ?? track.playback.youtube?.videoId
     if (!videoId || !this.canHandle(track)) throw new Error('This YouTube record is not verified.')
+    this.sourceQueue = fullSources.slice(1).map((source) => source.videoId)
     this.latestVideoId = videoId
     this.onState('loading')
     const player = await this.createPlayer(videoId)

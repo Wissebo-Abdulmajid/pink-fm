@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-07-14T02:57:12.050Z",
+  "generatedAt": "2026-07-14T04:23:04.099Z",
   "profile": "siti",
   "totals": {
     "activeTracks": 142,
@@ -9,181 +9,181 @@
     "spotifyAlbumOnlyUrls": 1,
     "invalidSpotifyUrls": 0,
     "spotifyEmbedPlayableTracks": 11,
-    "verifiedYouTubePlayableTracks": 0,
+    "verifiedYouTubePlayableTracks": 15,
     "applePreviewTracks": 142,
-    "externalOnlyTracks": 0,
+    "externalOnlyTracks": 126,
     "tracksWithoutDestination": 0,
-    "inSitePlayableTracks": 142,
-    "inSitePlaybackPercentage": 100,
-    "reviewedRecommendationReadyPercentage": 100,
-    "sitiEssentialsPercentage": 100
+    "inSitePlayableTracks": 16,
+    "inSitePlaybackPercentage": 11.3,
+    "reviewedRecommendationReadyPercentage": 15.2,
+    "sitiEssentialsPercentage": 61.5
   },
   "targets": {
-    "reviewedRecommendationReady80Percent": true,
-    "sitiEssentials90Percent": true,
+    "reviewedRecommendationReady80Percent": false,
+    "sitiEssentials90Percent": false,
     "twelvePlayableReviewedPerMood": {
-      "peaceful": true,
-      "happy": true,
+      "peaceful": false,
+      "happy": false,
       "romantic": true,
-      "confident": true,
-      "energised": true,
-      "nostalgic": true,
+      "confident": false,
+      "energised": false,
+      "nostalgic": false,
       "elegant": true,
-      "comforted": true,
+      "comforted": false,
       "dramatic": true
     }
   },
   "coverageByMood": {
     "peaceful": {
       "total": 39,
-      "inSitePlayable": 39,
-      "percentage": 100
+      "inSitePlayable": 7,
+      "percentage": 17.9
     },
     "happy": {
       "total": 47,
-      "inSitePlayable": 47,
-      "percentage": 100
+      "inSitePlayable": 7,
+      "percentage": 14.9
     },
     "romantic": {
       "total": 68,
-      "inSitePlayable": 68,
-      "percentage": 100
+      "inSitePlayable": 12,
+      "percentage": 17.6
     },
     "confident": {
       "total": 67,
-      "inSitePlayable": 67,
-      "percentage": 100
+      "inSitePlayable": 8,
+      "percentage": 11.9
     },
     "energised": {
       "total": 41,
-      "inSitePlayable": 41,
-      "percentage": 100
+      "inSitePlayable": 5,
+      "percentage": 12.2
     },
     "nostalgic": {
       "total": 69,
-      "inSitePlayable": 69,
-      "percentage": 100
+      "inSitePlayable": 11,
+      "percentage": 15.9
     },
     "elegant": {
       "total": 99,
-      "inSitePlayable": 99,
-      "percentage": 100
+      "inSitePlayable": 16,
+      "percentage": 16.2
     },
     "comforted": {
       "total": 58,
-      "inSitePlayable": 58,
-      "percentage": 100
+      "inSitePlayable": 11,
+      "percentage": 19
     },
     "dramatic": {
       "total": 72,
-      "inSitePlayable": 72,
-      "percentage": 100
+      "inSitePlayable": 13,
+      "percentage": 18.1
     }
   },
   "coverageByCollection": {
     "comfort-calm": {
       "total": 17,
-      "inSitePlayable": 17,
-      "percentage": 100
+      "inSitePlayable": 1,
+      "percentage": 5.9
     },
     "duets-collaborations": {
       "total": 18,
-      "inSitePlayable": 18,
-      "percentage": 100
+      "inSitePlayable": 1,
+      "percentage": 5.6
     },
     "elegant-evenings": {
       "total": 48,
-      "inSitePlayable": 48,
-      "percentage": 100
+      "inSitePlayable": 7,
+      "percentage": 14.6
     },
     "festive-frequency": {
       "total": 6,
-      "inSitePlayable": 6,
-      "percentage": 100
+      "inSitePlayable": 0,
+      "percentage": 0
     },
     "hidden-gems": {
       "total": 37,
-      "inSitePlayable": 37,
-      "percentage": 100
+      "inSitePlayable": 0,
+      "percentage": 0
     },
     "joyful-upbeat": {
       "total": 34,
-      "inSitePlayable": 34,
-      "percentage": 100
+      "inSitePlayable": 2,
+      "percentage": 5.9
     },
     "modern-siti": {
       "total": 35,
-      "inSitePlayable": 35,
-      "percentage": 100
+      "inSitePlayable": 2,
+      "percentage": 5.7
     },
     "nostalgic-classics": {
       "total": 78,
-      "inSitePlayable": 78,
-      "percentage": 100
+      "inSitePlayable": 12,
+      "percentage": 15.4
     },
     "powerful-vocals": {
       "total": 51,
-      "inSitePlayable": 51,
-      "percentage": 100
+      "inSitePlayable": 4,
+      "percentage": 7.8
     },
     "romantic-siti": {
       "total": 62,
-      "inSitePlayable": 62,
-      "percentage": 100
+      "inSitePlayable": 11,
+      "percentage": 17.7
     },
     "siti-essentials": {
       "total": 26,
-      "inSitePlayable": 26,
-      "percentage": 100
+      "inSitePlayable": 16,
+      "percentage": 61.5
     },
     "traditional-nusantara": {
       "total": 27,
-      "inSitePlayable": 27,
-      "percentage": 100
+      "inSitePlayable": 3,
+      "percentage": 11.1
     }
   },
   "coverageByEra": {
     "1990s classics": {
       "total": 41,
-      "inSitePlayable": 41,
-      "percentage": 100
+      "inSitePlayable": 7,
+      "percentage": 17.1
     },
     "2000s evolution": {
       "total": 37,
-      "inSitePlayable": 37,
-      "percentage": 100
+      "inSitePlayable": 5,
+      "percentage": 13.5
     },
     "2010s contemporary": {
       "total": 26,
-      "inSitePlayable": 26,
-      "percentage": 100
+      "inSitePlayable": 2,
+      "percentage": 7.7
     },
     "2020s modern": {
       "total": 14,
-      "inSitePlayable": 14,
-      "percentage": 100
+      "inSitePlayable": 2,
+      "percentage": 14.3
     },
     "late 2010s": {
       "total": 11,
-      "inSitePlayable": 11,
-      "percentage": 100
+      "inSitePlayable": 0,
+      "percentage": 0
     },
     "recent releases": {
       "total": 13,
-      "inSitePlayable": 13,
-      "percentage": 100
+      "inSitePlayable": 0,
+      "percentage": 0
     }
   },
   "coverageByRecommendationReadiness": {
     "reviewed": {
       "total": 105,
-      "inSitePlayable": 105,
-      "percentage": 100
+      "inSitePlayable": 16,
+      "percentage": 15.2
     },
     "metadataVerified": {
       "total": 37,
-      "inSitePlayable": 37,
-      "percentage": 100
+      "inSitePlayable": 0,
+      "percentage": 0
     },
     "provisional": {
       "total": 0,
@@ -200,7 +200,512 @@
       }
     ],
     "invalidSpotify": [],
-    "externalOnly": [],
+    "externalOnly": [
+      {
+        "id": "jawapan-di-persimpangan",
+        "title": "Jawapan Di Persimpangan"
+      },
+      {
+        "id": "mahligai-asmara",
+        "title": "Mahligai Asmara"
+      },
+      {
+        "id": "antara-waktu-dan-usia",
+        "title": "Antara Waktu Dan Usia"
+      },
+      {
+        "id": "sanggar-bayu",
+        "title": "Sanggar Bayu"
+      },
+      {
+        "id": "bicara-luka",
+        "title": "Bicara Luka"
+      },
+      {
+        "id": "kesilapanku-keegoanmu",
+        "title": "Kesilapanku, Keegoanmu"
+      },
+      {
+        "id": "khayalan-cinta",
+        "title": "Khayalan Cinta"
+      },
+      {
+        "id": "usah-diragui",
+        "title": "Usah Diragui"
+      },
+      {
+        "id": "rindu-di-antara-kita",
+        "title": "Rindu Di Antara Kita"
+      },
+      {
+        "id": "laksamana-mati-dibunuh",
+        "title": "Laksamana Mati Dibunuh"
+      },
+      {
+        "id": "janji",
+        "title": "Janji"
+      },
+      {
+        "id": "lela-manja",
+        "title": "Lela Manja"
+      },
+      {
+        "id": "joget-pahang",
+        "title": "Joget Pahang"
+      },
+      {
+        "id": "joget-berhibur",
+        "title": "Joget Berhibur"
+      },
+      {
+        "id": "sendiri",
+        "title": "Sendiri"
+      },
+      {
+        "id": "diari-hatimu",
+        "title": "Diari Hatimu"
+      },
+      {
+        "id": "satu-cinta-dua-jiwa",
+        "title": "Satu Cinta Dua Jiwa"
+      },
+      {
+        "id": "tak-boleh-lupa",
+        "title": "Tak Boleh Lupa"
+      },
+      {
+        "id": "gelora-asmara",
+        "title": "Gelora Asmara"
+      },
+      {
+        "id": "nian-di-hati",
+        "title": "Nian Di Hati"
+      },
+      {
+        "id": "seribu-kemanisan",
+        "title": "Seribu Kemanisan"
+      },
+      {
+        "id": "engkau-bagaikan-permata",
+        "title": "Engkau Bagaikan Permata"
+      },
+      {
+        "id": "lelaki-warkah-seorang-anak",
+        "title": "Lelaki (Warkah Seorang Anak)"
+      },
+      {
+        "id": "kedamaian",
+        "title": "Kedamaian"
+      },
+      {
+        "id": "joget-kasih-tak-sudah",
+        "title": "Joget Kasih Tak Sudah"
+      },
+      {
+        "id": "zapin-cinta-asmara",
+        "title": "Zapin Cinta Asmara"
+      },
+      {
+        "id": "canggai",
+        "title": "Canggai"
+      },
+      {
+        "id": "pawana-sampaikanlah-salam",
+        "title": "Pawana Sampaikanlah Salam"
+      },
+      {
+        "id": "berpantun-kasih",
+        "title": "Berpantun Kasih"
+      },
+      {
+        "id": "azimat-cinta",
+        "title": "Azimat Cinta"
+      },
+      {
+        "id": "bicara-manis-menghiris-kalbu",
+        "title": "Bicara Manis Menghiris Kalbu"
+      },
+      {
+        "id": "jalinan-cinta",
+        "title": "Jalinan Cinta"
+      },
+      {
+        "id": "indah-percintaan",
+        "title": "Indah Percintaan"
+      },
+      {
+        "id": "lakaran-kehidupan",
+        "title": "Lakaran Kehidupan"
+      },
+      {
+        "id": "joget-senyum-memikat",
+        "title": "Joget Senyum Memikat"
+      },
+      {
+        "id": "panas-berteduh-gelap-bersuluh",
+        "title": "Panas Berteduh Gelap Bersuluh"
+      },
+      {
+        "id": "kurik-kundi",
+        "title": "Kurik Kundi"
+      },
+      {
+        "id": "badarsila",
+        "title": "Badarsila"
+      },
+      {
+        "id": "syair-kamelia",
+        "title": "Syair Kamelia"
+      },
+      {
+        "id": "debaran-cinta",
+        "title": "Debaran Cinta"
+      },
+      {
+        "id": "untuk-selamanya",
+        "title": "Untuk Selamanya"
+      },
+      {
+        "id": "oda-bumi-anbia",
+        "title": "Oda Bumi Anbia"
+      },
+      {
+        "id": "janji-kasih",
+        "title": "Janji Kasih"
+      },
+      {
+        "id": "airmata-ibu",
+        "title": "Airmata Ibu"
+      },
+      {
+        "id": "dialah-di-hati",
+        "title": "Dialah Di Hati"
+      },
+      {
+        "id": "pendirianku",
+        "title": "Pendirianku"
+      },
+      {
+        "id": "cinta-tak-berganti",
+        "title": "Cinta Tak Berganti"
+      },
+      {
+        "id": "cahaya-seribu-liku",
+        "title": "Cahaya Seribu Liku"
+      },
+      {
+        "id": "lagu-rindu",
+        "title": "Lagu Rindu"
+      },
+      {
+        "id": "pejam-matamu",
+        "title": "Pejam Matamu"
+      },
+      {
+        "id": "siti-situ-sana-sini",
+        "title": "Siti Situ Sana Sini"
+      },
+      {
+        "id": "cuba-untuk-mengerti",
+        "title": "Cuba Untuk Mengerti"
+      },
+      {
+        "id": "hidup-penuh-bicara",
+        "title": "Hidup Penuh Bicara"
+      },
+      {
+        "id": "intrig-cinta",
+        "title": "Intrig Cinta"
+      },
+      {
+        "id": "ku-mahu",
+        "title": "Ku Mahu"
+      },
+      {
+        "id": "melawan-kesepian",
+        "title": "Melawan Kesepian"
+      },
+      {
+        "id": "mulanya-cinta",
+        "title": "Mulanya Cinta"
+      },
+      {
+        "id": "tanpa-kalian",
+        "title": "Tanpa Kalian"
+      },
+      {
+        "id": "wanita",
+        "title": "Wanita"
+      },
+      {
+        "id": "sekian-lama",
+        "title": "Sekian Lama"
+      },
+      {
+        "id": "di-kayangan-kita",
+        "title": "Di Kayangan Kita"
+      },
+      {
+        "id": "bintang-malam",
+        "title": "Bintang Malam"
+      },
+      {
+        "id": "cinta-ini",
+        "title": "Cinta Ini"
+      },
+      {
+        "id": "seloka-budi",
+        "title": "Seloka Budi"
+      },
+      {
+        "id": "senyum-minang-manis",
+        "title": "Senyum Minang Manis"
+      },
+      {
+        "id": "joget-menanti-kasih",
+        "title": "Joget Menanti Kasih"
+      },
+      {
+        "id": "asma-ul-husna",
+        "title": "Asma Ul Husna"
+      },
+      {
+        "id": "pintu-rindu",
+        "title": "Pintu Rindu"
+      },
+      {
+        "id": "tahajjud-cinta",
+        "title": "Tahajjud Cinta"
+      },
+      {
+        "id": "ku-percaya-ada-cinta",
+        "title": "Ku Percaya Ada Cinta"
+      },
+      {
+        "id": "selawat",
+        "title": "Selawat"
+      },
+      {
+        "id": "all-your-love",
+        "title": "All Your Love"
+      },
+      {
+        "id": "nobody-else",
+        "title": "Nobody Else"
+      },
+      {
+        "id": "falling-in-love",
+        "title": "Falling In Love"
+      },
+      {
+        "id": "fight-for-love",
+        "title": "Fight for Love"
+      },
+      {
+        "id": "remember-you-feat-sean-kingston",
+        "title": "Remember You (feat. Sean Kingston)"
+      },
+      {
+        "id": "aku",
+        "title": "Aku"
+      },
+      {
+        "id": "jaga-dia-untukku",
+        "title": "Jaga Dia Untukku"
+      },
+      {
+        "id": "mula-dan-akhir",
+        "title": "Mula Dan Akhir"
+      },
+      {
+        "id": "terbaik-bagimu",
+        "title": "Terbaik Bagimu"
+      },
+      {
+        "id": "warna-dunia",
+        "title": "Warna Dunia"
+      },
+      {
+        "id": "bersandar-cinta",
+        "title": "Bersandar Cinta"
+      },
+      {
+        "id": "penghiburku-feat-joe-flizzow",
+        "title": "Penghiburku (feat. Joe Flizzow)"
+      },
+      {
+        "id": "ikrar-cinta",
+        "title": "Ikrar Cinta"
+      },
+      {
+        "id": "segala-perasaan",
+        "title": "Segala Perasaan"
+      },
+      {
+        "id": "aku-bukan-malaikat",
+        "title": "Aku Bukan Malaikat"
+      },
+      {
+        "id": "kisah-ku-inginkan",
+        "title": "Kisah Ku Inginkan"
+      },
+      {
+        "id": "siapa-tak-mahu",
+        "title": "Siapa Tak Mahu"
+      },
+      {
+        "id": "tertulis-nama-kita",
+        "title": "Tertulis Nama Kita"
+      },
+      {
+        "id": "7-nasihat",
+        "title": "7 Nasihat"
+      },
+      {
+        "id": "kuasa-cintamu",
+        "title": "Kuasa Cintamu"
+      },
+      {
+        "id": "terang",
+        "title": "Terang"
+      },
+      {
+        "id": "menyapa-dunia",
+        "title": "Menyapa Dunia"
+      },
+      {
+        "id": "tanpa-diri-mu",
+        "title": "Tanpa Diri-Mu"
+      },
+      {
+        "id": "sehebat-matahari-feat-nao-zumar",
+        "title": "Sehebat Matahari (feat. Nao Zumar)"
+      },
+      {
+        "id": "romansa-kita",
+        "title": "Romansa Kita"
+      },
+      {
+        "id": "teratas",
+        "title": "Teratas"
+      },
+      {
+        "id": "menjaga-cintamu-original-soundtrack-from-anwar-the-untold-story",
+        "title": "Menjaga Cintamu (Original Soundtrack From Anwar, The Untold Story)"
+      },
+      {
+        "id": "magis",
+        "title": "Magis"
+      },
+      {
+        "id": "kumbang-bunga",
+        "title": "Kumbang Bunga"
+      },
+      {
+        "id": "hati-yang-rindu",
+        "title": "Hati Yang Rindu"
+      },
+      {
+        "id": "rencong",
+        "title": "Rencong"
+      },
+      {
+        "id": "pesanan-buat-diri",
+        "title": "Pesanan Buat Diri"
+      },
+      {
+        "id": "syurgaloka",
+        "title": "Syurgaloka"
+      },
+      {
+        "id": "kesuma",
+        "title": "Kesuma"
+      },
+      {
+        "id": "cenderamaya",
+        "title": "Cenderamaya"
+      },
+      {
+        "id": "aidilfitri-di-alaf-baru",
+        "title": "Aidilfitri Di Alaf Baru"
+      },
+      {
+        "id": "nikmat-hari-raya",
+        "title": "Nikmat Hari Raya"
+      },
+      {
+        "id": "sesuci-lebaran",
+        "title": "Sesuci Lebaran"
+      },
+      {
+        "id": "nazam-lebaran",
+        "title": "Nazam Lebaran"
+      },
+      {
+        "id": "bila-hari-raya-menjelma",
+        "title": "Bila Hari Raya Menjelma"
+      },
+      {
+        "id": "dirgahayu",
+        "title": "Dirgahayu"
+      },
+      {
+        "id": "you-came-to-me-feat-dato-sri-siti-nurhaliza",
+        "title": "You Came to Me (feat. Dato' Sri Siti Nurhaliza)"
+      },
+      {
+        "id": "dua-dunia-feat-siti-nurhaliza",
+        "title": "Dua Dunia (feat. Siti Nurhaliza)"
+      },
+      {
+        "id": "muara-hati",
+        "title": "Muara Hati"
+      },
+      {
+        "id": "galau",
+        "title": "Galau"
+      },
+      {
+        "id": "mikraj-cinta",
+        "title": "Mikraj Cinta"
+      },
+      {
+        "id": "milikmu-selamanya",
+        "title": "Milikmu Selamanya"
+      },
+      {
+        "id": "bersandar-cinta-orchestral",
+        "title": "Bersandar Cinta (feat. Dato' Sri Siti Nurhaliza) [From \"Aubrey Suwito and Friends with the Malaysian Philharmonic Orchestra\"]"
+      },
+      {
+        "id": "ikhlas",
+        "title": "Ikhlas"
+      },
+      {
+        "id": "cinta-tak-mungkin",
+        "title": "Cinta Tak Mungkin"
+      },
+      {
+        "id": "sejarah",
+        "title": "Sejarah"
+      },
+      {
+        "id": "menamakanmu-cinta",
+        "title": "Menamakanmu Cinta"
+      },
+      {
+        "id": "sesal",
+        "title": "SESAL"
+      },
+      {
+        "id": "beraya-dengan-saya",
+        "title": "Beraya Dengan Saya"
+      },
+      {
+        "id": "xiang-shui-yi-yang",
+        "title": "像水一樣"
+      }
+    ],
     "withoutDestination": [],
     "mostFrequentlyRecommendedWithoutInSitePlayback": []
   }

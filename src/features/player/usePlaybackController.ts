@@ -16,6 +16,23 @@ const makeAdapter = (
     ? new YouTubePlaybackAdapter(onState)
     : new AppleMusicPreviewAdapter(onState)
 
+const withTimeout = <T,>(promise: Promise<T>, message: string, timeoutMs = 9_000) =>
+  new Promise<T>((resolve, reject: (reason: Error) => void) => {
+    const timer = window.setTimeout(() => {
+      const error = new Error(message)
+      reject(error)
+    }, timeoutMs)
+    promise
+      .then((value) => {
+        window.clearTimeout(timer)
+        resolve(value)
+      })
+      .catch((error: unknown) => {
+        window.clearTimeout(timer)
+        reject(error instanceof Error ? error : new Error(String(error)))
+      })
+  })
+
 export const usePlaybackController = (track: Track) => {
   const { listener, recordPlaybackEvent } = useExperience()
   const selection = useMemo(
@@ -80,7 +97,10 @@ export const usePlaybackController = (track: Track) => {
     const adapter = adapterRef.current
     if (!adapter || listener.embedConsent !== 'allowed') return
     let current = true
-    void adapter.loadTrack(track).catch((cause) => {
+    void withTimeout(
+      adapter.loadTrack(track),
+      'The embedded player did not respond. That frequency is unavailable here.',
+    ).catch((cause) => {
       if (!current) return
       setError(cause instanceof Error ? cause.message : 'The embedded player could not load this track.')
       handleState('failed')
@@ -100,7 +120,10 @@ export const usePlaybackController = (track: Track) => {
   const reload = useCallback(() => {
     const adapter = adapterRef.current
     if (!adapter) return
-    void adapter.loadTrack(track).catch((cause) => {
+    void withTimeout(
+      adapter.loadTrack(track),
+      'The embedded player did not respond. That frequency is unavailable here.',
+    ).catch((cause) => {
       setError(cause instanceof Error ? cause.message : 'The track could not be reloaded.')
       handleState('failed')
     })

@@ -62,6 +62,8 @@ type ExperienceContextValue = {
   setStreamingService: (service: StreamingService) => void
   setPlaybackPreference: (preference: PlaybackPreference) => void
   setEmbedConsent: (consent: ListenerState['embedConsent']) => void
+  setAllowOfficialAlternateVersions: (enabled: boolean) => void
+  setAllowPreviewsWhenFullSongsUnavailable: (enabled: boolean) => void
   setSoundEffects: (enabled: boolean) => void
   setSoundVolume: (volume: number) => void
   setReducedMotion: (enabled: boolean) => void
@@ -139,6 +141,9 @@ export function ExperienceProvider({
       const context = {
         timeOfDay: getTimeOfDay(),
         artistPolicy: profile.gift.artistPolicy,
+        requireFullPlayback: true,
+        allowOfficialAlternateVersions: listener.allowOfficialAlternateVersions,
+        allowPreviewsWhenFullSongsUnavailable: listener.allowPreviewsWhenFullSongsUnavailable,
         rotationSeed: `day-${Math.floor(Date.now() / (1000 * 60 * 60 * 24))}`,
         ...(options.context ?? {}),
       }
@@ -203,7 +208,16 @@ export function ExperienceProvider({
       playSound('confirm')
       return result
     },
-    [currentMood, playSound, profile.gift.artistPolicy, profile.gift.station.frequencyLabel, profile.tracks.tracks, storage],
+    [
+      currentMood,
+      listener.allowOfficialAlternateVersions,
+      listener.allowPreviewsWhenFullSongsUnavailable,
+      playSound,
+      profile.gift.artistPolicy,
+      profile.gift.station.frequencyLabel,
+      profile.tracks.tracks,
+      storage,
+    ],
   )
 
   const tuneMood = useCallback(
@@ -377,6 +391,16 @@ export function ExperienceProvider({
     (embedConsent: ListenerState['embedConsent']) => storage.update((state) => ({ ...state, embedConsent })),
     [storage],
   )
+  const setAllowOfficialAlternateVersions = useCallback(
+    (allowOfficialAlternateVersions: boolean) =>
+      storage.update((state) => ({ ...state, allowOfficialAlternateVersions })),
+    [storage],
+  )
+  const setAllowPreviewsWhenFullSongsUnavailable = useCallback(
+    (allowPreviewsWhenFullSongsUnavailable: boolean) =>
+      storage.update((state) => ({ ...state, allowPreviewsWhenFullSongsUnavailable })),
+    [storage],
+  )
   const setSoundEffects = useCallback(
     (enabled: boolean) => storage.update((state) => ({ ...state, soundEffects: enabled })),
     [storage],
@@ -427,6 +451,8 @@ export function ExperienceProvider({
       setStreamingService,
       setPlaybackPreference,
       setEmbedConsent,
+      setAllowOfficialAlternateVersions,
+      setAllowPreviewsWhenFullSongsUnavailable,
       setSoundEffects,
       setSoundVolume,
       setReducedMotion,
@@ -464,6 +490,8 @@ export function ExperienceProvider({
       setStreamingService,
       setPlaybackPreference,
       setEmbedConsent,
+      setAllowOfficialAlternateVersions,
+      setAllowPreviewsWhenFullSongsUnavailable,
       slug,
       toggleLove,
       tuneMood,

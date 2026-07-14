@@ -14,6 +14,28 @@ export const moodDimensionKeys = [
 
 export const streamingServiceSchema = z.enum(['youtube', 'spotify', 'appleMusic'])
 export const playbackPreferenceSchema = z.enum(['automatic', 'spotify', 'youtube', 'apple'])
+export const playbackCoverageClassSchema = z.enum([
+  'full-subscription-free',
+  'full-account-dependent',
+  'preview-only',
+  'external-only',
+  'unavailable',
+])
+export const fullPlaybackSourceVersionSchema = z.enum([
+  'studio',
+  'official-audio',
+  'music-video',
+  'live',
+  'acoustic',
+  'alternate',
+])
+export const fullPlaybackSourceAuthoritySchema = z.enum([
+  'artist-official',
+  'label-official',
+  'distributor-official',
+  'youtube-topic',
+  'licensed-broadcaster',
+])
 export const artistPolicyModeSchema = z.enum([
   'primary-only',
   'primary-preferred',
@@ -168,6 +190,23 @@ const giftObjectSchema = z.strictObject({
       allowSecondaryCollection: false,
       secondaryCollectionId: 'malaysian-legends',
     }),
+  fullPlayback: z
+    .strictObject({
+      allowOfficialAlternateVersions: z.boolean(),
+      fullPlaybackFallback: z.strictObject({
+        allowSecondaryArtists: z.boolean(),
+        primaryArtistMinimumScore: z.number().min(0).max(1),
+        secondaryCollectionId: slugSchema,
+      }),
+    })
+    .default({
+      allowOfficialAlternateVersions: true,
+      fullPlaybackFallback: {
+        allowSecondaryArtists: true,
+        primaryArtistMinimumScore: 0.72,
+        secondaryCollectionId: 'malaysian-legends',
+      },
+    }),
   defaultStreamingService: streamingServiceSchema,
   privacyNotice: z.string().min(1).max(240),
 })
@@ -247,6 +286,83 @@ const trackPlaybackSchema = z.strictObject({
   }).nullable().default(null),
 })
 
+const youtubeVideoIdSchema = z
+  .string()
+  .regex(/^[A-Za-z0-9_-]{11}$/, 'Expected a valid YouTube video id')
+
+const youtubeWatchUrlSchema = youtubeUrlSchema.refine((value) => {
+  if (!value) return false
+  try {
+    const url = new URL(value)
+    if (url.hostname === 'youtu.be') return youtubeVideoIdSchema.safeParse(url.pathname.slice(1)).success
+    if (url.pathname === '/shorts' || url.pathname.startsWith('/shorts/')) return false
+    return youtubeVideoIdSchema.safeParse(url.searchParams.get('v') ?? '').success
+  } catch {
+    return false
+  }
+}, 'Expected a YouTube watch URL with a valid video id')
+
+export const fullPlaybackSourceSchema = z.strictObject({
+  id: slugSchema,
+  provider: z.literal('youtube'),
+  videoId: youtubeVideoIdSchema,
+  version: fullPlaybackSourceVersionSchema,
+  authority: fullPlaybackSourceAuthoritySchema,
+  channelId: z.string().regex(/^UC[A-Za-z0-9_-]{22}$/, 'Expected a YouTube channel id'),
+  channelName: z.string().min(1).max(120),
+  verified: z.boolean(),
+  embeddable: z.boolean(),
+  fullLength: z.boolean(),
+  durationSeconds: z.number().int().positive().nullable(),
+  expectedTrackDurationSeconds: z.number().int().positive().nullable(),
+  regionNotes: z.array(z.string().min(1).max(160)).max(12),
+  verifiedAt: isoDateSchema,
+  sourceUrl: youtubeWatchUrlSchema,
+  provenanceSourceId: slugSchema,
+  priority: z.number().int().positive().max(99),
+}).superRefine((source, context) => {
+  if (source.sourceUrl.includes('/shorts/')) {
+    context.addIssue({
+      code: 'custom',
+      path: ['sourceUrl'],
+      message: 'Shorts cannot be used as full-song playback sources.',
+    })
+  }
+  try {
+    const url = new URL(source.sourceUrl)
+    const urlVideoId = url.hostname === 'youtu.be' ? url.pathname.slice(1) : url.searchParams.get('v')
+    if (urlVideoId !== source.videoId) {
+      context.addIssue({
+        code: 'custom',
+        path: ['sourceUrl'],
+        message: 'sourceUrl video id must match videoId.',
+      })
+    }
+  } catch {
+    // URL shape is checked by youtubeWatchUrlSchema.
+  }
+  if (source.fullLength) {
+    if (source.durationSeconds === null) {
+      context.addIssue({
+        code: 'custom',
+        path: ['durationSeconds'],
+        message: 'Full-length sources require duration evidence.',
+      })
+    }
+    if (
+      source.expectedTrackDurationSeconds !== null &&
+      source.durationSeconds !== null &&
+      source.durationSeconds < Math.max(60, source.expectedTrackDurationSeconds * 0.75)
+    ) {
+      context.addIssue({
+        code: 'custom',
+        path: ['durationSeconds'],
+        message: 'Full-length source duration is too short for the expected track duration.',
+      })
+    }
+  }
+})
+
 const catalogueSlug = (value: string) =>
   value
     .normalize('NFKD')
@@ -298,6 +414,8 @@ const migrateTrackInput = (input: unknown) => {
       youtube: null,
       appleMusic: null,
     },
+    playbackCoverage: track.playbackCoverage ?? 'preview-only',
+    fullPlaybackSources: track.fullPlaybackSources ?? [],
   }
 }
 
@@ -334,6 +452,8 @@ const trackObjectSchema = z.strictObject({
     url: httpsOrEmptySchema.nullable(),
   }),
   playback: trackPlaybackSchema,
+  playbackCoverage: playbackCoverageClassSchema.default('preview-only'),
+  fullPlaybackSources: z.array(fullPlaybackSourceSchema).max(8).default([]),
   moods: moodVectorSchema,
   contexts: z.array(z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)).max(20),
   tempoClass: z.enum(['slow', 'medium', 'fast']),
@@ -368,6 +488,18 @@ export const trackSchema = z
         message: 'releaseYear must match the legacy year field when both are set',
       })
     }
+    if (
+      track.playbackCoverage === 'full-subscription-free' &&
+      !track.fullPlaybackSources.some(
+        (source) => source.provider === 'youtube' && source.verified && source.embeddable && source.fullLength,
+      )
+    ) {
+      context.addIssue({
+        code: 'custom',
+        path: ['playbackCoverage'],
+        message: 'full-subscription-free tracks require a verified, embeddable, full-length YouTube source.',
+      })
+    }
   })
 
 const migrateTracksFileInput = (input: unknown) => {
@@ -375,12 +507,14 @@ const migrateTracksFileInput = (input: unknown) => {
   const file = input as Record<string, unknown>
   return {
     ...file,
-    schemaVersion: file.schemaVersion === 1 || file.schemaVersion === 2 ? 3 : file.schemaVersion,
+    schemaVersion: file.schemaVersion === 1 || file.schemaVersion === 2 || file.schemaVersion === 3
+      ? 4
+      : file.schemaVersion,
   }
 }
 
 const tracksFileObjectSchema = z.strictObject({
-    schemaVersion: z.literal(3),
+    schemaVersion: z.literal(4),
     tracks: z.array(trackSchema),
   })
 
@@ -411,6 +545,62 @@ export const tracksFileSchema = z
           message: 'An embed URL is required when an embed provider is selected',
         })
       }
+      const primarySources = track.fullPlaybackSources.filter((source) => source.priority === 1)
+      if (primarySources.length > 1) {
+        context.addIssue({
+          code: 'custom',
+          path: ['tracks', index, 'fullPlaybackSources'],
+          message: `${track.id} has more than one primary full-playback source.`,
+        })
+      }
+      const sourceIds = new Set<string>()
+      const videoIds = new Set<string>()
+      track.fullPlaybackSources.forEach((source, sourceIndex) => {
+        if (sourceIds.has(source.id)) {
+          context.addIssue({
+            code: 'custom',
+            path: ['tracks', index, 'fullPlaybackSources', sourceIndex, 'id'],
+            message: `Duplicate full-playback source id: ${source.id}`,
+          })
+        }
+        if (videoIds.has(source.videoId)) {
+          context.addIssue({
+            code: 'custom',
+            path: ['tracks', index, 'fullPlaybackSources', sourceIndex, 'videoId'],
+            message: `Duplicate full-playback video id on ${track.id}: ${source.videoId}`,
+          })
+        }
+        sourceIds.add(source.id)
+        videoIds.add(source.videoId)
+      })
+    })
+  })
+
+export const youtubeAuthoritySchema = z.strictObject({
+  channelId: z.string().regex(/^UC[A-Za-z0-9_-]{22}$/, 'Expected a YouTube channel id'),
+  name: z.string().min(1).max(120),
+  authority: fullPlaybackSourceAuthoritySchema,
+  active: z.boolean(),
+  evidenceUrl: youtubeUrlSchema.refine(Boolean, 'An evidence URL is required'),
+  verifiedAt: isoDateSchema,
+})
+
+export const youtubeAuthoritiesFileSchema = z
+  .strictObject({
+    schemaVersion: z.literal(1),
+    channels: z.array(youtubeAuthoritySchema),
+  })
+  .superRefine(({ channels }, context) => {
+    const seen = new Set<string>()
+    channels.forEach((channel, index) => {
+      if (seen.has(channel.channelId)) {
+        context.addIssue({
+          code: 'custom',
+          path: ['channels', index, 'channelId'],
+          message: `Duplicate YouTube authority channel id: ${channel.channelId}`,
+        })
+      }
+      seen.add(channel.channelId)
     })
   })
 
@@ -668,6 +858,8 @@ export type Messages = z.infer<typeof messagesSchema>
 export type ProfileBundle = z.infer<typeof profileBundleSchema>
 export type StreamingService = z.infer<typeof streamingServiceSchema>
 export type PlaybackPreference = z.infer<typeof playbackPreferenceSchema>
+export type PlaybackCoverageClass = z.infer<typeof playbackCoverageClassSchema>
+export type FullPlaybackSource = z.infer<typeof fullPlaybackSourceSchema>
 export type ArtistPolicyMode = z.infer<typeof artistPolicyModeSchema>
 export type ArtistPolicy = z.infer<typeof artistPolicySchema>
 export type CurationStatus = z.infer<typeof curationStatusSchema>
@@ -677,3 +869,4 @@ export type Collection = z.infer<typeof collectionSchema>
 export type CollectionsFile = z.infer<typeof collectionsFileSchema>
 export type CatalogSources = z.infer<typeof catalogSourcesSchema>
 export type EmbeddingManifest = z.infer<typeof embeddingManifestSchema>
+export type YouTubeAuthoritiesFile = z.infer<typeof youtubeAuthoritiesFileSchema>

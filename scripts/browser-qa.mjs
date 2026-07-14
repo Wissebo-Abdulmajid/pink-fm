@@ -523,7 +523,7 @@ async function run() {
   }
   checks.push({ name: 'playback-consent-denied', passed: true, ...deniedState })
 
-  // Select a known, reviewed direct Spotify record through the visible catalogue flow.
+  // Select a known, reviewed full-song YouTube record through the visible catalogue flow.
   await evaluate(cdp, 'localStorage.clear()')
   await cdp.send('Page.reload', { ignoreCache: true })
   await waitForSelector(cdp, '.playback-consent', 10000)
@@ -540,21 +540,23 @@ async function run() {
   await clickSelector(cdp, '.playback-consent__actions .button:not(.button--secondary)')
   await waitForCondition(
     cdp,
-    `Boolean(document.querySelector('.provider-player--spotify iframe, .player-status span')) &&
-      (Boolean(document.querySelector('.provider-player--spotify iframe')) || document.querySelector('.player-status')?.textContent?.includes('could not'))`,
-    'Spotify embed or honest failure fallback',
+    `Boolean(document.querySelector('.provider-player--youtube')) &&
+      Boolean(document.querySelector('.playback-external-link')) &&
+      (document.querySelector('.player-shell__coverage')?.textContent ?? '').includes('FULL SONG')`,
+    'YouTube full-song player shell and fallback',
     30000,
   )
-  const spotifyOutcome = await evaluate(cdp, `({
+  const youtubeOutcome = await evaluate(cdp, `({
     track: document.querySelector('.player-shell__display h2')?.textContent?.trim() ?? '',
-    iframeLoaded: Boolean(document.querySelector('.provider-player--spotify iframe')),
+    coverage: document.querySelector('.player-shell__coverage')?.textContent?.trim() ?? '',
+    iframeLoaded: Boolean(document.querySelector('.provider-player--youtube iframe')),
     status: document.querySelector('.player-status')?.textContent?.trim() ?? '',
     fallback: Boolean(document.querySelector('.playback-external-link'))
   })`)
-  if (spotifyOutcome.track !== 'Cindai' || !spotifyOutcome.fallback) {
-    throw new Error('Real Spotify recommendation did not retain its player/fallback: ' + JSON.stringify(spotifyOutcome))
+  if (youtubeOutcome.track !== 'Cindai' || !youtubeOutcome.coverage.includes('FULL SONG') || !youtubeOutcome.fallback) {
+    throw new Error('Real YouTube recommendation did not retain its player/fallback: ' + JSON.stringify(youtubeOutcome))
   }
-  checks.push({ name: 'real-spotify-recommendation-provider-outcome', passed: true, ...spotifyOutcome })
+  checks.push({ name: 'real-youtube-recommendation-provider-outcome', passed: true, ...youtubeOutcome })
 
   await clickSelector(cdp, '.radio-secondary-actions button:first-child')
   await clickSelector(cdp, '.radio-secondary-actions button:first-child')
@@ -608,7 +610,11 @@ async function run() {
   // that origin-root path, so this request is browser noise rather than an app
   // resource failure.
   const primaryErrors = cdp.errors.filter(
-    (message) => !message.includes('/favicon.ico') && !message.includes('open.spotify.com'),
+    (message) =>
+      !message.includes('/favicon.ico') &&
+      !message.includes('open.spotify.com') &&
+      !message.includes('youtube.com/iframe_api') &&
+      !message.includes('youtube-nocookie.com'),
   )
   if (primaryErrors.length) {
     throw new Error('Browser console errors in primary flows:\n' + primaryErrors.join('\n'))
@@ -702,8 +708,8 @@ async function run() {
   await waitForSelector(cdp, '.retro-radio', 15000)
   await waitForSelector(cdp, '.player-shell', 15000)
   await evaluate(cdp, "window.dispatchEvent(new Event('offline'))")
-  await waitForCondition(cdp, "document.body.textContent.includes('Music playback requires an internet connection.')", 'offline music message', 10000)
-  checks.push(await inspect(cdp, 'offline-music-message', 'Music playback requires an internet connection.'))
+  await waitForCondition(cdp, "document.body.textContent.includes('Pink FM is ready, but full-song playback requires an internet connection.')", 'offline music message', 10000)
+  checks.push(await inspect(cdp, 'offline-music-message', 'Pink FM is ready, but full-song playback requires an internet connection.'))
   await cdp.send('Network.emulateNetworkConditions', {
     offline: false,
     latency: 0,
@@ -732,6 +738,8 @@ async function run() {
       !message.includes('404') &&
       !message.includes('ERR_INTERNET_DISCONNECTED') &&
       !message.includes('open.spotify.com') &&
+      !message.includes('youtube.com/iframe_api') &&
+      !message.includes('youtube-nocookie.com') &&
       !message.includes('pink-fm-intentionally-unavailable-model'),
   )
   if (unexpectedErrors.length) {

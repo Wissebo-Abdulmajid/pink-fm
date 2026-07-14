@@ -1,6 +1,6 @@
 # Phase 4 playback audit
 
-Generated 2026-07-14T02:57:12.050Z. Apple figures are preview-capable embeds, not universal full-track claims.
+Generated 2026-07-14T04:23:04.099Z. Apple figures are preview-capable embeds, not universal full-track claims.
 
 ## Totals
 
@@ -12,28 +12,28 @@ Generated 2026-07-14T02:57:12.050Z. Apple figures are preview-capable embeds, no
 | spotifyAlbumOnlyUrls | 1 |
 | invalidSpotifyUrls | 0 |
 | spotifyEmbedPlayableTracks | 11 |
-| verifiedYouTubePlayableTracks | 0 |
+| verifiedYouTubePlayableTracks | 15 |
 | applePreviewTracks | 142 |
-| externalOnlyTracks | 0 |
+| externalOnlyTracks | 126 |
 | tracksWithoutDestination | 0 |
-| inSitePlayableTracks | 142 |
-| inSitePlaybackPercentage | 100 |
-| reviewedRecommendationReadyPercentage | 100 |
-| sitiEssentialsPercentage | 100 |
+| inSitePlayableTracks | 16 |
+| inSitePlaybackPercentage | 11.3 |
+| reviewedRecommendationReadyPercentage | 15.2 |
+| sitiEssentialsPercentage | 61.5 |
 
 ## Reviewed coverage by mood
 
 | Mood | In site / eligible | Coverage | 12-track target |
 | --- | ---: | ---: | --- |
-| peaceful | 39/39 | 100% | pass |
-| happy | 47/47 | 100% | pass |
-| romantic | 68/68 | 100% | pass |
-| confident | 67/67 | 100% | pass |
-| energised | 41/41 | 100% | pass |
-| nostalgic | 69/69 | 100% | pass |
-| elegant | 99/99 | 100% | pass |
-| comforted | 58/58 | 100% | pass |
-| dramatic | 72/72 | 100% | pass |
+| peaceful | 7/39 | 17.9% | gap |
+| happy | 7/47 | 14.9% | gap |
+| romantic | 12/68 | 17.6% | pass |
+| confident | 8/67 | 11.9% | gap |
+| energised | 5/41 | 12.2% | gap |
+| nostalgic | 11/69 | 15.9% | gap |
+| elegant | 16/99 | 16.2% | pass |
+| comforted | 11/58 | 19% | gap |
+| dramatic | 13/72 | 18.1% | pass |
 
 ## Known Spotify gaps
 

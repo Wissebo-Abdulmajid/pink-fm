@@ -105,7 +105,7 @@ describe('primary experience components', () => {
       collections: ['modern'],
     })
     const profile = makeProfile({
-      tracks: { schemaVersion: 3, tracks: [calm, modern] },
+      tracks: { schemaVersion: 4, tracks: [calm, modern] },
       collections: {
         schemaVersion: 1,
         collections: [

@@ -29,12 +29,19 @@ export const loadYouTubeIframeApi = () => {
     const previousReady = window.onYouTubeIframeAPIReady
     const existing = document.querySelector<HTMLScriptElement>('script[data-pink-fm-provider="youtube"]')
     const script = existing ?? document.createElement('script')
+    const timeout = window.setTimeout(() => {
+      apiPromise = null
+      if (!existing) script.remove()
+      reject(new Error('YouTube’s embedded player could not be loaded.'))
+    }, 8_000)
     window.onYouTubeIframeAPIReady = () => {
+      window.clearTimeout(timeout)
       previousReady?.()
       if (window.YT) resolve(window.YT)
       else reject(new Error('YouTube’s player API was unavailable.'))
     }
     script.addEventListener('error', () => {
+      window.clearTimeout(timeout)
       apiPromise = null
       if (!existing) script.remove()
       reject(new Error('YouTube’s embedded player could not be loaded.'))

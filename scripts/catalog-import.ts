@@ -219,7 +219,7 @@ const run = async () => {
   }
 
   const output: TracksFile = {
-    schemaVersion: 3,
+    schemaVersion: 4,
     tracks: [...byId.values()],
   }
   const validated = tracksFileSchema.parse(output)

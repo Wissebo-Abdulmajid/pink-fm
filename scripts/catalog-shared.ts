@@ -85,7 +85,16 @@ export const normaliseTitle = (value: string) => normaliseText(value)
 export const normaliseProviderUrl = (value: string) => {
   if (!value) return ''
   const parsed = new URL(value)
-  parsed.search = ''
+  if (
+    ['youtube.com', 'www.youtube.com'].includes(parsed.hostname) &&
+    parsed.pathname === '/watch' &&
+    parsed.searchParams.get('v')
+  ) {
+    const videoId = parsed.searchParams.get('v')
+    parsed.search = videoId ? `?v=${videoId}` : ''
+  } else {
+    parsed.search = ''
+  }
   parsed.hash = ''
   return parsed.toString().replace(/\/$/, '')
 }

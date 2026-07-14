@@ -90,6 +90,11 @@ Open the local URL printed by Vite and use `#/g/siti`. On Windows, if PowerShell
 | `npm run playback:prepare -- --slug <slug> --dry-run` | Classify Spotify destinations and report safe playback migration changes |
 | `npm run playback:prepare -- --slug <slug> --apply` | Persist reviewed schema-migration defaults after inspecting the dry run |
 | `npm run playback:audit -- --slug <slug>` | Generate JSON and Markdown in-site playback coverage reports |
+| `npm run youtube:prepare -- --slug=<slug> --dry-run` | Preview curated full-song YouTube source assignment |
+| `npm run youtube:prepare -- --slug=<slug> --apply` | Persist reviewed full-song YouTube source metadata and provenance |
+| `npm run youtube:audit -- --slug=<slug>` | Generate full-subscription-free coverage reports |
+| `npm run youtube:verify -- --slug=<slug>` | Verify local YouTube source structure, provenance and trusted channels |
+| `npm run youtube:browser -- --slug=<slug>` | Optional live no-cookie embed endpoint smoke check |
 | `npm run recommendations:simulate` | Run 3,150 recommendation-diversity simulations across all user-facing moods |
 | `npm run bot:embeddings -- --slug <slug>` | Regenerate matching model/index/binary embeddings |
 | `npm run bot:evaluation:generate` | Recreate the deterministic evaluation corpus |
@@ -127,10 +132,12 @@ flowchart TD
   Request --> Engine
   Storage["Versioned profile-scoped localStorage"] --> Engine
   Engine --> Response["Evidence-backed response templates"]
+  Engine --> Gate["Full-song radio eligibility gate"]
+  Gate --> Response
   Response --> Select["Deterministic provider selection"]
   Consent["Profile-scoped embed consent"] --> Select
-  Select --> Spotify["Spotify Embed iFrame API"]
-  Select --> YouTube["Verified official YouTube IFrame"]
+  Select --> YouTube["Verified official full-song YouTube IFrame"]
+  Select --> Spotify["Secondary Spotify Embed iFrame API"]
   Select --> Apple["Apple Music preview iframe"]
   Select --> Links["Secondary official destination"]
   Spotify --> Events["Literal playback events"]
@@ -232,13 +239,15 @@ Phase 3 ran 3,150 deterministic simulations: 50 runs for each of nine user-facin
 
 ## In-site playback
 
-The radio owns one persistent, capability-aware player controller. A new recommendation loads into the current provider controller without leaving `RadioPage` and never autoplays. Automatic order is Spotify Embed, a manually verified official YouTube embed, an Apple Music preview, then an official external destination. A listener preference moves an available provider to the front; an unavailable preference falls through normally.
+The radio owns one persistent, capability-aware player controller. A new recommendation loads into the current provider controller without leaving `RadioPage` and never autoplays. Phase 4.1 separates provider availability from guaranteed full-song coverage. The main radio and WisseBot default to verified full-subscription-free YouTube sources only; Spotify, Apple Music previews and external links remain secondary manual destinations.
+
+Coverage classes are explicit: `full-subscription-free`, `full-account-dependent`, `preview-only`, `external-only`, and `unavailable`. Only `full-subscription-free` counts toward the guaranteed radio requirement. Apple previews never count as full songs, and Spotify embeds are not treated as guaranteed subscription-free full playback because account, browser, region and product behavior can vary.
 
 Spotify uses the official `https://open.spotify.com/embed/iframe-api/v1` script. It needs no OAuth, client ID, access token, Web API call, Web Playback SDK, or backend. Only exact `open.spotify.com` HTTPS track URLs with valid 22-character identifiers become `spotify:track:` URIs. Album, playlist, artist, malformed, lookalike-host, credential-bearing, and unsafe-protocol URLs never count as track playback. Spotify controls and attribution remain visible. Provider behavior may be a preview or full playback depending on account, browser, device, region, cookie policy and Spotify itself, so Pink FM says “Playback provided by Spotify,” not “Full song available.”
 
-YouTube is fallback-only in automatic mode unless explicitly preferred. A record needs a valid 11-character video ID, `verifiedOfficial: true`, and a source ID present in catalogue provenance. Pink FM does no live search, ships no YouTube Data API key, and does not select fan uploads. The visible IFrame player keeps standard controls and uses `youtube-nocookie.com` where compatible.
+YouTube is the primary guaranteed playback provider. A full source needs a valid video ID, trusted channel ID, provenance source ID, verified date, duration evidence, `verified: true`, `embeddable: true`, and `fullLength: true`. Pink FM does no runtime search, ships no YouTube Data API key, and does not select fan uploads. The visible IFrame player keeps standard controls and uses `youtube-nocookie.com` where compatible.
 
-Apple Music remains `preview-or-external` in Phase 4. Pink FM derives an official `embed.music.apple.com` URL from the validated song destination, shows Apple’s native iframe controls, and labels it “Preview provided by Apple Music.” There is no MusicKit authentication, developer token, private key, signed token, or full-playback promise.
+Apple Music remains `preview-or-external`. Pink FM derives an official `embed.music.apple.com` URL from the validated song destination, shows Apple’s native iframe controls, and labels it “Preview provided by Apple Music.” There is no MusicKit authentication, developer token, private key, signed token, or full-playback promise. Previews are excluded from main radio unless the listener explicitly enables preview fallback in Settings.
 
 Before the first embed, Pink FM explains that the provider receives a network request and may use its own cookies. The listener can allow embeds or remain external-only, and can change the profile-scoped decision and playback preference in Settings. Denial never disables recommendations, favourites, feedback, the queue, WisseBot, or external links. Pink FM adds no playback analytics.
 
@@ -248,15 +257,18 @@ The compact queue shows the current result, a prepared next result, and the most
 
 ### Adding playback data for another artist
 
-Keep `officialLinks` as canonical destinations. A valid direct Spotify track URL is sufficient; the adapter derives its URI. Add YouTube only after manual official-upload verification and add the exact provenance source to `catalog-sources.json`. Apple song links can use the official preview boundary without committing a duplicate embed URL. Then run:
+Keep `officialLinks` as canonical destinations. Add full-song YouTube data only after manual official-upload verification. The video channel must be present in `youtube-authorities.json`, the source must have provenance in `catalog-sources.json`, and the track must carry `playbackCoverage: "full-subscription-free"` plus one or more `fullPlaybackSources`. Apple song links can use the official preview boundary, but previews do not satisfy guaranteed radio playback. Then run:
 
 ```bash
 npm run playback:prepare -- --slug <slug> --dry-run
 npm run playback:audit -- --slug <slug>
+npm run youtube:prepare -- --slug=<slug> --dry-run
+npm run youtube:audit -- --slug=<slug>
+npm run youtube:verify -- --slug=<slug>
 npm run content:validate
 ```
 
-Review every album-only, malformed, external-only and missing destination. Never invent a URL to improve coverage. The current Siti report is `docs/phase-4-playback-audit.md`; its Apple figures mean preview-capable, not universal full-track playback.
+Review every album-only, malformed, external-only and missing destination. Never invent a URL to improve coverage. The current Siti full-song report is `docs/phase-4-1-full-song-audit.md`; it intentionally separates full-song coverage from preview-capable and external-only catalogue records.
 
 Explanations are derived from actual score contributions and structured request evidence. Technical details are tucked behind “Why this recommendation?” rather than dominating the radio display.
 
@@ -384,7 +396,7 @@ The manifest uses original Pink FM icons and a relative scope/start URL. The ser
 
 An update banner appears when a worker waits. After one successful online load, the interface can reopen cached catalogue metadata, local preferences, library history, and deterministic recommendations offline. External playback and a first-time semantic-model download may require connectivity.
 
-The Phase 4 shell cache is versioned `pink-fm-v4`; activation removes only outdated `pink-fm-*` caches. It deliberately leaves browser/Transformers model caches alone. Spotify/YouTube/Apple scripts, iframe pages, media, authentication and cookies are never permanent offline assets. Offline radio screens say plainly: “Music playback requires an internet connection.”
+The Phase 4.1 shell cache is versioned `pink-fm-v5`; activation removes only outdated `pink-fm-*` caches. It deliberately leaves browser/Transformers model caches alone. Spotify/YouTube/Apple scripts, iframe pages, media, authentication and cookies are never permanent offline assets. Offline radio screens say plainly: “Pink FM is ready, but full-song playback requires an internet connection.”
 
 ## GitHub Pages deployment
 
@@ -472,7 +484,7 @@ Do not place credentials or private data in the URL. An unusual slug provides ob
 
 ## Privacy limitations
 
-Favourites, feedback, settings, affinities, recommendation rotation, actual listening history, playback events, embed consent, and conversation preferences use a versioned `localStorage` layer scoped by gift slug. Versions one through three migrate to version four without deleting favourites or prior history; malformed data resets safely. Browser storage is not encrypted and clearing site data removes it.
+Favourites, feedback, settings, affinities, recommendation rotation, actual listening history, playback events, embed consent, alternate-version preference, preview-fallback preference, and conversation preferences use a versioned `localStorage` layer scoped by gift slug. Versions one through three migrate safely without deleting favourites or prior history; malformed data resets safely. Browser storage is not encrypted and clearing site data removes it.
 
 The opt-in semantic message is processed locally in the worker; it is not sent to Pink FM or an LLM service. The browser may contact Hugging Face/CDN origins to obtain public model files on first use. Allowing playback embeds contacts the selected Spotify, YouTube or Apple service under that provider’s privacy and cookie behavior. Other people with access to the same browser profile may inspect local storage.
 
@@ -514,7 +526,7 @@ Primary flows should be retested with keyboard only, 200% zoom, screen-reader na
 - Model cache persistence, first-use time, and memory depend on browser, storage pressure, connection, and hardware; no phone-performance claim is made from desktop Node or headless Chrome timings.
 - Precomputed embeddings understand catalogue descriptions; they do not verify historical facts or translate lyrics.
 - Static hosting provides no authentication, cross-device sync, or secure private messaging.
-- Embedded and external music playback require the provider and an internet connection. Spotify availability/full-length behavior varies by login, browser, device, region, cookies and blockers; Apple is preview-or-external; YouTube remains intentionally sparse until official uploads are manually verified.
+- Embedded and external music playback require the provider and an internet connection. Guaranteed radio playback uses manually verified official YouTube embeds only. Spotify availability/full-length behavior varies by login, browser, device, region, cookies and blockers; Apple is preview-or-external; YouTube coverage remains intentionally sparse until official uploads are manually verified.
 
 ## Creator and licence
 

@@ -2,6 +2,7 @@ import type { Track } from '../../config/schemas'
 import { appleMusicEmbedUrl } from './providers/apple/apple-url'
 import { spotifyTrackUri } from './providers/spotify/spotify-url'
 import { isYouTubeVideoId } from './providers/youtube/youtube-url'
+import { selectPrimaryFullPlaybackSource } from '../recommendations/full-playback'
 import type { PlaybackCapability, PlaybackPreference, PlaybackProviderId, PlaybackSelection } from './playback-types'
 
 export const playbackCapabilities: Record<PlaybackProviderId, PlaybackCapability> = {
@@ -26,6 +27,7 @@ export const playbackCapabilities: Record<PlaybackProviderId, PlaybackCapability
 export const providerCanHandle = (provider: PlaybackProviderId, track: Track) => {
   if (provider === 'spotify-embed') return Boolean(spotifyTrackUri(track.officialLinks.spotify))
   if (provider === 'youtube-embed') {
+    if (selectPrimaryFullPlaybackSource(track)) return true
     const youtube = track.playback.youtube
     return Boolean(youtube?.verifiedOfficial && youtube.sourceId && isYouTubeVideoId(youtube.videoId))
   }
@@ -36,7 +38,7 @@ export const providerCanHandle = (provider: PlaybackProviderId, track: Track) =>
   return Object.values(track.officialLinks).some(Boolean)
 }
 
-const automaticOrder: PlaybackProviderId[] = ['spotify-embed', 'youtube-embed', 'apple-preview', 'external']
+const automaticOrder: PlaybackProviderId[] = ['youtube-embed', 'spotify-embed', 'apple-preview', 'external']
 const preferenceProvider: Record<Exclude<PlaybackPreference, 'automatic'>, PlaybackProviderId> = {
   spotify: 'spotify-embed', youtube: 'youtube-embed', apple: 'apple-preview',
 }

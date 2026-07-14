@@ -61,6 +61,8 @@ export const listenerStateSchema = z.strictObject({
   selectedStreamingService: streamingServiceSchema,
   playbackPreference: playbackPreferenceSchema,
   embedConsent: z.enum(['ask', 'allowed', 'external-only']),
+  allowOfficialAlternateVersions: z.boolean(),
+  allowPreviewsWhenFullSongsUnavailable: z.boolean(),
   completedOnboarding: z.boolean(),
   favouriteStationCounts: z.record(z.string(), z.number().int().nonnegative()),
   lastTarget: moodVectorSchema.nullable(),
@@ -107,6 +109,8 @@ export const createDefaultListenerState = (
   selectedStreamingService: streamingService,
   playbackPreference: 'automatic',
   embedConsent: 'ask',
+  allowOfficialAlternateVersions: true,
+  allowPreviewsWhenFullSongsUnavailable: false,
   completedOnboarding: false,
   favouriteStationCounts: {},
   lastTarget: null,
@@ -147,6 +151,8 @@ export const migrateListenerState = (
       playbackEvents: versionTwo.playbackEvents ?? [],
       playbackPreference: versionTwo.playbackPreference ?? 'automatic',
       embedConsent: versionTwo.embedConsent ?? 'ask',
+      allowOfficialAlternateVersions: versionTwo.allowOfficialAlternateVersions ?? true,
+      allowPreviewsWhenFullSongsUnavailable: versionTwo.allowPreviewsWhenFullSongsUnavailable ?? false,
     }
     const result = listenerStateSchema.safeParse(migrated)
     return result.success ? result.data : defaults

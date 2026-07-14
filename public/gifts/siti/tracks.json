@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 3,
+  "schemaVersion": 4,
   "tracks": [
     {
       "id": "cindai",
@@ -36,7 +36,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=N2zJlMofr9Y",
         "spotify": "https://open.spotify.com/track/5hYW2hAwvsaifyiNxDVVKC",
         "appleMusic": "https://music.apple.com/my/album/cindai/573126598?i=573126640&uo=4"
       },
@@ -44,6 +44,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "N2zJlMofr9Y",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "cindai-official-mv",
+          "provider": "youtube",
+          "videoId": "N2zJlMofr9Y",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 296,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=N2zJlMofr9Y",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "cindai-official-lyric-suria",
+          "provider": "youtube",
+          "videoId": "InbmXtsF6vQ",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 297,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=InbmXtsF6vQ",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 35,
         "happy": 72,
@@ -98,7 +149,9 @@
         "apple-artist",
         "apple-release-573126598",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-siti-official",
+        "youtube-suria-records"
       ]
     },
     {
@@ -134,7 +187,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=q0VgfdlXfIc",
         "spotify": "https://open.spotify.com/track/3hCfrrBnKmZsbep5rZ7f61",
         "appleMusic": "https://music.apple.com/my/album/purnama-merindu/574417117?i=574417274&uo=4"
       },
@@ -142,6 +195,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "q0VgfdlXfIc",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-suria-records"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "purnama-merindu-official-mv",
+          "provider": "youtube",
+          "videoId": "q0VgfdlXfIc",
+          "version": "music-video",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 267,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=q0VgfdlXfIc",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 62,
         "happy": 38,
@@ -195,7 +280,8 @@
         "apple-artist",
         "apple-release-574417117",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-suria-records"
       ]
     },
     {
@@ -232,7 +318,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=eZ4Q5KLeP3E",
         "spotify": "https://open.spotify.com/track/4arXMX7u6GSz4EJG92db1F",
         "appleMusic": "https://music.apple.com/my/album/bukan-cinta-biasa/573421556?i=573421557&uo=4"
       },
@@ -240,6 +326,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "eZ4Q5KLeP3E",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "bukan-cinta-biasa-official-mv",
+          "provider": "youtube",
+          "videoId": "eZ4Q5KLeP3E",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 275,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=eZ4Q5KLeP3E",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 52,
         "happy": 45,
@@ -293,7 +411,8 @@
         "apple-artist",
         "apple-release-573421556",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-siti-official"
       ]
     },
     {
@@ -330,7 +449,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=2o3S1LqDr2U",
         "spotify": "https://open.spotify.com/album/2qSbdOw1byknZvx0RJsfHL",
         "appleMusic": "https://music.apple.com/my/album/aku-cinta-padamu/574180393?i=574180439&uo=4"
       },
@@ -338,6 +457,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "2o3S1LqDr2U",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-suria-records"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "aku-cinta-padamu-official-lyric-suria",
+          "provider": "youtube",
+          "videoId": "2o3S1LqDr2U",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 328,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=2o3S1LqDr2U",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 1
+        },
+        {
+          "id": "aku-cinta-padamu-official-lyric-siti",
+          "provider": "youtube",
+          "videoId": "ub-HuJ7cIro",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 318,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=ub-HuJ7cIro",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 58,
         "happy": 48,
@@ -391,7 +561,9 @@
         "apple-artist",
         "apple-release-574180393",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-suria-records",
+        "youtube-siti-official"
       ]
     },
     {
@@ -440,6 +612,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 45,
         "happy": 54,
@@ -531,7 +711,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=cYjwS7sf4sI",
         "spotify": "https://open.spotify.com/track/46LVlVqvTkznjpDobFWL7b",
         "appleMusic": "https://music.apple.com/my/album/biarlah-rahsia/1444110731?i=1444110733&uo=4"
       },
@@ -539,6 +719,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "cYjwS7sf4sI",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-suria-records"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "biarlah-rahsia-official-mv",
+          "provider": "youtube",
+          "videoId": "cYjwS7sf4sI",
+          "version": "music-video",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 258,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=cYjwS7sf4sI",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 68,
         "happy": 32,
@@ -592,7 +804,8 @@
         "apple-artist",
         "apple-release-1444110731",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-suria-records"
       ]
     },
     {
@@ -628,7 +841,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=K-kzBAW3uSg",
         "spotify": "https://open.spotify.com/track/5aGtASRxHzDvNx6hCxl4s5",
         "appleMusic": "https://music.apple.com/my/album/destinasi-cinta/1444110731?i=1444110736&uo=4"
       },
@@ -636,6 +849,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "K-kzBAW3uSg",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "destinasi-cinta-youtube-topic",
+          "provider": "youtube",
+          "videoId": "K-kzBAW3uSg",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 205,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=K-kzBAW3uSg",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 35,
         "happy": 88,
@@ -690,7 +935,8 @@
         "apple-artist",
         "apple-release-1444110731",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-siti-official"
       ]
     },
     {
@@ -728,7 +974,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=JZzPldJo4eM",
         "spotify": "https://open.spotify.com/track/0XDA8Rp5slzCTeYen5vgcH",
         "appleMusic": "https://music.apple.com/my/album/anta-permana/1521304037?i=1521304578&uo=4"
       },
@@ -736,6 +982,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "JZzPldJo4eM",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "anta-permana-official-mv",
+          "provider": "youtube",
+          "videoId": "JZzPldJo4eM",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 207,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=JZzPldJo4eM",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "anta-permana-official-live",
+          "provider": "youtube",
+          "videoId": "BktXD2W1P3M",
+          "version": "live",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 214,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=BktXD2W1P3M",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 28,
         "happy": 62,
@@ -789,7 +1086,8 @@
         "apple-artist",
         "apple-release-1521304037",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-siti-official"
       ]
     },
     {
@@ -824,7 +1122,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=0NRnLJmQFBU",
         "spotify": "https://open.spotify.com/track/0Ck4AsFNZT7q4LzjyHuNqs",
         "appleMusic": "https://music.apple.com/my/album/lebih-indah/1443611673?i=1443611851&uo=4"
       },
@@ -832,6 +1130,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "0NRnLJmQFBU",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "lebih-indah-official-video",
+          "provider": "youtube",
+          "videoId": "0NRnLJmQFBU",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 173,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=0NRnLJmQFBU",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "lebih-indah-official-alt",
+          "provider": "youtube",
+          "videoId": "x8GQC2miK0s",
+          "version": "alternate",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 243,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=x8GQC2miK0s",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 72,
         "happy": 64,
@@ -885,7 +1234,8 @@
         "apple-artist",
         "apple-release-1443611673",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-siti-official"
       ]
     },
     {
@@ -921,7 +1271,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=tzwXY-Womqc",
         "spotify": "https://open.spotify.com/track/487aH0z2Z5tpFYK5pG7uht",
         "appleMusic": "https://music.apple.com/my/album/wajah-kekasih/574180393?i=574180440&uo=4"
       },
@@ -929,6 +1279,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "tzwXY-Womqc",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-suria-records"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "wajah-kekasih-official-ost",
+          "provider": "youtube",
+          "videoId": "tzwXY-Womqc",
+          "version": "music-video",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 340,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=tzwXY-Womqc",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 66,
         "happy": 38,
@@ -982,7 +1364,8 @@
         "apple-artist",
         "apple-release-574180393",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-suria-records"
       ]
     },
     {
@@ -1018,7 +1401,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=_i4MjPw7ar0",
         "spotify": "https://open.spotify.com/track/6H0VKTMGQxartORpXViL4y",
         "appleMusic": "https://music.apple.com/my/album/kau-kekasihku/574352019?i=574352081&uo=4"
       },
@@ -1026,6 +1409,38 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "_i4MjPw7ar0",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-suria-records"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "kau-kekasihku-official-mv",
+          "provider": "youtube",
+          "videoId": "_i4MjPw7ar0",
+          "version": "music-video",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 336,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=_i4MjPw7ar0",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 1
+        }
+      ],
       "moods": {
         "peaceful": 54,
         "happy": 52,
@@ -1079,7 +1494,8 @@
         "apple-artist",
         "apple-release-574352019",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-suria-records"
       ]
     },
     {
@@ -1116,7 +1532,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=D2cgyd6z6HU",
         "spotify": "https://open.spotify.com/track/2M9BfgDbZtHfK2Kk3WtQV0",
         "appleMusic": "https://music.apple.com/my/album/balqis/574380968?i=574380970&uo=4"
       },
@@ -1124,6 +1540,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "D2cgyd6z6HU",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "balqis-official-mv",
+          "provider": "youtube",
+          "videoId": "D2cgyd6z6HU",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 308,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=D2cgyd6z6HU",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "balqis-official-lyric",
+          "provider": "youtube",
+          "videoId": "-NsuS_iPSPU",
+          "version": "official-audio",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 277,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=-NsuS_iPSPU",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 38,
         "happy": 68,
@@ -1178,7 +1645,8 @@
         "apple-artist",
         "apple-release-574380968",
         "spotify-artist",
-        "spotify-editorial"
+        "spotify-editorial",
+        "youtube-siti-official"
       ]
     },
     {
@@ -1222,6 +1690,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 40,
         "happy": 36,
@@ -1313,6 +1789,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 64,
         "happy": 48,
@@ -1397,7 +1881,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=VvPbwCehrgQ",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/jerat-percintaan/574251506?i=574251589&uo=4"
       },
@@ -1405,6 +1889,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "VvPbwCehrgQ",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "jerat-percintaan-official-mv-siti",
+          "provider": "youtube",
+          "videoId": "VvPbwCehrgQ",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 269,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=VvPbwCehrgQ",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "jerat-percintaan-official-mv-suria",
+          "provider": "youtube",
+          "videoId": "_JWQkyQdko4",
+          "version": "music-video",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 294,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=_JWQkyQdko4",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 66,
         "happy": 45,
@@ -1453,7 +1988,9 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574251506"
+        "apple-release-574251506",
+        "youtube-siti-official",
+        "youtube-suria-records"
       ]
     },
     {
@@ -1497,6 +2034,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 58,
         "happy": 41,
@@ -1589,6 +2134,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 37,
         "happy": 36,
@@ -1680,6 +2233,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 56,
         "happy": 19,
@@ -1770,6 +2331,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 64,
         "happy": 43,
@@ -1861,6 +2430,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 63,
         "happy": 41,
@@ -1952,6 +2529,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 65,
         "happy": 58,
@@ -2049,6 +2634,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 48,
         "happy": 60,
@@ -2142,6 +2735,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 33,
         "happy": 76,
@@ -2237,6 +2838,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 27,
         "happy": 77,
@@ -2331,6 +2940,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 70,
         "happy": 56,
@@ -2426,6 +3043,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 29,
         "happy": 83,
@@ -2521,6 +3146,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 35,
         "happy": 79,
@@ -2613,6 +3246,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 60,
         "happy": 19,
@@ -2703,6 +3344,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 59,
         "happy": 42,
@@ -2795,6 +3444,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 66,
         "happy": 46,
@@ -2886,6 +3543,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 30,
         "happy": 88,
@@ -2978,6 +3643,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 54,
         "happy": 23,
@@ -3069,6 +3742,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 23,
         "happy": 89,
@@ -3162,6 +3843,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 58,
         "happy": 40,
@@ -3254,6 +3943,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 65,
         "happy": 42,
@@ -3347,6 +4044,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 35,
         "happy": 36,
@@ -3438,6 +4143,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 83,
         "happy": 61,
@@ -3531,6 +4244,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 31,
         "happy": 81,
@@ -3624,6 +4345,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 29,
         "happy": 81,
@@ -3718,6 +4447,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 71,
         "happy": 60,
@@ -3811,6 +4548,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 65,
         "happy": 62,
@@ -3905,6 +4650,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 69,
         "happy": 55,
@@ -3998,6 +4751,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 60,
         "happy": 44,
@@ -4089,6 +4850,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 54,
         "happy": 19,
@@ -4180,6 +4949,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 59,
         "happy": 46,
@@ -4271,6 +5048,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 69,
         "happy": 53,
@@ -4354,7 +5139,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=pqj2-qRwwb8",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/percayalah/574288251?i=574288510&uo=4"
       },
@@ -4362,6 +5147,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "pqj2-qRwwb8",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "percayalah-official-mv",
+          "provider": "youtube",
+          "videoId": "pqj2-qRwwb8",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 298,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=pqj2-qRwwb8",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "percayalah-official-live-suria",
+          "provider": "youtube",
+          "videoId": "AMnQDYCz9Os",
+          "version": "live",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 318,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=AMnQDYCz9Os",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 62,
         "happy": 47,
@@ -4410,7 +5246,9 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-574288251"
+        "apple-release-574288251",
+        "youtube-siti-official",
+        "youtube-suria-records"
       ]
     },
     {
@@ -4454,6 +5292,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 58,
         "happy": 27,
@@ -4540,7 +5386,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=-AjZG2s7jnc",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/nirmala/1266167994?i=1266168552&uo=4"
       },
@@ -4548,6 +5394,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "-AjZG2s7jnc",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-siti-official"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "nirmala-official-mv",
+          "provider": "youtube",
+          "videoId": "-AjZG2s7jnc",
+          "version": "music-video",
+          "authority": "artist-official",
+          "channelId": "UCNq-mu-iXUmiAWyDOcJmZZg",
+          "channelName": "Siti Nurhaliza",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 350,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=-AjZG2s7jnc",
+          "provenanceSourceId": "youtube-siti-official",
+          "priority": 1
+        },
+        {
+          "id": "nirmala-official-lyric-suria",
+          "provider": "youtube",
+          "videoId": "3fvm5KkOoLs",
+          "version": "official-audio",
+          "authority": "label-official",
+          "channelId": "UCBd5pENmJrvi6PQq-2ndBhw",
+          "channelName": "SuriaRecords (SRC)",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 339,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=3fvm5KkOoLs",
+          "provenanceSourceId": "youtube-suria-records",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 28,
         "happy": 83,
@@ -4597,7 +5494,9 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1266167994"
+        "apple-release-1266167994",
+        "youtube-siti-official",
+        "youtube-suria-records"
       ]
     },
     {
@@ -4640,6 +5539,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 35,
         "happy": 76,
@@ -4736,6 +5643,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 31,
         "happy": 78,
@@ -4830,6 +5745,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 29,
         "happy": 83,
@@ -4924,6 +5847,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 33,
         "happy": 79,
@@ -5017,6 +5948,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 69,
         "happy": 61,
@@ -5110,6 +6049,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 63,
         "happy": 41,
@@ -5202,6 +6149,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 69,
         "happy": 59,
@@ -5294,6 +6249,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 39,
         "happy": 42,
@@ -5385,6 +6348,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 59,
         "happy": 47,
@@ -5476,6 +6447,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 56,
         "happy": 24,
@@ -5567,6 +6546,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 22,
         "happy": 91,
@@ -5661,6 +6648,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 35,
         "happy": 39,
@@ -5752,6 +6747,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 59,
         "happy": 43,
@@ -5844,6 +6847,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 33,
         "happy": 42,
@@ -5937,6 +6948,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 60,
         "happy": 40,
@@ -6028,6 +7047,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 66,
         "happy": 46,
@@ -6119,6 +7146,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 25,
         "happy": 89,
@@ -6211,6 +7246,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 61,
         "happy": 21,
@@ -6302,6 +7345,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 39,
         "happy": 39,
@@ -6395,6 +7446,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 39,
         "happy": 36,
@@ -6487,6 +7546,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 23,
         "happy": 90,
@@ -6580,6 +7647,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 61,
         "happy": 46,
@@ -6672,6 +7747,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 64,
         "happy": 48,
@@ -6763,6 +7846,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 57,
         "happy": 20,
@@ -6854,6 +7945,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 61,
         "happy": 46,
@@ -6946,6 +8045,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 22,
         "happy": 91,
@@ -7038,6 +8145,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 64,
         "happy": 59,
@@ -7131,6 +8246,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 64,
         "happy": 56,
@@ -7226,6 +8349,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 34,
         "happy": 83,
@@ -7319,6 +8450,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 72,
         "happy": 59,
@@ -7413,6 +8552,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 33,
         "happy": 81,
@@ -7507,6 +8654,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 35,
         "happy": 83,
@@ -7599,6 +8754,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 97,
         "happy": 58,
@@ -7691,6 +8854,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 92,
         "happy": 53,
@@ -7783,6 +8954,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 95,
         "happy": 60,
@@ -7874,6 +9053,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 95,
         "happy": 58,
@@ -7964,6 +9151,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 94,
         "happy": 56,
@@ -8054,6 +9249,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 39,
         "happy": 77,
@@ -8145,6 +9348,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 31,
         "happy": 80,
@@ -8235,6 +9446,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 32,
         "happy": 81,
@@ -8324,6 +9543,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 35,
         "happy": 78,
@@ -8420,6 +9647,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 38,
         "happy": 82,
@@ -8510,6 +9745,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 67,
         "happy": 56,
@@ -8600,6 +9843,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 57,
         "happy": 26,
@@ -8690,6 +9941,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 77,
         "happy": 67,
@@ -8779,6 +10038,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 76,
         "happy": 67,
@@ -8868,6 +10135,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 24,
         "happy": 87,
@@ -8962,6 +10237,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 61,
         "happy": 47,
@@ -9058,6 +10341,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 29,
         "happy": 87,
@@ -9151,6 +10442,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 58,
         "happy": 42,
@@ -9242,6 +10541,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 61,
         "happy": 27,
@@ -9333,6 +10640,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 66,
         "happy": 44,
@@ -9431,6 +10746,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 44,
         "happy": 56,
@@ -9523,6 +10846,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 27,
         "happy": 91,
@@ -9608,7 +10939,7 @@
       "artworkAlt": "",
       "active": true,
       "officialLinks": {
-        "youtube": "",
+        "youtube": "https://www.youtube.com/watch?v=JAGNmOlMdfQ",
         "spotify": "",
         "appleMusic": "https://music.apple.com/my/album/aku-bidadari-syurgamu/1521304037?i=1521304185&uo=4"
       },
@@ -9616,6 +10947,57 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "youtube",
+        "spotify": null,
+        "youtube": {
+          "videoId": "JAGNmOlMdfQ",
+          "verifiedOfficial": true,
+          "sourceId": "youtube-mvm-music"
+        },
+        "appleMusic": null
+      },
+      "playbackCoverage": "full-subscription-free",
+      "fullPlaybackSources": [
+        {
+          "id": "aku-bidadari-syurgamu-official-mv",
+          "provider": "youtube",
+          "videoId": "JAGNmOlMdfQ",
+          "version": "music-video",
+          "authority": "licensed-broadcaster",
+          "channelId": "UCquIzvgQ4PxPDZqFXhuT_gw",
+          "channelName": "MVM MUSIC",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 263,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=JAGNmOlMdfQ",
+          "provenanceSourceId": "youtube-mvm-music",
+          "priority": 1
+        },
+        {
+          "id": "aku-bidadari-syurgamu-official-audio",
+          "provider": "youtube",
+          "videoId": "oA3FNjs_gpY",
+          "version": "official-audio",
+          "authority": "licensed-broadcaster",
+          "channelId": "UCquIzvgQ4PxPDZqFXhuT_gw",
+          "channelName": "MVM MUSIC",
+          "verified": true,
+          "embeddable": true,
+          "fullLength": true,
+          "durationSeconds": 239,
+          "expectedTrackDurationSeconds": null,
+          "regionNotes": [],
+          "verifiedAt": "2026-07-14",
+          "sourceUrl": "https://www.youtube.com/watch?v=oA3FNjs_gpY",
+          "provenanceSourceId": "youtube-mvm-music",
+          "priority": 2
+        }
+      ],
       "moods": {
         "peaceful": 79,
         "happy": 67,
@@ -9663,7 +11045,8 @@
       ],
       "sourceIds": [
         "apple-artist",
-        "apple-release-1521304037"
+        "apple-release-1521304037",
+        "youtube-mvm-music"
       ]
     },
     {
@@ -9707,6 +11090,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 59,
         "happy": 25,
@@ -9804,6 +11195,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 31,
         "happy": 69,
@@ -9897,6 +11296,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 76,
         "happy": 63,
@@ -9987,6 +11394,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 76,
         "happy": 66,
@@ -10077,6 +11492,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 27,
         "happy": 87,
@@ -10170,6 +11593,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 65,
         "happy": 43,
@@ -10268,6 +11699,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 43,
         "happy": 56,
@@ -10361,6 +11800,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 60,
         "happy": 48,
@@ -10452,6 +11899,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 32,
         "happy": 74,
@@ -10543,6 +11998,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 66,
         "happy": 42,
@@ -10634,6 +12097,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 28,
         "happy": 74,
@@ -10733,6 +12204,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 27,
         "happy": 83,
@@ -10827,6 +12306,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 83,
         "happy": 67,
@@ -10920,6 +12407,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 28,
         "happy": 80,
@@ -11012,6 +12507,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 75,
         "happy": 68,
@@ -11102,6 +12605,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 79,
         "happy": 62,
@@ -11193,6 +12704,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 33,
         "happy": 73,
@@ -11285,6 +12804,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 67,
         "happy": 62,
@@ -11390,6 +12917,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 28,
         "happy": 100,
@@ -11493,6 +13028,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 32,
         "happy": 95,
@@ -11586,6 +13129,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 32,
         "happy": 98,
@@ -11678,6 +13229,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 34,
         "happy": 98,
@@ -11770,6 +13329,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 34,
         "happy": 100,
@@ -11868,6 +13435,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 35,
         "happy": 42,
@@ -11966,6 +13541,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 48,
         "happy": 58,
@@ -12066,6 +13649,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 48,
         "happy": 55,
@@ -12163,6 +13754,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 50,
         "happy": 58,
@@ -12254,6 +13853,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 55,
         "happy": 23,
@@ -12345,6 +13952,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 63,
         "happy": 46,
@@ -12436,6 +14051,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 43,
         "happy": 58,
@@ -12534,6 +14157,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 47,
         "happy": 62,
@@ -12635,6 +14266,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 48,
         "happy": 54,
@@ -12728,6 +14367,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 65,
         "happy": 48,
@@ -12820,6 +14467,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 33,
         "happy": 37,
@@ -12917,6 +14572,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 66,
         "happy": 47,
@@ -13009,6 +14672,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 58,
         "happy": 22,
@@ -13100,6 +14771,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 29,
         "happy": 100,
@@ -13199,6 +14878,14 @@
         "provider": "none",
         "url": null
       },
+      "playback": {
+        "preferredProvider": "automatic",
+        "spotify": null,
+        "youtube": null,
+        "appleMusic": null
+      },
+      "playbackCoverage": "preview-only",
+      "fullPlaybackSources": [],
       "moods": {
         "peaceful": 48,
         "happy": 56,

@@ -8,7 +8,7 @@ import { resetSpotifyIframeApiForTests } from './providers/spotify/spotify-ifram
 
 const renderPlayer = (track = makeTrack('player')) => render(
   <MemoryRouter>
-    <ExperienceProvider slug="player-test" profile={makeProfile({ tracks: { schemaVersion: 3, tracks: [track] } })} profileSource="network">
+    <ExperienceProvider slug="player-test" profile={makeProfile({ tracks: { schemaVersion: 4, tracks: [track] } })} profileSource="network">
       <EmbeddedRadioPlayer track={track} station="Velvet Calm" />
     </ExperienceProvider>
   </MemoryRouter>,
@@ -32,7 +32,12 @@ describe('embedded radio player', () => {
 
   it('loads Spotify only after the listener allows embedded players', async () => {
     const user = userEvent.setup()
-    renderPlayer()
+    renderPlayer(makeTrack('spotify-player', {
+      officialLinks: { spotify: 'https://open.spotify.com/track/5hYW2hAwvsaifyiNxDVVKC', youtube: '', appleMusic: '' },
+      playbackCoverage: 'external-only',
+      fullPlaybackSources: [],
+      playback: { preferredProvider: 'automatic', spotify: null, youtube: null, appleMusic: null },
+    }))
     await user.click(screen.getByRole('button', { name: 'Allow embedded players' }))
     await waitFor(() => expect(document.querySelectorAll('script[data-pink-fm-provider="spotify"]')).toHaveLength(1))
   })
@@ -41,6 +46,9 @@ describe('embedded radio player', () => {
     const user = userEvent.setup()
     const track = makeTrack('apple-player', {
       officialLinks: { spotify: '', youtube: '', appleMusic: 'https://music.apple.com/my/album/cindai/573126598?i=573126640' },
+      playbackCoverage: 'preview-only',
+      fullPlaybackSources: [],
+      playback: { preferredProvider: 'automatic', spotify: null, youtube: null, appleMusic: null },
     })
     renderPlayer(track)
     await user.click(screen.getByRole('button', { name: 'Allow embedded players' }))
@@ -52,7 +60,7 @@ describe('embedded radio player', () => {
   it('announces an honest offline playback limitation', () => {
     Object.defineProperty(window.navigator, 'onLine', { configurable: true, value: false })
     renderPlayer()
-    expect(screen.getByText('Music playback requires an internet connection.')).toBeInTheDocument()
+    expect(screen.getByText('Pink FM is ready, but full-song playback requires an internet connection.')).toBeInTheDocument()
     Object.defineProperty(window.navigator, 'onLine', { configurable: true, value: true })
   })
 })

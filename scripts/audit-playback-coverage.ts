@@ -5,6 +5,7 @@ import { moodDimensionKeys, type MoodDimension, type Track } from '../src/config
 import { parseSpotifyUrl } from '../src/features/player/providers/spotify/spotify-url.ts'
 import { appleMusicEmbedUrl } from '../src/features/player/providers/apple/apple-url.ts'
 import { isYouTubeVideoId } from '../src/features/player/providers/youtube/youtube-url.ts'
+import { isRadioEligible } from '../src/features/recommendations/full-playback.ts'
 
 const args = process.argv.slice(2)
 const slugIndex = args.indexOf('--slug')
@@ -17,15 +18,18 @@ const spotifyKind = (track: Track) => track.officialLinks.spotify
   : 'missing'
 const spotifyPlayable = (track: Track) => spotifyKind(track) === 'track'
 const youtubePlayable = (track: Track) => Boolean(
-  track.playback.youtube?.verifiedOfficial &&
-  track.playback.youtube.sourceId &&
-  isYouTubeVideoId(track.playback.youtube.videoId) &&
-  catalog.sources.sources.some((source) => source.id === track.playback.youtube?.sourceId),
+  isRadioEligible(track) ||
+  (
+    track.playback.youtube?.verifiedOfficial &&
+    track.playback.youtube.sourceId &&
+    isYouTubeVideoId(track.playback.youtube.videoId) &&
+    catalog.sources.sources.some((source) => source.id === track.playback.youtube?.sourceId)
+  ),
 )
 const applePlayable = (track: Track) => Boolean(
   appleMusicEmbedUrl(track.playback.appleMusic?.url || track.officialLinks.appleMusic),
 )
-const inSite = (track: Track) => spotifyPlayable(track) || youtubePlayable(track) || applePlayable(track)
+const inSite = (track: Track) => spotifyPlayable(track) || youtubePlayable(track)
 const anyDestination = (track: Track) => Object.values(track.officialLinks).some(Boolean)
 const percent = (part: number, total: number) => total ? Number(((part / total) * 100).toFixed(1)) : 0
 

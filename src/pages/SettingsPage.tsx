@@ -13,6 +13,8 @@ export default function SettingsPage() {
     setStreamingService,
     setPlaybackPreference,
     setEmbedConsent,
+    setAllowOfficialAlternateVersions,
+    setAllowPreviewsWhenFullSongsUnavailable,
     setSoundEffects,
     setReducedMotion,
     setHighContrast,
@@ -68,8 +70,32 @@ export default function SettingsPage() {
             <option value="youtube">Prefer YouTube</option>
             <option value="apple">Prefer Apple Music</option>
           </select>
-          <small>Automatic tries Spotify Embed, a verified official YouTube video, an Apple Music preview, then an external destination. An unavailable preference falls back without interrupting recommendations.</small>
+          <small>Guaranteed radio uses verified full-song YouTube sources first. Spotify and Apple remain secondary manual destinations and do not satisfy full-song coverage.</small>
         </div>
+        <label className="switch-row">
+          <span>
+            <strong>Allow official alternate versions</strong>
+            <small>Use official live, acoustic or alternate full performances when the studio recording is unavailable.</small>
+          </span>
+          <input
+            className="switch"
+            type="checkbox"
+            checked={listener.allowOfficialAlternateVersions}
+            onChange={(event) => setAllowOfficialAlternateVersions(event.target.checked)}
+          />
+        </label>
+        <label className="switch-row">
+          <span>
+            <strong>Allow previews when full songs are unavailable</strong>
+            <small>Off by default. Main radio and WisseBot otherwise avoid Apple previews and external-only tracks.</small>
+          </span>
+          <input
+            className="switch"
+            type="checkbox"
+            checked={listener.allowPreviewsWhenFullSongsUnavailable}
+            onChange={(event) => setAllowPreviewsWhenFullSongsUnavailable(event.target.checked)}
+          />
+        </label>
         <div className="field">
           <label htmlFor="embed-consent">Embedded players</label>
           <select
