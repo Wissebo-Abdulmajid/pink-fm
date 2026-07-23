@@ -6,15 +6,20 @@ import { AppleMusicPreviewAdapter } from './providers/apple/apple-adapter'
 import { SpotifyPlaybackAdapter } from './providers/spotify/spotify-adapter'
 import { YouTubePlaybackAdapter } from './providers/youtube/youtube-adapter'
 import type { PlaybackProviderAdapter, PlaybackState } from './playback-types'
+import { announcePlaybackActivity } from './playback-activity'
 
 const makeAdapter = (
   provider: 'spotify-embed' | 'youtube-embed' | 'apple-preview',
   onState: (state: PlaybackState) => void,
+  allowOfficialAlternateVersions: boolean,
 ) => provider === 'spotify-embed'
   ? new SpotifyPlaybackAdapter(onState)
   : provider === 'youtube-embed'
-    ? new YouTubePlaybackAdapter(onState)
+    ? new YouTubePlaybackAdapter(onState, allowOfficialAlternateVersions)
     : new AppleMusicPreviewAdapter(onState)
+
+export const friendlyPlaybackError = () =>
+  'This player could not tune in. Try again or choose another frequency.'
 
 const withTimeout = <T,>(promise: Promise<T>, message: string, timeoutMs = 9_000) =>
   new Promise<T>((resolve, reject: (reason: Error) => void) => {
@@ -62,6 +67,7 @@ export const usePlaybackController = (track: Track) => {
     const previous = previousStateRef.current
     previousStateRef.current = next
     setState(next)
+    announcePlaybackActivity(next === 'playing')
     const current = trackRef.current
     if (next === 'ready' && previous !== 'ready') eventCallbackRef.current('player-loaded', current.id, effectiveProvider)
     if (next === 'playing' && previous !== 'playing') eventCallbackRef.current('playback-started', current.id, effectiveProvider)
@@ -79,19 +85,21 @@ export const usePlaybackController = (track: Track) => {
     }
     const container = containerRef.current
     if (!container) return
-    const adapter = makeAdapter(effectiveProvider, handleState)
+    const adapter = makeAdapter(effectiveProvider, handleState, listener.allowOfficialAlternateVersions)
     adapterRef.current = adapter
     previousStateRef.current = 'idle'
     setError('')
     void adapter.mount(container).catch((cause) => {
-      setError(cause instanceof Error ? cause.message : 'The embedded player could not be mounted.')
+      void cause
+      setError(friendlyPlaybackError())
       handleState('failed')
     })
     return () => {
       adapter.destroy()
+      announcePlaybackActivity(false)
       if (adapterRef.current === adapter) adapterRef.current = null
     }
-  }, [effectiveProvider, generation, handleState, listener.embedConsent, selection.provider])
+  }, [effectiveProvider, generation, handleState, listener.allowOfficialAlternateVersions, listener.embedConsent, selection.provider])
 
   useEffect(() => {
     const adapter = adapterRef.current
@@ -102,21 +110,35 @@ export const usePlaybackController = (track: Track) => {
       'The embedded player did not respond. That frequency is unavailable here.',
     ).catch((cause) => {
       if (!current) return
-      setError(cause instanceof Error ? cause.message : 'The embedded player could not load this track.')
+      void cause
+      setError(friendlyPlaybackError())
       handleState('failed')
     })
     return () => { current = false }
   }, [generation, handleState, listener.embedConsent, track])
 
   const play = useCallback(async () => {
-    try { await adapterRef.current?.play() }
-    catch (cause) { setError(cause instanceof Error ? cause.message : 'Playback could not start.'); handleState('failed') }
+    try {
+      if (!adapterRef.current) throw new Error('Player unavailable')
+      await adapterRef.current.play()
+    } catch {
+      setError(friendlyPlaybackError())
+      handleState('failed')
+    }
   }, [handleState])
   const pause = useCallback(async () => {
-    try { await adapterRef.current?.pause() }
-    catch (cause) { setError(cause instanceof Error ? cause.message : 'Playback could not pause.'); handleState('failed') }
+    try {
+      if (!adapterRef.current) throw new Error('Player unavailable')
+      await adapterRef.current.pause()
+    } catch {
+      setError(friendlyPlaybackError())
+      handleState('failed')
+    }
   }, [handleState])
-  const retry = useCallback(() => setGeneration((value) => value + 1), [])
+  const retry = useCallback(() => {
+    setError('')
+    setGeneration((value) => value + 1)
+  }, [])
   const reload = useCallback(() => {
     const adapter = adapterRef.current
     if (!adapter) return
@@ -124,7 +146,8 @@ export const usePlaybackController = (track: Track) => {
       adapter.loadTrack(track),
       'The embedded player did not respond. That frequency is unavailable here.',
     ).catch((cause) => {
-      setError(cause instanceof Error ? cause.message : 'The track could not be reloaded.')
+      void cause
+      setError(friendlyPlaybackError())
       handleState('failed')
     })
   }, [handleState, track])

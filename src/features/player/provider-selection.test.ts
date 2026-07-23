@@ -34,8 +34,20 @@ describe('playback provider selection', () => {
   })
 
   it('respects an available listener preference', () => {
-    const track = makeTrack('preferred', { officialLinks: { spotify: 'https://open.spotify.com/track/5hYW2hAwvsaifyiNxDVVKC', youtube: 'https://www.youtube.com/watch?v=AbCdEfGhI_1', appleMusic: '' }, playback: { preferredProvider: 'automatic', spotify: null, youtube, appleMusic: null } })
-    expect(selectPlaybackProvider(track, 'youtube').provider).toBe('youtube-embed')
+    const track = makeTrack('preferred', {
+      officialLinks: { spotify: 'https://open.spotify.com/track/5hYW2hAwvsaifyiNxDVVKC', youtube: '', appleMusic: '' },
+      playbackCoverage: 'external-only',
+      fullPlaybackSources: [],
+      playback: { preferredProvider: 'automatic', spotify: null, youtube: null, appleMusic: null },
+    })
+    expect(selectPlaybackProvider(track, 'spotify').provider).toBe('spotify-embed')
+  })
+
+  it('keeps a guaranteed full song ahead of a secondary Spotify preference', () => {
+    const track = makeTrack('guaranteed-preferred', {
+      officialLinks: { spotify: 'https://open.spotify.com/track/5hYW2hAwvsaifyiNxDVVKC', youtube: 'https://www.youtube.com/watch?v=AbCdEfGhI_1', appleMusic: '' },
+    })
+    expect(selectPlaybackProvider(track, 'spotify').provider).toBe('youtube-embed')
   })
 
   it('falls back without error when a preference is unavailable', () => {

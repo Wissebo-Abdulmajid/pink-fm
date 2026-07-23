@@ -1,7 +1,7 @@
 {
   "name": "Pink FM — Your personal mood radio",
   "short_name": "Pink FM",
-  "description": "A private-feeling retro mood radio with explainable local recommendations and WisseBot.",
+  "description": "A beautifully personal retro mood radio with full-song recommendations and WisseBot.",
   "id": "./#/g/siti",
   "start_url": "./#/g/siti",
   "scope": "./",

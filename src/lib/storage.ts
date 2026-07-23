@@ -75,6 +75,7 @@ export type ListenerState = z.infer<typeof listenerStateSchema>
 
 export const createDefaultListenerState = (
   streamingService: StreamingService = 'spotify',
+  allowOfficialAlternateVersions = true,
 ): ListenerState => ({
   schemaVersion: STORAGE_SCHEMA_VERSION,
   lovedTrackIds: [],
@@ -109,7 +110,7 @@ export const createDefaultListenerState = (
   selectedStreamingService: streamingService,
   playbackPreference: 'automatic',
   embedConsent: 'ask',
-  allowOfficialAlternateVersions: true,
+  allowOfficialAlternateVersions,
   allowPreviewsWhenFullSongsUnavailable: false,
   completedOnboarding: false,
   favouriteStationCounts: {},
@@ -130,14 +131,15 @@ type LegacyState = {
 export const migrateListenerState = (
   raw: unknown,
   streamingService: StreamingService = 'spotify',
+  allowOfficialAlternateVersions = true,
 ): ListenerState => {
   const current = listenerStateSchema.safeParse(raw)
   if (current.success) return current.data
 
-  if (!raw || typeof raw !== 'object') return createDefaultListenerState(streamingService)
+  if (!raw || typeof raw !== 'object') return createDefaultListenerState(streamingService, allowOfficialAlternateVersions)
   const legacy = raw as LegacyState
   if (legacy.schemaVersion === 2 || legacy.schemaVersion === 3) {
-    const defaults = createDefaultListenerState(streamingService)
+    const defaults = createDefaultListenerState(streamingService, allowOfficialAlternateVersions)
     const versionTwo = raw as Record<string, unknown>
     const migrated = {
       ...versionTwo,
@@ -151,15 +153,15 @@ export const migrateListenerState = (
       playbackEvents: versionTwo.playbackEvents ?? [],
       playbackPreference: versionTwo.playbackPreference ?? 'automatic',
       embedConsent: versionTwo.embedConsent ?? 'ask',
-      allowOfficialAlternateVersions: versionTwo.allowOfficialAlternateVersions ?? true,
+      allowOfficialAlternateVersions: versionTwo.allowOfficialAlternateVersions ?? defaults.allowOfficialAlternateVersions,
       allowPreviewsWhenFullSongsUnavailable: versionTwo.allowPreviewsWhenFullSongsUnavailable ?? false,
     }
     const result = listenerStateSchema.safeParse(migrated)
     return result.success ? result.data : defaults
   }
-  if (legacy.schemaVersion !== 1) return createDefaultListenerState(streamingService)
+  if (legacy.schemaVersion !== 1) return createDefaultListenerState(streamingService, allowOfficialAlternateVersions)
 
-  const defaults = createDefaultListenerState(streamingService)
+  const defaults = createDefaultListenerState(streamingService, allowOfficialAlternateVersions)
   const loved = Array.isArray(legacy.lovedTrackIds)
     ? legacy.lovedTrackIds
     : Array.isArray(legacy.favourites)
@@ -207,6 +209,7 @@ export class ListenerStorage {
   constructor(
     slug: string,
     private readonly defaultService: StreamingService = 'spotify',
+    private readonly defaultAllowOfficialAlternateVersions = true,
   ) {
     this.key = `pink-fm:listener:v${STORAGE_SCHEMA_VERSION}:${slug}`
     this.eventName = `pink-fm:storage:${slug}`
@@ -214,10 +217,10 @@ export class ListenerStorage {
   }
 
   private read() {
-    if (!canUseStorage()) return createDefaultListenerState(this.defaultService)
+    if (!canUseStorage()) return createDefaultListenerState(this.defaultService, this.defaultAllowOfficialAlternateVersions)
     try {
       const value = window.localStorage.getItem(this.key)
-      if (value) return migrateListenerState(JSON.parse(value) as unknown, this.defaultService)
+      if (value) return migrateListenerState(JSON.parse(value) as unknown, this.defaultService, this.defaultAllowOfficialAlternateVersions)
       const slug = this.key.split(':').at(-1) ?? ''
       for (const version of [3, 2, 1]) {
         const legacyKey = `pink-fm:listener:v${version}:${slug}`
@@ -226,13 +229,14 @@ export class ListenerStorage {
         const migrated = migrateListenerState(
           JSON.parse(legacyValue) as unknown,
           this.defaultService,
+          this.defaultAllowOfficialAlternateVersions,
         )
         window.localStorage.setItem(this.key, JSON.stringify(migrated))
         return migrated
       }
-      return createDefaultListenerState(this.defaultService)
+      return createDefaultListenerState(this.defaultService, this.defaultAllowOfficialAlternateVersions)
     } catch {
-      return createDefaultListenerState(this.defaultService)
+      return createDefaultListenerState(this.defaultService, this.defaultAllowOfficialAlternateVersions)
     }
   }
 
@@ -270,10 +274,13 @@ export class ListenerStorage {
   }
 
   reset() {
-    this.snapshot = createDefaultListenerState(this.defaultService)
+    this.snapshot = createDefaultListenerState(this.defaultService, this.defaultAllowOfficialAlternateVersions)
     if (canUseStorage()) {
       try {
-        window.localStorage.removeItem(this.key)
+        const slug = this.key.split(':').at(-1) ?? ''
+        for (const version of [STORAGE_SCHEMA_VERSION, 3, 2, 1]) {
+          window.localStorage.removeItem(`pink-fm:listener:v${version}:${slug}`)
+        }
       } catch {
         // Reset the in-memory state even when persistent storage cannot be changed.
       }

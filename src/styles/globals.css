@@ -90,7 +90,7 @@ h3 {
 }
 
 :focus-visible {
-  outline: 3px solid var(--color-accent);
+  outline: 3px solid var(--color-primary-strong);
   outline-offset: 3px;
 }
 
@@ -170,7 +170,7 @@ h3 {
   padding: 0.72rem 1.08rem;
   border: 1px solid transparent;
   border-radius: 999px;
-  background: var(--color-primary);
+  background: var(--color-primary-strong);
   box-shadow: var(--shadow-control);
   color: white;
   cursor: pointer;
@@ -180,7 +180,7 @@ h3 {
 }
 
 .button:hover {
-  background: var(--color-primary-strong);
+  background: var(--color-plum);
   translate: 0 -1px;
 }
 
@@ -811,7 +811,7 @@ h3 {
 .bot-message--listener {
   justify-self: end;
   border-bottom-right-radius: 0.25rem;
-  background: var(--color-primary);
+  background: var(--color-primary-strong);
   color: white;
 }
 
@@ -1040,6 +1040,20 @@ h3 {
   cursor: pointer;
   font-size: 0.7rem;
   font-weight: 850;
+}
+
+.update-banner span {
+  display: grid;
+}
+
+.update-banner small {
+  color: var(--color-muted-text);
+  font-size: 0.72rem;
+}
+
+.update-banner button:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
 }
 
 .bottom-nav__item {

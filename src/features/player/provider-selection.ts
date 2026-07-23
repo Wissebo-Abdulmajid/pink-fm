@@ -47,6 +47,16 @@ export const selectPlaybackProvider = (
   track: Track,
   preference: PlaybackPreference = 'automatic',
 ): PlaybackSelection => {
+  // A verified full-song source is the radio guarantee and always stays first.
+  // Listener preferences remain useful for tracks without that guarantee and
+  // for the secondary external destination.
+  if (selectPrimaryFullPlaybackSource(track)) {
+    return {
+      provider: 'youtube-embed',
+      capability: playbackCapabilities['youtube-embed'],
+      reason: 'The guaranteed full-song player is available.',
+    }
+  }
   const preferred = preference === 'automatic' ? null : preferenceProvider[preference]
   const order = preferred
     ? [preferred, ...automaticOrder.filter((provider) => provider !== preferred)]

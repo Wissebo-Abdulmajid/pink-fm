@@ -14,7 +14,7 @@ import { YouTubeEmbedPlayer } from './providers/youtube/YouTubeEmbedPlayer'
 import { RecommendationQueue } from './RecommendationQueue'
 
 export function EmbeddedRadioPlayer({ track, station }: { track: Track; station: string }) {
-  const { listener, setEmbedConsent, recordPlaybackEvent } = useExperience()
+  const { listener, setEmbedConsent, recordPlaybackEvent, chooseAnother } = useExperience()
   const controller = usePlaybackController(track)
   const [online, setOnline] = useState(() => typeof navigator === 'undefined' || navigator.onLine)
 
@@ -51,6 +51,7 @@ export function EmbeddedRadioPlayer({ track, station }: { track: Track; station:
             onPlay={() => void controller.play()}
             onPause={() => void controller.pause()}
             onRetry={controller.retry}
+            onAnother={() => void chooseAnother()}
           />
         </>
       )}

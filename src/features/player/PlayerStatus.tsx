@@ -2,7 +2,7 @@ import type { PlaybackProviderId, PlaybackState } from './playback-types'
 
 const providerLabels: Record<PlaybackProviderId, string> = {
   'spotify-embed': 'Playback provided by Spotify',
-  'youtube-embed': 'Playback via official YouTube source',
+  'youtube-embed': 'Full song ready inside Pink FM',
   'apple-preview': 'Preview provided by Apple Music',
   external: 'External listening destination',
 }
@@ -15,7 +15,7 @@ const stateLabels: Record<PlaybackState, string> = {
   playing: 'Playing inside Pink FM',
   paused: 'Playback paused',
   completed: 'Playback completed',
-  failed: 'That frequency is unavailable here. Retuning to another full song.',
+  failed: 'That frequency is unavailable here. Try again or choose another full song.',
   'external-only': 'Embedded players are turned off',
 }
 

@@ -10,8 +10,13 @@ const RadioPage = lazy(() => import('../pages/RadioPage'))
 const LibraryPage = lazy(() => import('../pages/LibraryPage'))
 const SettingsPage = lazy(() => import('../pages/SettingsPage'))
 const AboutPage = lazy(() => import('../pages/AboutPage'))
-const PlaybackTestPage = lazy(() => import('../pages/PlaybackTestPage'))
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage'))
+
+const playbackTestRouteEnabled =
+  import.meta.env.DEV || import.meta.env.VITE_ENABLE_PLAYBACK_TESTS === 'true'
+const PlaybackTestPage = playbackTestRouteEnabled
+  ? lazy(() => import('../pages/PlaybackTestPage'))
+  : null
 
 const PageFallback = () => <LoadingTuner heading="Changing frequency" message="One clear signal, coming up…" />
 
@@ -28,7 +33,7 @@ export function AppRouter() {
             <Route path="library" element={<LibraryPage />} />
             <Route path="settings" element={<SettingsPage />} />
             <Route path="about" element={<AboutPage />} />
-            <Route path="playback-test" element={<PlaybackTestPage />} />
+            {PlaybackTestPage && <Route path="playback-test" element={<PlaybackTestPage />} />}
           </Route>
         </Route>
         <Route path="*" element={<NotFoundPage />} />
