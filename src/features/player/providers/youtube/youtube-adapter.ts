@@ -14,7 +14,10 @@ export class YouTubePlaybackAdapter implements PlaybackProviderAdapter {
   private latestVideoId: string | null = null
   private sourceQueue: string[] = []
 
-  constructor(private readonly onState: (state: PlaybackState) => void) {}
+  constructor(
+    private readonly onState: (state: PlaybackState) => void,
+    private readonly allowOfficialAlternateVersions = true,
+  ) {}
 
   canHandle(track: Track) {
     if (selectPrimaryFullPlaybackSource(track)) return true
@@ -36,7 +39,11 @@ export class YouTubePlaybackAdapter implements PlaybackProviderAdapter {
         height: '220',
         playerVars: { controls: 1, playsinline: 1, rel: 0 },
         events: {
-          onReady: () => { this.onState('ready'); resolve(player) },
+          onReady: () => {
+            player.getIframe().title = 'Pink FM full-song player'
+            this.onState('ready')
+            resolve(player)
+          },
           onError: () => {
             const fallback = this.sourceQueue.shift()
             if (fallback && this.player) {
@@ -64,7 +71,7 @@ export class YouTubePlaybackAdapter implements PlaybackProviderAdapter {
   }
 
   async loadTrack(track: Track) {
-    const fullSources = fullPlaybackSourcesForRadio(track)
+    const fullSources = fullPlaybackSourcesForRadio(track, this.allowOfficialAlternateVersions)
     const videoId = fullSources[0]?.videoId ?? track.playback.youtube?.videoId
     if (!videoId || !this.canHandle(track)) throw new Error('This YouTube record is not verified.')
     this.sourceQueue = fullSources.slice(1).map((source) => source.videoId)

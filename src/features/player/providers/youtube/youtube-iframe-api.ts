@@ -3,6 +3,7 @@ export type YouTubePlayer = {
   playVideo(): void
   pauseVideo(): void
   destroy(): void
+  getIframe(): HTMLIFrameElement
 }
 
 type YouTubeNamespace = {

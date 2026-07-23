@@ -71,7 +71,7 @@ export default function LibraryPage() {
           <small>{catalogueTracks.length}</small>
         </div>
         <p className="catalogue-browser__intro">
-          Browse verified titles, albums and data-driven collections. Internal provenance notes stay out of the listening view.
+          Browse titles, albums and hand-picked collections from the station.
         </p>
         <div className="catalogue-filters">
           <label className="field" htmlFor="catalogue-search">
@@ -119,10 +119,7 @@ export default function LibraryPage() {
                     <small>
                       {track.artist}{track.album ? ` · ${track.album}` : ''}{track.releaseYear ? ` · ${track.releaseYear}` : ''}
                     </small>
-                    <span>
-                      {track.curationStatus === 'reviewed' ? 'Reviewed' : 'Metadata verified'}
-                      {track.versionType !== 'studio' ? ` · ${track.versionType}` : ''}
-                    </span>
+                    {track.versionType !== 'studio' && <span>{track.versionType.replace(/-/g, ' ')}</span>}
                   </span>
                   <span className="catalogue-list__actions">
                     <button
@@ -231,7 +228,7 @@ export default function LibraryPage() {
             </div>
             <div className="retro-meter">
               <span><Clock3 size={16} aria-hidden="true" /> Most played</span>
-              <strong>{mostPlayed.length ? mostPlayed.map(([id, count]) => `${tracksById.get(id)?.title ?? id} · ${count}`).join(' / ') : 'No external plays recorded'}</strong>
+              <strong>{mostPlayed.length ? mostPlayed.map(([id, count]) => `${tracksById.get(id)?.title ?? 'Unavailable title'} · ${count}`).join(' / ') : 'No songs played yet'}</strong>
               <i style={{ '--meter': `${Math.min(100, (mostPlayed[0]?.[1] ?? 0) * 20)}%` } as CSSProperties} />
             </div>
           </div>
@@ -255,7 +252,7 @@ export default function LibraryPage() {
               return (
                 <li key={`${entry.trackId}-${entry.timestamp}-${index}`}>
                   <span>{String(index + 1).padStart(2, '0')}</span>
-                  <span><strong>{track?.title ?? entry.trackId}</strong><small>{entry.stationName} · {formatHistoryTime(entry.timestamp)}</small></span>
+                  <span><strong>{track?.title ?? 'Unavailable title'}</strong><small>{entry.stationName} · {formatHistoryTime(entry.timestamp)}</small></span>
                 </li>
               )
             })}

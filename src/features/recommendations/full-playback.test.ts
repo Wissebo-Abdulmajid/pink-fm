@@ -1,5 +1,5 @@
 import { makeTrack } from '../../test/fixtures'
-import { isRadioEligible, playbackStatusLabel } from './full-playback'
+import { fullPlaybackSourcesForRadio, isRadioEligible, playbackStatusLabel } from './full-playback'
 
 describe('full-song radio eligibility', () => {
   it('accepts a verified embeddable full YouTube source', () => {
@@ -45,5 +45,31 @@ describe('full-song radio eligibility', () => {
     expect(playbackStatusLabel(makeTrack('live', {
       fullPlaybackSources: [{ ...baseSource, version: 'live' }],
     }))).toBe('FULL OFFICIAL LIVE VERSION')
+  })
+
+  it('orders the primary, backup and official alternate sources deterministically', () => {
+    const track = makeTrack('fallback-order')
+    const source = track.fullPlaybackSources[0]
+    if (!source) throw new Error('Fixture track must include a full playback source.')
+    const sources = fullPlaybackSourcesForRadio(makeTrack('fallback-order', {
+      fullPlaybackSources: [
+        { ...source, id: 'official-live', videoId: 'AbCdEfGhI_3', sourceUrl: 'https://www.youtube.com/watch?v=AbCdEfGhI_3', priority: 3, version: 'live' },
+        { ...source, id: 'backup-studio', videoId: 'AbCdEfGhI_2', sourceUrl: 'https://www.youtube.com/watch?v=AbCdEfGhI_2', priority: 2 },
+        { ...source, id: 'primary-studio', videoId: 'AbCdEfGhI_1', sourceUrl: 'https://www.youtube.com/watch?v=AbCdEfGhI_1', priority: 1 },
+      ],
+    }))
+    expect(sources.map((item) => item.id)).toEqual(['primary-studio', 'backup-studio', 'official-live'])
+  })
+
+  it('removes alternate performances when the listener disables them', () => {
+    const track = makeTrack('no-alternates')
+    const source = track.fullPlaybackSources[0]
+    if (!source) throw new Error('Fixture track must include a full playback source.')
+    expect(fullPlaybackSourcesForRadio(makeTrack('no-alternates', {
+      fullPlaybackSources: [
+        source,
+        { ...source, id: 'live', videoId: 'AbCdEfGhI_2', sourceUrl: 'https://www.youtube.com/watch?v=AbCdEfGhI_2', priority: 2, version: 'live' },
+      ],
+    }), false).map((item) => item.id)).toEqual([source.id])
   })
 })

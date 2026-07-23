@@ -12,7 +12,7 @@ export function PlayerShell({ track, station, children }: { track: Track; statio
         <p>{track.artist}</p>
         <p className="player-shell__coverage">
           <strong>{playbackStatusLabel(track)}</strong>
-          {source ? <span>Playback via official YouTube source</span> : null}
+          {source ? <span>Full song ready inside Pink FM</span> : null}
         </p>
         {source && ['live', 'acoustic', 'alternate'].includes(source.version) ? (
           <p className="player-shell__version">Official {source.version} version</p>

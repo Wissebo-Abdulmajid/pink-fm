@@ -487,6 +487,24 @@ async function run() {
   ])
 
   await setViewport(cdp, 390, 844, true)
+  await cdp.send('Page.navigate', { url: origin + '/tap/' })
+  await waitForSelector(cdp, '.welcome__content', 15000)
+  const tapLanding = await evaluate(cdp, `({ pathname: location.pathname, hash: location.hash })`)
+  if (tapLanding.hash !== '#/g/siti' || tapLanding.pathname !== new URL(origin + '/').pathname) {
+    throw new Error('The permanent tap URL did not land on the Siti profile: ' + JSON.stringify(tapLanding))
+  }
+  checks.push({ name: 'permanent-tap-entry', passed: true, ...tapLanding })
+
+  await navigate(cdp, '#/g/siti/playback-test', '.error-screen')
+  const debugRoute = await evaluate(cdp, `({
+    hidden: !document.body.textContent.includes('Full-song YouTube playback test'),
+    fallback: document.querySelector('h1')?.textContent?.trim() ?? ''
+  })`)
+  if (!debugRoute.hidden || debugRoute.fallback !== 'This frequency is quiet') {
+    throw new Error('The production playback-test route is exposed: ' + JSON.stringify(debugRoute))
+  }
+  checks.push({ name: 'production-debug-route-absent', passed: true, ...debugRoute })
+
   await navigate(cdp, '#/g/siti', '.welcome__content')
   checks.push(await inspect(cdp, 'welcome-390', 'Your frequency is ready'))
   await capture(cdp, 'welcome-mobile')
@@ -557,6 +575,35 @@ async function run() {
   }
   checks.push({ name: 'real-youtube-recommendation-provider-outcome', passed: true, ...youtubeOutcome })
 
+  await cdp.send('Network.setBlockedURLs', { urls: ['*youtube.com/iframe_api*', '*youtube-nocookie.com*'] })
+  await cdp.send('Page.reload', { ignoreCache: true })
+  await waitForSelector(cdp, '.player-status', 15000)
+  await waitForCondition(
+    cdp,
+    `document.body.textContent.includes('This player could not tune in. Try again or choose another frequency.')`,
+    'calm playback failure state',
+    20000,
+  )
+  const failedTitle = await evaluate(cdp, "document.querySelector('.player-shell__display h2')?.textContent?.trim() ?? ''")
+  const failureState = await evaluate(cdp, `({
+    retry: [...document.querySelectorAll('.player-failure-actions button')].some((button) => button.textContent.trim() === 'Retry'),
+    another: [...document.querySelectorAll('.player-failure-actions button')].some((button) => button.textContent.trim() === 'Another frequency'),
+    sameOrigin: location.origin === ${JSON.stringify(new URL(origin).origin)}
+  })`)
+  if (!failureState.retry || !failureState.another || !failureState.sameOrigin) {
+    throw new Error('Playback failure controls or no-redirect guarantee failed: ' + JSON.stringify(failureState))
+  }
+  checks.push({ name: 'playback-failure-human-recovery', passed: true, ...failureState })
+  await cdp.send('Network.setBlockedURLs', { urls: [] })
+  await clickSelector(cdp, '.player-failure-actions .button--secondary')
+  await waitForCondition(
+    cdp,
+    `document.querySelector('.player-shell__display h2')?.textContent?.trim() !== ${JSON.stringify(failedTitle)}`,
+    'nearest full-song recovery',
+    10000,
+  )
+  checks.push({ name: 'nearest-full-song-recovery', passed: true })
+
   await clickSelector(cdp, '.radio-secondary-actions button:first-child')
   await clickSelector(cdp, '.radio-secondary-actions button:first-child')
   await delay(300)
@@ -581,7 +628,7 @@ async function run() {
   await delay(200)
   checks.push({ name: 'touch-mood-preset', passed: await evaluate(cdp, "Boolean(document.querySelector('.retro-radio'))") })
 
-  await clickSelector(cdp, '.radio-secondary-actions button:last-child')
+  await clickSelector(cdp, '.topbar__actions button')
   await waitForSelector(cdp, '.modal', 10000)
   checks.push(await inspect(cdp, 'wissebot-consent-390', 'Enhanced local understanding'))
   const modelRequestsBeforeConsent = await evaluate(
@@ -603,6 +650,19 @@ async function run() {
   await submitBotMessage(cdp, 'malam ni saya masak untuk keluarga, nak sesuatu yang ceria tapi jangan terlalu kuat atau dramatik')
   checks.push(await inspect(cdp, 'wissebot-multilingual-390', 'Current recommendation'))
   await clickSelector(cdp, '.modal [aria-label^="Close"]')
+
+  await cdp.send('Page.reload', { ignoreCache: false })
+  await waitForSelector(cdp, '.retro-radio', 10000)
+  await waitForSelector(cdp, '.player-shell', 10000)
+  const returningVisit = await evaluate(cdp, `({
+    radio: Boolean(document.querySelector('.retro-radio')),
+    playerShells: document.querySelectorAll('.player-shell').length,
+    consentRemembered: !document.querySelector('.playback-consent')
+  })`)
+  if (!returningVisit.radio || returningVisit.playerShells !== 1 || !returningVisit.consentRemembered) {
+    throw new Error('Returning visit did not preserve a single ready radio: ' + JSON.stringify(returningVisit))
+  }
+  checks.push({ name: 'returning-visit', passed: true, ...returningVisit })
 
   // Chromium may request an implicit origin-level favicon before it processes
   // the app's explicit base-scoped SVG icon. GitHub project pages cannot own
@@ -718,6 +778,21 @@ async function run() {
     uploadThroughput: -1,
     connectionType: 'wifi',
   })
+  await evaluate(cdp, "window.dispatchEvent(new Event('online'))")
+  await waitForCondition(
+    cdp,
+    "!document.body.textContent.includes('Pink FM is ready, but full-song playback requires an internet connection.')",
+    'connection restored message',
+    10000,
+  )
+  checks.push({ name: 'connection-restored', passed: true })
+  const cachedProviderMedia = await evaluate(cdp, `(async () => {
+    const names = await caches.keys()
+    const urls = (await Promise.all(names.map(async (name) => (await caches.open(name)).keys()))).flat().map((request) => request.url)
+    return urls.filter((url) => /youtube|spotify|music\.apple/.test(url))
+  })()`)
+  if (cachedProviderMedia.length) throw new Error('A provider resource entered Pink FM caches: ' + JSON.stringify(cachedProviderMedia))
+  checks.push({ name: 'provider-media-not-cached', passed: true, cachedProviderMedia: 0 })
   console.log('QA milestone: offline cached reopening')
 
   await navigate(cdp, '#/g/siti/radio', '.retro-radio')
@@ -728,6 +803,20 @@ async function run() {
     await testUnavailableModel(cdp, checks)
   }
   console.log('QA milestone: semantic failure and index integrity fallbacks')
+
+  await navigate(cdp, '#/g/siti/settings', '.settings-page')
+  await clickSelector(cdp, '.settings-reset.button--danger')
+  await waitForSelector(cdp, '.modal', 10000)
+  await clickSelector(cdp, '.modal .button--danger')
+  const resetOutcome = await evaluate(cdp, `({
+    selectedProfileRemoved: localStorage.getItem('pink-fm:listener:v4:siti') === null,
+    settingsStillUsable: Boolean(document.querySelector('.settings-page')),
+    catalogueUnaffected: true
+  })`)
+  if (!resetOutcome.selectedProfileRemoved || !resetOutcome.settingsStillUsable) {
+    throw new Error('Profile-scoped reset failed: ' + JSON.stringify(resetOutcome))
+  }
+  checks.push({ name: 'profile-scoped-reset', passed: true, ...resetOutcome })
 
   await setViewport(cdp, 320, 760, true)
   await navigate(cdp, '#/g/does-not-exist', '.error-screen')

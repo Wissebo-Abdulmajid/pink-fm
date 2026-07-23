@@ -74,9 +74,27 @@ describe('listener storage', () => {
   it('clears saved data', () => {
     const storage = new ListenerStorage('test')
     storage.update((state) => ({ ...state, lovedTrackIds: ['track-a'] }))
+    window.localStorage.setItem('pink-fm:listener:v2:test', JSON.stringify({ schemaVersion: 2 }))
+    window.localStorage.setItem('pink-fm:listener:v1:test', JSON.stringify({ schemaVersion: 1 }))
+    window.localStorage.setItem('unrelated-key', 'keep')
     storage.reset()
     expect(storage.getSnapshot().lovedTrackIds).toEqual([])
     expect(window.localStorage.getItem('pink-fm:listener:v4:test')).toBeNull()
+    expect(window.localStorage.getItem('pink-fm:listener:v2:test')).toBeNull()
+    expect(window.localStorage.getItem('pink-fm:listener:v1:test')).toBeNull()
+    expect(window.localStorage.getItem('unrelated-key')).toBe('keep')
+  })
+
+  it('uses the profile alternate-version policy as the first-run default', () => {
+    expect(new ListenerStorage('no-alternates', 'spotify', false).getSnapshot().allowOfficialAlternateVersions).toBe(false)
+  })
+
+  it('resets only the selected profile and leaves caches and other profiles alone', () => {
+    const storage = new ListenerStorage('selected-profile')
+    new ListenerStorage('other-profile').update((state) => ({ ...state, lovedTrackIds: ['keep-me'] }))
+    storage.update((state) => ({ ...state, lovedTrackIds: ['remove-me'] }))
+    storage.reset()
+    expect(new ListenerStorage('other-profile').getSnapshot().lovedTrackIds).toEqual(['keep-me'])
   })
 
   it('does not count recommendations, iframe loads, external opens or failures as plays', () => {

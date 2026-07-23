@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrainCircuit, Download, Info, LockKeyhole, RotateCcw, Trash2, Volume2 } from 'lucide-react'
+import { BrainCircuit, Download, LockKeyhole, RotateCcw, Trash2, Volume2 } from 'lucide-react'
 import { useExperience } from '../app/providers'
 import { Modal } from '../components/common/Modal'
 import type { PlaybackPreference, StreamingService } from '../config/schemas'
@@ -8,7 +8,6 @@ import { removeEnhancedModelCache } from '../features/bot/semantic/enhancedMode'
 export default function SettingsPage() {
   const {
     profile,
-    profileSource,
     listener,
     setStreamingService,
     setPlaybackPreference,
@@ -20,9 +19,11 @@ export default function SettingsPage() {
     setHighContrast,
     setSoundVolume,
     setSemanticMode,
+    clearHistory,
     resetPreferences,
   } = useExperience()
   const [confirmReset, setConfirmReset] = useState(false)
+  const [confirmClearHistory, setConfirmClearHistory] = useState(false)
   const [removingSemantic, setRemovingSemantic] = useState(false)
   const [semanticRemovalStatus, setSemanticRemovalStatus] = useState('')
 
@@ -38,9 +39,9 @@ export default function SettingsPage() {
       setSemanticRemovalStatus(
         result.supported
           ? result.deleted > 0
-            ? `Removed ${result.deleted} cached enhanced-understanding files. Favourites and listening history were not changed.`
-            : 'No matching enhanced-understanding files were found. Favourites and listening history were not changed.'
-          : 'This browser does not expose model Cache Storage. Its normal HTTP cache remains under browser control.',
+            ? `Removed ${result.deleted} stored enhanced-understanding files. Favourites and listening history were not changed.`
+            : 'No stored enhanced-understanding files were found. Favourites and listening history were not changed.'
+          : 'This browser manages the optional enhanced data itself. Your Pink FM choices were not changed.',
       )
     } catch {
       setSemanticRemovalStatus('The model cache could not be changed. Your Pink FM preferences were not affected.')
@@ -70,7 +71,7 @@ export default function SettingsPage() {
             <option value="youtube">Prefer YouTube</option>
             <option value="apple">Prefer Apple Music</option>
           </select>
-          <small>Guaranteed radio uses verified full-song YouTube sources first. Spotify and Apple remain secondary manual destinations and do not satisfy full-song coverage.</small>
+          <small>Pink FM keeps the guaranteed full song first. Your preference is used when another listening option is needed.</small>
         </div>
         <label className="switch-row">
           <span>
@@ -87,7 +88,7 @@ export default function SettingsPage() {
         <label className="switch-row">
           <span>
             <strong>Allow previews when full songs are unavailable</strong>
-            <small>Off by default. Main radio and WisseBot otherwise avoid Apple previews and external-only tracks.</small>
+            <small>Off by default. Short samples are never chosen while a full song is available.</small>
           </span>
           <input
             className="switch"
@@ -142,7 +143,7 @@ export default function SettingsPage() {
               <option value="lightweight">Instant understanding only</option>
             </select>
             <small>
-              Enhanced mode downloads about {profile.gift.assistant.semantic.estimatedDownloadMb} MB on first use and runs in a background worker. Pink FM always asks before starting it. Instant mode never starts the model; recommendations remain fully available.
+              Enhanced mode downloads about {profile.gift.assistant.semantic.estimatedDownloadMb} MB on first use and works on this device. Pink FM always asks before starting it. Instant mode needs no extra download, and recommendations remain fully available.
             </small>
             <button
               className="text-button settings-model-remove"
@@ -151,10 +152,10 @@ export default function SettingsPage() {
               disabled={removingSemantic}
             >
               <Trash2 size={15} aria-hidden="true" />
-              {removingSemantic ? 'Removing enhanced data…' : 'Remove enhanced understanding data'}
+              {removingSemantic ? 'Removing enhanced data…' : 'Remove optional enhanced data'}
             </button>
             <small>
-              Removes matching model files from Cache Storage only. Browser cache eviction is not guaranteed, and this never clears favourites, history or other preferences.
+              Frees the matching optional files when the browser allows it. This never clears favourites, history or other preferences.
             </small>
             {semanticRemovalStatus && <p className="settings-inline-status" role="status">{semanticRemovalStatus}</p>}
           </div>
@@ -196,36 +197,32 @@ export default function SettingsPage() {
         <span className="settings-section__icon" aria-hidden="true"><LockKeyhole /></span>
         <div>
           <h2 id="privacy-heading">{profile.messages.settings.privacyHeading}</h2>
-          <p>{profile.gift.privacyNotice} Pink FM stores favourites, feedback, settings and recommendation history in this browser’s local storage. Clearing site data also removes it.</p>
-          <p>Static gift files and public URLs are not private authentication. Do not add sensitive messages to a public deployment.</p>
+          <p>{profile.gift.privacyNotice} Favourites, feedback, settings and listening history stay in this browser. Pink FM has no account, advertising or analytics, and does not send this history to a server.</p>
+          <p>Music services connect only when you allow an embedded player or choose an external listening link.</p>
         </div>
       </section>
 
-      <section className="settings-section panel" aria-labelledby="profile-info-heading">
-        <span className="settings-section__icon" aria-hidden="true"><Info /></span>
-        <div>
-          <h2 id="profile-info-heading">Content profile</h2>
-          <dl className="profile-details">
-            <div><dt>Station</dt><dd>{profile.gift.station.name}</dd></div>
-            <div><dt>Artist</dt><dd>{profile.gift.artist.name}</dd></div>
-            <div><dt>Tracks</dt><dd>{profile.tracks.tracks.filter((track) => track.active).length} active</dd></div>
-            <div><dt>Reviewed</dt><dd>{profile.tracks.tracks.filter((track) => track.active && track.curationStatus === 'reviewed').length} recommendation-ready</dd></div>
-            <div><dt>Collections</dt><dd>{profile.collections.collections.filter((collection) => collection.active).length} active</dd></div>
-            <div><dt>Profile source</dt><dd>{profileSource === 'cache' ? 'Cached offline copy' : 'Latest network copy'}</dd></div>
-            <div><dt>Schema</dt><dd>Version {profile.gift.schemaVersion}</dd></div>
-          </dl>
-        </div>
-      </section>
-
-      <button className="button button--danger settings-reset" type="button" onClick={() => setConfirmReset(true)}>
-        <RotateCcw size={18} aria-hidden="true" /> Clear all preferences on this device
+      <button className="button button--secondary settings-reset" type="button" onClick={() => setConfirmClearHistory(true)}>
+        <Trash2 size={18} aria-hidden="true" /> Clear listening history
       </button>
 
-      <Modal open={confirmReset} onClose={() => setConfirmReset(false)} title="Clear local preferences?">
-        <p>This removes loved tracks, feedback, history, saved presets and settings for this gift profile from this browser. Profile content is not affected.</p>
+      <button className="button button--danger settings-reset" type="button" onClick={() => setConfirmReset(true)}>
+        <RotateCcw size={18} aria-hidden="true" /> Reset Pink FM experience
+      </button>
+
+      <Modal open={confirmClearHistory} onClose={() => setConfirmClearHistory(false)} title="Clear listening history?">
+        <p>This clears played-song history and listening counts for this Pink FM profile. Favourites, saved mixes and settings stay in place.</p>
         <div className="confirm-actions">
-          <button className="button button--secondary" type="button" onClick={() => setConfirmReset(false)}>Keep my preferences</button>
-          <button className="button button--danger" type="button" onClick={() => { resetPreferences(); setConfirmReset(false) }}>Clear local data</button>
+          <button className="button button--secondary" type="button" onClick={() => setConfirmClearHistory(false)}>Keep my history</button>
+          <button className="button button--danger" type="button" onClick={() => { clearHistory(); setConfirmClearHistory(false) }}>Clear listening history</button>
+        </div>
+      </Modal>
+
+      <Modal open={confirmReset} onClose={() => setConfirmReset(false)} title="Reset Pink FM experience?">
+        <p>This removes favourites, feedback, listening history, saved mixes and settings for this Pink FM profile from this browser. The station and music catalogue remain safe and ready to use.</p>
+        <div className="confirm-actions">
+          <button className="button button--secondary" type="button" onClick={() => setConfirmReset(false)}>Keep my experience</button>
+          <button className="button button--danger" type="button" onClick={() => { resetPreferences(); setConfirmReset(false) }}>Reset this experience</button>
         </div>
       </Modal>
     </main>

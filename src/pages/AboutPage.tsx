@@ -1,4 +1,4 @@
-import { Bot, Code2, ExternalLink, Radio, ShieldCheck } from 'lucide-react'
+import { Bot, Code2, Radio, ShieldCheck } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useExperience } from '../app/providers'
 
@@ -9,25 +9,25 @@ export default function AboutPage() {
     <main className="page page--narrow about-page" id="main-content">
       <p className="eyebrow">Behind the dial</p>
       <h1 className="page-heading">About {gift.station.name}</h1>
-      <p className="page-intro">A personal, profile-driven radio gift built around the listener's desired feeling.</p>
+      <p className="page-intro">A personal radio gift that begins with how the listener wants to feel.</p>
 
       <section className="about-hero panel">
         <span className="about-hero__radio" aria-hidden="true"><Radio size={36} /></span>
-        <div><h2>Mood first. Music second.</h2><p>Every recommendation compares the selected mood vector with editorial track profiles, then applies small, explainable adjustments for context, recent plays and local feedback.</p></div>
+        <div><h2>Mood first. Music second.</h2><p>Choose a feeling and Pink FM finds a fitting full song, with a short, human explanation for the choice.</p></div>
       </section>
 
       <section className="about-item">
         <span aria-hidden="true"><Bot /></span>
         <div>
           <h2>{gift.assistant.name}</h2>
-          <p>{gift.assistant.name} is a grounded personal music and mood guide created by {gift.creator.name}. Multilingual rules handle precise instructions such as negation and follow-ups; optional semantic matching recognises paraphrases and retrieves only from this configured catalogue.</p>
-          <p>Enhanced understanding runs locally in a background browser worker after the listener opts in. The lightweight rules remain available offline. Neither mode impersonates {gift.artist.name}, uses a text-generating chatbot, quotes lyrics, or invents artist facts.</p>
+          <p>{gift.assistant.name} is a warm music and mood guide created for this station. Ask in English, Malay or a natural mix of both, and it will tune only from the Pink FM collection.</p>
+          <p>Its instant mode is always ready. Optional enhanced understanding works on this device only after the listener agrees to the download.</p>
         </div>
       </section>
 
       <section className="about-item">
         <span aria-hidden="true"><ShieldCheck /></span>
-        <div><h2>Local by default</h2><p>{gift.privacyNotice} There is no account, database, analytics tracker or hidden client secret. Official music destinations are opened separately; Pink FM does not host the audio.</p></div>
+        <div><h2>Private by design</h2><p>{gift.privacyNotice} There is no account, advertising or analytics. Listening history and favourites stay in this browser. Music services connect only after consent or when an external link is chosen.</p></div>
       </section>
 
       {gift.creator.showOnAboutPage && (
@@ -41,7 +41,6 @@ export default function AboutPage() {
       <p className="disclaimer">Pink FM is an independent personal project and is not affiliated with or endorsed by the featured artist or streaming services.</p>
       <div className="about-actions">
         <Link className="button" to={`/g/${slug}/mood`}>Choose a mood</Link>
-        <a className="button button--secondary" href="https://github.com/Wissebo-Abdulmajid/pink-fm" target="_blank" rel="noopener noreferrer">Project source <ExternalLink size={16} aria-hidden="true" /></a>
       </div>
     </main>
   )

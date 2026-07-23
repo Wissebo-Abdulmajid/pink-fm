@@ -102,8 +102,12 @@ export function ExperienceProvider({
   children: ReactNode
 }) {
   const storage = useMemo(
-    () => new ListenerStorage(slug, profile.gift.defaultStreamingService),
-    [profile.gift.defaultStreamingService, slug],
+    () => new ListenerStorage(
+      slug,
+      profile.gift.defaultStreamingService,
+      profile.gift.fullPlayback.allowOfficialAlternateVersions,
+    ),
+    [profile.gift.defaultStreamingService, profile.gift.fullPlayback.allowOfficialAlternateVersions, slug],
   )
   const listener = useSyncExternalStore(storage.subscribe, storage.getSnapshot, storage.getSnapshot)
   const [currentMood, setCurrentMood] = useState<MoodPreset | null>(null)

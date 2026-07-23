@@ -16,7 +16,8 @@ export function PlaybackAction({ track }: { track: Track }) {
   const selected = track.officialLinks[preferred]
     ? ([preferred, track.officialLinks[preferred]] as const)
     : alternatives.find(([, link]) => Boolean(link))
-  const embedAllowed = isAllowedEmbed(track.embed.provider, track.embed.url)
+  const embedConfigured = isAllowedEmbed(track.embed.provider, track.embed.url)
+  const embedAllowed = listener.embedConsent === 'allowed' && embedConfigured
 
   return (
     <div className="playback-panel">
@@ -44,7 +45,7 @@ export function PlaybackAction({ track }: { track: Track }) {
           {profile.messages.radio.playOn} {serviceNames[selected[0]]}
           <ExternalLink size={16} aria-hidden="true" />
         </a>
-      ) : !embedAllowed ? (
+      ) : !embedConfigured ? (
         <div className="playback-unavailable" role="status">
           <WifiOff size={18} aria-hidden="true" />
           <span>{profile.messages.radio.noLink}</span>

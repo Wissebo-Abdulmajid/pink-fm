@@ -821,6 +821,12 @@
   margin-top: 0.65rem;
 }
 
+.player-failure-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
 .playback-external-link {
   display: inline-flex;
   align-items: center;

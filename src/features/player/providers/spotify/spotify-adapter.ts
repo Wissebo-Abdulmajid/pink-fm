@@ -14,6 +14,7 @@ export class SpotifyPlaybackAdapter implements PlaybackProviderAdapter {
   private latestUri: string | null = null
   private wasPlaying = false
   private completedUri: string | null = null
+  private latestTitle = ''
 
   constructor(private readonly onState: (state: PlaybackState) => void) {}
 
@@ -30,7 +31,11 @@ export class SpotifyPlaybackAdapter implements PlaybackProviderAdapter {
     this.controllerPromise = loadSpotifyIframeApi().then((api) => new Promise<SpotifyEmbedController>((resolve) => {
       api.createController(this.container as HTMLElement, { uri, width: '100%', height: 152 }, (controller) => {
         this.controller = controller
-        controller.addListener('ready', () => this.onState('ready'))
+        controller.addListener('ready', () => {
+          const iframe = this.container?.querySelector('iframe')
+          if (iframe) iframe.title = `${this.latestTitle} — Spotify player`
+          this.onState('ready')
+        })
         controller.addListener('playback_error', () => this.onState('failed'))
         controller.addListener('playback_update', ({ data }) => {
           const playing = data?.isPaused === false
@@ -58,6 +63,7 @@ export class SpotifyPlaybackAdapter implements PlaybackProviderAdapter {
     const uri = spotifyTrackUri(track.officialLinks.spotify)
     if (!uri) throw new Error('This is not a valid Spotify track destination.')
     this.latestUri = uri
+    this.latestTitle = track.title
     this.completedUri = null
     this.onState('loading')
     const controller = await this.createController(uri)

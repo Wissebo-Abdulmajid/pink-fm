@@ -1,9 +1,21 @@
 {
   "schemaVersion": 1,
-  "createdAt": "2026-07-14T05:01:50.361Z",
+  "createdAt": "2026-07-23T04:36:37.039Z",
   "browser": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
   "origin": "http://127.0.0.1:4173",
   "checks": [
+    {
+      "name": "permanent-tap-entry",
+      "passed": true,
+      "pathname": "/",
+      "hash": "#/g/siti"
+    },
+    {
+      "name": "production-debug-route-absent",
+      "passed": true,
+      "hidden": true,
+      "fallback": "This frequency is quiet"
+    },
     {
       "name": "welcome-390",
       "title": "Pink FM — Your personal mood radio",
@@ -73,23 +85,34 @@
       "name": "real-youtube-recommendation-provider-outcome",
       "passed": true,
       "track": "Cindai",
-      "coverage": "FULL SONGPlayback via official YouTube source",
+      "coverage": "FULL SONGFull song ready inside Pink FM",
       "iframeLoaded": false,
-      "status": "Playback via official YouTube sourceLoading the selected provider…",
+      "status": "Full song ready inside Pink FMLoading the selected provider…",
       "fallback": true
+    },
+    {
+      "name": "playback-failure-human-recovery",
+      "passed": true,
+      "retry": true,
+      "another": true,
+      "sameOrigin": true
+    },
+    {
+      "name": "nearest-full-song-recovery",
+      "passed": true
     },
     {
       "name": "rapid-recommendation-player-reuse",
       "passed": true,
       "playerShells": 1,
       "providerViewports": 1,
-      "currentTitle": "Nirmala"
+      "currentTitle": "Biarlah Rahsia"
     },
     {
       "name": "keyboard-energy-dial",
       "passed": true,
-      "before": 85,
-      "after": 90
+      "before": 15,
+      "after": 20
     },
     {
       "name": "touch-mood-preset",
@@ -223,6 +246,13 @@
       ]
     },
     {
+      "name": "returning-visit",
+      "passed": true,
+      "radio": true,
+      "playerShells": 1,
+      "consentRemembered": true
+    },
+    {
       "name": "radio-320",
       "title": "Pink FM — Your personal mood radio",
       "hash": "#/g/siti/radio",
@@ -253,7 +283,7 @@
         {
           "tag": "div",
           "className": "illuminated-display__station",
-          "text": "Now tunedWisseBot MixWB.1",
+          "text": "Now tunedVelvet Calm88.4",
           "left": 63,
           "right": 331,
           "width": 268
@@ -269,7 +299,7 @@
         {
           "tag": "b",
           "className": "",
-          "text": "WB.1",
+          "text": "88.4",
           "left": 252,
           "right": 331,
           "width": 79
@@ -285,23 +315,15 @@
         {
           "tag": "div",
           "className": "illuminated-display__track",
-          "text": "70% match strengthKau KekasihkuSiti Nurhaliza",
+          "text": "71% match strengthKesilapanku, KeegoanmuSiti Nurhaliza",
           "left": 63,
           "right": 331,
           "width": 268
         },
         {
-          "tag": "span",
-          "className": "",
-          "text": "70% match strength",
-          "left": 67,
-          "right": 323,
-          "width": 255
-        },
-        {
           "tag": "h1",
           "className": "",
-          "text": "Kau Kekasihku",
+          "text": "Kesilapanku, Keegoanmu",
           "left": 67,
           "right": 326,
           "width": 258
@@ -424,6 +446,15 @@
       "overflowingElements": []
     },
     {
+      "name": "connection-restored",
+      "passed": true
+    },
+    {
+      "name": "provider-media-not-cached",
+      "passed": true,
+      "cachedProviderMedia": 0
+    },
+    {
       "name": "stale-embedding-manifest",
       "passed": true
     },
@@ -435,6 +466,13 @@
       "name": "semantic-model-unavailable",
       "passed": true,
       "status": "Unauthorized access to file: \"https://huggingface.co/Xenova/pink-fm-intentionally-unavailable-model/resolve/main/config.json\"."
+    },
+    {
+      "name": "profile-scoped-reset",
+      "passed": true,
+      "selectedProfileRemoved": true,
+      "settingsStillUsable": true,
+      "catalogueUnaffected": true
     },
     {
       "name": "missing-profile-320",
